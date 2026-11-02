@@ -58,8 +58,11 @@ def load_index(dataset,index_path,config):
   original=index;converted=[]
   for r in original['recordings']:
    annotation=r['annotation'];id=Path(r['archive_path']).stem.removesuffix('_mic')
+   if 'performer' not in r and 'player_id' not in r:raise ValueError('Native manifest requires performer or player_id')
+   if 'performer' in r and 'player_id' in r and r['performer']!=r['player_id']:raise ValueError('Conflicting performer/player_id in native manifest')
+   player=r['performer'] if 'performer' in r else r['player_id']
    if Path(annotation['archive_path']).stem!=id:raise ValueError('Native manifest WAV/JAMS name mismatch')
-   converted.append(dict(id=id,player=r['performer'],style=r['style'],mode=r['part'],wav=r['archive_path'],jams=annotation['archive_path'],wavSha256=r['sha256'],jamsSha256=annotation['sha256'],expectedWavBytes=r['bytes'],expectedJamsBytes=annotation['bytes'],expectedChannels=r['channels'],expectedRate=r['sample_rate_hz'],expectedFrames=r['frames'],expectedWidth=r['sample_width_bytes'],expectedDuration=r['duration_seconds']))
+   converted.append(dict(id=id,player=player,style=r['style'],mode=r['part'],wav=r['archive_path'],jams=annotation['archive_path'],wavSha256=r['sha256'],jamsSha256=annotation['sha256'],expectedWavBytes=r['bytes'],expectedJamsBytes=annotation['bytes'],expectedChannels=r['channels'],expectedRate=r['sample_rate_hz'],expectedFrames=r['frames'],expectedWidth=r['sample_width_bytes'],expectedDuration=r['duration_seconds']))
   index=dict(schema='muisa-r1-local-v1',license='CC-BY-4.0',provenance=dict(dataset='GuitarSet1.1.0',doi='10.5281/zenodo.3371780',inputManifestSha256=sha(index_path)),recordings=converted)
  if index.get('schema')!='muisa-r1-local-v1' or not isinstance(index.get('recordings'),list):raise ValueError('Expected explicit muisa-r1-local-v1 index; see README')
  if not index.get('provenance') or not index.get('license'):raise ValueError('Dataset provenance and license required')

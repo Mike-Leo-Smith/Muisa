@@ -29,12 +29,22 @@ class DatasetTests(unittest.TestCase):
   with wave.open(str(wav),'wb') as w:w.setnchannels(1);w.setsampwidth(2);w.setframerate(8000);w.writeframes(bytes(16000))
   native=dict(recordings=[dict(archive_path=wav.name,performer='00',part='solo',style='Bossa Nova',bytes=wav.stat().st_size,sha256=sha(wav),channels=1,sample_rate_hz=8000,frames=8000,sample_width_bytes=2,duration_seconds=1,annotation=dict(archive_path=j.name,bytes=j.stat().st_size,sha256=sha(j)))])
   index=self.root/'manifest.json';index.write_text(json.dumps(native));rows,_=load_index(self.root,index,self.config);self.assertEqual(rows[0]['style'],'Bossa Nova');self.assertEqual(rows[0]['notes'][0]['midi'],60.12)
+  baseline=rows
+  item=native['recordings'][0];item['player_id']=item.pop('performer');index.write_text(json.dumps(native))
+  alias_rows,_=load_index(self.root,index,self.config);self.assertEqual(alias_rows,baseline)
+  item['performer']='00';index.write_text(json.dumps(native));same_rows,_=load_index(self.root,index,self.config);self.assertEqual(same_rows,baseline)
+  item['performer']='01';index.write_text(json.dumps(native))
+  with self.assertRaisesRegex(ValueError,'Conflicting performer/player_id'):load_index(self.root,index,self.config)
+  del item['performer']
   native['recordings'][0]['frames']=123;index.write_text(json.dumps(native))
   with self.assertRaisesRegex(ValueError,'metadata mismatch'):load_index(self.root,index,self.config)
  def test_nonzero_parent_validity_is_not_observation_origin(self):
   for origin in [501.25,901.5,751.75,7.25,241.5,591.75]:
    self.j.write_text(json.dumps(dict(annotations=[dict(namespace='note_midi',time=origin,duration=2,data=[dict(time=.25,duration=.5,value=44.125,confidence=None)])])))
    notes,schema=parse_jams(self.j,2);self.assertEqual(notes[0]['onsetMs'],250);self.assertEqual(notes[0]['durationMs'],500);self.assertEqual(schema['observationRangeSeconds'],[.25,.75]);self.assertEqual(schema['annotationValiditySpans'][0]['time'],origin);self.assertTrue(schema['warnings'])
+ def test_native_missing_player_alias_rejected_explicitly(self):
+  index=self.root/'manifest.json';index.write_text(json.dumps(dict(recordings=[dict(archive_path='00_BN1-120-C_solo_mic.wav',annotation=dict(archive_path='00_BN1-120-C_solo.jams'))])))
+  with self.assertRaisesRegex(ValueError,'requires performer or player_id'):load_index(self.root,index,self.config)
  def test_known_errata_rejected(self):
   idx=self.root/'index.json';idx.write_text(json.dumps(dict(schema='muisa-r1-local-v1',license='CC0',provenance='synthetic',recordings=[dict(id=self.config['excludedRecordings'][0])])))
   with self.assertRaisesRegex(ValueError,'erratum'):load_index(self.root,idx,self.config)
