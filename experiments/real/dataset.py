@@ -19,10 +19,14 @@ def parse_jams(path,audio_duration):
  namespace='note_midi' if any(a.get('namespace')=='note_midi' for a in annotations) else 'pitch_midi'
  tracks=[a for a in annotations if a.get('namespace')==namespace]
  if not tracks:raise ValueError('No note_midi or pitch_midi annotation')
- notes=[];seen=set();warnings=[]
+ notes=[];seen=set();warnings=[];annotation_spans=[]
  for track_index,track in enumerate(tracks):
   if not isinstance(track.get('data'),list):raise ValueError('Note annotation data must be an array')
-  if track.get('time',0) not in [0,0.0,None]:raise ValueError('Nonzero annotation origin requires explicit review')
+  span=dict(time=track.get('time'),duration=track.get('duration'))
+  for value in span.values():
+   if value is not None and (isinstance(value,bool) or not isinstance(value,(int,float)) or not math.isfinite(value) or value<0):raise ValueError('Invalid annotation validity metadata')
+  annotation_spans.append(span)
+  if span['time'] not in [None,0]:warnings.append('Nonzero annotation validity time retained; observation times used directly per official GuitarSet reader')
   for row in track['data']:
    values=[row.get(k) for k in ['time','duration','value']]
    if any(isinstance(x,bool) or not isinstance(x,(int,float)) or not math.isfinite(x) for x in values):raise ValueError('Invalid numeric JAMS note')
@@ -36,7 +40,7 @@ def parse_jams(path,audio_duration):
  if len(tracks)!=6:warnings.append(f'Expected six GuitarSet string tracks, found {len(tracks)}; inspect schema')
  duration=doc.get('file_metadata',{}).get('duration')
  if isinstance(duration,(int,float)) and abs(duration-audio_duration)>.1:warnings.append('JAMS file duration differs from WAV by >100ms')
- return notes,dict(namespace=namespace,trackCount=len(tracks),annotationCount=len(annotations),namespaces=sorted(set(a.get('namespace','') for a in annotations)),warnings=warnings)
+ return notes,dict(annotationValiditySpans=annotation_spans,observationRangeSeconds=[min(n['onsetMs'] for n in notes)/1000,max(n['onsetMs']+n['durationMs'] for n in notes)/1000],observationTimeSemantics='direct clip-local observation times; no annotation.time translation',namespace=namespace,trackCount=len(tracks),annotationCount=len(annotations),namespaces=sorted(set(a.get('namespace','') for a in annotations)),warnings=warnings)
 
 def reference_grid(notes,duration_ms,config):
  grid=[];reference=[];eligible=[];reason=[]

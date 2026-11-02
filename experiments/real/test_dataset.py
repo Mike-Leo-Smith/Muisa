@@ -31,6 +31,10 @@ class DatasetTests(unittest.TestCase):
   index=self.root/'manifest.json';index.write_text(json.dumps(native));rows,_=load_index(self.root,index,self.config);self.assertEqual(rows[0]['style'],'Bossa Nova');self.assertEqual(rows[0]['notes'][0]['midi'],60.12)
   native['recordings'][0]['frames']=123;index.write_text(json.dumps(native))
   with self.assertRaisesRegex(ValueError,'metadata mismatch'):load_index(self.root,index,self.config)
+ def test_nonzero_parent_validity_is_not_observation_origin(self):
+  for origin in [501.25,901.5,751.75,7.25,241.5,591.75]:
+   self.j.write_text(json.dumps(dict(annotations=[dict(namespace='note_midi',time=origin,duration=2,data=[dict(time=.25,duration=.5,value=44.125,confidence=None)])])))
+   notes,schema=parse_jams(self.j,2);self.assertEqual(notes[0]['onsetMs'],250);self.assertEqual(notes[0]['durationMs'],500);self.assertEqual(schema['observationRangeSeconds'],[.25,.75]);self.assertEqual(schema['annotationValiditySpans'][0]['time'],origin);self.assertTrue(schema['warnings'])
  def test_known_errata_rejected(self):
   idx=self.root/'index.json';idx.write_text(json.dumps(dict(schema='muisa-r1-local-v1',license='CC0',provenance='synthetic',recordings=[dict(id=self.config['excludedRecordings'][0])])))
   with self.assertRaisesRegex(ValueError,'erratum'):load_index(self.root,idx,self.config)

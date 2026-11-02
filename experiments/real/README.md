@@ -85,7 +85,7 @@ prepare拒绝覆盖现有prepared工作目录；要恢复只重跑model命令。
 
 ## 本地验证证据
 
-七项stdlib接口测试已执行：浮点音高/null confidence、拒绝重复/非法时长、共用边界/重叠mask、路径越界、hash失败、errata拒绝。三平台快CI运行这些测试；不会安装模型或拉数据。
+八项stdlib接口测试已执行：浮点音高/null confidence、拒绝重复/非法时长、共用边界/重叠mask、路径越界、hash失败、errata拒绝。三平台快CI运行这些测试；不会安装模型或拉数据。
 
 完整模型接口用自建3秒混合单音/重叠片段跑通，独立命令：
 
@@ -95,3 +95,9 @@ python3 experiments/real/smoke_fixture.py /tmp/r1-synthetic-data
 ```
 
 然后对synthetic-work执行相同四个inference/report命令。最终status必须为`synthetic-interface-test-only`，不能改名成真实结果。
+
+### GuitarSet非零annotation.time修正
+
+[JAMS结构定义](https://jams.readthedocs.io/en/stable/jams_structure.html)把父annotation.time/duration定义为可选的标注有效区间元数据，observation.time/duration单独定义观测区间；它不是要求对data.time统一加上的相对原点。[GuitarSet官方reader](https://github.com/marl/GuitarSet/blob/master/visualize/interpreter.py)直接使用note.time和note.duration生成MIDI/绘图，没有加减父time。
+
+本子集出现父time远大于clip时长、而全部观测落在clip范围的情况。此前拒绝非零父time过于严格，已修正为保留并报告父有效区间元数据，按官方reader直接读取观测时间；不猜测该元数据来自哪段原始录音，不盲目平移或裁剪。每条观测仍经过WAV范围校验，schema输出记录完整观测min/max与父span，非零父time作为已知审计warning。其他schema warning仍需检查。八项接口测试包括使用自造非零父time和clip局部观测的回归。
