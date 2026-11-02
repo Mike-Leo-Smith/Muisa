@@ -1,0 +1,11 @@
+{
+  "artifact": "original T0 120-step model, frozen before audit fixes",
+  "trainingCodeRevision": "cbdc9a1ef984058f8faf321c058483e7be411b03",
+  "trainingSteps": 120,
+  "checkpointSha256": "f53132eb431f0cce7fccc481b9613e0347c0ebd1e2133b42332fc90e55f86de2",
+  "onnxSha256": "82c51d63b7504f02c48b4adee5a7b384e3dfb5a6a5a914db8af9cb41527f11b3",
+  "configSha256": "7355a61101bc4f813562053150c35c7e0a24acf5159578f85f89c4184b0ade71",
+  "evaluation": "frame activity and mono MIDI only; no defined onset-to-event decoder or note F1",
+  "artifactDelivery": "private; binary weights and audio are not in repository",
+  "retrainedAfterAudit": false
+}

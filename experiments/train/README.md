@@ -17,3 +17,9 @@ python3 -m venv /path/to/t0-env
 限制：配置最多120步、训练loop120秒、2CPU线程、batch4；不自动扩大训练预算。测试包括shape/gradient、无标签mask零损失、prefix因果性、逐hop与整chunk状态一致性；run导出显式状态ONNX并用CPU Runtime比较多个chunk长度的logits和下一状态。仅保存本次自训练state_dict，不能加载不可信pickle。
 
 生成weights/ONNX/日志留本地reports，不提交大权重。`results.json`包含参数数、固定DFT buffer体积、实际步数/时长、训练batch初末loss、每头loss、ONNX大小/哈希与误差。固定DFT矩阵可能让导出文件远大于可训练参数；训练成功不意味着浏览器/WASM能高效执行该前端。所有真实准确率、泛化、平台延迟和教学效果均未验证。
+
+## 原模型冻结与审计修复
+
+首次120步权重按 [frozen-t0.json](frozen-t0.json) 固定，私有交付，未重训。第一轮真实音频诊断遵守 [固定帧级协议](FRAME_EVALUATION.md)：activity阈值0.5、argmax MIDI、右对齐hop结束时刻、latest-available≤grid、无未来插值；没有已定义event decoder，不报告note F1。跨ORT版本先用私有固定向量检查数值/状态，不静默放宽容差。
+
+后续源码分别修复：精确hop边界onset归属；先选有效mask再计算loss（忽略非法/NaN占位，监督区非法目标拒绝）；拒绝空/非整hop chunk与非法state。ONNX图自身不含Python断言，`inference.py`提供同等host校验和warmup时标。八项独立T0回归通过，包括临时随机模型导出/host检查；该临时模型不是新训练checkpoint，也未覆盖原模型。
