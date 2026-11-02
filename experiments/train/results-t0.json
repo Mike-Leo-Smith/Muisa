@@ -1,0 +1,236 @@
+{
+  "status": "synthetic-single-batch-training-smoke-only-not-recognition-improvement",
+  "codeRevision": "cbdc9a1ef984058f8faf321c058483e7be411b03",
+  "config": {
+    "protocol": "T0-causal-three-head-smoke-v1",
+    "seed": 20261102,
+    "sampleRateHz": 16000,
+    "windowSamples": 1024,
+    "hopSamples": 256,
+    "channels": 32,
+    "dilations": [
+      1,
+      2,
+      4
+    ],
+    "midiMin": 36,
+    "midiMax": 84,
+    "threads": 2,
+    "maxSteps": 120,
+    "maxTrainingSeconds": 120,
+    "batchSize": 4,
+    "clipSeconds": 2.048,
+    "learningRate": 0.003,
+    "lossWeights": {
+      "activity": 1.0,
+      "pitch": 1.0,
+      "onset": 1.0
+    },
+    "onsetPositiveWeight": 8.0,
+    "gradientClipNorm": 5.0,
+    "onnxOpset": 17,
+    "exportAbsoluteTolerance": 0.0001,
+    "exportRelativeTolerance": 0.0001,
+    "device": "cpu",
+    "deploymentStatus": "not-deployed"
+  },
+  "configSha256": "7355a61101bc4f813562053150c35c7e0a24acf5159578f85f89c4184b0ade71",
+  "data": {
+    "source": "self-generated harmonic PCM, not high-fidelity instrument or speech",
+    "split": "training-smoke-only",
+    "notes": [
+      [
+        {
+          "midi": 40,
+          "startSample": 2400,
+          "endSample": 8480
+        },
+        {
+          "midi": 45,
+          "startSample": 12000,
+          "endSample": 18080
+        },
+        {
+          "midi": 50,
+          "startSample": 21600,
+          "endSample": 27680
+        }
+      ],
+      [
+        {
+          "midi": 55,
+          "startSample": 2400,
+          "endSample": 8480
+        },
+        {
+          "midi": 59,
+          "startSample": 12000,
+          "endSample": 18080
+        },
+        {
+          "midi": 64,
+          "startSample": 21600,
+          "endSample": 27680
+        }
+      ],
+      [
+        {
+          "midi": 64,
+          "startSample": 2400,
+          "endSample": 8480
+        },
+        {
+          "midi": 65,
+          "startSample": 12000,
+          "endSample": 18080
+        },
+        {
+          "midi": 67,
+          "startSample": 21600,
+          "endSample": 27680
+        }
+      ],
+      []
+    ],
+    "clipSamples": 32768
+  },
+  "parameters": 19667,
+  "nonTrainableDftValues": 1050624,
+  "trainingSteps": 120,
+  "trainingWallSeconds": 1.6015044860014314,
+  "peakRssKiB": 411408,
+  "initialLoss": 5.30183744430542,
+  "initialHeads": {
+    "activity": 0.6860411763191223,
+    "onset": 0.7003503441810608,
+    "pitch": 3.9154460430145264
+  },
+  "finalLoss": 0.4587634205818176,
+  "finalHeads": {
+    "activity": 0.2499510645866394,
+    "onset": 0.1910822093486786,
+    "pitch": 0.01773015968501568
+  },
+  "history": [
+    {
+      "step": 1,
+      "lossBeforeUpdate": 5.30183744430542,
+      "heads": {
+        "activity": 0.6860411763191223,
+        "onset": 0.7003503441810608,
+        "pitch": 3.9154460430145264
+      }
+    },
+    {
+      "step": 21,
+      "lossBeforeUpdate": 3.2067413330078125,
+      "heads": {
+        "activity": 0.6833664774894714,
+        "onset": 0.4197530448436737,
+        "pitch": 2.1036219596862793
+      }
+    },
+    {
+      "step": 41,
+      "lossBeforeUpdate": 3.092254400253296,
+      "heads": {
+        "activity": 0.670607328414917,
+        "onset": 0.3933265209197998,
+        "pitch": 2.028320550918579
+      }
+    },
+    {
+      "step": 61,
+      "lossBeforeUpdate": 2.534223794937134,
+      "heads": {
+        "activity": 0.5190951824188232,
+        "onset": 0.33459216356277466,
+        "pitch": 1.6805365085601807
+      }
+    },
+    {
+      "step": 81,
+      "lossBeforeUpdate": 1.4149051904678345,
+      "heads": {
+        "activity": 0.33576861023902893,
+        "onset": 0.2796366512775421,
+        "pitch": 0.7994999289512634
+      }
+    },
+    {
+      "step": 101,
+      "lossBeforeUpdate": 0.6723634004592896,
+      "heads": {
+        "activity": 0.26452815532684326,
+        "onset": 0.24346420168876648,
+        "pitch": 0.16437098383903503
+      }
+    },
+    {
+      "step": 120,
+      "lossBeforeUpdate": 0.4608907401561737,
+      "heads": {
+        "activity": 0.2432699352502823,
+        "onset": 0.1988263875246048,
+        "pitch": 0.01879441924393177
+      }
+    }
+  ],
+  "onnxBytes": 4293283,
+  "onnxSha256": "82c51d63b7504f02c48b4adee5a7b384e3dfb5a6a5a914db8af9cb41527f11b3",
+  "onnxStateChecks": [
+    {
+      "hops": 1,
+      "maxAbsoluteErrorsLogitsPcmFeature": [
+        1.1920928955078125e-06,
+        0.0,
+        2.384185791015625e-07
+      ]
+    },
+    {
+      "hops": 3,
+      "maxAbsoluteErrorsLogitsPcmFeature": [
+        5.7220458984375e-06,
+        0.0,
+        1.1920928955078125e-06
+      ]
+    },
+    {
+      "hops": 7,
+      "maxAbsoluteErrorsLogitsPcmFeature": [
+        7.62939453125e-06,
+        0.0,
+        1.9073486328125e-06
+      ]
+    },
+    {
+      "hops": 1,
+      "maxAbsoluteErrorsLogitsPcmFeature": [
+        3.814697265625e-06,
+        0.0,
+        1.9073486328125e-06
+      ]
+    },
+    {
+      "hops": 4,
+      "maxAbsoluteErrorsLogitsPcmFeature": [
+        7.62939453125e-06,
+        0.0,
+        1.9073486328125e-06
+      ]
+    }
+  ],
+  "versions": {
+    "torch": "2.7.1+cpu",
+    "onnx": "1.18.0",
+    "onnxruntime": "1.22.0"
+  },
+  "limitations": [
+    "Training-batch loss only, no accuracy or holdout claim",
+    "No actual sampled or real-recorded guitar training yet",
+    "No fine F0 head; no poly pitch supervision",
+    "ONNX CPU checked; WASM and browser streaming untested",
+    "Fixed DFT export stores a large nontrainable matrix despite small learned parameter count",
+    "N1 inputs not used for training"
+  ]
+}

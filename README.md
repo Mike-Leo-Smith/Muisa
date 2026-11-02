@@ -36,7 +36,7 @@ npm start
 ## 测试与 CI
 
 ```sh
-npm test                   # PCM 算法、生命周期与指标：42 项
+npm test                   # PCM 算法、生命周期与指标：44 项
 npm run build              # JS 语法检查 + dist 静态应用
 npm run fixtures           # 生成 6 个本地 PCM16 WAV
 npm run test:report         # JUnit 报告写入 reports/unit.xml
@@ -76,3 +76,5 @@ GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试
 同一 CI 的 deploy job 依赖三平台 core 与 browser 全部成功；只 master 的 push / 手动触发可发布，PR 不部署。browser job 在 `/` 与 `/Muisa/` 两个路径运行同样检查，然后上传它实际测试过的 dist；发布 job 不重新构建。首次需仓库管理员将 Settings → Pages → Build and deployment → Source 设为 GitHub Actions。普通 GITHUB_TOKEN 不能首次启用站点，本项目不要求生成 PAT。
 
 部署后工作流使用官方返回的 page_url 验证 HTTPS、version.json 提交 SHA 以及每个静态资源 hash。麦克风仍必须用户主动授权，音频不上传；远端假麦克风测试不代表用户设备已通过。没有 WASM / SharedArrayBuffer，也不需要额外 COOP/COEP 或 service worker。
+
+独立训练管线试验见 [T0](experiments/train/README.md) 与 [首次结果](experiments/train/RESULTS_T0.md)：只验证有限CPU训练和ONNX一致性，尚无真实准确率改进，不接入网页。
