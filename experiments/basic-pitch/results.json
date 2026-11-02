@@ -1,0 +1,484 @@
+{
+  "experiment": "B1 Basic Pitch ONNX offline note transcription, synthetic only",
+  "python": "3.12.14",
+  "basicPitch": "0.4.0",
+  "onnxruntime": "1.23.2",
+  "mirEval": "0.8.2",
+  "modelSha256": "2c3c1d144bfa61ad236e92e169c13535c880469a12a047d4e73451f2c059a0ec",
+  "modelBytes": 230444,
+  "inputManifest": {
+    "sampleRateHz": 22050,
+    "cases": [
+      {
+        "id": "mono-clean",
+        "file": "clean.wav",
+        "notes": [
+          {
+            "midi": 52,
+            "onsetMs": 200,
+            "durationMs": 400
+          },
+          {
+            "midi": 64,
+            "onsetMs": 850,
+            "durationMs": 400
+          },
+          {
+            "midi": 67,
+            "onsetMs": 1500,
+            "durationMs": 400
+          }
+        ],
+        "sha256": "ad5163129cec4ed7dfee118c0ffe41982a8a6085282e80182b37ff68d94bde20",
+        "noiseGain": 0,
+        "snrDb": null
+      },
+      {
+        "id": "mono-noise-10",
+        "file": "noise-10.wav",
+        "notes": [
+          {
+            "midi": 52,
+            "onsetMs": 200,
+            "durationMs": 400
+          },
+          {
+            "midi": 64,
+            "onsetMs": 850,
+            "durationMs": 400
+          },
+          {
+            "midi": 67,
+            "onsetMs": 1500,
+            "durationMs": 400
+          }
+        ],
+        "sha256": "74a1a54e3f5f32b7d00b9ba44ccfac75b6e381ae45175b1e1fb678bc14e97a79",
+        "noiseGain": 0.4691499900392327,
+        "snrDb": 10
+      },
+      {
+        "id": "mono-noise-only",
+        "file": "noise-only.wav",
+        "notes": [],
+        "sha256": "522223584b8106482bdca60a8d6edecfd44bfdc4bc9da613a3ef38a19513c843",
+        "noiseGain": 1,
+        "snrDb": null
+      },
+      {
+        "id": "mono-silence",
+        "file": "silence.wav",
+        "notes": [],
+        "sha256": "8f245649e1e94d36965a9ddfe7bfa6c15449a39e461cfceefbae1e29bdbde162",
+        "noiseGain": 0,
+        "snrDb": null
+      },
+      {
+        "id": "triads-clean",
+        "file": "triads-clean.wav",
+        "notes": [
+          {
+            "midi": 48,
+            "onsetMs": 200,
+            "durationMs": 700
+          },
+          {
+            "midi": 52,
+            "onsetMs": 200,
+            "durationMs": 700
+          },
+          {
+            "midi": 55,
+            "onsetMs": 200,
+            "durationMs": 700
+          },
+          {
+            "midi": 55,
+            "onsetMs": 1300,
+            "durationMs": 700
+          },
+          {
+            "midi": 59,
+            "onsetMs": 1300,
+            "durationMs": 700
+          },
+          {
+            "midi": 62,
+            "onsetMs": 1300,
+            "durationMs": 700
+          }
+        ],
+        "sha256": "2f30bb7bebf1e9d872efb42e7f08fcaf7c1235c9869bac7d3716cd1e5d452df9",
+        "snrDb": null,
+        "noiseGain": 0
+      },
+      {
+        "id": "triads-noise10",
+        "file": "triads-noise10.wav",
+        "notes": [
+          {
+            "midi": 48,
+            "onsetMs": 200,
+            "durationMs": 700
+          },
+          {
+            "midi": 52,
+            "onsetMs": 200,
+            "durationMs": 700
+          },
+          {
+            "midi": 55,
+            "onsetMs": 200,
+            "durationMs": 700
+          },
+          {
+            "midi": 55,
+            "onsetMs": 1300,
+            "durationMs": 700
+          },
+          {
+            "midi": 59,
+            "onsetMs": 1300,
+            "durationMs": 700
+          },
+          {
+            "midi": 62,
+            "onsetMs": 1300,
+            "durationMs": 700
+          }
+        ],
+        "sha256": "825ef904ab8a53b4d9370e8de70001aa721b0a701cd6bec6afc6d274c7e5e885",
+        "snrDb": 10,
+        "noiseGain": 0.27300699528342043
+      }
+    ],
+    "seed": 123,
+    "license": "self-generated mathematical audio"
+  },
+  "loadMs": 18.778043000565958,
+  "warmupMs": 712.9143930005739,
+  "audioWindowSamples": 43844,
+  "sampleRateHz": 22050,
+  "frameHop": 256,
+  "thresholds": {
+    "onset": 0.5,
+    "frame": 0.3,
+    "minNoteMs": 127.7
+  },
+  "threadLimits": {
+    "intra": 2,
+    "inter": 1
+  },
+  "rows": [
+    {
+      "id": "mono-clean",
+      "warnings": [],
+      "inputSha256": "ad5163129cec4ed7dfee118c0ffe41982a8a6085282e80182b37ff68d94bde20",
+      "referenceCount": 3,
+      "predictedCount": 3,
+      "metrics": {
+        "onsetPitch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "averageOverlap": 0.8838009235829959
+        },
+        "onsetPitchOffset": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "averageOverlap": 0.8838009235829959
+        }
+      },
+      "wholeClipComputeMs": [
+        49.0392530000463,
+        53.59102700003859,
+        59.53484300061973
+      ],
+      "wholeClipCpuMs": [
+        97.03317999999994,
+        109.48404999999983,
+        119.53934300000002
+      ],
+      "processPeakRssKiB": 304240,
+      "predictions": [
+        {
+          "onsetMs": 847.5283446712018,
+          "durationMs": 441.1791383219954,
+          "midi": 64,
+          "modelAmplitude": 0.7387478351593018
+        },
+        {
+          "onsetMs": 197.36961451247166,
+          "durationMs": 452.7891156462585,
+          "midi": 52,
+          "modelAmplitude": 0.7225059866905212
+        },
+        {
+          "onsetMs": 1474.467120181406,
+          "durationMs": 464.3990929705215,
+          "midi": 67,
+          "modelAmplitude": 0.7508428692817688
+        }
+      ]
+    },
+    {
+      "id": "mono-noise-10",
+      "warnings": [],
+      "inputSha256": "74a1a54e3f5f32b7d00b9ba44ccfac75b6e381ae45175b1e1fb678bc14e97a79",
+      "referenceCount": 3,
+      "predictedCount": 3,
+      "metrics": {
+        "onsetPitch": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "averageOverlap": 0.9279380206526241
+        },
+        "onsetPitchOffset": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "averageOverlap": 0.9279380206526241
+        }
+      },
+      "wholeClipComputeMs": [
+        44.64186699988204,
+        47.07480199976999,
+        49.525063000146474
+      ],
+      "wholeClipCpuMs": [
+        88.62590300000006,
+        95.0538200000004,
+        101.5311109999999
+      ],
+      "processPeakRssKiB": 304368,
+      "predictions": [
+        {
+          "onsetMs": 1486.077097505669,
+          "durationMs": 429.56916099773235,
+          "midi": 67,
+          "modelAmplitude": 0.5737866163253784
+        },
+        {
+          "onsetMs": 197.36961451247166,
+          "durationMs": 429.5691609977324,
+          "midi": 52,
+          "modelAmplitude": 0.6282438635826111
+        },
+        {
+          "onsetMs": 824.3083900226758,
+          "durationMs": 417.9591836734693,
+          "midi": 64,
+          "modelAmplitude": 0.5827099680900574
+        }
+      ]
+    },
+    {
+      "id": "mono-noise-only",
+      "warnings": [],
+      "inputSha256": "522223584b8106482bdca60a8d6edecfd44bfdc4bc9da613a3ef38a19513c843",
+      "referenceCount": 0,
+      "predictedCount": 0,
+      "metrics": {
+        "noReference": true,
+        "falseNotesPerMinute": 0.0
+      },
+      "wholeClipComputeMs": [
+        44.475920999502705,
+        45.23151100056566,
+        45.482391999939864
+      ],
+      "wholeClipCpuMs": [
+        88.46781700000017,
+        89.28982200000002,
+        93.42951999999994
+      ],
+      "processPeakRssKiB": 304368,
+      "predictions": []
+    },
+    {
+      "id": "mono-silence",
+      "warnings": [
+        "invalid value encountered in divide"
+      ],
+      "inputSha256": "8f245649e1e94d36965a9ddfe7bfa6c15449a39e461cfceefbae1e29bdbde162",
+      "referenceCount": 0,
+      "predictedCount": 0,
+      "metrics": {
+        "noReference": true,
+        "falseNotesPerMinute": 0.0
+      },
+      "wholeClipComputeMs": [
+        44.83134800011612,
+        47.543145999952685,
+        44.749667000360205
+      ],
+      "wholeClipCpuMs": [
+        88.81556399999991,
+        95.53563800000032,
+        88.75324199999967
+      ],
+      "processPeakRssKiB": 304368,
+      "predictions": []
+    },
+    {
+      "id": "triads-clean",
+      "warnings": [],
+      "inputSha256": "2f30bb7bebf1e9d872efb42e7f08fcaf7c1235c9869bac7d3716cd1e5d452df9",
+      "referenceCount": 6,
+      "predictedCount": 7,
+      "metrics": {
+        "onsetPitch": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.923076923076923,
+          "averageOverlap": 0.9585865996258756
+        },
+        "onsetPitchOffset": {
+          "precision": 0.8571428571428571,
+          "recall": 1.0,
+          "f1": 0.923076923076923,
+          "averageOverlap": 0.9585865996258756
+        }
+      },
+      "wholeClipComputeMs": [
+        46.245663999798126,
+        50.67343399969104,
+        46.14721699999791
+      ],
+      "wholeClipCpuMs": [
+        90.23727300000006,
+        102.6215960000001,
+        90.04432800000029
+      ],
+      "processPeakRssKiB": 304496,
+      "predictions": [
+        {
+          "onsetMs": 1300.3174603174602,
+          "durationMs": 744.3224489795916,
+          "midi": 62,
+          "modelAmplitude": 0.737623929977417
+        },
+        {
+          "onsetMs": 1300.3174603174602,
+          "durationMs": 721.1024943310656,
+          "midi": 59,
+          "modelAmplitude": 0.7389589548110962
+        },
+        {
+          "onsetMs": 1300.3174603174602,
+          "durationMs": 732.7124716553288,
+          "midi": 55,
+          "modelAmplitude": 0.6224608421325684
+        },
+        {
+          "onsetMs": 197.36961451247166,
+          "durationMs": 743.0385487528343,
+          "midi": 55,
+          "modelAmplitude": 0.6912972927093506
+        },
+        {
+          "onsetMs": 197.36961451247166,
+          "durationMs": 731.4285714285716,
+          "midi": 52,
+          "modelAmplitude": 0.6950039267539978
+        },
+        {
+          "onsetMs": 197.36961451247166,
+          "durationMs": 708.2086167800454,
+          "midi": 48,
+          "modelAmplitude": 0.5602467060089111
+        },
+        {
+          "onsetMs": 476.0090702947846,
+          "durationMs": 208.97959183673476,
+          "midi": 74,
+          "modelAmplitude": 0.3084631562232971
+        }
+      ]
+    },
+    {
+      "id": "triads-noise10",
+      "warnings": [],
+      "inputSha256": "825ef904ab8a53b4d9370e8de70001aa721b0a701cd6bec6afc6d274c7e5e885",
+      "referenceCount": 6,
+      "predictedCount": 8,
+      "metrics": {
+        "onsetPitch": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "averageOverlap": 0.9812824567258449
+        },
+        "onsetPitchOffset": {
+          "precision": 0.75,
+          "recall": 1.0,
+          "f1": 0.8571428571428571,
+          "averageOverlap": 0.9812824567258449
+        }
+      },
+      "wholeClipComputeMs": [
+        45.83293100040464,
+        45.847774000321806,
+        48.13585400006559
+      ],
+      "wholeClipCpuMs": [
+        89.73071999999993,
+        93.85120800000024,
+        96.17790500000024
+      ],
+      "processPeakRssKiB": 304496,
+      "predictions": [
+        {
+          "onsetMs": 1300.3174603174602,
+          "durationMs": 697.8825396825395,
+          "midi": 62,
+          "modelAmplitude": 0.5066609382629395
+        },
+        {
+          "onsetMs": 1300.3174603174602,
+          "durationMs": 686.2725623582766,
+          "midi": 55,
+          "modelAmplitude": 0.5066699981689453
+        },
+        {
+          "onsetMs": 1288.7074829931973,
+          "durationMs": 721.1024943310657,
+          "midi": 59,
+          "modelAmplitude": 0.5612719058990479
+        },
+        {
+          "onsetMs": 208.9795918367347,
+          "durationMs": 708.2086167800454,
+          "midi": 52,
+          "modelAmplitude": 0.5728693604469299
+        },
+        {
+          "onsetMs": 197.36961451247166,
+          "durationMs": 708.2086167800454,
+          "midi": 55,
+          "modelAmplitude": 0.519790530204773
+        },
+        {
+          "onsetMs": 197.36961451247166,
+          "durationMs": 696.5986394557824,
+          "midi": 48,
+          "modelAmplitude": 0.5031775236129761
+        },
+        {
+          "onsetMs": 1439.6371882086166,
+          "durationMs": 406.34920634920644,
+          "midi": 43,
+          "modelAmplitude": 0.38000980019569397
+        },
+        {
+          "onsetMs": 510.83900226757373,
+          "durationMs": 232.19954648526075,
+          "midi": 36,
+          "modelAmplitude": 0.3760969638824463
+        }
+      ]
+    }
+  ]
+}
