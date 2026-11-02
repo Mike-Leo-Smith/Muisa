@@ -1,0 +1,752 @@
+{
+  "experiment": "M1 GM guitar MIDI and early reflections, not real guitar",
+  "sampleRateHz": 22050,
+  "bank": {
+    "name": "TimGM6mb.sf2",
+    "sha256": "c5378b62028c920cb11e4803327983fee2f2cdff5dc89c708e39da417e51c854",
+    "bytes": 5969788,
+    "license": "GPL-2; installed Debian timgm6mb-soundfont, no audio redistribution"
+  },
+  "renderer": {
+    "name": "FluidSynth",
+    "version": "2.4.4",
+    "program": 25,
+    "gain": 0.6,
+    "reverb": false,
+    "chorus": false
+  },
+  "room": {
+    "packageVersion": "0.10.1",
+    "dimensionsM": [
+      4,
+      5,
+      2.7
+    ],
+    "sourceM": [
+      1.2,
+      1.3,
+      1.2
+    ],
+    "micM": [
+      1.7,
+      1.3,
+      1.2
+    ],
+    "absorption": 0.35,
+    "maxOrder": 6,
+    "rirSamples": 2011,
+    "rirSha256": "a8ec9406cc53a3948a4d35e26f84a455aed928a1c73d9a2aae9aa48922935c79",
+    "fractionalDelaySamples": 40,
+    "soundSpeed": 343.0
+  },
+  "cases": [
+    {
+      "id": "separated-dry-clean",
+      "file": "separated-dry-clean.wav",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 900,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 900,
+          "performedOnsetMs": 900,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1600,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 1600,
+          "performedOnsetMs": 1600,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "bea41bb476125e732087c6944dc8a2da49e323ffc7f6a5089a28aab01a390fbe",
+      "drySha256": "492b3e6a53493e31ffbe71ce5998544376f829be6f2312fc8c6a1eaee78cb534",
+      "midiSha256": "074e8169d38f6b2482b683302a7050e336a8ec668c39ff704c0bcff648f2bd64",
+      "groupId": "separated",
+      "split": "development",
+      "polyphonic": false,
+      "sampleRateHz": 22050,
+      "frames": 67253,
+      "peak": 0.092071533203125,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "captureDelayMs": 0,
+      "roomFamily": "bypass"
+    },
+    {
+      "id": "separated-dry-noise10",
+      "file": "separated-dry-noise10.wav",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 900,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 900,
+          "performedOnsetMs": 900,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1600,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 1600,
+          "performedOnsetMs": 1600,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "aeb39b16ba97835458f784322d2258b3d688a36a3690b8b40fdc41d90ba4af66",
+      "drySha256": "492b3e6a53493e31ffbe71ce5998544376f829be6f2312fc8c6a1eaee78cb534",
+      "midiSha256": "074e8169d38f6b2482b683302a7050e336a8ec668c39ff704c0bcff648f2bd64",
+      "groupId": "separated",
+      "split": "development",
+      "polyphonic": false,
+      "sampleRateHz": 22050,
+      "frames": 67253,
+      "peak": 0.10052915251788223,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.007532516851572872,
+      "seed": 123,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "captureDelayMs": 0,
+      "roomFamily": "bypass"
+    },
+    {
+      "id": "separated-room-clean",
+      "file": "separated-room-clean.wav",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 903.2717849044379,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 900,
+          "performedOnsetMs": 900,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1603.271784904438,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 1600,
+          "performedOnsetMs": 1600,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "530c6d60c5f8377ae37953250dff375ab4e8837c60394af8b0034238148c03e2",
+      "drySha256": "492b3e6a53493e31ffbe71ce5998544376f829be6f2312fc8c6a1eaee78cb534",
+      "midiSha256": "074e8169d38f6b2482b683302a7050e336a8ec668c39ff704c0bcff648f2bd64",
+      "groupId": "separated",
+      "split": "development",
+      "polyphonic": false,
+      "sampleRateHz": 22050,
+      "frames": 69263,
+      "peak": 0.18601061891127116,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "captureDelayMs": 0,
+      "roomFamily": "shoebox-ism-order6"
+    },
+    {
+      "id": "separated-room-noise10",
+      "file": "separated-room-noise10.wav",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 903.2717849044379,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 900,
+          "performedOnsetMs": 900,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1603.271784904438,
+          "durationMs": 450,
+          "velocity": 90,
+          "scoreOnsetMs": 1600,
+          "performedOnsetMs": 1600,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "dff41591125eecdf5e3e35af8c113b81bac44bf9107ccf7230eee8f07e15e174",
+      "drySha256": "492b3e6a53493e31ffbe71ce5998544376f829be6f2312fc8c6a1eaee78cb534",
+      "midiSha256": "074e8169d38f6b2482b683302a7050e336a8ec668c39ff704c0bcff648f2bd64",
+      "groupId": "separated",
+      "split": "development",
+      "polyphonic": false,
+      "sampleRateHz": 22050,
+      "frames": 69263,
+      "peak": 0.229466890396388,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.015410853680290468,
+      "seed": 123,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "captureDelayMs": 0,
+      "roomFamily": "shoebox-ism-order6"
+    },
+    {
+      "id": "repeat-soft-dry-clean",
+      "file": "repeat-soft-dry-clean.wav",
+      "notes": [
+        {
+          "midi": 64,
+          "onsetMs": 200,
+          "durationMs": 350,
+          "velocity": 45,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 550,
+          "durationMs": 350,
+          "velocity": 65,
+          "scoreOnsetMs": 550,
+          "performedOnsetMs": 550,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 900,
+          "durationMs": 350,
+          "velocity": 90,
+          "scoreOnsetMs": 900,
+          "performedOnsetMs": 900,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "c260adb719efd7b79ae08321cd4e0ad906cffd1c82d4b038dcde83be15551cac",
+      "drySha256": "1b23d811f83594f483d1a39b0093c4dcfecdd9e15fc9a4bf197c5c9196babac8",
+      "midiSha256": "83bfcf09ae3c2b044448164458b3adb1aa3c94ec11c7c85fbd42e7b3a69a9b15",
+      "groupId": "repeat-soft",
+      "split": "development",
+      "polyphonic": false,
+      "sampleRateHz": 22050,
+      "frames": 49612,
+      "peak": 0.0951995849609375,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "captureDelayMs": 0,
+      "roomFamily": "bypass"
+    },
+    {
+      "id": "repeat-soft-dry-noise10",
+      "file": "repeat-soft-dry-noise10.wav",
+      "notes": [
+        {
+          "midi": 64,
+          "onsetMs": 200,
+          "durationMs": 350,
+          "velocity": 45,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 550,
+          "durationMs": 350,
+          "velocity": 65,
+          "scoreOnsetMs": 550,
+          "performedOnsetMs": 550,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 900,
+          "durationMs": 350,
+          "velocity": 90,
+          "scoreOnsetMs": 900,
+          "performedOnsetMs": 900,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "12d521691b7d9b8d6957b5fd177bd01cea5ca395aca793cdb393774b1bff539d",
+      "drySha256": "1b23d811f83594f483d1a39b0093c4dcfecdd9e15fc9a4bf197c5c9196babac8",
+      "midiSha256": "83bfcf09ae3c2b044448164458b3adb1aa3c94ec11c7c85fbd42e7b3a69a9b15",
+      "groupId": "repeat-soft",
+      "split": "development",
+      "polyphonic": false,
+      "sampleRateHz": 22050,
+      "frames": 49612,
+      "peak": 0.09275011280302528,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.003998080870440563,
+      "seed": 123,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "captureDelayMs": 0,
+      "roomFamily": "bypass"
+    },
+    {
+      "id": "repeat-soft-room-clean",
+      "file": "repeat-soft-room-clean.wav",
+      "notes": [
+        {
+          "midi": 64,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 350,
+          "velocity": 45,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 553.2717849044379,
+          "durationMs": 350,
+          "velocity": 65,
+          "scoreOnsetMs": 550,
+          "performedOnsetMs": 550,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 903.2717849044379,
+          "durationMs": 350,
+          "velocity": 90,
+          "scoreOnsetMs": 900,
+          "performedOnsetMs": 900,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "6833e812c4c8699b6718e4b002d6dae305365bfe663fcade80b807faf2404716",
+      "drySha256": "1b23d811f83594f483d1a39b0093c4dcfecdd9e15fc9a4bf197c5c9196babac8",
+      "midiSha256": "83bfcf09ae3c2b044448164458b3adb1aa3c94ec11c7c85fbd42e7b3a69a9b15",
+      "groupId": "repeat-soft",
+      "split": "development",
+      "polyphonic": false,
+      "sampleRateHz": 22050,
+      "frames": 51622,
+      "peak": 0.18995626990208817,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "captureDelayMs": 0,
+      "roomFamily": "shoebox-ism-order6"
+    },
+    {
+      "id": "repeat-soft-room-noise10",
+      "file": "repeat-soft-room-noise10.wav",
+      "notes": [
+        {
+          "midi": 64,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 350,
+          "velocity": 45,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 553.2717849044379,
+          "durationMs": 350,
+          "velocity": 65,
+          "scoreOnsetMs": 550,
+          "performedOnsetMs": 550,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 64,
+          "onsetMs": 903.2717849044379,
+          "durationMs": 350,
+          "velocity": 90,
+          "scoreOnsetMs": 900,
+          "performedOnsetMs": 900,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "3e4b8552e94ad0b1d6a30340c05773e619325c67a142984111d6cacc255e09f1",
+      "drySha256": "1b23d811f83594f483d1a39b0093c4dcfecdd9e15fc9a4bf197c5c9196babac8",
+      "midiSha256": "83bfcf09ae3c2b044448164458b3adb1aa3c94ec11c7c85fbd42e7b3a69a9b15",
+      "groupId": "repeat-soft",
+      "split": "development",
+      "polyphonic": false,
+      "sampleRateHz": 22050,
+      "frames": 51622,
+      "peak": 0.2131799205685319,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.000000000000002,
+      "noiseGain": 0.008235779787626718,
+      "seed": 123,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "captureDelayMs": 0,
+      "roomFamily": "shoebox-ism-order6"
+    },
+    {
+      "id": "triads-dry-clean",
+      "file": "triads-dry-clean.wav",
+      "notes": [
+        {
+          "midi": 48,
+          "onsetMs": 200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 55,
+          "onsetMs": 200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 55,
+          "onsetMs": 1200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 59,
+          "onsetMs": 1200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 62,
+          "onsetMs": 1200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "04a27cec5bf188ada1936a5ea1b6b74e38865cb3b20a5e95e4f098a315887ae8",
+      "drySha256": "0f2193a81d90487d2639ceb854bc3ef4ec531c8884b222641d3acd3d0647bf7d",
+      "midiSha256": "d43d1bc05e037fa47a763782487f4f9b5a3397eb95632405f1ae7910b2690bc0",
+      "groupId": "triads",
+      "split": "development",
+      "polyphonic": true,
+      "sampleRateHz": 22050,
+      "frames": 61740,
+      "peak": 0.1348114013671875,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "captureDelayMs": 0,
+      "roomFamily": "bypass"
+    },
+    {
+      "id": "triads-dry-noise10",
+      "file": "triads-dry-noise10.wav",
+      "notes": [
+        {
+          "midi": 48,
+          "onsetMs": 200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 55,
+          "onsetMs": 200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 55,
+          "onsetMs": 1200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 59,
+          "onsetMs": 1200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 62,
+          "onsetMs": 1200,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "8e3fb47263ccbca370de50d3fb53bc22dc6de130978539b3f57a3406ed4a7ec3",
+      "drySha256": "0f2193a81d90487d2639ceb854bc3ef4ec531c8884b222641d3acd3d0647bf7d",
+      "midiSha256": "d43d1bc05e037fa47a763782487f4f9b5a3397eb95632405f1ae7910b2690bc0",
+      "groupId": "triads",
+      "split": "development",
+      "polyphonic": true,
+      "sampleRateHz": 22050,
+      "frames": 61740,
+      "peak": 0.1434693394753875,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.010123064189125293,
+      "seed": 123,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "captureDelayMs": 0,
+      "roomFamily": "bypass"
+    },
+    {
+      "id": "triads-room-clean",
+      "file": "triads-room-clean.wav",
+      "notes": [
+        {
+          "midi": 48,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 52,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 55,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 55,
+          "onsetMs": 1203.271784904438,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 59,
+          "onsetMs": 1203.271784904438,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 62,
+          "onsetMs": 1203.271784904438,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "0e6f178e49d0ac0a7dbca662aeedfc6ffa642591e494cb03a74eb8f286501c45",
+      "drySha256": "0f2193a81d90487d2639ceb854bc3ef4ec531c8884b222641d3acd3d0647bf7d",
+      "midiSha256": "d43d1bc05e037fa47a763782487f4f9b5a3397eb95632405f1ae7910b2690bc0",
+      "groupId": "triads",
+      "split": "development",
+      "polyphonic": true,
+      "sampleRateHz": 22050,
+      "frames": 63750,
+      "peak": 0.33496052646016505,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "captureDelayMs": 0,
+      "roomFamily": "shoebox-ism-order6"
+    },
+    {
+      "id": "triads-room-noise10",
+      "file": "triads-room-noise10.wav",
+      "notes": [
+        {
+          "midi": 48,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 52,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 55,
+          "onsetMs": 203.27178490443796,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 200,
+          "performedOnsetMs": 200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 55,
+          "onsetMs": 1203.271784904438,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 59,
+          "onsetMs": 1203.271784904438,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        },
+        {
+          "midi": 62,
+          "onsetMs": 1203.271784904438,
+          "durationMs": 600,
+          "velocity": 80,
+          "scoreOnsetMs": 1200,
+          "performedOnsetMs": 1200,
+          "renderAttackMs": null
+        }
+      ],
+      "sha256": "a11741be7a996abf96172126e8ae132a18c812e64d6e05acf5761140513ac2a1",
+      "drySha256": "0f2193a81d90487d2639ceb854bc3ef4ec531c8884b222641d3acd3d0647bf7d",
+      "midiSha256": "d43d1bc05e037fa47a763782487f4f9b5a3397eb95632405f1ae7910b2690bc0",
+      "groupId": "triads",
+      "split": "development",
+      "polyphonic": true,
+      "sampleRateHz": 22050,
+      "frames": 63750,
+      "peak": 0.3703013254884286,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.027753822663142257,
+      "seed": 123,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "captureDelayMs": 0,
+      "roomFamily": "shoebox-ism-order6"
+    }
+  ]
+}

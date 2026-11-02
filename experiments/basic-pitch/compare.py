@@ -1,3 +1,4 @@
+import os
 """Experimental ONNX-only adapter; package metadata still requests unavailable TF on py312."""
 import contextlib,hashlib,io,json,resource,time,sys,warnings,wave
 from pathlib import Path
@@ -13,7 +14,7 @@ class ControlledOnnx(Model):
   options=ort.SessionOptions();options.intra_op_num_threads=2;options.inter_op_num_threads=1
   self.model=ort.InferenceSession(str(path),sess_options=options,providers=['CPUExecutionProvider'])
 t=time.perf_counter();model=ControlledOnnx(ICASSP_2022_MODEL_PATH);load_ms=(time.perf_counter()-t)*1000
-root=Path('reports/basic-pitch');manifest=json.loads((root/'manifest.json').read_text())
+root=Path(os.environ.get('MUISA_INPUT','reports/basic-pitch'));manifest=json.loads((root/'manifest.json').read_text())
 with contextlib.redirect_stdout(io.StringIO()):
  t=time.perf_counter();predict(root/manifest['cases'][0]['file'],model);warm_ms=(time.perf_counter()-t)*1000
 rows=[]
@@ -40,5 +41,5 @@ for case in manifest['cases']:
  midi.write(str(root/(case['id']+'.mid')))
  rows.append(dict(id=case['id'],warnings=sorted(warning_messages),inputSha256=case['sha256'],referenceCount=len(ref),predictedCount=len(est),metrics=metrics,wholeClipComputeMs=wall,wholeClipCpuMs=cpu,processPeakRssKiB=resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,predictions=[dict(onsetMs=float(e[0]*1000),durationMs=float((e[1]-e[0])*1000),midi=int(e[2]),modelAmplitude=float(e[3])) for e in events]))
 result=dict(experiment='B1 Basic Pitch ONNX offline note transcription, synthetic only',python=sys.version.split()[0],basicPitch='0.4.0',onnxruntime=ort.__version__,mirEval=mir_eval.__version__,modelSha256=MODEL_HASH,modelBytes=ICASSP_2022_MODEL_PATH.stat().st_size,inputManifest=manifest,loadMs=load_ms,warmupMs=warm_ms,audioWindowSamples=AUDIO_N_SAMPLES,sampleRateHz=AUDIO_SAMPLE_RATE,frameHop=FFT_HOP,thresholds=dict(onset=.5,frame=.3,minNoteMs=127.7),threadLimits=dict(intra=2,inter=1),rows=rows)
-Path('experiments/basic-pitch/results.json').write_text(json.dumps(result,indent=2)+'\n')
+Path(os.environ.get('MUISA_OUTPUT','experiments/basic-pitch/results.json')).write_text(json.dumps(result,indent=2)+'\n')
 print(json.dumps([{k:r[k] for k in ['id','referenceCount','predictedCount','metrics']} for r in rows],indent=2))

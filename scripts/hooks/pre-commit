@@ -1,0 +1,9 @@
+#!/bin/sh
+set -eu
+for role in AUTHOR COMMITTER; do
+  identity=$(git var "GIT_${role}_IDENT")
+  case "$identity" in
+    'Codex <codex@users.noreply.github.com> '*) ;;
+    *) echo "Commit blocked: this experiment workspace requires Codex noreply identity." >&2; exit 1 ;;
+  esac
+done

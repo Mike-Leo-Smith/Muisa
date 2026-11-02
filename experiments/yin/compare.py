@@ -1,10 +1,11 @@
+import os
 """Offline research adapter; never imported by the browser or fast CI."""
 import hashlib,json,time,resource,sys,platform
 from pathlib import Path
 import librosa
 import numpy as np
 import soundfile as sf
-root=Path('reports/yin');manifest=json.loads((root/'manifest.json').read_text());rate=manifest['sampleRateHz'];window=manifest['windowSize'];hop=manifest['hopSize']
+root=Path(os.environ.get('MUISA_INPUT','reports/yin'));manifest=json.loads((root/'manifest.json').read_text());rate=manifest['sampleRateHz'];window=manifest['windowSize'];hop=manifest['hopSize']
 common=dict(fmin=70,fmax=1000,sr=rate,frame_length=window,hop_length=hop,center=False)
 # Warm JIT separately; count cold startup rather than silently hiding it.
 t=time.perf_counter();warm=np.sin(2*np.pi*220*np.arange(window+hop)/rate)*.2
