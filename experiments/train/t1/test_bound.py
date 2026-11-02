@@ -68,6 +68,39 @@ class BoundTests(unittest.TestCase):
         self.i['parents'][0]['sha256']=self.s['asset']['sha256']
         other=copy.deepcopy(self.i);other['id']='other';other['split']='train';self.m['items'].append(other)
         with self.assertRaisesRegex(ValueError,'leakage'):self.run_audit()
+    def test_distinct_parents_identical_prepared_pcm_cannot_cross_splits(self):
+        # The only difference is in 256 samples removed by the crop. All source
+        # identities/groups differ, so only prepared PCM identity catches this.
+        prepared=struct.pack('<2048f',*([.1]*2048))
+        items=[];sources={}
+        for index,split in enumerate(('development','train')):
+            source_id='parent-'+str(index)
+            parent=prepared+struct.pack('<256f',*([float(index)]*256))
+            parent_path=source_id+'.pcm';self.put(parent_path,parent)
+            source=copy.deepcopy(self.s)
+            source['asset']=dict(path=parent_path,sha256=digest(parent));source['samples']=2304
+            source['groups']={k:[source_id+':'+k] if v else None for k,v in source['groups'].items()}
+            sources[source_id]=source
+            item=copy.deepcopy(self.i);item['id']='crop-'+str(index);item['split']=split
+            item['parents']=[dict(sourceId=source_id,sha256=digest(parent),role='target')]
+            item['timeMapping']['sourceId']=source_id
+            item['transform']['mix']=[dict(sourceId=source_id,gain=1,offsetSamples=0)]
+            # Separate prepared files, identical bytes and SHA256.
+            prepared_path=item['id']+'.pcm';self.put(prepared_path,prepared)
+            item['pcm']['path']=prepared_path
+            annotation=copy.deepcopy(self.a)
+            annotation['binding']['timeMapping']=copy.deepcopy(item['timeMapping'])
+            annotation['binding']['parentHashes']={source_id:digest(parent)}
+            payload=json.dumps(annotation).encode();path=item['id']+'.json';self.put(path,payload)
+            item['annotation']=dict(path=path,sha256=digest(payload));items.append(item)
+        self.m['sources']=sources;self.m['items']=items
+        self.assertNotEqual(items[0]['parents'][0]['sha256'],items[1]['parents'][0]['sha256'])
+        self.assertEqual(items[0]['pcm']['sha256'],items[1]['pcm']['sha256'])
+        with self.assertRaisesRegex(ValueError,'prepared PCM'):
+            self.run_audit()
+        items[1]['split']='development'
+        self.assertEqual(len(self.run_audit()),2)
+
     def test_mix_and_replay_fail_closed(self):
         self.i['transform']['mix']=[]
         with self.assertRaisesRegex(ValueError,'mix'):self.run_audit()

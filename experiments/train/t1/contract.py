@@ -68,6 +68,10 @@ def audit(manifest, root, purpose='audit'):
         pcm=item['pcm'];mapping=item['timeMapping']
         if pcm['sampleRateHz']!=16000 or pcm['channels']!=1 or not integer(pcm['samples'],1):raise ValueError('Invalid prepared PCM')
         raw=asset(root,pcm)
+        prepared_key=('preparedPcmHash',pcm['sha256'])
+        if prepared_key in assignments and assignments[prepared_key]!=split:
+            raise ValueError('Cross-split prepared PCM leakage')
+        assignments[prepared_key]=split
         if len(raw)!=pcm['samples']*4 or any(not math.isfinite(v[0]) for v in struct.iter_unpack('<f',raw)):raise ValueError('Invalid PCM length/value')
         if mapping!=dict(sourceId=next(p['sourceId'] for p in parents if p['role']=='target'),sourceRateHz=target[0]['sampleRateHz'],outputRateHz=16000,cropStartSample=mapping.get('cropStartSample'),cropEndSample=mapping.get('cropEndSample'),additionalDelaySamples=0):raise ValueError('Unsupported/incomplete time mapping')
         a,b=mapping['cropStartSample'],mapping['cropEndSample']
