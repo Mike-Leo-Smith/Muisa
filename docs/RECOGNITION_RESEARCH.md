@@ -43,7 +43,7 @@
 
 ## 数据与实验里程碑
 
-[GuitarSet](https://guitarset.weebly.com/)优先考察：6 位演奏者、相同 30 谱、360 录音，microphone/hex 版本必须归同一原录音组。需要 player holdout 及另行谱面 holdout。[发布包](https://zenodo.org/records/3371780)音频许可尚待核验，本轮不下载、不放进公共仓库。[IDMT Guitar](https://www.idmt.fraunhofer.de/en/publications/datasets/guitar.html)有 evaluation / CC BY-NC-ND 限制，不默认允许训练、修改或再分发。
+[GuitarSet](https://guitarset.weebly.com/)优先考察：6 位演奏者、相同 30 谱、360 录音，microphone/hex 版本必须归同一原录音组。需要 player holdout 及另行谱面 holdout。[发布包 v1.1.0](https://zenodo.org/records/3371780) 的 [Zenodo 元数据](https://zenodo.org/api/records/3371780)与 [DataCite](https://api.datacite.org/dois/10.5281/zenodo.3371780)确认 CC BY 4.0；使用/修改需署名、许可证和修改说明。本轮尚未下载，公共仓库默认不复制大音频。mic ZIP 656,927,981 字节、标注 ZIP 39,132,574 字节，下载前检查空间和网络，先用开发小子集。[IDMT Guitar](https://www.idmt.fraunhofer.de/en/publications/datasets/guitar.html)有 evaluation / CC BY-NC-ND 限制，不默认允许训练、修改或再分发。
 
 后续逐项做，不一次安装全部依赖：
 
@@ -52,5 +52,9 @@
 3. Basic Pitch 离线 poly 对照，单列转录与和弦评估。
 4. raw / DSP / 模型抗噪消融，clean 退化与负结果同样保存。
 5. 在线 DTW/HMM 跟谱候选，测试恢复、前视与谱先验偏差。
+
+[Basic Pitch 训练包含 GuitarSet](https://raw.githubusercontent.com/spotify/basic-pitch/main/basic_pitch/data/datasets/guitarset.py)，不能把任意 GuitarSet 子集称为其未见 test。先核对 [时间偏移 errata](https://github.com/marl/GuitarSet/issues/5) 和 [重复样本 errata](https://github.com/marl/GuitarSet/issues/4)，开发 manifest 明确排除或记录修正。
+
+高保真合成后续研究按 Score/MIDI 语义 → 乐器 dry PCM → room/RIR → mic/device → 噪声分层。FluidSynth 离线 SF2 与 pyroomacoustics ISM/RIR 可作为候选，但尚未安装或评测；需核实代码/音源许可、采样力度与演奏法，不把普通 GM 音源自动称为高保真。合成标签分别保留 MIDI note-on、渲染 attack、直达声传播、晚混响，不能混作一个起音。若外部 RIR 处理，需防止内置混响/chorus 重复计算。
 
 每阶段有固定版本、可复现命令、机器可读结果和结论后，才决定接入实时主干。快 CI 与重 benchmark 分离；模型/音频不得被默认上传到公开仓库。
