@@ -50,14 +50,14 @@ guideUI=createGuideUI({onNoise(value){noiseRms=value;$('noiseInfo').textContent=
 async function startDemo(){
  clearDemo();const id=++token;await input.stop();if(id!==token)return;$('player').pause();clearNoise();guideUI.connect('demo-'+token,true);resetWorker();let sample=0;
  demoTimer=setInterval(()=>{
-  const startSample=sample;sample+=1024;if(busy)return;const g=guideUI.guide,l=guideUI.lesson,rate=48000;
+  if(busy)return;const startSample=sample;sample+=1024;const g=guideUI.guide,l=guideUI.lesson,rate=48000;
   let midi=null,amp=.12;
   if(g.stage==='strings')midi=OPEN_STRINGS[g.stringIndex].midi;
   if(g.stage==='quality'){midi=64;amp=[.02,.12,.4][g.qualityIndex];}
   const elapsed=(performance.now()-l.started)/1000;
   if(g.stage==='lesson'&&l.active)midi=[64,65,67,64][l.mode==='blind'?Math.min(3,Math.floor(elapsed/2)):Math.min(3,l.cursor)];
   const x=Float32Array.from({length:4096},(_,i)=>{const index=startSample+i;let hash=Math.imul(index^123,0x45d9f3b);hash=(hash^(hash>>>16))>>>0;const noise=(hash/4294967296-.5)*.002;
-   const pulse=g.stage==='lesson'?((elapsed+i/rate)%(l.mode==='blind'?2:1.4)<.65?1:0):1;
+   const pulse=g.stage==='lesson'?((index/rate)%(l.mode==='blind'?2:1.4)<.65?1:0):1;
    return noise+(midi===null?0:amp*Math.sin(2*Math.PI*440*2**((midi-69)/12)*index/rate)*pulse);
   });draw(x);busy=true;worker.postMessage({type:'frame',frame:{channels:[x],sampleRateHz:rate,startSample,hopSize:1024,streamId:'demo-'+token}});
  },22);
