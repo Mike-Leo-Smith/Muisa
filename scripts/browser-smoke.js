@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 const base=process.env.BASE_URL||'http://127.0.0.1:8000';
 const profile=mkdtempSync(join(tmpdir(),'guitar-browser-'));
 const browser=spawn(process.env.CHROMIUM_PATH||'/usr/bin/chromium',['--headless','--no-sandbox','--disable-dev-shm-usage','--remote-debugging-port=0',`--user-data-dir=${profile}`,'--use-fake-device-for-media-stream',`--use-file-for-fake-audio-capture=${resolve('fixtures/melody.wav')}`,'about:blank'],{stdio:'ignore'});
-let ws;const delay=ms=>new Promise(r=>setTimeout(r,ms));
+let ws,cdp;const delay=ms=>new Promise(r=>setTimeout(r,ms));
 try{
  let port;for(let i=0;i<100;i++){try{port=readFileSync(join(profile,'DevToolsActivePort'),'utf8').split('\n')[0];break;}catch{await delay(100);}}
  if(!port)throw Error('Chromium startup timeout');
@@ -14,7 +14,7 @@ try{
  ws=new WebSocket(pages.find(x=>x.type==='page').webSocketDebuggerUrl);await new Promise((r,j)=>{ws.onopen=r;ws.onerror=j;});
  let next=0;const pending=new Map();const errors=[];
  ws.onmessage=({data})=>{const d=JSON.parse(data);if(d.method==='Runtime.exceptionThrown')errors.push(d.params.exceptionDetails.text);if(d.id){const p=pending.get(d.id);pending.delete(d.id);d.error?p.reject(Error(JSON.stringify(d.error))):p.resolve(d.result);}};
- const cdp=(method,params={})=>new Promise((resolve,reject)=>{const id=++next;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
+ cdp=(method,params={})=>new Promise((resolve,reject)=>{const id=++next;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
  const evaluate=async expression=>{const r=await cdp('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
  const wait=async expression=>{for(let i=0;i<150;i++){if(await evaluate(expression))return;await delay(100);}throw Error('Timeout: '+expression);};
  await cdp('Runtime.enable');await cdp('Page.enable');await cdp('Browser.grantPermissions',{origin:base,permissions:['audioCapture']});
@@ -29,4 +29,12 @@ try{
  assert.ok(lifecycle.closed);assert.ok(lifecycle.clock.slice(1).every((v,i)=>v>lifecycle.clock[i]));assert.equal(lifecycle.clock[0],0);assert.equal(lifecycle.restart[0],0);console.log('PASS input sample clock, stop cleanup and restart isolation');
  await cdp('Browser.setPermission',{origin:base,permission:{name:'microphone'},setting:'denied'});await evaluate("document.querySelector('#start').click()");await wait("document.querySelector('#status').textContent.startsWith('denied')");console.log('PASS microphone permission denial');
  assert.deepEqual(errors,[]);console.log('PASS no page runtime exceptions');
-}finally{ws?.close();browser.kill();await new Promise(r=>browser.once('exit',r));rmSync(profile,{recursive:true,force:true,maxRetries:20,retryDelay:100});}
+}finally{
+ // Ask the actual browser to close, not just the launcher process. Chrome wrappers
+ // can exit while child processes still write into the temporary profile.
+ const exited=browser.exitCode!==null||browser.signalCode!==null?Promise.resolve():new Promise(r=>browser.once('exit',r));
+ if(cdp&&ws?.readyState===WebSocket.OPEN){try{await Promise.race([cdp('Browser.close'),delay(5000)]);}catch{}}
+ await Promise.race([exited,delay(5000)]);
+ if(browser.exitCode===null&&browser.signalCode===null){browser.kill();await Promise.race([exited,delay(5000)]);}
+ ws?.close();rmSync(profile,{recursive:true,force:true,maxRetries:10,retryDelay:100});
+}
