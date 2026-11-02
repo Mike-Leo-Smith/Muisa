@@ -27,6 +27,7 @@ jobs:
       - run: npm run build
       - run: npm run test:report
       - run: npm run fixtures
+      - run: node experiments/following/run.js
       - run: node benchmark/run.js fixtures/manifest.json
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         if: always()

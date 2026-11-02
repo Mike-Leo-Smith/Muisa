@@ -1,0 +1,4854 @@
+{
+  "experiment": "A1 event-level causal alignment, not audio recognition accuracy",
+  "notes": [
+    {
+      "midi": 60,
+      "beat": 0
+    },
+    {
+      "midi": 62,
+      "beat": 1
+    },
+    {
+      "midi": 64,
+      "beat": 2
+    },
+    {
+      "midi": 64,
+      "beat": 3
+    },
+    {
+      "midi": 65,
+      "beat": 4
+    },
+    {
+      "midi": 67,
+      "beat": 5
+    },
+    {
+      "midi": 69,
+      "beat": 6
+    },
+    {
+      "midi": 71,
+      "beat": 7
+    },
+    {
+      "midi": 72,
+      "beat": 8
+    },
+    {
+      "midi": 74,
+      "beat": 9
+    },
+    {
+      "midi": 76,
+      "beat": 10
+    },
+    {
+      "midi": 77,
+      "beat": 11
+    }
+  ],
+  "fixtures": [
+    {
+      "id": "clean",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "miss-one",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "miss-four-forward-jump",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "extra-wrong",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 48,
+            "confidence": 0.99,
+            "onsetMs": 2450
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "duplicate-pluck",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 950
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "duplicate-at-repeated-pitch",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1450
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "unknown",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 2200
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "accelerate",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 980
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1720
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 2420
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 3080
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 4280
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 4820
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 5320
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 5780
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 6200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 6580
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "pause",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 6700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 7200
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 7700
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 8200
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 8700
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 9200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 9700
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "backward-repeat-section",
+      "items": [
+        {
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          },
+          "truth": 0
+        },
+        {
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          },
+          "truth": 1
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          },
+          "truth": 2
+        },
+        {
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          },
+          "truth": 3
+        },
+        {
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          },
+          "truth": 4
+        },
+        {
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          },
+          "truth": 5
+        },
+        {
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          },
+          "truth": 6
+        },
+        {
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          },
+          "truth": 7
+        },
+        {
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 6200
+          },
+          "truth": 8
+        },
+        {
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 6700
+          },
+          "truth": 9
+        },
+        {
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 7200
+          },
+          "truth": 10
+        },
+        {
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 7700
+          },
+          "truth": 11
+        }
+      ]
+    },
+    {
+      "id": "noise-only",
+      "items": [
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 0
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 1000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 1500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 2000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 2500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 3000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 3500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 4000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 4500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 5000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 5500
+          },
+          "truth": null
+        }
+      ]
+    },
+    {
+      "id": "confident-unrelated",
+      "items": [
+        {
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 0
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 1000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 1500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 2000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 2500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 3000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 3500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 4000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 4500
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 5000
+          },
+          "truth": null
+        },
+        {
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 5500
+          },
+          "truth": null
+        }
+      ]
+    }
+  ],
+  "parameters": {
+    "skipCost": 0.65,
+    "extraCost": 0.8,
+    "wrongCost": 2.5,
+    "margin": 0.15
+  },
+  "limitations": "No acoustic DSP evaluated. Pitch-only DTW-style edit lattice, no tempo model. Backward section jumps unsupported. Repeated equal pitches can be intrinsically ambiguous. Online DP emits provisional current positions, never rewrites past outputs; not irreversible pedagogical scoring.",
+  "prefixInvariancePassed": true,
+  "rows": [
+    {
+      "case": "clean",
+      "method": "current-lookahead3",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.07031399999999977,
+        0.005558000000000618,
+        0.0030439999999991585,
+        0.0025340000000007024,
+        0.003895999999997457,
+        0.004086000000000922,
+        0.002473999999999421,
+        0.0028140000000007603,
+        0.004415999999999087,
+        0.012167999999999068,
+        0.003916000000000253,
+        0.0013919999999991717
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "skipped": [],
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          }
+        }
+      ]
+    },
+    {
+      "case": "clean",
+      "method": "online-dp",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.2568310000000018,
+        0.030566000000000315,
+        0.017896000000000356,
+        0.014520999999998452,
+        0.605877999999997,
+        0.022002999999997996,
+        0.011766999999998973,
+        0.012067999999999302,
+        0.011656999999999584,
+        0.011345999999999634,
+        0.029443000000000552,
+        0.013189000000000561
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "clean",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 3
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "eventIndex": 4
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 10
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 11
+        }
+      ]
+    },
+    {
+      "case": "miss-one",
+      "method": "current-lookahead3",
+      "targets": 11,
+      "accepted": 11,
+      "correct": 11,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.1135889999999975,
+        0.00143200000000121,
+        0.0007310000000018135,
+        0.0006510000000048421,
+        0.0018220000000042091,
+        0.0006200000000049499,
+        0.0005910000000000082,
+        0.000580999999996834,
+        0.0006510000000048421,
+        0.000641000000001668,
+        0.000580999999996834
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [
+            4
+          ],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          }
+        }
+      ]
+    },
+    {
+      "case": "miss-one",
+      "method": "online-dp",
+      "targets": 11,
+      "accepted": 11,
+      "correct": 11,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.00726099999999974,
+        0.003584999999993954,
+        0.004437000000002911,
+        0.003145000000003506,
+        0.0030040000000042255,
+        0.0029439999999993915,
+        0.0027739999999951692,
+        0.002724000000000615,
+        0.002754000000003032,
+        0.0030250000000009436,
+        0.002853999999999246
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.15000000000000002
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "miss-one",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 3
+        },
+        {
+          "kind": "unobserved",
+          "index": 4
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 4
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 10
+        }
+      ]
+    },
+    {
+      "case": "miss-four-forward-jump",
+      "method": "current-lookahead3",
+      "targets": 8,
+      "accepted": 2,
+      "correct": 2,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 0.25,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.0020230000000012183,
+        0.0008410000000012019,
+        0.0006610000000009109,
+        0.0004210000000028913,
+        0.0003810000000044056,
+        0.0003609999999980573,
+        0.0003600000000005821,
+        0.0003600000000005821
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        }
+      ]
+    },
+    {
+      "case": "miss-four-forward-jump",
+      "method": "online-dp",
+      "targets": 8,
+      "accepted": 5,
+      "correct": 5,
+      "recoveryAfterObservations": 4,
+      "precision": 1,
+      "coverage": 0.625,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.005679000000000656,
+        0.0032750000000021373,
+        0.002935000000000798,
+        0.0027940000000015175,
+        0.002894999999995207,
+        0.002904000000000906,
+        0.002734000000003789,
+        0.0028140000000007603
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.19999999999999996
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.6000000000000001
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "miss-four-forward-jump",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "unobserved",
+          "index": 2
+        },
+        {
+          "kind": "unobserved",
+          "index": 3
+        },
+        {
+          "kind": "unobserved",
+          "index": 4
+        },
+        {
+          "kind": "unobserved",
+          "index": 5
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 3
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 4
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 7
+        }
+      ]
+    },
+    {
+      "case": "extra-wrong",
+      "method": "current-lookahead3",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.002534000000004255,
+        0.0017719999999954439,
+        0.03234799999999893,
+        0.0014230000000026166,
+        0.0010820000000038021,
+        0.0014120000000019672,
+        0.0011510000000001241,
+        0.0010609999999999786,
+        0.0011220000000022878,
+        0.0010219999999989682,
+        0.0010919999999998709,
+        0.0011620000000007735,
+        0.0012720000000001619
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "skipped": [],
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 48,
+            "confidence": 0.99,
+            "onsetMs": 2450
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          }
+        }
+      ]
+    },
+    {
+      "case": "extra-wrong",
+      "method": "online-dp",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.005547999999997444,
+        0.003264000000001488,
+        0.0029639999999986344,
+        0.0028849999999991383,
+        0.0029940000000010514,
+        0.002704000000001372,
+        0.0029439999999993915,
+        0.0026839999999950237,
+        0.002693999999998198,
+        0.0028140000000007603,
+        0.002473999999999421,
+        0.0024239999999977613,
+        0.0023640000000000327
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "margin": 0.65
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "extra-wrong",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 3
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "eventIndex": 4
+        },
+        {
+          "kind": "extra",
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 10
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 11
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 12
+        }
+      ]
+    },
+    {
+      "case": "duplicate-pluck",
+      "method": "current-lookahead3",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.0013319999999978904,
+        0.0005910000000000082,
+        0.00041099999999971715,
+        0.0007009999999993966,
+        0.00037100000000123146,
+        0.00035000000000451337,
+        0.0003700000000037562,
+        0.0003510000000019886,
+        0.0003609999999980573,
+        0.00034999999999740794,
+        0.00047999999999603915,
+        0.0004100000000022419,
+        0.0003699999999966508
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 950
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "skipped": [],
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          }
+        }
+      ]
+    },
+    {
+      "case": "duplicate-pluck",
+      "method": "online-dp",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.004886999999996533,
+        0.002934000000003323,
+        0.002835000000004584,
+        0.002853999999999246,
+        0.002524000000001081,
+        0.0026140000000012265,
+        0.0026140000000012265,
+        0.0025630000000020914,
+        0.002453000000002703,
+        0.0024340000000009354,
+        0.0025440000000003238,
+        0.0024140000000016926,
+        0.00234400000000079
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "duplicate-pluck",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "extra",
+          "eventIndex": 1
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 3
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 4
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 10
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 11
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 12
+        }
+      ]
+    },
+    {
+      "case": "duplicate-at-repeated-pitch",
+      "method": "current-lookahead3",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 11,
+      "recoveryAfterObservations": null,
+      "precision": 0.9166666666666666,
+      "coverage": 0.9166666666666666,
+      "falseAdvance": 1,
+      "unknown": 0,
+      "computeMs": [
+        0.002012999999998044,
+        0.0008009999999956108,
+        0.0007009999999993966,
+        0.000610999999999251,
+        0.0005910000000000082,
+        0.0007809999999963679,
+        0.0006810000000001537,
+        0.0007510000000010564,
+        0.0006610000000009109,
+        0.0007310000000018135,
+        0.0007310000000018135,
+        0.0007209999999986394,
+        0.0006810000000001537
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1450
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "skipped": [],
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          }
+        }
+      ]
+    },
+    {
+      "case": "duplicate-at-repeated-pitch",
+      "method": "online-dp",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 11,
+      "recoveryAfterObservations": null,
+      "precision": 0.9166666666666666,
+      "coverage": 0.9166666666666666,
+      "falseAdvance": 1,
+      "unknown": 0,
+      "computeMs": [
+        0.00525800000000487,
+        0.003144000000006031,
+        0.0029439999999993915,
+        0.003665999999995506,
+        0.0027539999999959264,
+        0.004918000000003531,
+        0.0028040000000046916,
+        0.002734000000003789,
+        0.002592999999997403,
+        0.0024529999999955976,
+        0.0024629999999987717,
+        0.002423000000000286,
+        0.0024240000000048667
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "duplicate-at-repeated-pitch",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "extra",
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 3
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 4
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 10
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 11
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 12
+        }
+      ]
+    },
+    {
+      "case": "unknown",
+      "method": "current-lookahead3",
+      "targets": 12,
+      "accepted": 11,
+      "correct": 11,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 0.9166666666666666,
+      "falseAdvance": 0,
+      "unknown": 1,
+      "computeMs": [
+        0.0013020000000025789,
+        0.0005410000000054538,
+        0.00037100000000123146,
+        0.0004809999999935144,
+        0.014731999999995082,
+        0.0026740000000060604,
+        0.0006910000000033278,
+        0.0005510000000015225,
+        0.0005310000000022796,
+        0.000610999999999251,
+        0.0005910000000000082,
+        0.0005709999999936599
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [
+            4
+          ],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          }
+        }
+      ]
+    },
+    {
+      "case": "unknown",
+      "method": "online-dp",
+      "targets": 12,
+      "accepted": 11,
+      "correct": 11,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 0.9166666666666666,
+      "falseAdvance": 0,
+      "unknown": 1,
+      "computeMs": [
+        0.003855000000001496,
+        0.0027639999999991005,
+        0.0025940000000019836,
+        0.0025539999999963925,
+        0.011467000000003225,
+        0.10968199999999939,
+        0.006579000000002111,
+        0.004997000000003027,
+        0.004888000000001114,
+        0.004937000000005298,
+        0.004837999999999454,
+        0.004977000000003784
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.15000000000000002
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "unknown",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 3
+        },
+        {
+          "kind": "unknown",
+          "index": 4,
+          "eventIndex": 4
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 10
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 11
+        }
+      ]
+    },
+    {
+      "case": "accelerate",
+      "method": "current-lookahead3",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.0019729999999995584,
+        0.0007409999999978822,
+        0.0006210000000024252,
+        0.000671000000004085,
+        0.0005400000000008731,
+        0.000529999999997699,
+        0.0005200000000016303,
+        0.0005400000000008731,
+        0.0005700000000032901,
+        0.0005710000000007653,
+        0.0005510000000015225,
+        0.0005409999999983484
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 980
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1720
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 2420
+          }
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "skipped": [],
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 3080
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 4280
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 4820
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 5320
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 5780
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 6200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 6580
+          }
+        }
+      ]
+    },
+    {
+      "case": "accelerate",
+      "method": "online-dp",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.0036550000000019622,
+        0.0026640000000028863,
+        0.00262299999999982,
+        0.0026140000000012265,
+        0.0026340000000004693,
+        0.002704000000001372,
+        0.002724000000000615,
+        0.0025730000000052655,
+        0.002442999999999529,
+        0.0024130000000042173,
+        0.0024340000000009354,
+        0.0024140000000016926
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "accelerate",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 3
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "eventIndex": 4
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 10
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 11
+        }
+      ]
+    },
+    {
+      "case": "pause",
+      "method": "current-lookahead3",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.0017020000000016466,
+        0.0007510000000010564,
+        0.0006510000000048421,
+        0.0006310000000055993,
+        0.0005309999999951742,
+        0.0005310000000022796,
+        0.0005209999999991055,
+        0.0006409999999945626,
+        0.0005310000000022796,
+        0.0005609999999975912,
+        0.0005609999999975912,
+        0.0005409999999983484
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "skipped": [],
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 6700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 7200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 7700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 8200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 8700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 9200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 9700
+          }
+        }
+      ]
+    },
+    {
+      "case": "pause",
+      "method": "online-dp",
+      "targets": 12,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 1,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.003695000000000448,
+        0.0028149999999982356,
+        0.002643999999996538,
+        0.0025639999999995666,
+        0.004516999999999882,
+        0.005007000000006201,
+        0.004626999999999271,
+        0.005057999999998231,
+        0.004797000000003493,
+        0.004817000000002736,
+        0.003955999999995186,
+        0.003824999999999079
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "pause",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 2
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 3
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "eventIndex": 4
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 10
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 11
+        }
+      ]
+    },
+    {
+      "case": "backward-repeat-section",
+      "method": "current-lookahead3",
+      "targets": 16,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 0.75,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.0016120000000015011,
+        0.0007310000000018135,
+        0.0005009999999998627,
+        0.0004710000000045511,
+        0.0005009999999998627,
+        0.0004810000000006198,
+        0.000580999999996834,
+        0.00040100000000364844,
+        0.0003299999999981651,
+        0.00030999999999892225,
+        0.0005110000000030368,
+        0.000610999999999251,
+        0.000491000000003794,
+        0.0005410000000054538,
+        0.0005209999999991055,
+        0.0005009999999998627
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "skipped": [],
+          "event": {
+            "midi": 60,
+            "confidence": 0.99,
+            "onsetMs": 200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "skipped": [],
+          "event": {
+            "midi": 62,
+            "confidence": 0.99,
+            "onsetMs": 700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "skipped": [],
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 1700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "skipped": [],
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 2200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "skipped": [],
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 2700
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 3200
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 64,
+            "confidence": 0.99,
+            "onsetMs": 3700
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 65,
+            "confidence": 0.99,
+            "onsetMs": 4200
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 67,
+            "confidence": 0.99,
+            "onsetMs": 4700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "skipped": [],
+          "event": {
+            "midi": 69,
+            "confidence": 0.99,
+            "onsetMs": 5200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "skipped": [],
+          "event": {
+            "midi": 71,
+            "confidence": 0.99,
+            "onsetMs": 5700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "skipped": [],
+          "event": {
+            "midi": 72,
+            "confidence": 0.99,
+            "onsetMs": 6200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "skipped": [],
+          "event": {
+            "midi": 74,
+            "confidence": 0.99,
+            "onsetMs": 6700
+          }
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "skipped": [],
+          "event": {
+            "midi": 76,
+            "confidence": 0.99,
+            "onsetMs": 7200
+          }
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "skipped": [],
+          "event": {
+            "midi": 77,
+            "confidence": 0.99,
+            "onsetMs": 7700
+          }
+        }
+      ]
+    },
+    {
+      "case": "backward-repeat-section",
+      "method": "online-dp",
+      "targets": 16,
+      "accepted": 12,
+      "correct": 12,
+      "recoveryAfterObservations": null,
+      "precision": 1,
+      "coverage": 0.75,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.09138599999999997,
+        0.005008000000003676,
+        0.10899200000000064,
+        0.002823999999996829,
+        0.0025639999999995666,
+        0.0024940000000057694,
+        0.0026340000000004693,
+        0.002354000000003964,
+        0.0023640000000000327,
+        0.0023630000000025575,
+        0.0024840000000025952,
+        0.002473999999999421,
+        0.002334000000004721,
+        0.0023429999999962092,
+        0.002985000000002458,
+        0.0023130000000008977
+      ],
+      "outputs": [
+        {
+          "kind": "match",
+          "index": 0,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "margin": 0.65
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "margin": 0.65
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "margin": 0.8
+        }
+      ]
+    },
+    {
+      "case": "backward-repeat-section",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "match",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "match",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "extra",
+          "eventIndex": 2
+        },
+        {
+          "kind": "extra",
+          "eventIndex": 3
+        },
+        {
+          "kind": "extra",
+          "eventIndex": 4
+        },
+        {
+          "kind": "extra",
+          "eventIndex": 5
+        },
+        {
+          "kind": "match",
+          "index": 2,
+          "eventIndex": 6
+        },
+        {
+          "kind": "match",
+          "index": 3,
+          "eventIndex": 7
+        },
+        {
+          "kind": "match",
+          "index": 4,
+          "eventIndex": 8
+        },
+        {
+          "kind": "match",
+          "index": 5,
+          "eventIndex": 9
+        },
+        {
+          "kind": "match",
+          "index": 6,
+          "eventIndex": 10
+        },
+        {
+          "kind": "match",
+          "index": 7,
+          "eventIndex": 11
+        },
+        {
+          "kind": "match",
+          "index": 8,
+          "eventIndex": 12
+        },
+        {
+          "kind": "match",
+          "index": 9,
+          "eventIndex": 13
+        },
+        {
+          "kind": "match",
+          "index": 10,
+          "eventIndex": 14
+        },
+        {
+          "kind": "match",
+          "index": 11,
+          "eventIndex": 15
+        }
+      ]
+    },
+    {
+      "case": "noise-only",
+      "method": "current-lookahead3",
+      "targets": 0,
+      "accepted": 0,
+      "correct": 0,
+      "recoveryAfterObservations": null,
+      "precision": null,
+      "coverage": null,
+      "falseAdvance": 0,
+      "unknown": 12,
+      "computeMs": [
+        0.000671000000004085,
+        0.0002800000000036107,
+        0.00021999999999877673,
+        0.0002210000000033574,
+        0.0001299999999986312,
+        0.0001299999999986312,
+        0.00013000000000573664,
+        0.00013000000000573664,
+        0.00013100000000321188,
+        0.0001299999999986312,
+        0.00013000000000573664,
+        0.0001200000000025625
+      ],
+      "outputs": [
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 0
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 500
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 1000
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 1500
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 2000
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 2500
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 3000
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 3500
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 4000
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 4500
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 5000
+          }
+        },
+        {
+          "kind": "unknown",
+          "event": {
+            "midi": null,
+            "confidence": 0.1,
+            "onsetMs": 5500
+          }
+        }
+      ]
+    },
+    {
+      "case": "noise-only",
+      "method": "online-dp",
+      "targets": 0,
+      "accepted": 0,
+      "correct": 0,
+      "recoveryAfterObservations": null,
+      "precision": null,
+      "coverage": null,
+      "falseAdvance": 0,
+      "unknown": 12,
+      "computeMs": [
+        0.0006909999999962224,
+        0.00032099999999957163,
+        0.00021999999999877673,
+        0.00019100000000094042,
+        0.00021999999999877673,
+        0.00021999999999877673,
+        0.0002210000000033574,
+        0.0002500000000011937,
+        0.00021999999999877673,
+        0.00023000000000195087,
+        0.00023000000000195087,
+        0.0002309999999994261
+      ],
+      "outputs": [
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        },
+        {
+          "kind": "unknown"
+        }
+      ]
+    },
+    {
+      "case": "noise-only",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "unknown",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "unknown",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "unknown",
+          "index": 2,
+          "eventIndex": 2
+        },
+        {
+          "kind": "unknown",
+          "index": 3,
+          "eventIndex": 3
+        },
+        {
+          "kind": "unknown",
+          "index": 4,
+          "eventIndex": 4
+        },
+        {
+          "kind": "unknown",
+          "index": 5,
+          "eventIndex": 5
+        },
+        {
+          "kind": "unknown",
+          "index": 6,
+          "eventIndex": 6
+        },
+        {
+          "kind": "unknown",
+          "index": 7,
+          "eventIndex": 7
+        },
+        {
+          "kind": "unknown",
+          "index": 8,
+          "eventIndex": 8
+        },
+        {
+          "kind": "unknown",
+          "index": 9,
+          "eventIndex": 9
+        },
+        {
+          "kind": "unknown",
+          "index": 10,
+          "eventIndex": 10
+        },
+        {
+          "kind": "unknown",
+          "index": 11,
+          "eventIndex": 11
+        }
+      ]
+    },
+    {
+      "case": "confident-unrelated",
+      "method": "current-lookahead3",
+      "targets": 0,
+      "accepted": 0,
+      "correct": 0,
+      "recoveryAfterObservations": null,
+      "precision": null,
+      "coverage": null,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.0014720000000068012,
+        0.0005910000000000082,
+        0.0006009999999960769,
+        0.00043099999999896,
+        0.0003110000000035029,
+        0.0003200000000020964,
+        0.0003109999999963975,
+        0.0003109999999963975,
+        0.00030999999999892225,
+        0.00030999999999892225,
+        0.0003109999999963975,
+        0.00030999999999892225
+      ],
+      "outputs": [
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 0
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 500
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 1000
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 1500
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 2000
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 2500
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 3000
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 3500
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 4000
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 4500
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 35,
+            "confidence": 0.99,
+            "onsetMs": 5000
+          }
+        },
+        {
+          "kind": "extra",
+          "event": {
+            "midi": 36,
+            "confidence": 0.99,
+            "onsetMs": 5500
+          }
+        }
+      ]
+    },
+    {
+      "case": "confident-unrelated",
+      "method": "online-dp",
+      "targets": 0,
+      "accepted": 0,
+      "correct": 0,
+      "recoveryAfterObservations": null,
+      "precision": null,
+      "coverage": null,
+      "falseAdvance": 0,
+      "unknown": 0,
+      "computeMs": [
+        0.004255999999998039,
+        0.0026040000000051577,
+        0.002262999999999238,
+        0.0021830000000022665,
+        0.0021539999999973247,
+        0.0021730000000061978,
+        0.0028240000000039345,
+        0.002123000000004538,
+        0.002062999999999704,
+        0.005008000000003676,
+        0.0021830000000022665,
+        0.002194000000002916
+      ],
+      "outputs": [
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        },
+        {
+          "kind": "extra",
+          "margin": 0.6500000000000001
+        }
+      ]
+    },
+    {
+      "case": "confident-unrelated",
+      "method": "offline-edit-distance-noncausal",
+      "path": [
+        {
+          "kind": "wrong",
+          "index": 0,
+          "eventIndex": 0
+        },
+        {
+          "kind": "wrong",
+          "index": 1,
+          "eventIndex": 1
+        },
+        {
+          "kind": "wrong",
+          "index": 2,
+          "eventIndex": 2
+        },
+        {
+          "kind": "wrong",
+          "index": 3,
+          "eventIndex": 3
+        },
+        {
+          "kind": "wrong",
+          "index": 4,
+          "eventIndex": 4
+        },
+        {
+          "kind": "wrong",
+          "index": 5,
+          "eventIndex": 5
+        },
+        {
+          "kind": "wrong",
+          "index": 6,
+          "eventIndex": 6
+        },
+        {
+          "kind": "wrong",
+          "index": 7,
+          "eventIndex": 7
+        },
+        {
+          "kind": "wrong",
+          "index": 8,
+          "eventIndex": 8
+        },
+        {
+          "kind": "wrong",
+          "index": 9,
+          "eventIndex": 9
+        },
+        {
+          "kind": "wrong",
+          "index": 10,
+          "eventIndex": 10
+        },
+        {
+          "kind": "wrong",
+          "index": 11,
+          "eventIndex": 11
+        }
+      ]
+    }
+  ]
+}
