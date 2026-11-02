@@ -3,3 +3,6 @@ dist/
 node_modules/
 *.log
 .env
+reports/
+benchmark/local*.json
+fixtures/manifest.json

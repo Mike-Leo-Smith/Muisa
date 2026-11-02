@@ -1,5 +1,33 @@
 {
-  "description": "Deterministic synthetic harmonic-rich notes + seeded stationary noise / tonal accompaniment. Noise RMS is known from construction (oracle); not speech or real-room validation. No waveform denoising claim.",
+  "seed": 123,
+  "calibrationMode": "oracle (noise-only ground truth); UI calibration tested separately",
+  "noiseOnly": {
+    "onset": {
+      "tp": 0,
+      "fp": 1,
+      "fn": 0,
+      "precision": 0,
+      "recall": null,
+      "f1": 0,
+      "signedOnsetBiasMs": null
+    },
+    "note": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "precision": null,
+      "recall": null,
+      "f1": null,
+      "signedOnsetBiasMs": null
+    },
+    "eventAcceptanceCoverage": 0,
+    "unknownEvents": 1,
+    "falseEventsPerMinute": 0,
+    "falseOnsetsPerMinute": 20,
+    "offsetEvaluated": false
+  },
+  "metricVersion": 2,
+  "description": "Deterministic synthetic harmonic-rich notes + seeded stationary noise / tonal accompaniment. SNR/SIR uses labeled target-active regions; gains are retained. Noise RMS is known from construction (oracle); not speech or real-room validation. No waveform denoising claim.",
   "window": 4096,
   "hop": 1024,
   "chordWindow": 16384,
@@ -7,6 +35,9 @@
   "rows": [
     {
       "kind": "clean",
+      "ratio": "SNR",
+      "melodyNoiseGain": 0,
+      "chordNoiseGain": 0,
       "snrDb": null,
       "preprocess": false,
       "pitchTrials": 4,
@@ -14,15 +45,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 4,
-      "onsetMeanAbsErrorMs": 11.999999999999972,
+      "event": {
+        "onset": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -12
+        },
+        "note": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -12
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 314
+      "cpuMs": 325
     },
     {
       "kind": "clean",
+      "ratio": "SNR",
+      "melodyNoiseGain": 0,
+      "chordNoiseGain": 0,
       "snrDb": null,
       "preprocess": true,
       "pitchTrials": 4,
@@ -30,15 +86,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 4,
-      "onsetMeanAbsErrorMs": 11.999999999999972,
+      "event": {
+        "onset": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -12
+        },
+        "note": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -12
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 265
+      "cpuMs": 360
     },
     {
       "kind": "static",
+      "ratio": "SNR",
+      "melodyNoiseGain": 0.14818314687310302,
+      "chordNoiseGain": 0.08436726951757229,
       "snrDb": 20,
       "preprocess": false,
       "pitchTrials": 4,
@@ -46,15 +127,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 3,
-      "onsetMeanAbsErrorMs": 13.333333333333295,
+      "event": {
+        "onset": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "signedOnsetBiasMs": -13.333333333333334
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "signedOnsetBiasMs": -13.333333333333334
+        },
+        "eventAcceptanceCoverage": 0.75,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 308
+      "cpuMs": 349
     },
     {
       "kind": "static",
+      "ratio": "SNR",
+      "melodyNoiseGain": 0.14818314687310302,
+      "chordNoiseGain": 0.08436726951757229,
       "snrDb": 20,
       "preprocess": true,
       "pitchTrials": 4,
@@ -62,15 +168,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 3,
-      "onsetMeanAbsErrorMs": 13.333333333333295,
+      "event": {
+        "onset": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "signedOnsetBiasMs": -13.333333333333334
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "signedOnsetBiasMs": -13.333333333333334
+        },
+        "eventAcceptanceCoverage": 0.75,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 264
+      "cpuMs": 298
     },
     {
       "kind": "static",
+      "ratio": "SNR",
+      "melodyNoiseGain": 0.4685962549702635,
+      "chordNoiseGain": 0.26679273164482353,
       "snrDb": 10,
       "preprocess": false,
       "pitchTrials": 4,
@@ -78,15 +209,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 3,
-      "onsetMeanAbsErrorMs": 9.777777777777715,
+      "event": {
+        "onset": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "signedOnsetBiasMs": -6.222222222222247
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "signedOnsetBiasMs": -6.222222222222247
+        },
+        "eventAcceptanceCoverage": 0.75,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 325
+      "cpuMs": 335
     },
     {
       "kind": "static",
+      "ratio": "SNR",
+      "melodyNoiseGain": 0.4685962549702635,
+      "chordNoiseGain": 0.26679273164482353,
       "snrDb": 10,
       "preprocess": true,
       "pitchTrials": 4,
@@ -94,15 +250,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 3,
-      "onsetMeanAbsErrorMs": 9.777777777777715,
+      "event": {
+        "onset": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "signedOnsetBiasMs": -6.222222222222247
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "signedOnsetBiasMs": -6.222222222222247
+        },
+        "eventAcceptanceCoverage": 0.75,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 237
+      "cpuMs": 257
     },
     {
       "kind": "static",
+      "ratio": "SNR",
+      "melodyNoiseGain": 1.4818314687310303,
+      "chordNoiseGain": 0.8436726951757229,
       "snrDb": 0,
       "preprocess": false,
       "pitchTrials": 4,
@@ -110,15 +291,40 @@
       "octaveErrors": 0,
       "unknownPitch": 4,
       "onsets": 1,
-      "falseNotes": 0,
-      "matchedOnsets": 0,
-      "onsetMeanAbsErrorMs": null,
+      "event": {
+        "onset": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 307
+      "cpuMs": 344
     },
     {
       "kind": "static",
+      "ratio": "SNR",
+      "melodyNoiseGain": 1.4818314687310303,
+      "chordNoiseGain": 0.8436726951757229,
       "snrDb": 0,
       "preprocess": true,
       "pitchTrials": 4,
@@ -126,15 +332,40 @@
       "octaveErrors": 0,
       "unknownPitch": 4,
       "onsets": 1,
-      "falseNotes": 0,
-      "matchedOnsets": 0,
-      "onsetMeanAbsErrorMs": null,
+      "event": {
+        "onset": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 1,
-      "cpuMs": 83
+      "cpuMs": 114
     },
     {
       "kind": "static",
+      "ratio": "SNR",
+      "melodyNoiseGain": 2.635110389992127,
+      "chordNoiseGain": 1.5002857826430323,
       "snrDb": -5,
       "preprocess": false,
       "pitchTrials": 4,
@@ -142,15 +373,40 @@
       "octaveErrors": 0,
       "unknownPitch": 4,
       "onsets": 1,
-      "falseNotes": 0,
-      "matchedOnsets": 0,
-      "onsetMeanAbsErrorMs": null,
+      "event": {
+        "onset": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 305
+      "cpuMs": 363
     },
     {
       "kind": "static",
+      "ratio": "SNR",
+      "melodyNoiseGain": 2.635110389992127,
+      "chordNoiseGain": 1.5002857826430323,
       "snrDb": -5,
       "preprocess": true,
       "pitchTrials": 4,
@@ -158,15 +414,40 @@
       "octaveErrors": 0,
       "unknownPitch": 4,
       "onsets": 1,
-      "falseNotes": 0,
-      "matchedOnsets": 0,
-      "onsetMeanAbsErrorMs": null,
+      "event": {
+        "onset": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 1,
-      "cpuMs": 84
+      "cpuMs": 181
     },
     {
       "kind": "dc",
+      "ratio": "SNR",
+      "melodyNoiseGain": 0.4685962549702635,
+      "chordNoiseGain": 0.26679273164482353,
       "snrDb": 10,
       "preprocess": false,
       "pitchTrials": 4,
@@ -174,15 +455,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 1,
-      "falseNotes": 0,
-      "matchedOnsets": 0,
-      "onsetMeanAbsErrorMs": null,
+      "event": {
+        "onset": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 4,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 325
+      "cpuMs": 344
     },
     {
       "kind": "dc",
+      "ratio": "SNR",
+      "melodyNoiseGain": 0.4685962549702635,
+      "chordNoiseGain": 0.26679273164482353,
       "snrDb": 10,
       "preprocess": true,
       "pitchTrials": 4,
@@ -190,15 +496,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 3,
-      "onsetMeanAbsErrorMs": 9.777777777777715,
+      "event": {
+        "onset": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "signedOnsetBiasMs": -6.222222222222247
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.75,
+          "f1": 0.8571428571428571,
+          "signedOnsetBiasMs": -6.222222222222247
+        },
+        "eventAcceptanceCoverage": 0.75,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 249
+      "cpuMs": 302
     },
     {
       "kind": "accompaniment",
+      "ratio": "SIR",
+      "melodyNoiseGain": 0.537252798040554,
+      "chordNoiseGain": 0.30182795902402615,
       "snrDb": 10,
       "preprocess": false,
       "pitchTrials": 4,
@@ -206,15 +537,40 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 3,
-      "onsetMeanAbsErrorMs": 9.777777777777715,
+      "event": {
+        "onset": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "signedOnsetBiasMs": -6.222222222222247
+        },
+        "note": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285714,
+          "signedOnsetBiasMs": -2.6666666666667425
+        },
+        "eventAcceptanceCoverage": 0.75,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 359
+      "cpuMs": 375
     },
     {
       "kind": "accompaniment",
+      "ratio": "SIR",
+      "melodyNoiseGain": 0.537252798040554,
+      "chordNoiseGain": 0.30182795902402615,
       "snrDb": 10,
       "preprocess": true,
       "pitchTrials": 4,
@@ -222,12 +578,34 @@
       "octaveErrors": 0,
       "unknownPitch": 0,
       "onsets": 4,
-      "falseNotes": 0,
-      "matchedOnsets": 3,
-      "onsetMeanAbsErrorMs": 9.777777777777715,
+      "event": {
+        "onset": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75,
+          "signedOnsetBiasMs": -6.222222222222247
+        },
+        "note": {
+          "tp": 2,
+          "fp": 1,
+          "fn": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285714,
+          "signedOnsetBiasMs": -2.6666666666667425
+        },
+        "eventAcceptanceCoverage": 0.75,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
       "chordWrong": 0,
       "chordUnknown": 0,
-      "cpuMs": 280
+      "cpuMs": 292
     }
   ]
 }

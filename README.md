@@ -32,9 +32,10 @@ npm start
 ## 测试与 CI
 
 ```sh
-npm test                   # PCM 算法、生命周期：15 项
+npm test                   # PCM 算法、生命周期与指标：32 项
 npm run build              # JS 语法检查 + dist 静态应用
 npm run fixtures           # 生成 6 个本地 PCM16 WAV
+npm run test:report         # JUnit 报告写入 reports/unit.xml
 npm run test:browser        # Linux Chromium/Chrome：自动启动 dist 测试服务器
 node scripts/noise-benchmark.js  # 14 组原始/预处理对照
 ```
@@ -53,7 +54,7 @@ GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试
 
 ## 目录与下一步
 
-- [产品/课程草案](docs/PLAN.md)、[接口契约](docs/INTERFACES.md)、[竞品参考](docs/competitors.md)。
+- [产品/课程草案](docs/PLAN.md)、[接口契约](docs/INTERFACES.md)、[竞品参考](docs/competitors.md)、[识别研究与实验计划](docs/RECOGNITION_RESEARCH.md)。
 - `src/input.js` / `capture-worklet.js`：设备授权、PCM、停止/异常。
 - `src/dsp.js` / `preprocess.js`：单音、起音、和弦候选与可关闭预处理。
 - `src/score.js`：声明式短谱、因果跟随、离线编辑距离。

@@ -2,12 +2,12 @@
 
 初始测试环境：Linux 容器，Node v24.19.0、Python 3.12.14、预装 Chromium。初始原型无依赖安装；后续加入跨平台 Node 静态构建与 CI，见 README。所有命令在项目根目录执行。
 
-## 已实际执行
+## 初始里程碑历史记录
 
 - `npm test`：15/15 通过，0 失败，最后一轮约 3.39 秒。覆盖 44.1k/48k 的合成泛音单音（MIDI 40/45/52/64/65/67/76）、静音/噪声、C/Am 候选与非候选七和弦拒绝、PCM 起音到八音短谱对齐、缺音、重复音、匀速变化、未知/额外音因果策略、削波、已知连续换音失败、DC 保留原始波形、噪声强度对照、取消授权请求后晚到音轨释放。
 - `npm run fixtures`：生成六个实际 PCM16 WAV 到 `fixtures/`，包括 melody、c_major、noise、missing、repeated、unsupported_chord。文件被 gitignore，生成器纳入项目。旋律默认音间距 1 秒，即该每音两拍短谱的 120 BPM 测试版；课程草案中的 60 BPM 不被测试固定为评分速度。
 - `node scripts/browser-smoke.js`：6 个检查均通过。页面生成 PCM 经 Worker 得到 8 个音并完成对齐；C 候选识别；本地缺音 WAV 经浏览器 decodeAudioData 后得到 7 个音和一个 unobserved；Chromium 假麦克风经 getUserMedia → AudioWorklet → Worker → 实时跟随 → 停止；权限拒绝路径；无页面运行时异常。浏览器使用假麦克风 WAV，不是实际硬件。
-- `node scripts/noise-benchmark.js`：14 组原始/预处理对照已完成，原始数值见 `noise-benchmark.json`。这不是只喂已知音符事件的测试：音高、起音、和弦都从 PCM 开始计算。
+- `node scripts/noise-benchmark.js`：14 组原始/预处理对照已完成，当时使用旧逐事件最近索引统计；当前 `noise-benchmark.json` 已升级为一对一匹配及 active-region SNR，不应直接与旧统计横比。这不是只喂已知音符事件的测试：音高、起音、和弦都从 PCM 开始计算。
 
 ## 抗噪结果与解释
 
@@ -33,3 +33,9 @@
 ## ZIP 交付验证
 
 从本地初始提交导出 ZIP，排除 `.git`、生成 WAV、node_modules 和凭据目录，包含零依赖 package-lock.json。完整性检查通过；在新的临时目录解压后再次执行 `npm test`：15/15 通过；`npm run fixtures` 再次成功生成六个 WAV。未安装任何第三方依赖。浏览器 6 项与噪声 14 组来自上文原工程执行记录，未把解压测试冒充真实琴验证。
+
+## 第二里程碑：边界、校准与标准指标
+
+本地 32 项自动测试通过，浏览器扩为 7 项检查：新增实际匹配音高/索引断言、采样时钟推进、stop/restart 隔离与 track/context cleanup。修复校准 raw DC RMS 与 gate DC-free RMS 的域不一致，以及掉帧后 stale chord / 人工起音问题。重复或倒退时间戳、不同流/采样率、非法 PCM 显式拒绝。
+
+保留而未掩盖的失败：sample 0 起音当前被定位到首个 tail hop（48k 下 64ms）；截断不足窗口和尾部极短音可能无事件；快速重复/连音仍漏检。标准一对一事件指标、pitch RPA/voicing/coverage、纯噪声误事件率与计算延迟分位数已有机器可读框架。新 runner 只实跑自制 PCM，真实 GuitarSet/IDMT 数据、offset、完整和弦和硬件延迟尚未评估。详见 RECOGNITION_RESEARCH.md。
