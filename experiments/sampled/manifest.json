@@ -1,0 +1,1999 @@
+{
+  "experiment": "M2 controlled Emily sample branches; attack proxies, not hand-labelled ground truth",
+  "bankCommit": "b4920dc662fd9cad6dcaccdeecffdd91c8725d8c",
+  "bankLicense": "CC0-1.0",
+  "rendererVersion": "sfizz 1.2.3 archived offline tool",
+  "rendererSha256": "bcc209850f4d6ace363c13ad9b9882b885f397e29c257754d422b76724744f97",
+  "originalSfzSha256": "e4e0fb4938db52459dc369ae4347548b5894bb75b21ea04ff66a2033be0d96cc",
+  "sampleRateHz": 22050,
+  "selectedSamples": {
+    "1": [
+      {
+        "file": "notes/db2_p_rr1.wav",
+        "sha256": "8dcee4b9aafd2a33a09f48d57d75ed7f27a60f0ab06b93185759af35f212368f",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/db2_mp_rr1.wav",
+        "sha256": "fd42ab961041b693064fd70f6e6f6434934c6c266f96f0fb85b44cf02a5b7e64",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/db2_mf_rr1.wav",
+        "sha256": "7056fe063dddb9c5b3d288d9800171a44111772fc0b999498b4b0867d4b67fe6",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/db2_f_rr1.wav",
+        "sha256": "c4b518bfb7e17fefb91d58b4c4b01554301197753f76feb4b32f9ab4824480e4",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/e2_p_rr1.wav",
+        "sha256": "7edec7d6aee89f8a753277f8795d0fb8df3fad7c5c5b8a302a04d914055e7af4",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/e2_mp_rr1.wav",
+        "sha256": "2cdfe97743f36ea4e16a7ffbff3ef8f200893bebd0dc9f9a5621dafcdecbe4fd",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/e2_mf_rr1.wav",
+        "sha256": "e1a2c4443e754a40afed733430ef52fa35490e110f2bacee429ccffd61e9d201",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/e2_f_rr1.wav",
+        "sha256": "a674f5c6b2ec5f9d37421d51c8518d0a0ad223cf564913151263d7c20c8a4017",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb2_p_rr1.wav",
+        "sha256": "e9df0c526dce2d995b657c45a3ab788b3edace65863950ae00d41651e09ee4a1",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb2_mp_rr1.wav",
+        "sha256": "33e13b64a364264344faeaa3a98d74fcf40cd72ac865fe7277000e48c20bd2cc",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb2_mf_rr1.wav",
+        "sha256": "aab2c703be7803f4f9f2ca0783700132a7a653aab9ee23b51095423d8a63dfc2",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb2_f_rr1.wav",
+        "sha256": "d8324a84330ab133ae1ab3468655162ed2dcfeaf6eab208fa4c800f637998781",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a2_p_rr1.wav",
+        "sha256": "e728c4291bdc15b35bd0e598d67ac3b480016a9dd183f08699d878dc02948ec4",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a2_mp_rr1.wav",
+        "sha256": "9688299f1462019634805c380c72a27ab4cad0402f298f4a8ba95e4c8a65ebaa",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a2_mf_rr1.wav",
+        "sha256": "b0031818b989d576cdc189154c90162e1b545b7ee9c56a6640ce0e7e658079c4",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a2_f_rr1.wav",
+        "sha256": "0d58e0992ab32623371b1b94be4200961a7503b3bad796c3bbd40ce530c53469",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c3_p_rr1.wav",
+        "sha256": "6dc716c5e3f995c74757d726afc2dbf67e13f28df4c916d8f2961a3dd20d18fc",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c3_mp_rr1.wav",
+        "sha256": "905955dffc33333557736368f5e3d1ff9addaf118007a16d23fb4eb699f02a55",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c3_mf_rr1.wav",
+        "sha256": "255adb40062435e8774a8d02f26b98f7741f3496b362eb265ca3453f5e4ad55d",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c3_f_rr1.wav",
+        "sha256": "325779911651325e884454df5423923a9f763c147e32dd223772ba5f28322349",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb3_p_rr1.wav",
+        "sha256": "fd9e92df98efa35fc539790210705b37c559ad4ab0214fbeb9be8c3e65c7e4e2",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb3_mp_rr1.wav",
+        "sha256": "2f5de9b90ddc9f558da9aab376f9c729fe5c2e805b562dc13d6f6196eebf871b",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb3_mf_rr1.wav",
+        "sha256": "12978712adecefb7643c2f0e2632e87f684c26654073ce425e708c70e642c5b5",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb3_f_rr1.wav",
+        "sha256": "e7f542e13d171d5f9b2aae495bade31118efbeab5c133ef6defd36eda68c6e08",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb3_p_rr1.wav",
+        "sha256": "854bd4dd1f20567b89c86f3726ebad978a84569e0c61c429c95bc20eeb398b9b",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb3_mp_rr1.wav",
+        "sha256": "eda77b9d9f77462b0f601713fb54796ba9808e88870fbe1ddd230559d92e941c",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb3_mf_rr1.wav",
+        "sha256": "0cd292ead34dc8ff7c4e4daf4638d73f3a81b95a50f531c626cf0e737babe785",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb3_f_rr1.wav",
+        "sha256": "23b9afa3c8c9076def758810245f8a62d29db3aef9fa71d05f432bfc17e554d9",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a3_p_rr1.wav",
+        "sha256": "d92e980efba435aebfe43e74ab8f4215879b1d4c740359b6a5ee14e052fd5c49",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a3_mp_rr1.wav",
+        "sha256": "92881dc3afa984ef20dd405b13ed9713a649076f86eb0d683ffce8989912be93",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a3_mf_rr1.wav",
+        "sha256": "97da917363eef473435df5e215cedf18579fdef7d7cb0f677f9a50f085930c13",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a3_f_rr1.wav",
+        "sha256": "60fd76d27da5e3a2099a2d52028b8bb0eb931ccc974ef51bd6d5793ea69604a6",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c4_p_rr1.wav",
+        "sha256": "cc51fcb6d14a3d29f66533a58abcfe32998cb09d2b288290a65b2aea18b600c7",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c4_mp_rr1.wav",
+        "sha256": "af79b9c1f7df66d3028cac69679a6dde35992dc06fe41cdc7758d287a070e5dc",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c4_mf_rr1.wav",
+        "sha256": "67643ecb0b523745ff80127396a5c8c6e871115102020c34ab84cce3140aab70",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c4_f_rr1.wav",
+        "sha256": "3caf8ba2f821b2c1ca013fddffc2d66a7bacbf109cb9a0dcbc4002540a26a5b3",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb4_p_rr1.wav",
+        "sha256": "1a51f07fec6debaab30b44374ea2a58ac03f22bf332117438379a7c46d908f9a",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb4_mp_rr1.wav",
+        "sha256": "81bcc53beb5209a2b67c30dccf8ffb8c376e9400abfb5de340c181359ad681c8",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb4_mf_rr1.wav",
+        "sha256": "bffb64bc23b38596507e0b62abe5d7df7e70364a0564ca71bdbed27b9b91b8d2",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb4_f_rr1.wav",
+        "sha256": "6e270011b2733dccb4e5e688be77c86bd9f9d4374c02e219cb55266b24ef16ec",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb4_p_rr1.wav",
+        "sha256": "00303711f9dc8089cbd128f59c883d777028c43bb57e046fed7c20cb2eb3e48c",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb4_mp_rr1.wav",
+        "sha256": "1ad77352a26e1a56a38b73a49c350b5bc9a73e41139bb5f5fa46147533cbf66a",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb4_mf_rr1.wav",
+        "sha256": "cfcffc387151aaec0e29f23d28004404ab964d0fd1cd819303a5f7e4711d1e87",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb4_f_rr1.wav",
+        "sha256": "f3790290fa763a1555e3fa84b828610de3f007ab86abeb7e8eb48f29c33cf473",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a4_p_rr1.wav",
+        "sha256": "7fdbdb45e7202d0a85ced602b7aebb98fead77b3ba885ddd1e37c71f9032aed6",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a4_mp_rr1.wav",
+        "sha256": "2650004e015576a74f2e6a1e50af8b98f113df792a0f8607910c234529e7b346",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a4_mf_rr1.wav",
+        "sha256": "4df039e1d517e727149ba4ef8e1616ead6761ab485fa541f522611a9388471b8",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a4_f_rr1.wav",
+        "sha256": "aedc4779fbecebf9c8b722161340c0a06acb0147cd7b7a40a5117f9635318589",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c5_p_rr1.wav",
+        "sha256": "f9c6a5388e9bae2f84c3641315d6fae5166eb442d0ea4f7e38488d5d76d31aa3",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c5_mp_rr1.wav",
+        "sha256": "db491a413f40a28f3358df15bb277f2d0a34ec80f83f565ffa5430bce9c4620c",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c5_mf_rr1.wav",
+        "sha256": "5e2f79f8b12e1cde3fdaa62e7c441907fd39eb3a222c3d240ae227a241a9f5ee",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c5_f_rr1.wav",
+        "sha256": "2f7f7cca8cff33c217e17887361a6c4dae8f63d96512f19acf1c18fd5d60bb5a",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb5_p_rr1.wav",
+        "sha256": "d08f8c880f955c4e4a44d49e4b7759d07dbd9c7f465d96237e5b0fa55a56b174",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb5_mp_rr1.wav",
+        "sha256": "de16428ac68068329e3d2b5345c6a426c83b5f6db3338b83455711a720785d10",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb5_mf_rr1.wav",
+        "sha256": "5e673d0d45a382edcfd88ce50850c76dc3ad73be774fbb3af21c60d10c2fed3d",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb5_f_rr1.wav",
+        "sha256": "aade67a3f4ccfc42dff0b914304bb45b5bfba6b956e4ff4dc4c0ab2e023cf01d",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb5_p_rr1.wav",
+        "sha256": "9611c0faaee802010d1d67d6678c802c806239c9c7f5b67107039ed21edcfe5c",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb5_mp_rr1.wav",
+        "sha256": "d62786d353de332bd5e074c8a5d79330466f346222e91b45d42a80453ac3d046",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb5_mf_rr1.wav",
+        "sha256": "32968b1ec8f69bae83231dfa71460d85e5954420257540e91c76a2aa615fde07",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb5_f_rr1.wav",
+        "sha256": "50fb98c21039c41a00cc4a2a6656c79817369df2c1109e46022bf585a2836cb1",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a5_p_rr1.wav",
+        "sha256": "1e89187c1f484a99092e87af50070715b0137577337f3fc8add7c67299691612",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a5_mp_rr1.wav",
+        "sha256": "06d1c41f6c76293a67e9a1c667f974f508900dfaa20f345f75f7408b0060da4d",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a5_mf_rr1.wav",
+        "sha256": "dc0dfb831d93b7fad9b67d34c4538220147b88418b26555dd5a55d30eed77e51",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a5_f_rr1.wav",
+        "sha256": "805c33a086cb6f213b15114c177113c895faf1095fa5d0fcab6c6f11f9280a61",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c6_p_rr1.wav",
+        "sha256": "da2b60481b905be19823b4d67d97356e62ad097cd362f04624e8490cc87e88c7",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c6_mp_rr1.wav",
+        "sha256": "568f13928b0de8fb9a51dd8aea33681ecdf0b3442e8fad00477df0cca4c3ad5f",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c6_mf_rr1.wav",
+        "sha256": "7aebd9aacbd66d2348749193357dd391a68e7c2f4b51b4acbc0834b5df643681",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c6_f_rr1.wav",
+        "sha256": "53732f9871c88905ef13644362ded09bb1eeec214f47fb74c88cc1fac034c112",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/d6_p_rr1.wav",
+        "sha256": "fb532fc46461ab15c7222399d79f25b781eb90af4e2c2a3c9029e6b527ab5e9f",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/d6_mp_rr1.wav",
+        "sha256": "dc220a53300416c609e933cbfa78412a131999d40ba288b2a0cc360d44361b5a",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/d6_mf_rr1.wav",
+        "sha256": "07a6ca23d75a76aee73875ba685003a27a92c0d9d58af7768904c0206ba2a8c8",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/d6_f_rr1.wav",
+        "sha256": "b7192fbe292ed9fc3688a7815b506c3e43d7308521dd2c9671e0dbd7bb655e10",
+        "bytes": 560944
+      }
+    ],
+    "2": [
+      {
+        "file": "notes/db2_p_rr2.wav",
+        "sha256": "c6ab9a96937e194a6373b9c332f955c1e5a89d29f7652afc1ce1ef0f5b55cf12",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/db2_mp_rr2.wav",
+        "sha256": "219908fb4cc7b6a9e56d111efe26b4fb4422f7c4573f51ace842216cd9428e27",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/db2_mf_rr2.wav",
+        "sha256": "1425e41d53dfd2a564df17e66fab6762f501e344a9dd4665ab0febadffbb46ec",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/db2_f_rr2.wav",
+        "sha256": "91c9cf96c4c2efa2b9bcca97f7c0211f49ccf0e0a23152affaf1ade10bece524",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/e2_p_rr2.wav",
+        "sha256": "43e9e1bedbbef484e24f9ac98fcf334d058865064dace97978b344d0385bcbe8",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/e2_mp_rr2.wav",
+        "sha256": "7945c022de99ab5c06b05e2dddbc1ede7ee1e13e8a6af2cab55d41dc6420fc28",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/e2_mf_rr2.wav",
+        "sha256": "76c26f3bef07be2dcf32c77f860481e3241681be4be1a0f10c59b3fa252b4c3d",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/e2_f_rr2.wav",
+        "sha256": "9a5cfc1ae8068db591a46fad392d086b0d8053f40a5eaac32c974d7ce5681879",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb2_p_rr2.wav",
+        "sha256": "db4aecfc5b588e782869756ee14c8a515265ca47d1ae4a5a9b886d20e8bcb67c",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb2_mp_rr2.wav",
+        "sha256": "8da59ce4d3c0efe0bd73977bf6d49685edd6de8897798df389c5bb37633fa676",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb2_mf_rr2.wav",
+        "sha256": "528ed4815d1b4f984ae4522687ec2844244e007b45cc73e2ad8355bd69df99e5",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb2_f_rr2.wav",
+        "sha256": "865ef2cc712e8c62f545cda84480838eb5e13608468e18a8ce5516eb1f5ef102",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a2_p_rr2.wav",
+        "sha256": "e3c442b6bcea4d7ddd882ba7c657e1c936d555dc3a3791d562a46bfdc5642c11",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a2_mp_rr2.wav",
+        "sha256": "ca30e457a389d929a944227047d894ed36aa06b4158099b5e6562ef3ee020292",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a2_mf_rr2.wav",
+        "sha256": "f2e4628a8ca606c6effff4a575e25069cddb31894cfb5ca7351c9fc99b4aea7f",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a2_f_rr2.wav",
+        "sha256": "752c2c5b65ad4456de25764354344de7606e6494f4d9e97d8a9338aed31beb7e",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c3_p_rr2.wav",
+        "sha256": "308bc3ef53fd6b5ce7a8e0e2aa364b27b7c5725ea2b38993169b8ab6a112193d",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c3_mp_rr2.wav",
+        "sha256": "60dcf7d675a3f3d8bfddc4286114be29b8f2701cb4d6528780490fd15143ebe9",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c3_mf_rr2.wav",
+        "sha256": "3fc57d1591cd31e016f6a7f3f97bc39fbaae91ecccdc080049976c02827ac7fe",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c3_f_rr2.wav",
+        "sha256": "b54abe35de75962a0591fa4d33145e2060b46ba9c4ebd11c2488ab34aa035c86",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb3_p_rr2.wav",
+        "sha256": "fd8f5ddf6de5d28511d3ce5de407edac863b6dbc0a33361ed403a298ba0a25aa",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb3_mp_rr2.wav",
+        "sha256": "4d259df76012b90dd43bbf0e7856825a679bdc483aaa675793391754ee9adccc",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb3_mf_rr2.wav",
+        "sha256": "3316256c408d831974bb52e1fca1bcbdcb22038314f79580e0a71634efcb21dd",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb3_f_rr2.wav",
+        "sha256": "70052c7cb54e262cd7a93cc4fb65a96928ab0ef944d691099408d0aec2cd1546",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb3_p_rr2.wav",
+        "sha256": "618d4a46a08baac1d0ab6f69d39e98ef505687c6e8754bdb0676cbbbb5ec18b3",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb3_mp_rr2.wav",
+        "sha256": "961ee02d6cb60c76a789e31ddd3abe5c744045673e1bad09b1245c10c2de6505",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb3_mf_rr2.wav",
+        "sha256": "585f0c03e65170edaf6f753f38b71cccddbed447b7c0b3ad788243ce58d66705",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb3_f_rr2.wav",
+        "sha256": "6914b0e0d8402eeb085f6503cf3915204df36279334739b447389854f4bb4b3b",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a3_p_rr2.wav",
+        "sha256": "f27338edb9169d0ab3598d8e8f62b7318965ab1dfcb49ef013da85f4bc02db58",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a3_mp_rr2.wav",
+        "sha256": "f00cfed9f2f31489a8af5ea0131ed7034107790c32020128308b23c356be88d3",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a3_mf_rr2.wav",
+        "sha256": "c33b1889ebbb61aa1af07aad550fcfa409a0600c7ffec2b757410cdfddd07428",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a3_f_rr2.wav",
+        "sha256": "b52e71770ee69846edc29e3710c29b4dd5101d61638c1567b508f200ec494429",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c4_p_rr2.wav",
+        "sha256": "21aa9e49ee692f6c2baa139c523f55a562e2ded8af95841f3a7a2e2cd436f929",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c4_mp_rr2.wav",
+        "sha256": "d29aa2e24519f6bfb2cbf2ecad5e8337d9b45194282e62440c29b483be01b1f9",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c4_mf_rr2.wav",
+        "sha256": "e98e0204c916f28c2063885d3659b5470cbef5353b12269f705a89c0c5a6eed0",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c4_f_rr2.wav",
+        "sha256": "d709066b2fd7a3bac9182c987bac9f42ec1f10508915b965adb506529abc2112",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb4_p_rr2.wav",
+        "sha256": "b5aad3f45dd94284201341e35cecd92de0a709ee31ef8872972e0bde79847df4",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb4_mp_rr2.wav",
+        "sha256": "92ec458d2f43c15e1d321e12800114abe3ea53feadcfd8ed0933ce90d579a259",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb4_mf_rr2.wav",
+        "sha256": "b4ba1d2d32a8b0e60386ffebf8cae78d61d892334cc0d4dbd79070fae7a3d550",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb4_f_rr2.wav",
+        "sha256": "95a8a3ea238c9e4abd3577e6ade9d9d987ef986aa965bada11a5d9e3ba814b20",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb4_p_rr2.wav",
+        "sha256": "47c2615b0babffe5b6c26a63694216516ea62e015219d6a41cdd0b2f09f83671",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb4_mp_rr2.wav",
+        "sha256": "e72a60091f450dd5afc7c483271a27e024803500bbc218fbf2f2ddf251a850ca",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb4_mf_rr2.wav",
+        "sha256": "c6db34c4f6568a6faca9626d8ce829d23a37e29c05c5787f78ede200b0fee0d6",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/gb4_f_rr2.wav",
+        "sha256": "8c3eb2772d4fd6663f514e4c88c592cae48f3a28b40f6104589cd7a47db93dd0",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a4_p_rr2.wav",
+        "sha256": "c9304644259143b6eb97a60718959db4c09dcabda9b5e9cf16a95177c8c1a972",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a4_mp_rr2.wav",
+        "sha256": "8895fbca0fb373cb52cbda49ee7257257ed35c133f946a9c6518e0003d4734a6",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a4_mf_rr2.wav",
+        "sha256": "70312c3adbff3fa03d297513ac8d1c556e724fe954980908bc002bf1b50ef326",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a4_f_rr2.wav",
+        "sha256": "17d35473fe3a3ba04da9c6238e6fc8357bbcaf65e2a8e692f134803457378da1",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/c5_p_rr2.wav",
+        "sha256": "25832b6e9eef1f867217d1a3aaab8ac955484a8e1044915375d8b813c24b36fe",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c5_mp_rr2.wav",
+        "sha256": "5e675fd6ec114084428ec2c4e5348783d3e44b9896c6ce3282c851a2f0d54b37",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c5_mf_rr2.wav",
+        "sha256": "6ee9e8db73062e2390ea73cc8a5a599a58f28d75d2b47d86af1a45a9421e6ddb",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c5_f_rr2.wav",
+        "sha256": "df021197b87dbb983239951d478e25da3df2b1c66914e27ea8ffb71be4fadfb8",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/eb5_p_rr2.wav",
+        "sha256": "ff8fece1c16223530be99e537d8cd38dc01231069a17ae3cf955a108eb3b05f3",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb5_mp_rr2.wav",
+        "sha256": "0f69bce72786272fa13a5140d40ae3c1e100d195f572227418972deb9552c1d8",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb5_mf_rr2.wav",
+        "sha256": "b992db0731da59e593d546f4134a7cd34567309880227232bf9fc4d299868c3d",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/eb5_f_rr2.wav",
+        "sha256": "fa26e26da324df8850a9352f89b22fb9b34cadb906ee4e1ab3bacab17b44ab61",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb5_p_rr2.wav",
+        "sha256": "f9187688202e05ade45c7b2319945c7a8fde646edbf54cdfa072b00aca338552",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb5_mp_rr2.wav",
+        "sha256": "20b5c3a8d149ad1863de9303a4b849a027c1d8bf0367ea4741834371519d9637",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb5_mf_rr2.wav",
+        "sha256": "040e1ac2751a4f8d22b3577d2a71ec97c5197a2ac4ba90f8afc60dbf0e6448a9",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/gb5_f_rr2.wav",
+        "sha256": "4bc18728bfb9305b486656a83ce2898abe8ff6fd6258fb91fc8f4a8ee1a8d08f",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/a5_p_rr2.wav",
+        "sha256": "5aea5680486162dc466a8e16447d8e71b59554a53d29d8b7130eba52574f3d72",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a5_mp_rr2.wav",
+        "sha256": "bf020766dcee5d4fc94134ad8979fe1ae410beadc66890ef88e85045c31d78c3",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a5_mf_rr2.wav",
+        "sha256": "c6ff157fd6f3d3a55a705560dd8f8452d931c98f0f6b430990c9a9af58955fee",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/a5_f_rr2.wav",
+        "sha256": "8459b30a34b6ec900f8ee5e812b4e341b5eae8864236d71c119c6ed6961a952e",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c6_p_rr2.wav",
+        "sha256": "15f0640405a772aae387c3092a02a2244302557869aa9f9bfa7dba562fe25327",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c6_mp_rr2.wav",
+        "sha256": "eeadbf44e0e419166b587b7a8a84091802535231db42a57d1087e7c95cbdffd5",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c6_mf_rr2.wav",
+        "sha256": "0d2f93a7d2830789d1b89a09458d2413002db2f90b01b0adc057bfdecaa1318b",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/c6_f_rr2.wav",
+        "sha256": "14e4483c5c39cb801e56d545984f4273e81445c45803d70574853936790f074b",
+        "bytes": 560946
+      },
+      {
+        "file": "notes/d6_p_rr2.wav",
+        "sha256": "45e1a60698258070451db803fe3666d3454fa7e0282240a1500adc452448b8a3",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/d6_mp_rr2.wav",
+        "sha256": "6a7b0d8cde1b2f8996e64924b1849e37e6cb6bcc37164669802e9fab7b425568",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/d6_mf_rr2.wav",
+        "sha256": "47f3a94efc3e1ef29501275fd8599a351ff0fe0e34e6b05291ab5c2b03af4f91",
+        "bytes": 560944
+      },
+      {
+        "file": "notes/d6_f_rr2.wav",
+        "sha256": "b00d5e3e882a72f06343bd726968181e597bffe3a1c5259796c4dd4b57d8b30e",
+        "bytes": 560944
+      }
+    ]
+  },
+  "calibration": {
+    "cal-1-35-52": {
+      "midi": 52,
+      "velocity": 35,
+      "rr": 1,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.40816326530614,
+          300.81632653061223,
+          301.6326530612245
+        ],
+        "onsetMs": 300.81632653061223,
+        "lowerMs": 300.40816326530614,
+        "upperMs": 301.6326530612245,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "cfb15f0368151b2e083506f9191548f0b54dfa4ef371ac11896dc011dc811efa"
+    },
+    "cal-1-35-64": {
+      "midi": 64,
+      "velocity": 35,
+      "rr": 1,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.0453514739229,
+          300.1814058956916,
+          300.77097505668934
+        ],
+        "onsetMs": 300.1814058956916,
+        "lowerMs": 300.0453514739229,
+        "upperMs": 300.77097505668934,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "076f6004d5f1bdb1f27279fbe45295744ec12150180abe991427b82a06414df8"
+    },
+    "cal-1-35-67": {
+      "midi": 67,
+      "velocity": 35,
+      "rr": 1,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.13605442176873,
+          300.77097505668934,
+          301.2244897959184
+        ],
+        "onsetMs": 300.77097505668934,
+        "lowerMs": 300.13605442176873,
+        "upperMs": 301.2244897959184,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "ccb0921ca8f0915b256496d66063f22cb765c831c0709bc74883b82056663f07"
+    },
+    "cal-1-90-52": {
+      "midi": 52,
+      "velocity": 90,
+      "rr": 1,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.2721088435374,
+          300.90702947845807,
+          301.26984126984127
+        ],
+        "onsetMs": 300.90702947845807,
+        "lowerMs": 300.2721088435374,
+        "upperMs": 301.26984126984127,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "2fd04df151372430b59ddb8a3d59e39ee3d819249ca1141d3b344cb857e3760d"
+    },
+    "cal-1-90-64": {
+      "midi": 64,
+      "velocity": 90,
+      "rr": 1,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.0907029478458,
+          300.95238095238096,
+          301.31519274376416
+        ],
+        "onsetMs": 300.95238095238096,
+        "lowerMs": 300.0907029478458,
+        "upperMs": 301.31519274376416,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "d3555cbbc8730be35840f1d06787740d18440232ad167edc20b859d79b6b2561"
+    },
+    "cal-1-90-67": {
+      "midi": 67,
+      "velocity": 90,
+      "rr": 1,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.13605442176873,
+          300.2721088435374,
+          300.72562358276645
+        ],
+        "onsetMs": 300.2721088435374,
+        "lowerMs": 300.13605442176873,
+        "upperMs": 300.72562358276645,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "d6b93a09151a1d05455f11a85ccd80f268797ca6bf5084944189c9efefb431ad"
+    },
+    "cal-2-35-52": {
+      "midi": 52,
+      "velocity": 35,
+      "rr": 2,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.0907029478458,
+          300.2721088435374,
+          300.72562358276645
+        ],
+        "onsetMs": 300.2721088435374,
+        "lowerMs": 300.0907029478458,
+        "upperMs": 300.72562358276645,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "3afe0cd0572b94feed0d71ef58bc8974b2d8b3b462159ff0187ac431202b2ce8"
+    },
+    "cal-2-35-64": {
+      "midi": 64,
+      "velocity": 35,
+      "rr": 2,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.1814058956916,
+          301.08843537414964,
+          301.26984126984127
+        ],
+        "onsetMs": 301.08843537414964,
+        "lowerMs": 300.1814058956916,
+        "upperMs": 301.26984126984127,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "3b5629a3d5658fa86c35dfc9b5fd0ea4152fc4dc76e0fb36e9da134e13f2728b"
+    },
+    "cal-2-35-67": {
+      "midi": 67,
+      "velocity": 35,
+      "rr": 2,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.0907029478458,
+          300.3174603174603,
+          301.08843537414964
+        ],
+        "onsetMs": 300.3174603174603,
+        "lowerMs": 300.0907029478458,
+        "upperMs": 301.08843537414964,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "874887318454f4098cfd8c94cd3ed1b11bce868484c437cf18edaff5390ebf82"
+    },
+    "cal-2-90-52": {
+      "midi": 52,
+      "velocity": 90,
+      "rr": 2,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.2721088435374,
+          300.68027210884355,
+          302.22222222222223
+        ],
+        "onsetMs": 300.68027210884355,
+        "lowerMs": 300.2721088435374,
+        "upperMs": 302.22222222222223,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "d603c60ca457929413e62bb2758ed80f37bc2215108f25ba1560f60ea1c0f01c"
+    },
+    "cal-2-90-64": {
+      "midi": 64,
+      "velocity": 90,
+      "rr": 2,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.0907029478458,
+          300.99773242630386,
+          301.1337868480726
+        ],
+        "onsetMs": 300.99773242630386,
+        "lowerMs": 300.0907029478458,
+        "upperMs": 301.1337868480726,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "efda683bbda00e12cda671846540ac270797ec2e92b28ce9479f8ef3950d559c"
+    },
+    "cal-2-90-67": {
+      "midi": 67,
+      "velocity": 90,
+      "rr": 2,
+      "midiOnsetMs": 300,
+      "rendered": {
+        "method": "trailing1msRMS relative to first150ms peak",
+        "thresholdsDb": [
+          -40,
+          -30,
+          -20
+        ],
+        "thresholdOnsetsMs": [
+          300.0907029478458,
+          300.3174603174603,
+          300.95238095238096
+        ],
+        "onsetMs": 300.3174603174603,
+        "lowerMs": 300.0907029478458,
+        "upperMs": 300.95238095238096,
+        "resolutionMs": 0.045351473922902494,
+        "smoothingMs": 0.9977324263038548
+      },
+      "wavSha256": "718a56001f0b5d959e46026c50af14b79df162dfeba5b032ebc0a7f68917a978"
+    }
+  },
+  "cases": [
+    {
+      "id": "rr1-v35-dry-clean",
+      "file": "rr1-v35-dry-clean.wav",
+      "sha256": "57a4d17e1ee2aa145e5cb7698afb69e1caaa16b2c0164929271a63fd74ce4f90",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 35,
+          "onsetMs": 300,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 300.81632653061223,
+          "acousticBoundsMs": [
+            300.40816326530614,
+            301.6326530612246
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 35,
+          "onsetMs": 1000,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1000.1814058956916,
+          "acousticBoundsMs": [
+            1000.0453514739229,
+            1000.7709750566894
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 35,
+          "onsetMs": 1700,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1700.7709750566894,
+          "acousticBoundsMs": [
+            1700.1360544217687,
+            1701.2244897959183
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 47616,
+      "sampleRateHz": 22050,
+      "rr": 1,
+      "velocity": 35,
+      "roomed": false,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "peak": 0.026123046875,
+      "groupId": "rr1-v35",
+      "split": "development"
+    },
+    {
+      "id": "rr1-v35-dry-noise10",
+      "file": "rr1-v35-dry-noise10.wav",
+      "sha256": "fc1de568ffc7269532667fc10bd80d06e629b7cdb58080554e6277e4a330b5d3",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 35,
+          "onsetMs": 300,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 300.81632653061223,
+          "acousticBoundsMs": [
+            300.40816326530614,
+            301.6326530612246
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 35,
+          "onsetMs": 1000,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1000.1814058956916,
+          "acousticBoundsMs": [
+            1000.0453514739229,
+            1000.7709750566894
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 35,
+          "onsetMs": 1700,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1700.7709750566894,
+          "acousticBoundsMs": [
+            1700.1360544217687,
+            1701.2244897959183
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 47616,
+      "sampleRateHz": 22050,
+      "rr": 1,
+      "velocity": 35,
+      "roomed": false,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.002028768416744086,
+      "seed": 123,
+      "peak": 0.027424917244734264,
+      "groupId": "rr1-v35",
+      "split": "development"
+    },
+    {
+      "id": "rr1-v35-room-clean",
+      "file": "rr1-v35-room-clean.wav",
+      "sha256": "3cecc2fdb6c32d34d824242a2f1a86ce0e58e276123535608bece18f159ab14b",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 35,
+          "onsetMs": 303.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 304.0881114350502,
+          "acousticBoundsMs": [
+            303.67994816974414,
+            304.90443796566257
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 35,
+          "onsetMs": 1003.2717849044379,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1003.4531908001295,
+          "acousticBoundsMs": [
+            1003.3171363783608,
+            1004.0427599611273
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 35,
+          "onsetMs": 1703.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1704.0427599611273,
+          "acousticBoundsMs": [
+            1703.4078393262066,
+            1704.4962747003563
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 49626,
+      "sampleRateHz": 22050,
+      "rr": 1,
+      "velocity": 35,
+      "roomed": true,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "peak": 0.05662419162092811,
+      "groupId": "rr1-v35",
+      "split": "development"
+    },
+    {
+      "id": "rr1-v35-room-noise10",
+      "file": "rr1-v35-room-noise10.wav",
+      "sha256": "796845dc3f1a57c11757a4d0fed57df029b59f0e743850553fd8df84f7242ae9",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 35,
+          "onsetMs": 303.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 304.0881114350502,
+          "acousticBoundsMs": [
+            303.67994816974414,
+            304.90443796566257
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 35,
+          "onsetMs": 1003.2717849044379,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1003.4531908001295,
+          "acousticBoundsMs": [
+            1003.3171363783608,
+            1004.0427599611273
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 35,
+          "onsetMs": 1703.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1704.0427599611273,
+          "acousticBoundsMs": [
+            1703.4078393262066,
+            1704.4962747003563
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 49626,
+      "sampleRateHz": 22050,
+      "rr": 1,
+      "velocity": 35,
+      "roomed": true,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 9.999999999999998,
+      "noiseGain": 0.00411310642021723,
+      "seed": 123,
+      "peak": 0.05712871620278755,
+      "groupId": "rr1-v35",
+      "split": "development"
+    },
+    {
+      "id": "rr1-v90-dry-clean",
+      "file": "rr1-v90-dry-clean.wav",
+      "sha256": "083d1564a6a5d71991054a2be0503d0ca25f73aa9a6569f96bd346ec3ec7445b",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 90,
+          "onsetMs": 300,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 300.90702947845807,
+          "acousticBoundsMs": [
+            300.27210884353735,
+            301.2698412698412
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 90,
+          "onsetMs": 1000,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1000.952380952381,
+          "acousticBoundsMs": [
+            1000.0907029478458,
+            1001.3151927437641
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 90,
+          "onsetMs": 1700,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1700.2721088435374,
+          "acousticBoundsMs": [
+            1700.1360544217687,
+            1700.7256235827665
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 47616,
+      "sampleRateHz": 22050,
+      "rr": 1,
+      "velocity": 90,
+      "roomed": false,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "peak": 0.08380126953125,
+      "groupId": "rr1-v90",
+      "split": "development"
+    },
+    {
+      "id": "rr1-v90-dry-noise10",
+      "file": "rr1-v90-dry-noise10.wav",
+      "sha256": "bd2d5dd5c64f634d8594a377dd8e7b37f108265420135001e129de274e6c27f9",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 90,
+          "onsetMs": 300,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 300.90702947845807,
+          "acousticBoundsMs": [
+            300.27210884353735,
+            301.2698412698412
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 90,
+          "onsetMs": 1000,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1000.952380952381,
+          "acousticBoundsMs": [
+            1000.0907029478458,
+            1001.3151927437641
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 90,
+          "onsetMs": 1700,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1700.2721088435374,
+          "acousticBoundsMs": [
+            1700.1360544217687,
+            1700.7256235827665
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 47616,
+      "sampleRateHz": 22050,
+      "rr": 1,
+      "velocity": 90,
+      "roomed": false,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.004880897597611553,
+      "seed": 123,
+      "peak": 0.09103421029414105,
+      "groupId": "rr1-v90",
+      "split": "development"
+    },
+    {
+      "id": "rr1-v90-room-clean",
+      "file": "rr1-v90-room-clean.wav",
+      "sha256": "a9419361ef7c669df146ce597b8a7a7a8ae85aad5e25515faf7832591b5a3594",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 90,
+          "onsetMs": 303.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 304.17881438289606,
+          "acousticBoundsMs": [
+            303.54389374797535,
+            304.5416261742792
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 90,
+          "onsetMs": 1003.2717849044379,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1004.2241658568189,
+          "acousticBoundsMs": [
+            1003.3624878522837,
+            1004.586977648202
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 90,
+          "onsetMs": 1703.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1703.5438937479753,
+          "acousticBoundsMs": [
+            1703.4078393262066,
+            1703.9974084872044
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 49626,
+      "sampleRateHz": 22050,
+      "rr": 1,
+      "velocity": 90,
+      "roomed": true,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "peak": 0.1697544499458773,
+      "groupId": "rr1-v90",
+      "split": "development"
+    },
+    {
+      "id": "rr1-v90-room-noise10",
+      "file": "rr1-v90-room-noise10.wav",
+      "sha256": "0ddd6bf6b6fb090c9dda3715c1d54276f989045084805c4718242360961996b6",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 90,
+          "onsetMs": 303.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 304.17881438289606,
+          "acousticBoundsMs": [
+            303.54389374797535,
+            304.5416261742792
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 90,
+          "onsetMs": 1003.2717849044379,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1004.2241658568189,
+          "acousticBoundsMs": [
+            1003.3624878522837,
+            1004.586977648202
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 90,
+          "onsetMs": 1703.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1703.5438937479753,
+          "acousticBoundsMs": [
+            1703.4078393262066,
+            1703.9974084872044
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 49626,
+      "sampleRateHz": 22050,
+      "rr": 1,
+      "velocity": 90,
+      "roomed": true,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.00997339480394595,
+      "seed": 123,
+      "peak": 0.17786076597396094,
+      "groupId": "rr1-v90",
+      "split": "development"
+    },
+    {
+      "id": "rr2-v35-dry-clean",
+      "file": "rr2-v35-dry-clean.wav",
+      "sha256": "8956acdda0748a6945dbc30ad14cb2089cb43adc5182eef82b8363ae9af2b5eb",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 35,
+          "onsetMs": 300,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 300.2721088435374,
+          "acousticBoundsMs": [
+            300.0907029478458,
+            300.7256235827665
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 35,
+          "onsetMs": 1000,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1001.0884353741496,
+          "acousticBoundsMs": [
+            1000.1814058956916,
+            1001.2698412698412
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 35,
+          "onsetMs": 1700,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1700.3174603174602,
+          "acousticBoundsMs": [
+            1700.0907029478458,
+            1701.0884353741496
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 47616,
+      "sampleRateHz": 22050,
+      "rr": 2,
+      "velocity": 35,
+      "roomed": false,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "peak": 0.02557373046875,
+      "groupId": "rr2-v35",
+      "split": "development"
+    },
+    {
+      "id": "rr2-v35-dry-noise10",
+      "file": "rr2-v35-dry-noise10.wav",
+      "sha256": "473f16d02b80a30ef7371ea3a9a24eaef72d7bfdbe6d14a9868bcd3d265327b9",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 35,
+          "onsetMs": 300,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 300.2721088435374,
+          "acousticBoundsMs": [
+            300.0907029478458,
+            300.7256235827665
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 35,
+          "onsetMs": 1000,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1001.0884353741496,
+          "acousticBoundsMs": [
+            1000.1814058956916,
+            1001.2698412698412
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 35,
+          "onsetMs": 1700,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1700.3174603174602,
+          "acousticBoundsMs": [
+            1700.0907029478458,
+            1701.0884353741496
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 47616,
+      "sampleRateHz": 22050,
+      "rr": 2,
+      "velocity": 35,
+      "roomed": false,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 9.999999999999998,
+      "noiseGain": 0.002157280971493955,
+      "seed": 123,
+      "peak": 0.02835397182826716,
+      "groupId": "rr2-v35",
+      "split": "development"
+    },
+    {
+      "id": "rr2-v35-room-clean",
+      "file": "rr2-v35-room-clean.wav",
+      "sha256": "29b44491fc81b4f5ab99caed5cade4ffff4fc3fee1bad61a2a71a2bf3da832a3",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 35,
+          "onsetMs": 303.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 303.5438937479754,
+          "acousticBoundsMs": [
+            303.3624878522838,
+            303.9974084872045
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 35,
+          "onsetMs": 1003.2717849044379,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1004.3602202785876,
+          "acousticBoundsMs": [
+            1003.4531908001295,
+            1004.5416261742791
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 35,
+          "onsetMs": 1703.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1703.5892452218982,
+          "acousticBoundsMs": [
+            1703.3624878522837,
+            1704.3602202785876
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 49626,
+      "sampleRateHz": 22050,
+      "rr": 2,
+      "velocity": 35,
+      "roomed": true,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "peak": 0.05641250915832794,
+      "groupId": "rr2-v35",
+      "split": "development"
+    },
+    {
+      "id": "rr2-v35-room-noise10",
+      "file": "rr2-v35-room-noise10.wav",
+      "sha256": "1b55d22f8752377d4e86969f2df2297f52e0965d15d28182fc8fc32ef462f340",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 35,
+          "onsetMs": 303.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 303.5438937479754,
+          "acousticBoundsMs": [
+            303.3624878522838,
+            303.9974084872045
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 35,
+          "onsetMs": 1003.2717849044379,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1004.3602202785876,
+          "acousticBoundsMs": [
+            1003.4531908001295,
+            1004.5416261742791
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 35,
+          "onsetMs": 1703.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1703.5892452218982,
+          "acousticBoundsMs": [
+            1703.3624878522837,
+            1704.3602202785876
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 49626,
+      "sampleRateHz": 22050,
+      "rr": 2,
+      "velocity": 35,
+      "roomed": true,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.004502270645158726,
+      "seed": 123,
+      "peak": 0.05892132345775943,
+      "groupId": "rr2-v35",
+      "split": "development"
+    },
+    {
+      "id": "rr2-v90-dry-clean",
+      "file": "rr2-v90-dry-clean.wav",
+      "sha256": "b8358ca49b8db66b4b92562eb9d13b7bd578e0b8034fc0c66a451f55ecb2e932",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 90,
+          "onsetMs": 300,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 300.68027210884355,
+          "acousticBoundsMs": [
+            300.27210884353735,
+            302.2222222222222
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 90,
+          "onsetMs": 1000,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1000.9977324263039,
+          "acousticBoundsMs": [
+            1000.0907029478458,
+            1001.1337868480725
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 90,
+          "onsetMs": 1700,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1700.3174603174602,
+          "acousticBoundsMs": [
+            1700.0907029478458,
+            1700.952380952381
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 47616,
+      "sampleRateHz": 22050,
+      "rr": 2,
+      "velocity": 90,
+      "roomed": false,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "peak": 0.090118408203125,
+      "groupId": "rr2-v90",
+      "split": "development"
+    },
+    {
+      "id": "rr2-v90-dry-noise10",
+      "file": "rr2-v90-dry-noise10.wav",
+      "sha256": "0e46aecd62b9dd7c703cb9412c89b518d5560afed97533aa471aca7304490794",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 90,
+          "onsetMs": 300,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 300.68027210884355,
+          "acousticBoundsMs": [
+            300.27210884353735,
+            302.2222222222222
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 90,
+          "onsetMs": 1000,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1000.9977324263039,
+          "acousticBoundsMs": [
+            1000.0907029478458,
+            1001.1337868480725
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 90,
+          "onsetMs": 1700,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1700.3174603174602,
+          "acousticBoundsMs": [
+            1700.0907029478458,
+            1700.952380952381
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 47616,
+      "sampleRateHz": 22050,
+      "rr": 2,
+      "velocity": 90,
+      "roomed": false,
+      "physicalDelayMs": 0,
+      "algorithmicDelaySamples": 0,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.005048115947500126,
+      "seed": 123,
+      "peak": 0.09453493250731572,
+      "groupId": "rr2-v90",
+      "split": "development"
+    },
+    {
+      "id": "rr2-v90-room-clean",
+      "file": "rr2-v90-room-clean.wav",
+      "sha256": "f3707acbffafce378cd4578f00b2c0f4e9974ac2d78b5ad98674d966db5c36d3",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 90,
+          "onsetMs": 303.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 303.95205701328155,
+          "acousticBoundsMs": [
+            303.54389374797535,
+            305.49400712666016
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 90,
+          "onsetMs": 1003.2717849044379,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1004.2695173307418,
+          "acousticBoundsMs": [
+            1003.3624878522837,
+            1004.4055717525105
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 90,
+          "onsetMs": 1703.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1703.5892452218982,
+          "acousticBoundsMs": [
+            1703.3624878522837,
+            1704.224165856819
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 49626,
+      "sampleRateHz": 22050,
+      "rr": 2,
+      "velocity": 90,
+      "roomed": true,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "requestedSnrDb": null,
+      "achievedSnrDb": null,
+      "noiseGain": 0.0,
+      "seed": 123,
+      "peak": 0.18402267257597546,
+      "groupId": "rr2-v90",
+      "split": "development"
+    },
+    {
+      "id": "rr2-v90-room-noise10",
+      "file": "rr2-v90-room-noise10.wav",
+      "sha256": "f8bbb6d479e90fd1bdfe0b2ecf4853746f418f94ef502feb73fe2413ba3b37c7",
+      "notes": [
+        {
+          "midi": 52,
+          "velocity": 90,
+          "onsetMs": 303.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 300,
+          "acousticOnsetMs": 303.95205701328155,
+          "acousticBoundsMs": [
+            303.54389374797535,
+            305.49400712666016
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 64,
+          "velocity": 90,
+          "onsetMs": 1003.2717849044379,
+          "durationMs": 450,
+          "midiOnsetMs": 1000,
+          "acousticOnsetMs": 1004.2695173307418,
+          "acousticBoundsMs": [
+            1003.3624878522837,
+            1004.4055717525105
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        },
+        {
+          "midi": 67,
+          "velocity": 90,
+          "onsetMs": 1703.271784904438,
+          "durationMs": 450,
+          "midiOnsetMs": 1700,
+          "acousticOnsetMs": 1703.5892452218982,
+          "acousticBoundsMs": [
+            1703.3624878522837,
+            1704.224165856819
+          ],
+          "offsetLabel": "MIDI gate end; acoustic release unlabelled"
+        }
+      ],
+      "frames": 49626,
+      "sampleRateHz": 22050,
+      "rr": 2,
+      "velocity": 90,
+      "roomed": true,
+      "physicalDelayMs": 1.4577259475218658,
+      "algorithmicDelaySamples": 40,
+      "requestedSnrDb": 10,
+      "achievedSnrDb": 10.0,
+      "noiseGain": 0.010537854398176677,
+      "seed": 123,
+      "peak": 0.18831716764746106,
+      "groupId": "rr2-v90",
+      "split": "development"
+    }
+  ]
+}

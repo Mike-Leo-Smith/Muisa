@@ -1,0 +1,4812 @@
+{
+  "experiment": "M2 raw/DC/measured-noise confidence gating on paired sampled guitar",
+  "limitations": "Not speech denoising. Automatic dry attack proxy with threshold sensitivity, not human ground truth. MIDI gate end retained; release tails can be counted as false voicing. No real hardware, no held-out bank/room family. PCM16 sample renderer, no independent per-case normalization.",
+  "rows": [
+    {
+      "id": "rr1-v35-dry-clean",
+      "mode": "raw",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.1447640000000021,
+        "p95Ms": 0.4640679999999975,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr1-v35-dry-clean",
+      "mode": "dc",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.419351000000006,
+        "p95Ms": 0.6661159999999953,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr1-v35-dry-clean",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.44257500000000505,
+        "p95Ms": 0.5440860000000072,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr1-v35-dry-noise10",
+      "mode": "raw",
+      "noiseRms": 0.0020420353471469204,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.07207699999999306,
+        "p95Ms": 0.2024200000000036,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr1-v35-dry-noise10",
+      "mode": "dc",
+      "noiseRms": 0.0020420353471469204,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.4267109999999974,
+        "p95Ms": 0.5181570000000022,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr1-v35-dry-noise10",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.0020420353471469204,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.41811900000000435,
+        "p95Ms": 0.5360739999999993,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr1-v35-room-clean",
+      "mode": "raw",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.9333333333333333,
+          "25": 0.9333333333333333,
+          "50": 0.9333333333333333
+        },
+        "acceptedPrecision50": 0.9032258064516129,
+        "voicedCoverage": 0.9333333333333333,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.9333333333333333,
+          "25": 0.9333333333333333,
+          "50": 0.9333333333333333
+        },
+        "acceptedPrecision50": 0.9032258064516129,
+        "voicedCoverage": 0.9333333333333333,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.3007460000000037,
+        "p95Ms": 9.227666,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.04220677107196,
+          "confidence": 0.9628131631682124
+        }
+      ]
+    },
+    {
+      "id": "rr1-v35-room-clean",
+      "mode": "dc",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.9333333333333333,
+          "25": 0.9333333333333333,
+          "50": 0.9333333333333333
+        },
+        "acceptedPrecision50": 0.9032258064516129,
+        "voicedCoverage": 0.9333333333333333,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.9333333333333333,
+          "25": 0.9333333333333333,
+          "50": 0.9333333333333333
+        },
+        "acceptedPrecision50": 0.9032258064516129,
+        "voicedCoverage": 0.9333333333333333,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.4211750000000052,
+        "p95Ms": 9.224972000000037,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.04220677107196,
+          "confidence": 0.9628131631682124
+        }
+      ]
+    },
+    {
+      "id": "rr1-v35-room-clean",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.9333333333333333,
+          "25": 0.9333333333333333,
+          "50": 0.9333333333333333
+        },
+        "acceptedPrecision50": 0.9032258064516129,
+        "voicedCoverage": 0.9333333333333333,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.9333333333333333,
+          "25": 0.9333333333333333,
+          "50": 0.9333333333333333
+        },
+        "acceptedPrecision50": 0.9032258064516129,
+        "voicedCoverage": 0.9333333333333333,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.505971000000045,
+        "p95Ms": 9.171463000000017,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.04220677107196,
+          "confidence": 0.9628131631682124
+        }
+      ]
+    },
+    {
+      "id": "rr1-v35-room-noise10",
+      "mode": "raw",
+      "noiseRms": 0.004139896663186363,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 0.8,
+          "50": 0.8
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.8,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 0.8,
+          "50": 0.8
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.8,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.1547100000000228,
+        "p95Ms": 9.128709000000072,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.045233107461755,
+          "confidence": 0.8962815720042372
+        }
+      ]
+    },
+    {
+      "id": "rr1-v35-room-noise10",
+      "mode": "dc",
+      "noiseRms": 0.004139896663186363,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 0.8,
+          "50": 0.8
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.8,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 0.8,
+          "50": 0.8
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.8,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.4247500000000173,
+        "p95Ms": 9.11903499999994,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.045233107461755,
+          "confidence": 0.8962815720042372
+        }
+      ]
+    },
+    {
+      "id": "rr1-v35-room-noise10",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.004139896663186363,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 0.8,
+          "50": 0.8
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.8,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 0.8,
+          "50": 0.8
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.8,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -24.6323291221251
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "note": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.3333333333333333,
+          "f1": 0.5,
+          "signedOnsetBiasMs": -25.44865565273733
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.4665619999999535,
+        "p95Ms": 9.277660999999966,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.045233107461755,
+          "confidence": 0.8962815720042372
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-dry-clean",
+      "mode": "raw",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7142857142857143,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7142857142857143,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.1594880000000103,
+        "p95Ms": 8.811870999999996,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.126675450237904,
+          "confidence": 0.9475440170912502
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14179329624541,
+          "confidence": 0.9451975960102453
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.11315278066796,
+          "confidence": 0.9393342292626722
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-dry-clean",
+      "mode": "dc",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7142857142857143,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7142857142857143,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.4248209999999517,
+        "p95Ms": 9.325992000000042,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.126675450237904,
+          "confidence": 0.9475440170912502
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14179329624541,
+          "confidence": 0.9451975960102453
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.11315278066796,
+          "confidence": 0.9393342292626722
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-dry-clean",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7142857142857143,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7142857142857143,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.2,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.4795409999999265,
+        "p95Ms": 9.48735099999999,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.126675450237904,
+          "confidence": 0.9475440170912502
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14179329624541,
+          "confidence": 0.9451975960102453
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.11315278066796,
+          "confidence": 0.9393342292626722
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-dry-noise10",
+      "mode": "raw",
+      "noiseRms": 0.004913196375636115,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5357142857142857,
+          "25": 0.7142857142857143,
+          "50": 0.7142857142857143
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7142857142857143,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5357142857142857,
+          "25": 0.7142857142857143,
+          "50": 0.7142857142857143
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7142857142857143,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.1818100000000413,
+        "p95Ms": 8.975182999999788,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.13473063260584,
+          "confidence": 0.8886831739566846
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14848933620326,
+          "confidence": 0.8871971282795136
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.11973955622035,
+          "confidence": 0.8559860399920163
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-dry-noise10",
+      "mode": "dc",
+      "noiseRms": 0.004913196375636115,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5357142857142857,
+          "25": 0.7142857142857143,
+          "50": 0.7142857142857143
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7142857142857143,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5357142857142857,
+          "25": 0.7142857142857143,
+          "50": 0.7142857142857143
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7142857142857143,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.4288360000000466,
+        "p95Ms": 9.264069999999947,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.13473063260584,
+          "confidence": 0.8886831739566846
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14848933620326,
+          "confidence": 0.8871971282795136
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.11973955622035,
+          "confidence": 0.8559860399920163
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-dry-noise10",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.004913196375636115,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5357142857142857,
+          "25": 0.7142857142857143,
+          "50": 0.7142857142857143
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7142857142857143,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5357142857142857,
+          "25": 0.7142857142857143,
+          "50": 0.7142857142857143
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7142857142857143,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.47241118669687
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.4493660000000546,
+        "p95Ms": 9.373562999999876,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.13473063260584,
+          "confidence": 0.8886831739566846
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14848933620326,
+          "confidence": 0.8871971282795136
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.11973955622035,
+          "confidence": 0.8559860399920163
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-room-clean",
+      "mode": "raw",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7666666666666667,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7666666666666667,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.1678699999999935,
+        "p95Ms": 9.164753000000019,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.11349523516752,
+          "confidence": 0.9387415820331054
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14909560626225,
+          "confidence": 0.9498995189044068
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.12282096116765,
+          "confidence": 0.9244653832157315
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-room-clean",
+      "mode": "dc",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7666666666666667,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7666666666666667,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.5622840000000906,
+        "p95Ms": 9.621359999999868,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.11349523365854,
+          "confidence": 0.9387415824720382
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14909560626225,
+          "confidence": 0.9498995189044068
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.1228209621974,
+          "confidence": 0.9244653817780245
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-room-clean",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7666666666666667,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7666666666666667,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.5502970000000005,
+        "p95Ms": 9.5675940000001,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.11349523365854,
+          "confidence": 0.9387415824720382
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.14909560626225,
+          "confidence": 0.9498995189044068
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.1228209621974,
+          "confidence": 0.9244653817780245
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-room-noise10",
+      "mode": "raw",
+      "noiseRms": 0.010038568024285854,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6333333333333333,
+          "50": 0.6333333333333333
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6333333333333333,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6333333333333333,
+          "50": 0.6333333333333333
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6333333333333333,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -26.333009394233954
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -27.26271460965347
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.2209089999998923,
+        "p95Ms": 9.430680999999822,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.12030072981263,
+          "confidence": 0.8790271748403955
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.15373244596175,
+          "confidence": 0.8936946164273679
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-room-noise10",
+      "mode": "dc",
+      "noiseRms": 0.010038568024285854,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6333333333333333,
+          "50": 0.6333333333333333
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6333333333333333,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6333333333333333,
+          "50": 0.6333333333333333
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6333333333333333,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -26.333009394233954
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -27.26271460965347
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.5363859999997658,
+        "p95Ms": 9.656386000000111,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.12030073046882,
+          "confidence": 0.8790271753589503
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.15373244596175,
+          "confidence": 0.8936946164273679
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    },
+    {
+      "id": "rr1-v90-room-noise10",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.010038568024285854,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6333333333333333,
+          "50": 0.6333333333333333
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6333333333333333,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6333333333333333,
+          "50": 0.6333333333333333
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6333333333333333,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -26.333009394233954
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.74419609113488
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -27.26271460965347
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.4515309999997044,
+        "p95Ms": 9.499162999999953,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.12030073046882,
+          "confidence": 0.8790271753589503
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.15373244596175,
+          "confidence": 0.8936946164273679
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    },
+    {
+      "id": "rr2-v35-dry-clean",
+      "mode": "raw",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.07259699999985969,
+        "p95Ms": 1.127009000000271,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr2-v35-dry-clean",
+      "mode": "dc",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.3946549999996023,
+        "p95Ms": 1.4381100000000515,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr2-v35-dry-clean",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.4333819999997104,
+        "p95Ms": 1.5398620000000847,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr2-v35-dry-noise10",
+      "mode": "raw",
+      "noiseRms": 0.002171093064377898,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.07083499999998821,
+        "p95Ms": 1.1742199999998775,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr2-v35-dry-noise10",
+      "mode": "dc",
+      "noiseRms": 0.002171093064377898,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.40904600000021674,
+        "p95Ms": 1.4033489999997073,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr2-v35-dry-noise10",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.002171093064377898,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.14285714285714285,
+          "25": 0.14285714285714285,
+          "50": 0.14285714285714285
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.14285714285714285,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 3,
+          "precision": null,
+          "recall": 0,
+          "f1": 0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 0.47733800000014526,
+        "p95Ms": 1.6103149999999005,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": []
+    },
+    {
+      "id": "rr2-v35-room-clean",
+      "mode": "raw",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8666666666666667,
+          "25": 0.8666666666666667,
+          "50": 0.8666666666666667
+        },
+        "acceptedPrecision50": 0.8666666666666667,
+        "voicedCoverage": 0.8666666666666667,
+        "voicingFalseAlarm": 0.26666666666666666,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8666666666666667,
+          "25": 0.8666666666666667,
+          "50": 0.8666666666666667
+        },
+        "acceptedPrecision50": 0.8666666666666667,
+        "voicedCoverage": 0.8666666666666667,
+        "voicingFalseAlarm": 0.26666666666666666,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.208900999999969,
+        "p95Ms": 9.171086000000287,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 325.07936507936506,
+          "midi": 52.00145239702814,
+          "confidence": 0.9947056125160352
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.04117294679523,
+          "confidence": 0.9867921048560877
+        }
+      ]
+    },
+    {
+      "id": "rr2-v35-room-clean",
+      "mode": "dc",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8666666666666667,
+          "25": 0.8666666666666667,
+          "50": 0.8666666666666667
+        },
+        "acceptedPrecision50": 0.8666666666666667,
+        "voicedCoverage": 0.8666666666666667,
+        "voicingFalseAlarm": 0.26666666666666666,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8666666666666667,
+          "25": 0.8666666666666667,
+          "50": 0.8666666666666667
+        },
+        "acceptedPrecision50": 0.8666666666666667,
+        "voicedCoverage": 0.8666666666666667,
+        "voicingFalseAlarm": 0.26666666666666666,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.414585999999872,
+        "p95Ms": 9.430761000000075,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 325.07936507936506,
+          "midi": 52.00145239702814,
+          "confidence": 0.9947056125160352
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.04117294679523,
+          "confidence": 0.9867921048560877
+        }
+      ]
+    },
+    {
+      "id": "rr2-v35-room-clean",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8666666666666667,
+          "25": 0.8666666666666667,
+          "50": 0.8666666666666667
+        },
+        "acceptedPrecision50": 0.8666666666666667,
+        "voicedCoverage": 0.8666666666666667,
+        "voicingFalseAlarm": 0.26666666666666666,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8666666666666667,
+          "25": 0.8666666666666667,
+          "50": 0.8666666666666667
+        },
+        "acceptedPrecision50": 0.8666666666666667,
+        "voicedCoverage": 0.8666666666666667,
+        "voicingFalseAlarm": 0.26666666666666666,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.4428179999999884,
+        "p95Ms": 9.419494000000213,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 325.07936507936506,
+          "midi": 52.00145239702814,
+          "confidence": 0.9947056125160352
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.04117294679523,
+          "confidence": 0.9867921048560877
+        }
+      ]
+    },
+    {
+      "id": "rr2-v35-room-noise10",
+      "mode": "raw",
+      "noiseRms": 0.004531382874248611,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7,
+          "25": 0.7,
+          "50": 0.7
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7,
+          "25": 0.7,
+          "50": 0.7
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.163372999999865,
+        "p95Ms": 8.942477999999937,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 325.07936507936506,
+          "midi": 51.99501653202576,
+          "confidence": 0.9249632071807226
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.04469105064226,
+          "confidence": 0.9274975640808986
+        }
+      ]
+    },
+    {
+      "id": "rr2-v35-room-noise10",
+      "mode": "dc",
+      "noiseRms": 0.004531382874248611,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7,
+          "25": 0.7,
+          "50": 0.7
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7,
+          "25": 0.7,
+          "50": 0.7
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.479761999999937,
+        "p95Ms": 9.334347999999864,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 325.07936507936506,
+          "midi": 51.99501653202576,
+          "confidence": 0.9249632071807226
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.04469105064226,
+          "confidence": 0.9274975640808986
+        }
+      ]
+    },
+    {
+      "id": "rr2-v35-room-noise10",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.004531382874248611,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7,
+          "25": 0.7,
+          "50": 0.7
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7,
+          "25": 0.7,
+          "50": 0.7
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.7,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.1130547457078137
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -3.793326854551367
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.4840580000000045,
+        "p95Ms": 9.357613000000129,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 325.07936507936506,
+          "midi": 51.99501653202576,
+          "confidence": 0.9249632071807226
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.04469105064226,
+          "confidence": 0.9274975640808986
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-dry-clean",
+      "mode": "raw",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7857142857142857,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9310344827586207,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.13333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7857142857142857,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9310344827586207,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.13333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.1554120000000694,
+        "p95Ms": 8.945742999999766,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.15806811890985,
+          "confidence": 0.9485175770873198
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.09811642848081,
+          "confidence": 0.9482693367347949
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.1540812381083,
+          "confidence": 0.9188393227510023
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-dry-clean",
+      "mode": "dc",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7857142857142857,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9310344827586207,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.13333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7857142857142857,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9310344827586207,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.13333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.4199829999997746,
+        "p95Ms": 9.254559999999856,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.15806811890985,
+          "confidence": 0.9485175770873198
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.09811642848081,
+          "confidence": 0.9482693367347949
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.1540812381083,
+          "confidence": 0.9188393227510023
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-dry-clean",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7857142857142857,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9310344827586207,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.13333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.7857142857142857,
+          "25": 0.9642857142857143,
+          "50": 0.9642857142857143
+        },
+        "acceptedPrecision50": 0.9310344827586207,
+        "voicedCoverage": 0.9642857142857143,
+        "voicingFalseAlarm": 0.13333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.5267519999997603,
+        "p95Ms": 9.512972999999874,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.15806811890985,
+          "confidence": 0.9485175770873198
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.09811642848081,
+          "confidence": 0.9482693367347949
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.1540812381083,
+          "confidence": 0.9188393227510023
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-dry-noise10",
+      "mode": "raw",
+      "noiseRms": 0.005080983981722669,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5,
+          "25": 0.6785714285714286,
+          "50": 0.6785714285714286
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6785714285714286,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5,
+          "25": 0.6785714285714286,
+          "50": 0.6785714285714286
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6785714285714286,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -23.06122448979596
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -23.900226757369637
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.1512360000001536,
+        "p95Ms": 9.203914999999597,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.167458373784115,
+          "confidence": 0.8870534147864669
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.10034322806288,
+          "confidence": 0.8941127956927477
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-dry-noise10",
+      "mode": "dc",
+      "noiseRms": 0.005080983981722669,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5,
+          "25": 0.6785714285714286,
+          "50": 0.6785714285714286
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6785714285714286,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5,
+          "25": 0.6785714285714286,
+          "50": 0.6785714285714286
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6785714285714286,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -23.06122448979596
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -23.900226757369637
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.5107080000002497,
+        "p95Ms": 9.226658000000043,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.167458373784115,
+          "confidence": 0.8870534147864669
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.10034322806288,
+          "confidence": 0.8941127956927477
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-dry-noise10",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.005080983981722669,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5,
+          "25": 0.6785714285714286,
+          "50": 0.6785714285714286
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6785714285714286,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 28,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.5,
+          "25": 0.6785714285714286,
+          "50": 0.6785714285714286
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6785714285714286,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -24.76190476190474
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -23.06122448979596
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -25.42705971277398
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -23.900226757369637
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 43,
+        "p50Ms": 1.4530519999998432,
+        "p95Ms": 9.514665999999579,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.167458373784115,
+          "confidence": 0.8870534147864669
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.10034322806288,
+          "confidence": 0.8941127956927477
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-room-clean",
+      "mode": "raw",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.1415609999999106,
+        "p95Ms": 9.373415999999906,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.15785093512439,
+          "confidence": 0.9366571972929777
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.0993506072096,
+          "confidence": 0.9545329378365061
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.16415942176985,
+          "confidence": 0.9068028823892481
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-room-clean",
+      "mode": "dc",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.560120999999981,
+        "p95Ms": 9.357622999999876,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.15785093736297,
+          "confidence": 0.9366571963443013
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.0993506072096,
+          "confidence": 0.9545329378365061
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.16415942031628,
+          "confidence": 0.9068028838624492
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-room-clean",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.00001750354197698106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.8,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.8571428571428571,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.3333333333333333,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "note": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "eventAcceptanceCoverage": 1,
+        "unknownEvents": 0,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.457658999999694,
+        "p95Ms": 9.217756000000008,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.15785093736297,
+          "confidence": 0.9366571963443013
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.0993506072096,
+          "confidence": 0.9545329378365061
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": 67.16415942031628,
+          "confidence": 0.9068028838624492
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-room-noise10",
+      "mode": "raw",
+      "noiseRms": 0.010606843193810106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6,
+          "50": 0.6
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6,
+          "50": 0.6
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -26.333009394233954
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -27.17201166180763
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.158556000000317,
+        "p95Ms": 9.020484000000579,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.165852027710145,
+          "confidence": 0.8684262954375832
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.10320590751698,
+          "confidence": 0.9040179995000126
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-room-noise10",
+      "mode": "dc",
+      "noiseRms": 0.010606843193810106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6,
+          "50": 0.6
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6,
+          "50": 0.6
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -26.333009394233954
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -27.17201166180763
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.4740430000001652,
+        "p95Ms": 9.284155000000283,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.16585202955476,
+          "confidence": 0.868426294890368
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.1032059053125,
+          "confidence": 0.9040179996778869
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    },
+    {
+      "id": "rr2-v90-room-noise10",
+      "mode": "dc-calibrated-gate",
+      "noiseRms": 0.010606843193810106,
+      "calibration": "measured first4096samples before signal; same DC-free domain",
+      "midiPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6,
+          "50": 0.6
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "acousticProxyPitch": {
+        "voicedFrames": 30,
+        "unvoicedFrames": 15,
+        "rpa": {
+          "10": 0.4666666666666667,
+          "25": 0.6,
+          "50": 0.6
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.6,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "midiEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.033689666342752
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -26.333009394233954
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "acousticProxyEvents": {
+        "onset": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1,
+          "recall": 1,
+          "f1": 1,
+          "signedOnsetBiasMs": -28.698844617211915
+        },
+        "note": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 1,
+          "precision": 1,
+          "recall": 0.6666666666666666,
+          "f1": 0.8,
+          "signedOnsetBiasMs": -27.17201166180763
+        },
+        "eventAcceptanceCoverage": 0.6666666666666666,
+        "unknownEvents": 1,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "compute": {
+        "count": 45,
+        "p50Ms": 1.4462520000006407,
+        "p95Ms": 9.739959999999883,
+        "deadlineMs": 46.439909297052154,
+        "deadlineMisses": 0
+      },
+      "events": [
+        {
+          "onsetMs": 278.6394557823129,
+          "midi": 52.16585202955476,
+          "confidence": 0.868426294890368
+        },
+        {
+          "onsetMs": 975.2380952380952,
+          "midi": 64.1032059053125,
+          "confidence": 0.9040179996778869
+        },
+        {
+          "onsetMs": 1671.8367346938776,
+          "midi": null,
+          "confidence": 0
+        }
+      ]
+    }
+  ]
+}
