@@ -11,3 +11,21 @@ test('N1 negative event rates use processed duration and no target; same guard s
  for(let i=9600;i<36000;i++)pcm[i]=.2*Math.sin(2*Math.PI*330*i/48000);
  const notes=[{midi:64,onsetMs:200,durationMs:550}];const positive=analyze(pcm,notes,config),negative=analyze(pcm,[],config);assert.ok(positive.frameCounts['boundary-guard']>0);assert.equal(negative.frameCounts.mono,0);assert.ok(negative.events.falseEventsPerMinute>0);assert.ok(positive.pitch.voicedFrames>0);
 });
+import {targetNotes,lockedFiles,loadBundle,sha} from '../experiments/nonstationary/bundle.js';
+import {mkdtempSync,mkdirSync,writeFileSync,rmSync} from 'node:fs';import {tmpdir} from 'node:os';import {join} from 'node:path';
+test('N1 actual delayed-label structure uses performed SMF gates once and rejects double delay',()=>{
+ const n={noteId:'note-01',midi:52,velocity:78,performedOnsetSeconds:.4,performedGateEndSeconds:.8802083333333334,physicalDelaySeconds:.0014577259475218659,fractionalDelaySeconds:.0018140589569160999,targetOnsetSeconds:.403271784904438,targetGateEndSeconds:.8834801182377714,onsetSample48000:19357,gateEndSample48000:42407};
+ const doc={notes:[n],negativeConditionsHaveTargetNotes:false,negativeReference:[],resampleAdditionalDelaySeconds:0};const out=targetNotes(doc,1,1)[0];assert.equal(out.onsetMs,n.targetOnsetSeconds*1000);assert.ok(Math.abs(out.durationMs-480.2083333333334)<1e-8);assert.throws(()=>targetNotes({...doc,notes:[{...n,targetOnsetSeconds:n.targetOnsetSeconds+n.physicalDelaySeconds}]},1,1));
+ assert.equal(lockedFiles({files:[{path:'labels/a.json',sha256:'a'.repeat(64)}]}).get('labels/a.json'),'a'.repeat(64));
+});
+test('N1 bundle validation to six-condition analysis with synthetic hashed assets, never real-scene inference',()=>{
+ const root=mkdtempSync(join(tmpdir(),'n1-smoke-'));try{
+  mkdirSync(join(root,'conditions'));mkdirSync(join(root,'labels'));const entries=[];const put=(p,b)=>{writeFileSync(join(root,p),b);entries.push({path:p,sha256:sha(b)});return sha(b);};
+  const hashes={};for(const name of config.conditions){const value=name==='room-only'?.1:name==='speech-only'?.02:name==='transients-only'?.03:name==='room-speech'?.12:name==='room-speech-transients'?.15:.05;hashes[name]=put(`conditions/${name}.wav`,wav(new Array(48000).fill(value)));}
+  const notes=Array.from({length:12},(_,i)=>{const t=.15+i*.05;return {noteId:`n${i}`,midi:64,performedOnsetSeconds:t,performedGateEndSeconds:t+.03,physicalDelaySeconds:0,fractionalDelaySeconds:0,targetOnsetSeconds:t,targetGateEndSeconds:t+.03,onsetSample48000:Math.round(t*48000),gateEndSample48000:Math.round((t+.03)*48000)};});
+  put('labels/performed-and-delayed.json',Buffer.from(JSON.stringify({notes,negativeConditionsHaveTargetNotes:false,negativeReference:[],resampleAdditionalDelaySeconds:0})));const manifestHash=put('manifest.json',Buffer.from('{}'));const lockBytes=Buffer.from(JSON.stringify({files:entries}));writeFileSync(join(root,'input-lock.json'),lockBytes);
+  const binding={inputManifestSha256:manifestHash,inputLockSha256:sha(lockBytes),conditions:hashes,samples:48000,sampleRateHz:48000,pairTolerance:1e-7,pairId:'synthetic-only'};const b=loadBundle(root,binding,config);assert.equal(b.notes.length,12);
+  for(const name of config.conditions){const report=analyze(b.inputs[name].pcm,name.startsWith('room-')?b.notes:[],config);assert.ok(report.analysisFrames>0);assert.equal(report.events.falseEventsPerMinute===null,name.startsWith('room-'));}
+  writeFileSync(join(root,'labels/performed-and-delayed.json'),'{}');assert.throws(()=>loadBundle(root,binding,config));
+ }finally{rmSync(root,{recursive:true,force:true});}
+});
