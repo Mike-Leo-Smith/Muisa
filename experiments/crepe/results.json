@@ -1,0 +1,1465 @@
+{
+  "experiment": "C1 official CREPE tiny/small, synthetic only",
+  "fixtures": [
+    {
+      "id": "clean",
+      "sha256": "ad5163129cec4ed7dfee118c0ffe41982a8a6085282e80182b37ff68d94bde20",
+      "noiseSeed": 123,
+      "noiseGain": 0,
+      "snrDb": null
+    },
+    {
+      "id": "noise-20",
+      "sha256": "102d8b6888e764b17d3a3ea0f3b9916f3b421660aeb918c38b8de0bf01106578",
+      "noiseSeed": 123,
+      "noiseGain": 0.1483582532769283,
+      "snrDb": 20
+    },
+    {
+      "id": "noise-10",
+      "sha256": "74a1a54e3f5f32b7d00b9ba44ccfac75b6e381ae45175b1e1fb678bc14e97a79",
+      "noiseSeed": 123,
+      "noiseGain": 0.4691499900392327,
+      "snrDb": 10
+    },
+    {
+      "id": "noise-0",
+      "sha256": "a0c9315f786f82b5ba1646c719f67d808df417e8fa52b1fcf1e160c285c2621f",
+      "noiseSeed": 123,
+      "noiseGain": 1.483582532769283,
+      "snrDb": 0
+    },
+    {
+      "id": "noise-only",
+      "sha256": "522223584b8106482bdca60a8d6edecfd44bfdc4bc9da613a3ef38a19513c843",
+      "noiseSeed": 123,
+      "noiseGain": 1,
+      "snrDb": null
+    },
+    {
+      "id": "silence",
+      "sha256": "8f245649e1e94d36965a9ddfe7bfa6c15449a39e461cfceefbae1e29bdbde162",
+      "noiseSeed": 123,
+      "noiseGain": 0,
+      "snrDb": null
+    },
+    {
+      "id": "weak",
+      "sha256": "9894fd03ac33242707dacd90a7c570599205d80e4fea99baf43ef8a62935ec40",
+      "noiseSeed": 123,
+      "noiseGain": 0,
+      "snrDb": null
+    }
+  ],
+  "limitations": "Native CREPE 64ms windows/10ms hop differ from Y1; not directly pooled. Offline batch invocation, no Viterbi; center=false timestamps shifted +32ms for labels. No actual hardware, true guitar or realtime integration.",
+  "models": [
+    {
+      "capacity": "tiny",
+      "sourceCommit": "c9b71ce61491454125a0693f584f7244f29d9884",
+      "weightsCommit": "bb29b8d99a89924476d112d27ed470e4ac5617c0",
+      "weightsSha256": "409254d6a537cc432061112b7ec5f6fd283658f108fc2abc24db9c25858b42df",
+      "weightsBytes": 2011144,
+      "parameters": 487096,
+      "tensorflow": "2.20.0",
+      "python": "3.12.14",
+      "loadMs": 133.7298240000564,
+      "warmupMs": 347.08670200006964,
+      "windowMs": 64,
+      "stepMs": 10,
+      "center": false,
+      "viterbi": false,
+      "rows": [
+        {
+          "id": "clean",
+          "threshold": 0.5,
+          "confidenceMedian": 0.6686062812805176,
+          "wholeClipComputeMs": [
+            997.2000040002058,
+            351.3488490002601,
+            312.64672500037705
+          ],
+          "wholeClipCpuMs": [
+            1239.7695069999997,
+            591.1695410000002,
+            541.7894990000001
+          ],
+          "processPeakRssKiB": 774452,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9833333333333333,
+              "25": 0.9833333333333333,
+              "50": 0.9833333333333333
+            },
+            "acceptedPrecision50": 0.9833333333333333,
+            "voicedCoverage": 0.9833333333333333,
+            "voicingFalseAlarm": 0.017543859649122806,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 351.3488490002601,
+            "p95Ms": 997.2000040002058,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "clean",
+          "threshold": 0.8,
+          "confidenceMedian": 0.6686062812805176,
+          "wholeClipComputeMs": [
+            997.2000040002058,
+            351.3488490002601,
+            312.64672500037705
+          ],
+          "wholeClipCpuMs": [
+            1239.7695069999997,
+            591.1695410000002,
+            541.7894990000001
+          ],
+          "processPeakRssKiB": 774452,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9166666666666666,
+              "25": 0.9166666666666666,
+              "50": 0.9166666666666666
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9166666666666666,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.9803921568627451,
+              "25": 0.9803921568627451,
+              "50": 0.9803921568627451
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9803921568627451,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 351.3488490002601,
+            "p95Ms": 997.2000040002058,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-20",
+          "threshold": 0.5,
+          "confidenceMedian": 0.6810487508773804,
+          "wholeClipComputeMs": [
+            313.7187859997539,
+            316.53242900029,
+            323.57573399985995
+          ],
+          "wholeClipCpuMs": [
+            544.6417820000003,
+            549.3076820000002,
+            552.6836340000001
+          ],
+          "processPeakRssKiB": 775336,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9916666666666667,
+              "25": 0.9916666666666667,
+              "50": 0.9916666666666667
+            },
+            "acceptedPrecision50": 0.9834710743801653,
+            "voicedCoverage": 0.9916666666666667,
+            "voicingFalseAlarm": 0.017543859649122806,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 316.53242900029,
+            "p95Ms": 323.57573399985995,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-20",
+          "threshold": 0.8,
+          "confidenceMedian": 0.6810487508773804,
+          "wholeClipComputeMs": [
+            313.7187859997539,
+            316.53242900029,
+            323.57573399985995
+          ],
+          "wholeClipCpuMs": [
+            544.6417820000003,
+            549.3076820000002,
+            552.6836340000001
+          ],
+          "processPeakRssKiB": 775336,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9166666666666666,
+              "25": 0.9166666666666666,
+              "50": 0.9166666666666666
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9166666666666666,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.9803921568627451,
+              "25": 0.9803921568627451,
+              "50": 0.9803921568627451
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9803921568627451,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 316.53242900029,
+            "p95Ms": 323.57573399985995,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-10",
+          "threshold": 0.5,
+          "confidenceMedian": 0.6788337230682373,
+          "wholeClipComputeMs": [
+            353.2113189999109,
+            325.0901579999663,
+            352.30993799996213
+          ],
+          "wholeClipCpuMs": [
+            596.5691570000002,
+            562.8750370000004,
+            596.1282320000007
+          ],
+          "processPeakRssKiB": 775984,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9916666666666667,
+              "25": 0.9916666666666667,
+              "50": 0.9916666666666667
+            },
+            "acceptedPrecision50": 0.9834710743801653,
+            "voicedCoverage": 0.9916666666666667,
+            "voicingFalseAlarm": 0.017543859649122806,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 352.30993799996213,
+            "p95Ms": 353.2113189999109,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-10",
+          "threshold": 0.8,
+          "confidenceMedian": 0.6788337230682373,
+          "wholeClipComputeMs": [
+            353.2113189999109,
+            325.0901579999663,
+            352.30993799996213
+          ],
+          "wholeClipCpuMs": [
+            596.5691570000002,
+            562.8750370000004,
+            596.1282320000007
+          ],
+          "processPeakRssKiB": 775984,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.875,
+              "25": 0.875,
+              "50": 0.875
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.875,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.9607843137254902,
+              "25": 0.9607843137254902,
+              "50": 0.9607843137254902
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9607843137254902,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 352.30993799996213,
+            "p95Ms": 353.2113189999109,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-0",
+          "threshold": 0.5,
+          "confidenceMedian": 0.5406367778778076,
+          "wholeClipComputeMs": [
+            368.4680740002477,
+            330.4809659998682,
+            333.5264469997128
+          ],
+          "wholeClipCpuMs": [
+            646.0514559999986,
+            574.1339029999999,
+            584.9701879999998
+          ],
+          "processPeakRssKiB": 776748,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9666666666666667,
+              "25": 0.9916666666666667,
+              "50": 0.9916666666666667
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9916666666666667,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.9803921568627451,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 333.5264469997128,
+            "p95Ms": 368.4680740002477,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-0",
+          "threshold": 0.8,
+          "confidenceMedian": 0.5406367778778076,
+          "wholeClipComputeMs": [
+            368.4680740002477,
+            330.4809659998682,
+            333.5264469997128
+          ],
+          "wholeClipCpuMs": [
+            646.0514559999986,
+            574.1339029999999,
+            584.9701879999998
+          ],
+          "processPeakRssKiB": 776748,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.6416666666666667,
+              "25": 0.6416666666666667,
+              "50": 0.6416666666666667
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.6416666666666667,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.7254901960784313,
+              "25": 0.7254901960784313,
+              "50": 0.7254901960784313
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.7254901960784313,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 333.5264469997128,
+            "p95Ms": 368.4680740002477,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-only",
+          "threshold": 0.5,
+          "confidenceMedian": 0.1394045650959015,
+          "wholeClipComputeMs": [
+            313.669746999949,
+            371.60128200002873,
+            351.76941200006695
+          ],
+          "wholeClipCpuMs": [
+            542.4578590000007,
+            640.1899419999993,
+            596.0023059999991
+          ],
+          "processPeakRssKiB": 777156,
+          "allFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": 0,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0.004273504273504274,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": 0,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0.004273504273504274,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 351.76941200006695,
+            "p95Ms": 371.60128200002873,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-only",
+          "threshold": 0.8,
+          "confidenceMedian": 0.1394045650959015,
+          "wholeClipComputeMs": [
+            313.669746999949,
+            371.60128200002873,
+            351.76941200006695
+          ],
+          "wholeClipCpuMs": [
+            542.4578590000007,
+            640.1899419999993,
+            596.0023059999991
+          ],
+          "processPeakRssKiB": 777156,
+          "allFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 351.76941200006695,
+            "p95Ms": 371.60128200002873,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "silence",
+          "threshold": 0.5,
+          "confidenceMedian": 0.01391275692731142,
+          "wholeClipComputeMs": [
+            354.8924789997727,
+            361.66511700002957,
+            379.92273300005763
+          ],
+          "wholeClipCpuMs": [
+            600.8223889999992,
+            625.1770739999997,
+            671.5626239999999
+          ],
+          "processPeakRssKiB": 777712,
+          "allFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 361.66511700002957,
+            "p95Ms": 379.92273300005763,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "silence",
+          "threshold": 0.8,
+          "confidenceMedian": 0.01391275692731142,
+          "wholeClipComputeMs": [
+            354.8924789997727,
+            361.66511700002957,
+            379.92273300005763
+          ],
+          "wholeClipCpuMs": [
+            600.8223889999992,
+            625.1770739999997,
+            671.5626239999999
+          ],
+          "processPeakRssKiB": 777712,
+          "allFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 361.66511700002957,
+            "p95Ms": 379.92273300005763,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "weak",
+          "threshold": 0.5,
+          "confidenceMedian": 0.6686137318611145,
+          "wholeClipComputeMs": [
+            376.6522169999007,
+            327.10401499980435,
+            316.53976699999475
+          ],
+          "wholeClipCpuMs": [
+            663.9427560000008,
+            559.0254979999987,
+            548.4256550000008
+          ],
+          "processPeakRssKiB": 778424,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9833333333333333,
+              "25": 0.9833333333333333,
+              "50": 0.9833333333333333
+            },
+            "acceptedPrecision50": 0.9833333333333333,
+            "voicedCoverage": 0.9833333333333333,
+            "voicingFalseAlarm": 0.017543859649122806,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 327.10401499980435,
+            "p95Ms": 376.6522169999007,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "weak",
+          "threshold": 0.8,
+          "confidenceMedian": 0.6686137318611145,
+          "wholeClipComputeMs": [
+            376.6522169999007,
+            327.10401499980435,
+            316.53976699999475
+          ],
+          "wholeClipCpuMs": [
+            663.9427560000008,
+            559.0254979999987,
+            548.4256550000008
+          ],
+          "processPeakRssKiB": 778424,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9166666666666666,
+              "25": 0.9166666666666666,
+              "50": 0.9166666666666666
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9166666666666666,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.9803921568627451,
+              "25": 0.9803921568627451,
+              "50": 0.9803921568627451
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9803921568627451,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 327.10401499980435,
+            "p95Ms": 376.6522169999007,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        }
+      ]
+    },
+    {
+      "capacity": "small",
+      "sourceCommit": "c9b71ce61491454125a0693f584f7244f29d9884",
+      "weightsCommit": "bb29b8d99a89924476d112d27ed470e4ac5617c0",
+      "weightsSha256": "67cff9f4bf1f3b63496fdcb631b830f994f2904705401cd208d2b86a0d16654a",
+      "weightsBytes": 6579224,
+      "parameters": 1629192,
+      "tensorflow": "2.20.0",
+      "python": "3.12.14",
+      "loadMs": 128.25434499973198,
+      "warmupMs": 452.4803740000607,
+      "windowMs": 64,
+      "stepMs": 10,
+      "center": false,
+      "viterbi": false,
+      "rows": [
+        {
+          "id": "clean",
+          "threshold": 0.5,
+          "confidenceMedian": 0.6382116675376892,
+          "wholeClipComputeMs": [
+            1617.2014320000017,
+            1021.0125530002188,
+            1006.4963400000124
+          ],
+          "wholeClipCpuMs": [
+            2429.0026969999994,
+            1881.5853630000001,
+            1819.9670570000003
+          ],
+          "processPeakRssKiB": 787752,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9583333333333334,
+              "25": 0.975,
+              "50": 0.9833333333333333
+            },
+            "acceptedPrecision50": 0.9672131147540983,
+            "voicedCoverage": 0.9833333333333333,
+            "voicingFalseAlarm": 0.03508771929824561,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1021.0125530002188,
+            "p95Ms": 1617.2014320000017,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "clean",
+          "threshold": 0.8,
+          "confidenceMedian": 0.6382116675376892,
+          "wholeClipComputeMs": [
+            1617.2014320000017,
+            1021.0125530002188,
+            1006.4963400000124
+          ],
+          "wholeClipCpuMs": [
+            2429.0026969999994,
+            1881.5853630000001,
+            1819.9670570000003
+          ],
+          "processPeakRssKiB": 787752,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.925,
+              "25": 0.925,
+              "50": 0.925
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.925,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1021.0125530002188,
+            "p95Ms": 1617.2014320000017,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-20",
+          "threshold": 0.5,
+          "confidenceMedian": 0.6336026191711426,
+          "wholeClipComputeMs": [
+            1067.7392160000636,
+            954.4525090000207,
+            1030.596001000049
+          ],
+          "wholeClipCpuMs": [
+            1927.6880820000013,
+            1754.5358899999997,
+            1865.0826130000003
+          ],
+          "processPeakRssKiB": 789096,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9583333333333334,
+              "25": 0.975,
+              "50": 0.9833333333333333
+            },
+            "acceptedPrecision50": 0.9752066115702479,
+            "voicedCoverage": 0.9833333333333333,
+            "voicingFalseAlarm": 0.02631578947368421,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1030.596001000049,
+            "p95Ms": 1067.7392160000636,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-20",
+          "threshold": 0.8,
+          "confidenceMedian": 0.6336026191711426,
+          "wholeClipComputeMs": [
+            1067.7392160000636,
+            954.4525090000207,
+            1030.596001000049
+          ],
+          "wholeClipCpuMs": [
+            1927.6880820000013,
+            1754.5358899999997,
+            1865.0826130000003
+          ],
+          "processPeakRssKiB": 789096,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.925,
+              "25": 0.925,
+              "50": 0.925
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.925,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1030.596001000049,
+            "p95Ms": 1067.7392160000636,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-10",
+          "threshold": 0.5,
+          "confidenceMedian": 0.618017315864563,
+          "wholeClipComputeMs": [
+            1005.6921270002022,
+            1000.5591120002464,
+            1014.9202120001064
+          ],
+          "wholeClipCpuMs": [
+            1820.7578800000003,
+            1804.6108499999978,
+            1828.2062099999976
+          ],
+          "processPeakRssKiB": 790372,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9416666666666667,
+              "25": 0.9833333333333333,
+              "50": 0.9916666666666667
+            },
+            "acceptedPrecision50": 0.9754098360655737,
+            "voicedCoverage": 0.9916666666666667,
+            "voicingFalseAlarm": 0.02631578947368421,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.9803921568627451,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1005.6921270002022,
+            "p95Ms": 1014.9202120001064,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-10",
+          "threshold": 0.8,
+          "confidenceMedian": 0.618017315864563,
+          "wholeClipComputeMs": [
+            1005.6921270002022,
+            1000.5591120002464,
+            1014.9202120001064
+          ],
+          "wholeClipCpuMs": [
+            1820.7578800000003,
+            1804.6108499999978,
+            1828.2062099999976
+          ],
+          "processPeakRssKiB": 790372,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9,
+              "25": 0.9166666666666666,
+              "50": 0.9166666666666666
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9166666666666666,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.9803921568627451,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1005.6921270002022,
+            "p95Ms": 1014.9202120001064,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-0",
+          "threshold": 0.5,
+          "confidenceMedian": 0.5651876926422119,
+          "wholeClipComputeMs": [
+            1021.2281409999378,
+            1023.6545160000787,
+            1053.062422000039
+          ],
+          "wholeClipCpuMs": [
+            1851.767959,
+            1842.3055050000023,
+            1908.5198159999984
+          ],
+          "processPeakRssKiB": 791332,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.925,
+              "25": 0.975,
+              "50": 0.9833333333333333
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.9833333333333333,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.9607843137254902,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1023.6545160000787,
+            "p95Ms": 1053.062422000039,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-0",
+          "threshold": 0.8,
+          "confidenceMedian": 0.5651876926422119,
+          "wholeClipComputeMs": [
+            1021.2281409999378,
+            1023.6545160000787,
+            1053.062422000039
+          ],
+          "wholeClipCpuMs": [
+            1851.767959,
+            1842.3055050000023,
+            1908.5198159999984
+          ],
+          "processPeakRssKiB": 791332,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.6,
+              "25": 0.625,
+              "50": 0.625
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.625,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 0.6862745098039216,
+              "25": 0.7156862745098039,
+              "50": 0.7156862745098039
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.7156862745098039,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1023.6545160000787,
+            "p95Ms": 1053.062422000039,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-only",
+          "threshold": 0.5,
+          "confidenceMedian": 0.07355619221925735,
+          "wholeClipComputeMs": [
+            1027.2253010002714,
+            943.771045000176,
+            1027.50220300004
+          ],
+          "wholeClipCpuMs": [
+            1875.583199000001,
+            1764.3139200000028,
+            1849.6055590000005
+          ],
+          "processPeakRssKiB": 791332,
+          "allFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1027.2253010002714,
+            "p95Ms": 1027.50220300004,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "noise-only",
+          "threshold": 0.8,
+          "confidenceMedian": 0.07355619221925735,
+          "wholeClipComputeMs": [
+            1027.2253010002714,
+            943.771045000176,
+            1027.50220300004
+          ],
+          "wholeClipCpuMs": [
+            1875.583199000001,
+            1764.3139200000028,
+            1849.6055590000005
+          ],
+          "processPeakRssKiB": 791332,
+          "allFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1027.2253010002714,
+            "p95Ms": 1027.50220300004,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "silence",
+          "threshold": 0.5,
+          "confidenceMedian": 0.00836699828505516,
+          "wholeClipComputeMs": [
+            1029.2120029998841,
+            985.9246330001952,
+            1016.1043650000465
+          ],
+          "wholeClipCpuMs": [
+            1912.9996750000018,
+            1815.297797999996,
+            1851.2380180000036
+          ],
+          "processPeakRssKiB": 791332,
+          "allFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1016.1043650000465,
+            "p95Ms": 1029.2120029998841,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "silence",
+          "threshold": 0.8,
+          "confidenceMedian": 0.00836699828505516,
+          "wholeClipComputeMs": [
+            1029.2120029998841,
+            985.9246330001952,
+            1016.1043650000465
+          ],
+          "wholeClipCpuMs": [
+            1912.9996750000018,
+            1815.297797999996,
+            1851.2380180000036
+          ],
+          "processPeakRssKiB": 791332,
+          "allFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 0,
+            "unvoicedFrames": 234,
+            "rpa": {
+              "10": null,
+              "25": null,
+              "50": null
+            },
+            "acceptedPrecision50": null,
+            "voicedCoverage": null,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1016.1043650000465,
+            "p95Ms": 1029.2120029998841,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "weak",
+          "threshold": 0.5,
+          "confidenceMedian": 0.6384676694869995,
+          "wholeClipComputeMs": [
+            1043.7193460002163,
+            1151.3281649999954,
+            1063.9145820000522
+          ],
+          "wholeClipCpuMs": [
+            1883.7743799999985,
+            2085.724139000007,
+            1976.7925530000027
+          ],
+          "processPeakRssKiB": 791936,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.9583333333333334,
+              "25": 0.975,
+              "50": 0.9833333333333333
+            },
+            "acceptedPrecision50": 0.9672131147540983,
+            "voicedCoverage": 0.9833333333333333,
+            "voicingFalseAlarm": 0.03508771929824561,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1063.9145820000522,
+            "p95Ms": 1151.3281649999954,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "weak",
+          "threshold": 0.8,
+          "confidenceMedian": 0.6384676694869995,
+          "wholeClipComputeMs": [
+            1043.7193460002163,
+            1151.3281649999954,
+            1063.9145820000522
+          ],
+          "wholeClipCpuMs": [
+            1883.7743799999985,
+            2085.724139000007,
+            1976.7925530000027
+          ],
+          "processPeakRssKiB": 791936,
+          "allFrames": {
+            "voicedFrames": 120,
+            "unvoicedFrames": 114,
+            "rpa": {
+              "10": 0.925,
+              "25": 0.925,
+              "50": 0.925
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 0.925,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "stableFrames": {
+            "voicedFrames": 102,
+            "unvoicedFrames": 96,
+            "rpa": {
+              "10": 1,
+              "25": 1,
+              "50": 1
+            },
+            "acceptedPrecision50": 1,
+            "voicedCoverage": 1,
+            "voicingFalseAlarm": 0,
+            "octaveErrors": 0
+          },
+          "compute": {
+            "count": 3,
+            "p50Ms": 1063.9145820000522,
+            "p95Ms": 1151.3281649999954,
+            "deadlineMs": 2400,
+            "deadlineMisses": 0
+          }
+        }
+      ]
+    }
+  ]
+}

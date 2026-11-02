@@ -46,7 +46,7 @@ GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试
 
 跨平台 Node 测试通过不等于真实硬件通过。当前真实琴、Windows/macOS 麦克风、Safari、Firefox 和手机音频链路均未验证；实际 CI 状态以仓库 Actions 为准。
 
-已运行的可选研究：[Y1：YIN/pYIN 成对比较](experiments/yin/README.md)，包含负结果与局限，未接入在线识别器。
+已运行的可选研究：[Y1：YIN/pYIN 成对比较](experiments/yin/README.md)，以及 [C1：CREPE tiny/small](experiments/crepe/README.md)，均包含负结果与局限，未接入在线识别器。
 
 ## 技术路线
 
