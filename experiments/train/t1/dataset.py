@@ -1,4 +1,6 @@
-"""T1 preparation only. Standard library; no training, audio upload or downloads."""
+"""Legacy v1 metadata checks and internal frame primitive. NOT a training authorization.
+Use contract.audit (v2) / audit.py for bound source-to-label validation.
+"""
 import hashlib
 import json
 import math
@@ -109,8 +111,4 @@ def frame_labels(notes, *, frames, reliable_intervals, negative_kind=None, hop=2
     return out
 
 if __name__ == '__main__':
-    import argparse
-    parser = argparse.ArgumentParser(description='Validate local T1 manifest, groups and asset hashes; never train')
-    parser.add_argument('manifest'); parser.add_argument('--root', required=True)
-    args = parser.parse_args()
-    print(json.dumps(validate_manifest(json.loads(Path(args.manifest).read_text()), args.root), indent=2, allow_nan=False))
+    raise SystemExit('Unbound v1 CLI retired. Use audit.py bound MANIFEST --root ROOT or audit.py guitarset MANIFEST --root ROOT.')
