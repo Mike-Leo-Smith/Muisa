@@ -2,10 +2,13 @@ import json,unittest
 from pathlib import Path
 import torch
 from model import TinyGuitar,masked_loss
-from data import toy_batch
+from data import toy_batch,onset_frame_index
 C=json.loads(Path(__file__).with_name('config.json').read_text());torch.set_num_threads(C['threads'])
 class ModelTests(unittest.TestCase):
  def setUp(self):torch.manual_seed(C['seed']);self.model=TinyGuitar(C).eval()
+ def test_onset_at_hop_boundary_is_not_in_previous_frame(self):
+  for sample,index in [(0,0),(255,0),(256,1),(257,1),(512,2),(2400,9)]:self.assertEqual(onset_frame_index(sample,256),index)
+  with self.assertRaises(ValueError):onset_frame_index(-1,256)
  def test_shapes_gradients_masks(self):
   pcm,labels,_=toy_batch(C);y,*_=self.model(pcm,*self.model.states(len(pcm)));self.assertEqual(tuple(y.shape),(4,128,51));loss,parts=masked_loss(y,labels,C);loss.backward();self.assertTrue(all(torch.isfinite(p.grad).all() for p in self.model.parameters() if p.grad is not None));self.assertTrue(all(p.weight.grad is not None for p in self.model.tcn));self.assertTrue(torch.isfinite(loss));
   empty={k:torch.zeros_like(v) for k,v in labels.items()};zero,_=masked_loss(y,empty,C);self.assertEqual(zero.item(),0)
