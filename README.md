@@ -36,7 +36,7 @@ npm start
 ## 测试与 CI
 
 ```sh
-npm test                   # PCM 算法、生命周期与指标：38 项
+npm test                   # PCM 算法、生命周期与指标：40 项
 npm run build              # JS 语法检查 + dist 静态应用
 npm run fixtures           # 生成 6 个本地 PCM16 WAV
 npm run test:report         # JUnit 报告写入 reports/unit.xml

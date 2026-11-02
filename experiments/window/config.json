@@ -1,0 +1,17 @@
+{
+  "protocol": "W1-js-window-v1",
+  "sampleRateHz": 22050,
+  "windows": [{"id": "js-4096", "samples": 4096}, {"id": "js-2048", "samples": 2048}],
+  "hopSamples": 512,
+  "firstCenterSample": 2048,
+  "confidence": 0.8,
+  "gridMs": 10,
+  "boundaryGuardMs": 50,
+  "gridStartMs": 100,
+  "gridEndMarginMs": 150,
+  "boundaryDistanceBinsMs": {"50to105": [50, 105], "105plus": [105, null]},
+  "expectedRecordings": 12,
+  "expectedPlayers": 6,
+  "repeatCount": 1,
+  "baseR1ConfigSha256": "74156f09af63dbe885c417f07f52f02dc54ef657f991384aad727a0728a2e609"
+}
