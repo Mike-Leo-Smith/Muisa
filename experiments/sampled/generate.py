@@ -32,8 +32,10 @@ def render(notes,path,rr):
  for tick,on,n in sorted(ev,key=lambda e:(e[0],e[1])):
   track.append(mido.Message('note_on' if on else 'note_off',note=n['midi'],velocity=n['velocity'] if on else 0,time=tick-last));last=tick
  track.append(mido.MetaMessage('end_of_track',time=960));mid.save(path.with_suffix('.mid'))
- subprocess.run([str(renderer),'--sfz',str(sfzs[rr]),'--midi',str(path.with_suffix('.mid')),'--wav',str(path),'--samplerate',str(rate),'--blocksize','256','--use-eot'],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
+ subprocess.run([str(renderer),'--sfz',str(sfzs[rr]),'--midi',str(path.with_suffix('.mid')),'--wav',str(path),'--samplerate',str(rate),'--blocksize','256'],check=True,timeout=30,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
  sr,x=wavfile.read(path);assert sr==rate and x.dtype==np.int16;assert np.max(np.abs(x.astype(float)))<32767
+ assert len(x)/rate>=max((n['onsetMs']+n['durationMs'])/1000 for n in notes)
+ assert np.max(np.abs(x[-256:].astype(np.int32)))<=2, 'Natural release did not decay; do not pad or silently truncate'
  return x.mean(axis=1)/32768
 
 calibration={}

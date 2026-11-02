@@ -1,0 +1,36 @@
+{
+  "status": "actual sfizz 1.2.3 render regression, CC0 Emily, not real guitar validation",
+  "cases": [
+    {
+      "fixture": "cal-1-90-64",
+      "lastMidiNoteOffSeconds": 0.75,
+      "cut": {
+        "seconds": 0.7546485260770975,
+        "sha256": "d3555cbbc8730be35840f1d06787740d18440232ad167edc20b859d79b6b2561",
+        "lastBlockPeakPcm16": 1040
+      },
+      "natural": {
+        "seconds": 1.0100680272108844,
+        "sha256": "3fd053035c357363200e78f6997277a8aa22d96478176e580959f1b97a166ca9",
+        "lastBlockPeakPcm16": 1
+      },
+      "recoveredTailRms": 0.0023721766684193925
+    },
+    {
+      "fixture": "rr1-v90-render",
+      "lastMidiNoteOffSeconds": 2.15,
+      "cut": {
+        "seconds": 2.159455782312925,
+        "sha256": "5d574f657fbac38fc109d4c83c43002ea8a63a9d4487715384748d176646deff",
+        "lastBlockPeakPcm16": 387
+      },
+      "natural": {
+        "seconds": 2.403265306122449,
+        "sha256": "55a1d8d2fb0938e44a6de2c5339b914814c3bf5de7cc3619a353bda56490ae9e",
+        "lastBlockPeakPcm16": 1
+      },
+      "recoveredTailRms": 0.0011385206831289753
+    }
+  ],
+  "limits": "Two pinned fixtures only; no reassessment of M2/M3 recognition or release labels."
+}

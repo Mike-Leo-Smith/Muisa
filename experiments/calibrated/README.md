@@ -61,3 +61,12 @@ RPA表中两个数表示source/microphone，不是precision/recall。每行完�
 JS原生4096/22050≈185.8ms窗，1024/22050≈46.4ms hop；CREPE64ms窗、10ms hop，中心+32ms；Basic Pitch约1.99秒原生窗口，整段离线解码。共同10ms网格不会让JS拥有10ms时间分辨率。JSON分别保存JS每帧compute、模型整段wall/CPU、运行时RSS和模型load/warmup；它们不是直接等价的实时延迟指标。没有测浏览器端模型首输出、排队或音频设备延迟。
 
 当前输入仍是合法采样渲染，未取得真实GuitarSet mic音频。本校准里程碑完成后等待真实数据，不新增算法家族，不替换在线算法。A1的重复同音歧义/回跳限制仍独立保留。
+
+
+## Release 截断勘误
+
+历史 M2/M3 输入使用 sfizz `--use-eot`，实际在最后 note-off 附近结束：MIDI 的末尾 EOT delta 未带来预期尾音。隔离样本也受影响，因此历史 release 统计和依赖其结束标签的评价不能作为完整释放验证。已发布 JSON 保留为历史结果，不静默改写；起音/音高结果也只能解释为对这些旧输入的结果。
+
+生成器现移除该选项，让 sfizz 渲染至自身功率停止条件，并检查末尾量化电平、超时及削波。已有输出不会自动变成新结果，需重新生成、校准和评价。两条固定样本的实际渲染回归见 `experiments/sampled/results-release-fix.json`：旧前缀逐样本一致，新增尾段具有非零能量，并非补零。
+
+使用 room 环境运行：`python experiments/sampled/test_release.py /path/to/sfizz_render`（先有 M2 本地素材）。这是可选重实验，不向快 CI 添加音源或编译器依赖。
