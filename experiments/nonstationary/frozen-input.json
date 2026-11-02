@@ -1,0 +1,21 @@
+{
+  "schema": "muisa-n1-delivery-v1",
+  "builderCodeRevision": "8f2051565d28a16c0ee619312202d6c1635eeee5",
+  "configSha256": "837d4856812c54ae50d578d2523cc04732194ed3c7fc9a290be3aa10277b4d9d",
+  "inputManifestSha256": "3a1f3b5ba9aea228993d6e359a247ea580dc7c005ac9ceaa5c79726d164a269e",
+  "inputLockSha256": "96291f2528261de1308d6b726b33f3e02b6c75a183f3868d56aeafdbc0dde833",
+  "zipSha256": "7cfe443d50f53ecf3b84d2c75f3286fbb8e28df1fb163d47dfded565fa454b65",
+  "pairId": "N1-performed-gates-pair-001",
+  "samples": 421221,
+  "sampleRateHz": 48000,
+  "commonGain": 1.0,
+  "pairTolerance": 1e-7,
+  "conditions": {
+    "room-only": "0feb9a1e88f8ffcf399810946545b631141078bf9c0c1522bda1ff4796cf4d83",
+    "room-speech": "bed44da8a328e6076c7db76dbae0d4f702db34bc754f9482325c1dbbbae33e4e",
+    "room-speech-transients": "0d263c9743a0973785b1726bbe01e7b0c150ea9ef08c0e249a07e6d909d04cfb",
+    "speech-only": "963d3dbbf7774ff35e4fe17c2c45b9cdc9c0b99b10a25b87f2b3ae493c6c360c",
+    "transients-only": "d34b25e8cd908b4f35c3ebe3dde20972c0dd2152926322e983ea68f342fc720e",
+    "speech-transients-only": "9f6388d1dc59c171ac68be795f420d85a80ee56741f4bc4d38e5fa502386b560"
+  }
+}

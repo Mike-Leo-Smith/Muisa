@@ -45,3 +45,7 @@
 1. 冻结manifest和6输入hash，人工核对许可、对应源/事件、tail未截断、零削波、相同gain/时轴；不听模型结果选素材。
 2. 全mixer回归覆盖full/tiny/zero overlap和zero/nonfinite保护；新增成对stem恒等式、负样本无target、重采样时轴/时延、严格JSON检查。
 3. 用自造PCM先验证runner、匹配和分母，明确它不是人声测试。冻结代码SHA与configSHA后，独立执行端对真实素材合成的6输入串行运行；保留所有结果，不因坏结果删条件。
+
+## 当前适配状态
+
+`frozen-input.json` 已记录独立生产端冻结的六条件哈希和配置绑定；`audio.js` 校验float WAV与条件线性恒等式，`analyze.js`提供固定分析/评分核心，已有合成接口测试。真实数据runner的标签映射尚待核对实际`performed-and-delayed.json`字段及delay语义，不能猜测note结构或重复加delay。可先运行只读 `python experiments/nonstationary/inspect_bundle.py BUNDLE` 输出冻结manifest/lock校验与实际标签结构；此命令不执行推理。N1不用于T0训练。
