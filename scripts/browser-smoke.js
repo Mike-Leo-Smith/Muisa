@@ -29,4 +29,4 @@ try{
  assert.ok(lifecycle.closed);assert.ok(lifecycle.clock.slice(1).every((v,i)=>v>lifecycle.clock[i]));assert.equal(lifecycle.clock[0],0);assert.equal(lifecycle.restart[0],0);console.log('PASS input sample clock, stop cleanup and restart isolation');
  await cdp('Browser.setPermission',{origin:base,permission:{name:'microphone'},setting:'denied'});await evaluate("document.querySelector('#start').click()");await wait("document.querySelector('#status').textContent.startsWith('denied')");console.log('PASS microphone permission denial');
  assert.deepEqual(errors,[]);console.log('PASS no page runtime exceptions');
-}finally{ws?.close();browser.kill();await new Promise(r=>browser.once('exit',r));rmSync(profile,{recursive:true,force:true});}
+}finally{ws?.close();browser.kill();await new Promise(r=>browser.once('exit',r));rmSync(profile,{recursive:true,force:true,maxRetries:20,retryDelay:100});}
