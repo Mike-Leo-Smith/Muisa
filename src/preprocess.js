@@ -6,3 +6,9 @@ export function preprocess(raw,{enabled=false,noiseRms=null}={}){
  return {samples,uncertain:noiseRms!==null&&Math.sqrt(samples.reduce((sum,x)=>sum+x*x,0)/samples.length)<noiseRms*2};
 }
 export function noiseEstimate(rmsValues){const x=rmsValues.filter(Number.isFinite).sort((a,b)=>a-b);return x.length?x[Math.floor(x.length/2)]:null;}
+
+// Calibration and gating must use the same DC-free signal domain.
+export function backgroundRms(raw){
+ const x=preprocess(raw,{enabled:true}).samples;
+ return Math.sqrt(x.reduce((sum,v)=>sum+v*v,0)/x.length);
+}

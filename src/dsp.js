@@ -50,16 +50,24 @@ export function chord(samples,rate) {
   return {label:accepted?a.label:null,reason:accepted?'candidate-match':'uncertain',margin,candidates:ranked,chroma:Array.from(chroma)};
 }
 export class Analyzer {
-  constructor(config={}){this.config=config;this.previousRms=0;this.lastOnset=-Infinity;this.pending=null;this.events=[];this.frames=0;this.lastChord=null;this.expected=null;this.chordBuffer=new Float32Array(16384);this.chordFilled=0;}
+  constructor(config={}){this.config=config;this.previousRms=0;this.lastOnset=-Infinity;this.pending=null;this.events=[];this.frames=0;this.lastChord=null;this.expected=null;this.lastStart=null;this.rate=null;this.streamId=null;this.chordBuffer=new Float32Array(16384);this.chordFilled=0;}
   process(frame){
     const {channels,sampleRateHz:rate,startSample,hopSize=1024}=frame;
+    if(!Number.isFinite(rate)||rate<=0||!Number.isInteger(startSample)||startSample<0||
+       !Number.isInteger(hopSize)||hopSize<=0||!(channels?.[0] instanceof Float32Array)||
+       channels[0].length!==4096||hopSize>4096||channels[0].some(x=>!Number.isFinite(x)))
+      throw new RangeError('Invalid PCM frame: require finite 4096-sample channel, positive rate/hop and nonnegative sample index');
+    if(this.lastStart!==null && startSample<=this.lastStart)throw new RangeError('PCM timestamps must increase; reset analyzer for a new stream');
+    if(this.rate!==null && (rate!==this.rate||frame.streamId!==this.streamId))throw new RangeError('Source changed: reset analyzer before switching stream or sample rate');
+    this.lastStart=startSample;this.rate=rate;this.streamId=frame.streamId;
+    const discontinuity=this.expected!==null && startSample!==this.expected;
     // Explicitly use channel 0: stereo averaging can cancel antiphase signals.
     const raw=channels[0], processed=preprocess(raw,this.config), x=processed.samples, time=startSample/rate*1000, metrics=level(raw);
-    if(this.expected!==null && startSample!==this.expected){this.previousRms=0;this.pending=null;this.chordFilled=0;}
+    if(discontinuity){this.previousRms=0;this.pending=null;this.chordFilled=0;this.lastChord=null;}
     this.expected=startSample+hopSize;
     const tail=level(x.subarray(x.length-hopSize)).rms;
     const onset=time+(x.length-hopSize)/rate*1000;
-    if(tail>.012 && tail>Math.max(.012,this.previousRms*1.8) && onset-this.lastOnset>160){this.pending=onset;this.lastOnset=onset;}
+    if(!discontinuity && tail>.012 && tail>Math.max(.012,this.previousRms*1.8) && onset-this.lastOnset>160){this.pending=onset;this.lastOnset=onset;}
     this.previousRms=tail;
     const detected=processed.uncertain?{midi:null,confidence:0,reason:'near-noise-floor'}:pitch(x,rate);
     let event=null;
@@ -71,7 +79,7 @@ export class Analyzer {
     this.chordBuffer.copyWithin(0,chunk.length);this.chordBuffer.set(chunk,this.chordBuffer.length-chunk.length);
     this.chordFilled=Math.min(this.chordBuffer.length,this.chordFilled+chunk.length);
     if(this.frames++%4===0 && this.chordFilled===this.chordBuffer.length) this.lastChord=metrics.clipped||processed.uncertain?{label:null,reason:'clipped-or-noisy',candidates:[]}:chord(this.chordBuffer,rate);
-    return {timeMs:time,level:metrics,pitch:detected,chord:this.lastChord,event};
+    return {timeMs:time,discontinuity,level:metrics,pitch:detected,chord:this.lastChord,event};
   }
 }
 export function* frames(channels, sampleRateHz, windowSize=4096, hopSize=1024){

@@ -1,11 +1,10 @@
 import {SystemInput} from './input.js';
-import {level} from './dsp.js';
-import {noiseEstimate} from './preprocess.js';
+import {noiseEstimate,backgroundRms} from './preprocess.js';
 import {melody,tone,wav} from './fixtures.js';
 const $=id=>document.getElementById(id),status=s=>$('status').textContent=s;
 let worker,busy=false,dropped=0,token=0,url=null,noiseRms=null,calibration=null;
 const input=new SystemInput(frame=>{
- if(calibration){calibration.push(level(frame.channels[0]).rms);if(calibration.length>=48){noiseRms=noiseEstimate(calibration);calibration=null;$('noiseInfo').textContent='噪声 RMS '+noiseRms.toFixed(4)+'（只对本次输入有效）';resetWorker();}}
+ if(calibration){calibration.push(backgroundRms(frame.channels[0]));if(calibration.length>=48){noiseRms=noiseEstimate(calibration);calibration=null;$('noiseInfo').textContent='噪声 RMS '+noiseRms.toFixed(4)+'（只对本次输入有效）';resetWorker();}}
  draw(frame.channels[0]);if(busy){dropped++;return;}busy=true;worker.postMessage({type:'frame',frame});
 },status);
 function draw(x){const c=$('wave'),g=c.getContext('2d');g.clearRect(0,0,c.width,c.height);g.beginPath();g.strokeStyle='#69dbc2';for(let i=0;i<c.width;i++){const y=65-x[Math.floor(i*x.length/c.width)]*60;i?g.lineTo(i,y):g.moveTo(i,y);}g.stroke();}
