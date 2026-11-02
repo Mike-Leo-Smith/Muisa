@@ -21,6 +21,17 @@ class ModelTests(unittest.TestCase):
     y,p,f=self.model(x[:,:,i*256:(i+1)*256],p,f);outputs.append(y)
    torch.testing.assert_close(torch.cat(outputs,1),full,rtol=1e-5,atol=1e-6);torch.testing.assert_close(p,ps);torch.testing.assert_close(f,fs,rtol=1e-5,atol=1e-6)
    reset,*_=self.model(x[:,:,:256],*self.model.states(1));torch.testing.assert_close(reset,full[:,:1])
+ def test_mask_before_loss_ignores_invalid_placeholders_and_logits(self):
+  x=torch.zeros(1,2,51,requires_grad=True)
+  with torch.no_grad():x[:,1,:]=float('nan')
+  labels={k:torch.tensor([[1.,0.]]) for k in ['activityMask','onsetMask','pitchMask']}
+  labels.update(activity=torch.tensor([[1.,float('nan')]]),onset=torch.tensor([[0.,float('nan')]]),pitch=torch.tensor([[4.,99999.]]))
+  loss,_=masked_loss(x,labels,C);self.assertTrue(torch.isfinite(loss));loss.backward();self.assertTrue(torch.isfinite(x.grad).all());self.assertEqual(x.grad[:,1,:].abs().sum().item(),0)
+  labels['activity'][0,0]=float('nan')
+  with self.assertRaisesRegex(ValueError,'binary target'):masked_loss(x,labels,C)
+ def test_empty_masks_ignore_nan_targets_and_preserve_zero_gradient(self):
+  x=torch.full((1,2,51),float('nan'),requires_grad=True);labels={k:torch.zeros(1,2) for k in ['activityMask','onsetMask','pitchMask']};labels.update({k:torch.full((1,2),float('nan')) for k in ['activity','onset','pitch']})
+  loss,_=masked_loss(x,labels,C);self.assertEqual(loss.item(),0);loss.backward();self.assertTrue(torch.equal(x.grad,torch.zeros_like(x)))
  def test_unknown_pitch_mask_prevents_supervision(self):
   x=torch.randn(1,2,51,requires_grad=True);labels={k:torch.zeros(1,2) for k in ['activity','onset','activityMask','onsetMask','pitchMask']};labels['pitch']=torch.zeros(1,2,dtype=torch.long);labels['activityMask'][:]=1
   loss,_=masked_loss(x,labels,C);loss.backward();self.assertEqual(x.grad[:,:,2:].abs().sum().item(),0)

@@ -23,9 +23,21 @@ class TinyGuitar(nn.Module):
 
 def masked_loss(logits,labels,c):
  activity,onset,pitch=logits[:,:,0],logits[:,:,1],logits[:,:,2:]
- def average(values,mask):return (values*mask).sum()/mask.sum().clamp(min=1)
- losses={
- 'activity':average(F.binary_cross_entropy_with_logits(activity,labels['activity'],reduction='none'),labels['activityMask']),
- 'onset':average(F.binary_cross_entropy_with_logits(onset,labels['onset'],reduction='none',pos_weight=torch.tensor(c['onsetPositiveWeight'],device=logits.device)),labels['onsetMask']),
- 'pitch':average(F.cross_entropy(pitch.reshape(-1,pitch.shape[-1]),labels['pitch'].reshape(-1),reduction='none').reshape_as(labels['pitch']),labels['pitchMask'])}
+ def select(values,target,mask):
+  if mask.shape!=target.shape or values.shape[:2]!=mask.shape:raise ValueError('Loss label/mask shape mismatch')
+  if not torch.isfinite(mask).all() or not ((mask==0)|(mask==1)).all():raise ValueError('Masks must be finite binary values')
+  valid=mask.bool();return values[valid],target[valid]
+ def binary(values,target,mask,positive_weight=None):
+  values,target=select(values,target,mask)
+  if not values.numel():return values.sum()*0
+  if not torch.isfinite(target).all() or not ((target>=0)&(target<=1)).all():raise ValueError('Invalid supervised binary target')
+  return F.binary_cross_entropy_with_logits(values,target,reduction='mean',pos_weight=positive_weight)
+ values,target=select(pitch,labels['pitch'],labels['pitchMask'])
+ if not target.numel():pitch_loss=values.sum()*0
+ else:
+  if not torch.isfinite(target).all() or not ((target>=0)&(target<pitch.shape[-1])&(target==target.round())).all():raise ValueError('Invalid supervised pitch class')
+  pitch_loss=F.cross_entropy(values,target.long(),reduction='mean')
+ losses={'activity':binary(activity,labels['activity'],labels['activityMask']),
+ 'onset':binary(onset,labels['onset'],labels['onsetMask'],torch.tensor(c['onsetPositiveWeight'],device=logits.device)),
+ 'pitch':pitch_loss}
  return sum(c['lossWeights'][k]*v for k,v in losses.items()),losses
