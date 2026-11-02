@@ -46,6 +46,8 @@ GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试
 
 跨平台 Node 测试通过不等于真实硬件通过。当前真实琴、Windows/macOS 麦克风、Safari、Firefox 和手机音频链路均未验证；实际 CI 状态以仓库 Actions 为准。
 
+已运行的可选研究：[Y1：YIN/pYIN 成对比较](experiments/yin/README.md)，包含负结果与局限，未接入在线识别器。
+
 ## 技术路线
 
 原生 ES modules，WebAudio / AudioWorklet 采集，Web Worker 做 DSP，UI 与 PCM/事件接口解耦。构建只检查语法并拷贝静态文件，不做转译；Node 仅用于开发服务和测试。

@@ -1,0 +1,1369 @@
+{
+  "experiment": "Y1 synthetic-only paired pitch comparison",
+  "librosa": "0.11.0",
+  "python": "3.12.14",
+  "platform": "Linux-6.18.57-x86_64-with-glibc2.41",
+  "jitWarmupMs": 16512.14349499969,
+  "windowSize": 4096,
+  "sampleRateHz": 22050,
+  "hopSize": 512,
+  "fixtures": [
+    {
+      "id": "clean",
+      "sha256": "ad5163129cec4ed7dfee118c0ffe41982a8a6085282e80182b37ff68d94bde20",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 400
+        },
+        {
+          "midi": 64,
+          "onsetMs": 850,
+          "durationMs": 400
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1500,
+          "durationMs": 400
+        }
+      ],
+      "noiseSeed": 123,
+      "noiseGain": 0,
+      "snrDb": null
+    },
+    {
+      "id": "noise-20",
+      "sha256": "102d8b6888e764b17d3a3ea0f3b9916f3b421660aeb918c38b8de0bf01106578",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 400
+        },
+        {
+          "midi": 64,
+          "onsetMs": 850,
+          "durationMs": 400
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1500,
+          "durationMs": 400
+        }
+      ],
+      "noiseSeed": 123,
+      "noiseGain": 0.1483582532769283,
+      "snrDb": 20
+    },
+    {
+      "id": "noise-10",
+      "sha256": "74a1a54e3f5f32b7d00b9ba44ccfac75b6e381ae45175b1e1fb678bc14e97a79",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 400
+        },
+        {
+          "midi": 64,
+          "onsetMs": 850,
+          "durationMs": 400
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1500,
+          "durationMs": 400
+        }
+      ],
+      "noiseSeed": 123,
+      "noiseGain": 0.4691499900392327,
+      "snrDb": 10
+    },
+    {
+      "id": "noise-0",
+      "sha256": "a0c9315f786f82b5ba1646c719f67d808df417e8fa52b1fcf1e160c285c2621f",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 400
+        },
+        {
+          "midi": 64,
+          "onsetMs": 850,
+          "durationMs": 400
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1500,
+          "durationMs": 400
+        }
+      ],
+      "noiseSeed": 123,
+      "noiseGain": 1.483582532769283,
+      "snrDb": 0
+    },
+    {
+      "id": "noise-only",
+      "sha256": "522223584b8106482bdca60a8d6edecfd44bfdc4bc9da613a3ef38a19513c843",
+      "notes": [],
+      "noiseSeed": 123,
+      "noiseGain": 1,
+      "snrDb": null
+    },
+    {
+      "id": "silence",
+      "sha256": "8f245649e1e94d36965a9ddfe7bfa6c15449a39e461cfceefbae1e29bdbde162",
+      "notes": [],
+      "noiseSeed": 123,
+      "noiseGain": 0,
+      "snrDb": null
+    },
+    {
+      "id": "weak",
+      "sha256": "9894fd03ac33242707dacd90a7c570599205d80e4fea99baf43ef8a62935ec40",
+      "notes": [
+        {
+          "midi": 52,
+          "onsetMs": 200,
+          "durationMs": 400
+        },
+        {
+          "midi": 64,
+          "onsetMs": 850,
+          "durationMs": 400
+        },
+        {
+          "midi": 67,
+          "onsetMs": 1500,
+          "durationMs": 400
+        }
+      ],
+      "noiseSeed": 123,
+      "noiseGain": 0,
+      "snrDb": null
+    }
+  ],
+  "limitations": "No true guitar, onset/chord/end-to-end latency evaluation. pYIN HMM uses whole future clip despite center=false. Process peak RSS includes interpreter/libraries/JIT; JS RSS is a different process and not incremental model memory. Three clip timings are exploratory, not robust p95 inference.",
+  "rows": [
+    {
+      "id": "clean",
+      "method": "muisa-js",
+      "variant": "native energy/confidence gates",
+      "compute": {
+        "count": 96,
+        "p50Ms": 1.0867000000000075,
+        "p95Ms": 1.335248000000007,
+        "deadlineMs": 23.219954648526077,
+        "deadlineMisses": 0
+      },
+      "rssBytes": 53342208,
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.7083333333333334,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.4666666666666667,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      }
+    },
+    {
+      "id": "clean",
+      "method": "yin",
+      "variant": "native",
+      "wholeClipComputeMs": [
+        34.941287000037846,
+        134.9300609999773,
+        15.218434999951569
+      ],
+      "processPeakRssKiB": 432212,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.53125,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.5625,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 34.941287000037846,
+        "p95Ms": 134.9300609999773,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "clean",
+      "method": "yin",
+      "variant": "rms-gate",
+      "wholeClipComputeMs": [
+        34.941287000037846,
+        134.9300609999773,
+        15.218434999951569
+      ],
+      "processPeakRssKiB": 432212,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.68,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.5333333333333333,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 34.941287000037846,
+        "p95Ms": 134.9300609999773,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "clean",
+      "method": "pyin",
+      "variant": "native-hmm",
+      "wholeClipComputeMs": [
+        191.43936399996164,
+        172.77934699995967,
+        149.46640600010141
+      ],
+      "processPeakRssKiB": 446940,
+      "causality": "whole-clip HMM / noncausal",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.68,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.5333333333333333,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 172.77934699995967,
+        "p95Ms": 191.43936399996164,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-20",
+      "method": "muisa-js",
+      "variant": "native energy/confidence gates",
+      "compute": {
+        "count": 96,
+        "p50Ms": 1.089984999999956,
+        "p95Ms": 1.2658759999999916,
+        "deadlineMs": 23.219954648526077,
+        "deadlineMisses": 0
+      },
+      "rssBytes": 55881728,
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.75,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.37777777777777777,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      }
+    },
+    {
+      "id": "noise-20",
+      "method": "yin",
+      "variant": "native",
+      "wholeClipComputeMs": [
+        14.74249900002178,
+        14.141197999833821,
+        14.023123999777454
+      ],
+      "processPeakRssKiB": 446940,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.53125,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.5625,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 14.141197999833821,
+        "p95Ms": 14.74249900002178,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-20",
+      "method": "yin",
+      "variant": "rms-gate",
+      "wholeClipComputeMs": [
+        14.74249900002178,
+        14.141197999833821,
+        14.023123999777454
+      ],
+      "processPeakRssKiB": 446940,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.53125,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.5625,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 14.141197999833821,
+        "p95Ms": 14.74249900002178,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-20",
+      "method": "pyin",
+      "variant": "native-hmm",
+      "wholeClipComputeMs": [
+        219.5951429998786,
+        175.69390700009535,
+        173.77808699984598
+      ],
+      "processPeakRssKiB": 447208,
+      "causality": "whole-clip HMM / noncausal",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.68,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.5333333333333333,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 175.69390700009535,
+        "p95Ms": 219.5951429998786,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-10",
+      "method": "muisa-js",
+      "variant": "native energy/confidence gates",
+      "compute": {
+        "count": 96,
+        "p50Ms": 1.098538000000019,
+        "p95Ms": 1.5713480000000004,
+        "deadlineMs": 23.219954648526077,
+        "deadlineMisses": 0
+      },
+      "rssBytes": 59346944,
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0.7450980392156863,
+          "25": 0.9215686274509803,
+          "50": 0.9411764705882353
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 0.9411764705882353,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0.9259259259259259,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      }
+    },
+    {
+      "id": "noise-10",
+      "method": "yin",
+      "variant": "native",
+      "wholeClipComputeMs": [
+        16.69278100007432,
+        16.02701399997386,
+        15.360325000074226
+      ],
+      "processPeakRssKiB": 447208,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0.7450980392156863,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.53125,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0.9629629629629629,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.5625,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 16.02701399997386,
+        "p95Ms": 16.69278100007432,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-10",
+      "method": "yin",
+      "variant": "rms-gate",
+      "wholeClipComputeMs": [
+        16.69278100007432,
+        16.02701399997386,
+        15.360325000074226
+      ],
+      "processPeakRssKiB": 447208,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0.7450980392156863,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.53125,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0.9629629629629629,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.5625,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 16.02701399997386,
+        "p95Ms": 16.69278100007432,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-10",
+      "method": "pyin",
+      "variant": "native-hmm",
+      "wholeClipComputeMs": [
+        165.4132489998119,
+        168.04754499980845,
+        148.62990600022385
+      ],
+      "processPeakRssKiB": 447208,
+      "causality": "whole-clip HMM / noncausal",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0.8431372549019608,
+          "25": 0.9607843137254902,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.68,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.5333333333333333,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 165.4132489998119,
+        "p95Ms": 168.04754499980845,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-0",
+      "method": "muisa-js",
+      "variant": "native energy/confidence gates",
+      "compute": {
+        "count": 96,
+        "p50Ms": 1.0893939999999702,
+        "p95Ms": 1.3003170000000068,
+        "deadlineMs": 23.219954648526077,
+        "deadlineMisses": 0
+      },
+      "rssBytes": 62726144,
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      }
+    },
+    {
+      "id": "noise-0",
+      "method": "yin",
+      "variant": "native",
+      "wholeClipComputeMs": [
+        14.626467000198318,
+        17.45448999963628,
+        15.125456999612652
+      ],
+      "processPeakRssKiB": 447208,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0.0392156862745098,
+          "25": 0.3333333333333333,
+          "50": 0.6274509803921569
+        },
+        "acceptedPrecision50": 0.3333333333333333,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 12
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0,
+          "25": 0.2222222222222222,
+          "50": 0.5555555555555556
+        },
+        "acceptedPrecision50": 0.3125,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 8
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 15.125456999612652,
+        "p95Ms": 17.45448999963628,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-0",
+      "method": "yin",
+      "variant": "rms-gate",
+      "wholeClipComputeMs": [
+        14.626467000198318,
+        17.45448999963628,
+        15.125456999612652
+      ],
+      "processPeakRssKiB": 447208,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0.0392156862745098,
+          "25": 0.3333333333333333,
+          "50": 0.6274509803921569
+        },
+        "acceptedPrecision50": 0.3333333333333333,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 12
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0,
+          "25": 0.2222222222222222,
+          "50": 0.5555555555555556
+        },
+        "acceptedPrecision50": 0.3125,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 8
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 15.125456999612652,
+        "p95Ms": 17.45448999963628,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-0",
+      "method": "pyin",
+      "variant": "native-hmm",
+      "wholeClipComputeMs": [
+        160.20180700024866,
+        154.41469899997173,
+        153.02122399998552
+      ],
+      "processPeakRssKiB": 447272,
+      "causality": "whole-clip HMM / noncausal",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 154.41469899997173,
+        "p95Ms": 160.20180700024866,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-only",
+      "method": "muisa-js",
+      "variant": "native energy/confidence gates",
+      "compute": {
+        "count": 96,
+        "p50Ms": 1.0782879999999295,
+        "p95Ms": 1.2387950000000956,
+        "deadlineMs": 23.219954648526077,
+        "deadlineMisses": 0
+      },
+      "rssBytes": 63102976,
+      "allFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      }
+    },
+    {
+      "id": "noise-only",
+      "method": "yin",
+      "variant": "native",
+      "wholeClipComputeMs": [
+        15.019000999927812,
+        23.159910999765998,
+        17.790767999940726
+      ],
+      "processPeakRssKiB": 447272,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 17.790767999940726,
+        "p95Ms": 23.159910999765998,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-only",
+      "method": "yin",
+      "variant": "rms-gate",
+      "wholeClipComputeMs": [
+        15.019000999927812,
+        23.159910999765998,
+        17.790767999940726
+      ],
+      "processPeakRssKiB": 447272,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 17.790767999940726,
+        "p95Ms": 23.159910999765998,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "noise-only",
+      "method": "pyin",
+      "variant": "native-hmm",
+      "wholeClipComputeMs": [
+        181.39791100020375,
+        166.92263699997056,
+        162.57408799992845
+      ],
+      "processPeakRssKiB": 447272,
+      "causality": "whole-clip HMM / noncausal",
+      "allFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0.3125,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0.3125,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 166.92263699997056,
+        "p95Ms": 181.39791100020375,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "silence",
+      "method": "muisa-js",
+      "variant": "native energy/confidence gates",
+      "compute": {
+        "count": 96,
+        "p50Ms": 0.01835700000003726,
+        "p95Ms": 0.018757999999934327,
+        "deadlineMs": 23.219954648526077,
+        "deadlineMisses": 0
+      },
+      "rssBytes": 64806912,
+      "allFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      }
+    },
+    {
+      "id": "silence",
+      "method": "yin",
+      "variant": "native",
+      "wholeClipComputeMs": [
+        14.641256000231806,
+        14.007166999817855,
+        13.800702000025922
+      ],
+      "processPeakRssKiB": 447272,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 14.007166999817855,
+        "p95Ms": 14.641256000231806,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "silence",
+      "method": "yin",
+      "variant": "rms-gate",
+      "wholeClipComputeMs": [
+        14.641256000231806,
+        14.007166999817855,
+        13.800702000025922
+      ],
+      "processPeakRssKiB": 447272,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 14.007166999817855,
+        "p95Ms": 14.641256000231806,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "silence",
+      "method": "pyin",
+      "variant": "native-hmm",
+      "wholeClipComputeMs": [
+        145.1315459999023,
+        141.642217000026,
+        143.13333700010844
+      ],
+      "processPeakRssKiB": 447304,
+      "causality": "whole-clip HMM / noncausal",
+      "allFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 96,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 143.13333700010844,
+        "p95Ms": 145.1315459999023,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "weak",
+      "method": "muisa-js",
+      "variant": "native energy/confidence gates",
+      "compute": {
+        "count": 96,
+        "p50Ms": 0.018296999999961372,
+        "p95Ms": 0.01912800000002335,
+        "deadlineMs": 23.219954648526077,
+        "deadlineMisses": 0
+      },
+      "rssBytes": 64806912,
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      }
+    },
+    {
+      "id": "weak",
+      "method": "yin",
+      "variant": "native",
+      "wholeClipComputeMs": [
+        20.10159700012082,
+        14.794934999827092,
+        15.159394999955111
+      ],
+      "processPeakRssKiB": 447304,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.53125,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.5625,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 1,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 15.159394999955111,
+        "p95Ms": 20.10159700012082,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "weak",
+      "method": "yin",
+      "variant": "rms-gate",
+      "wholeClipComputeMs": [
+        20.10159700012082,
+        14.794934999827092,
+        15.159394999955111
+      ],
+      "processPeakRssKiB": 447304,
+      "causality": "independent windows, offline vectorized adapter",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 0,
+          "25": 0,
+          "50": 0
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": 0,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 15.159394999955111,
+        "p95Ms": 20.10159700012082,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    },
+    {
+      "id": "weak",
+      "method": "pyin",
+      "variant": "native-hmm",
+      "wholeClipComputeMs": [
+        158.3644419997654,
+        151.39738299967576,
+        150.4842889999054
+      ],
+      "processPeakRssKiB": 447304,
+      "causality": "whole-clip HMM / noncausal",
+      "allFrames": {
+        "voicedFrames": 51,
+        "unvoicedFrames": 45,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.68,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.5333333333333333,
+        "octaveErrors": 0
+      },
+      "stableFrames": {
+        "voicedFrames": 27,
+        "unvoicedFrames": 21,
+        "rpa": {
+          "10": 1,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 1,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "clipCompute": {
+        "count": 3,
+        "p50Ms": 151.39738299967576,
+        "p95Ms": 158.3644419997654,
+        "deadlineMs": 2400,
+        "deadlineMisses": 0
+      }
+    }
+  ]
+}
