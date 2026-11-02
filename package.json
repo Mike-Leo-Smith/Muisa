@@ -1,0 +1,16 @@
+{
+  "name": "muisa",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/serve.js",
+    "test": "node --test",
+    "fixtures": "node scripts/generate.js",
+    "build": "node scripts/build.js",
+    "test:browser": "node scripts/browser-ci.js"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}

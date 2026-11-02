@@ -1,0 +1,5 @@
+fixtures/*.wav
+dist/
+node_modules/
+*.log
+.env
