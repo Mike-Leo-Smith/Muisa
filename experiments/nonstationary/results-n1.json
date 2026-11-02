@@ -1,0 +1,477 @@
+{
+  "protocol": "N1-nonstationary-v1-draft-contract",
+  "status": "one-synthetic-spatial-scene-with-real-interference-recordings-not-generalization",
+  "codeRevision": "c1617ea524472b499c15d0792e01aa56808c5aca",
+  "builderCodeRevision": "8f2051565d28a16c0ee619312202d6c1635eeee5",
+  "configSha256": "837d4856812c54ae50d578d2523cc04732194ed3c7fc9a290be3aa10277b4d9d",
+  "inputManifestSha256": "3a1f3b5ba9aea228993d6e359a247ea580dc7c005ac9ceaa5c79726d164a269e",
+  "inputLockSha256": "96291f2528261de1308d6b726b33f3e02b6c75a183f3868d56aeafdbc0dde833",
+  "config": {
+    "protocol": "N1-nonstationary-v1-draft-contract",
+    "executionStatus": "not-run",
+    "sceneCount": 1,
+    "seed": 123,
+    "conditions": [
+      "room-only",
+      "room-speech",
+      "room-speech-transients",
+      "speech-only",
+      "transients-only",
+      "speech-transients-only"
+    ],
+    "dryDiagnosticIncludedInRanking": false,
+    "speechCalibrationRegion": "active-overlap",
+    "speechCalibrationSirDb": 10,
+    "transientCalibrationRegion": "event-local-full-convolution",
+    "transientCalibrationSirDb": 0,
+    "commonHeadroomPeak": 0.9,
+    "independentNormalization": false,
+    "analysisSampleRateHz": 48000,
+    "windowSamples": 4096,
+    "hopSamples": 1024,
+    "pitchConfidence": 0.8,
+    "preprocess": {
+      "enabled": false,
+      "noiseRms": null
+    },
+    "gridMs": 10,
+    "gridStartMs": 100,
+    "gridEndMarginMs": 150,
+    "boundaryGuardMs": 50,
+    "noteOnsetToleranceMs": 50,
+    "notePitchToleranceCents": 50,
+    "offsetScoring": false,
+    "repeatCount": 1,
+    "inputLockRequiredBeforeInference": true,
+    "newModelsOrTraining": false
+  },
+  "inspection": {
+    "pairId": "N1-performed-gates-pair-001",
+    "lockedPayloadCount": 46,
+    "samples": 421221,
+    "sampleRateHz": 48000,
+    "conditions": [
+      "room-only",
+      "room-speech",
+      "room-speech-transients",
+      "speech-only",
+      "transients-only",
+      "speech-transients-only"
+    ],
+    "noteCount": 12,
+    "labelsSha256": "b23c5f30b02a914571b7bc2fa4ac7fb9895eff0cbc12d80c2fe299e5cca66dba",
+    "pairMaxAbsoluteErrors": {
+      "room-speech": 7.450580596923828e-09,
+      "room-speech-transients": 2.843444235622883e-08,
+      "speech-transients-only": 2.7008354663848877e-08
+    },
+    "labels": "targetOnsetSeconds/targetGateEndSeconds already delayed; no additional delay"
+  },
+  "rows": [
+    {
+      "condition": "room-only",
+      "targetPresent": true,
+      "inputSha256": "0feb9a1e88f8ffcf399810946545b631141078bf9c0c1522bda1ff4796cf4d83",
+      "frameCounts": {
+        "mono": 498,
+        "unvoiced": 115,
+        "polyphonic": 0,
+        "boundary-guard": 240
+      },
+      "pitch": {
+        "voicedFrames": 498,
+        "unvoicedFrames": 115,
+        "rpa": {
+          "10": 0.929718875502008,
+          "25": 1,
+          "50": 1
+        },
+        "acceptedPrecision50": 0.9940119760479041,
+        "voicedCoverage": 1,
+        "voicingFalseAlarm": 0.02608695652173913,
+        "octaveErrors": 0
+      },
+      "events": {
+        "onset": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "signedOnsetBiasMs": -10.271784904439452
+        },
+        "note": {
+          "tp": 10,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1": 0.9090909090909091,
+          "signedOnsetBiasMs": -11.13845157110618
+        },
+        "eventAcceptanceCoverage": 0.8333333333333334,
+        "unknownEvents": 2,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "voicedAnalysisFrameFraction": 0.7671568627450981,
+      "analysisFrames": 408,
+      "analyzedDurationMs": 8768,
+      "unprocessedTailMs": 7.4375,
+      "compute": {
+        "count": 408,
+        "p50Ms": 0.9343940000001112,
+        "p95Ms": 13.027361000000042,
+        "deadlineMs": 21.333333333333332,
+        "deadlineMisses": 0
+      },
+      "observedRssBytes": 84791296
+    },
+    {
+      "condition": "room-speech",
+      "targetPresent": true,
+      "inputSha256": "bed44da8a328e6076c7db76dbae0d4f702db34bc754f9482325c1dbbbae33e4e",
+      "frameCounts": {
+        "mono": 498,
+        "unvoiced": 115,
+        "polyphonic": 0,
+        "boundary-guard": 240
+      },
+      "pitch": {
+        "voicedFrames": 498,
+        "unvoicedFrames": 115,
+        "rpa": {
+          "10": 0.7590361445783133,
+          "25": 0.8353413654618473,
+          "50": 0.8353413654618473
+        },
+        "acceptedPrecision50": 0.9369369369369369,
+        "voicedCoverage": 0.8795180722891566,
+        "voicingFalseAlarm": 0.05217391304347826,
+        "octaveErrors": 16
+      },
+      "events": {
+        "onset": {
+          "tp": 12,
+          "fp": 0,
+          "fn": 0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0,
+          "signedOnsetBiasMs": -8.4940071266617
+        },
+        "note": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 4,
+          "precision": 0.8888888888888888,
+          "recall": 0.6666666666666666,
+          "f1": 0.7619047619047619,
+          "signedOnsetBiasMs": -9.605118237773127
+        },
+        "eventAcceptanceCoverage": 0.75,
+        "unknownEvents": 3,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "voicedAnalysisFrameFraction": 0.6421568627450981,
+      "analysisFrames": 408,
+      "analyzedDurationMs": 8768,
+      "unprocessedTailMs": 7.4375,
+      "compute": {
+        "count": 408,
+        "p50Ms": 0.7391170000000784,
+        "p95Ms": 12.813326999999845,
+        "deadlineMs": 21.333333333333332,
+        "deadlineMisses": 0
+      },
+      "observedRssBytes": 85053440
+    },
+    {
+      "condition": "room-speech-transients",
+      "targetPresent": true,
+      "inputSha256": "0d263c9743a0973785b1726bbe01e7b0c150ea9ef08c0e249a07e6d909d04cfb",
+      "frameCounts": {
+        "mono": 498,
+        "unvoiced": 115,
+        "polyphonic": 0,
+        "boundary-guard": 240
+      },
+      "pitch": {
+        "voicedFrames": 498,
+        "unvoicedFrames": 115,
+        "rpa": {
+          "10": 0.5622489959839357,
+          "25": 0.6164658634538153,
+          "50": 0.6164658634538153
+        },
+        "acceptedPrecision50": 0.9331306990881459,
+        "voicedCoverage": 0.6566265060240963,
+        "voicingFalseAlarm": 0.017391304347826087,
+        "octaveErrors": 18
+      },
+      "events": {
+        "onset": {
+          "tp": 9,
+          "fp": 8,
+          "fn": 3,
+          "precision": 0.5294117647058824,
+          "recall": 0.75,
+          "f1": 0.6206896551724138,
+          "signedOnsetBiasMs": -8.308821941476607
+        },
+        "note": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 7,
+          "precision": 0.8333333333333334,
+          "recall": 0.4166666666666667,
+          "f1": 0.5555555555555556,
+          "signedOnsetBiasMs": -10.738451571106271
+        },
+        "eventAcceptanceCoverage": 0.35294117647058826,
+        "unknownEvents": 11,
+        "falseEventsPerMinute": null,
+        "falseOnsetsPerMinute": null,
+        "offsetEvaluated": false
+      },
+      "voicedAnalysisFrameFraction": 0.4803921568627451,
+      "analysisFrames": 408,
+      "analyzedDurationMs": 8768,
+      "unprocessedTailMs": 7.4375,
+      "compute": {
+        "count": 408,
+        "p50Ms": 0.6791290000001027,
+        "p95Ms": 11.249316999999792,
+        "deadlineMs": 21.333333333333332,
+        "deadlineMisses": 0
+      },
+      "observedRssBytes": 85839872
+    },
+    {
+      "condition": "speech-only",
+      "targetPresent": false,
+      "inputSha256": "963d3dbbf7774ff35e4fe17c2c45b9cdc9c0b99b10a25b87f2b3ae493c6c360c",
+      "frameCounts": {
+        "mono": 0,
+        "unvoiced": 853,
+        "polyphonic": 0,
+        "boundary-guard": 0
+      },
+      "pitch": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 853,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0.08909730363423213,
+        "octaveErrors": 0
+      },
+      "events": {
+        "onset": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0.3333333333333333,
+        "unknownEvents": 2,
+        "falseEventsPerMinute": 6.843065693430657,
+        "falseOnsetsPerMinute": 20.529197080291972,
+        "offsetEvaluated": false
+      },
+      "voicedAnalysisFrameFraction": 0.0857843137254902,
+      "analysisFrames": 408,
+      "analyzedDurationMs": 8768,
+      "unprocessedTailMs": 7.4375,
+      "compute": {
+        "count": 408,
+        "p50Ms": 0.5354170000000522,
+        "p95Ms": 10.176078999999845,
+        "deadlineMs": 21.333333333333332,
+        "deadlineMisses": 0
+      },
+      "observedRssBytes": 102748160
+    },
+    {
+      "condition": "transients-only",
+      "targetPresent": false,
+      "inputSha256": "d34b25e8cd908b4f35c3ebe3dde20972c0dd2152926322e983ea68f342fc720e",
+      "frameCounts": {
+        "mono": 0,
+        "unvoiced": 853,
+        "polyphonic": 0,
+        "boundary-guard": 0
+      },
+      "pitch": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 853,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": null,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0,
+        "octaveErrors": 0
+      },
+      "events": {
+        "onset": {
+          "tp": 0,
+          "fp": 12,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 12,
+        "falseEventsPerMinute": 0.0,
+        "falseOnsetsPerMinute": 82.11678832116789,
+        "offsetEvaluated": false
+      },
+      "voicedAnalysisFrameFraction": 0,
+      "analysisFrames": 408,
+      "analyzedDurationMs": 8768,
+      "unprocessedTailMs": 7.4375,
+      "compute": {
+        "count": 408,
+        "p50Ms": 0.5342260000006718,
+        "p95Ms": 10.17447600000014,
+        "deadlineMs": 21.333333333333332,
+        "deadlineMisses": 0
+      },
+      "observedRssBytes": 103665664
+    },
+    {
+      "condition": "speech-transients-only",
+      "targetPresent": false,
+      "inputSha256": "9f6388d1dc59c171ac68be795f420d85a80ee56741f4bc4d38e5fa502386b560",
+      "frameCounts": {
+        "mono": 0,
+        "unvoiced": 853,
+        "polyphonic": 0,
+        "boundary-guard": 0
+      },
+      "pitch": {
+        "voicedFrames": 0,
+        "unvoicedFrames": 853,
+        "rpa": {
+          "10": null,
+          "25": null,
+          "50": null
+        },
+        "acceptedPrecision50": 0,
+        "voicedCoverage": null,
+        "voicingFalseAlarm": 0.04337631887456037,
+        "octaveErrors": 0
+      },
+      "events": {
+        "onset": {
+          "tp": 0,
+          "fp": 12,
+          "fn": 0,
+          "precision": 0.0,
+          "recall": null,
+          "f1": 0.0,
+          "signedOnsetBiasMs": null
+        },
+        "note": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "precision": null,
+          "recall": null,
+          "f1": null,
+          "signedOnsetBiasMs": null
+        },
+        "eventAcceptanceCoverage": 0,
+        "unknownEvents": 12,
+        "falseEventsPerMinute": 0.0,
+        "falseOnsetsPerMinute": 82.11678832116789,
+        "offsetEvaluated": false
+      },
+      "voicedAnalysisFrameFraction": 0.041666666666666664,
+      "analysisFrames": 408,
+      "analyzedDurationMs": 8768,
+      "unprocessedTailMs": 7.4375,
+      "compute": {
+        "count": 408,
+        "p50Ms": 0.539614000000256,
+        "p95Ms": 10.373235999999451,
+        "deadlineMs": 21.333333333333332,
+        "deadlineMisses": 0
+      },
+      "observedRssBytes": 103796736
+    }
+  ],
+  "pairedDeltas": [
+    {
+      "condition": "room-speech",
+      "rpa50": -0.16465863453815266,
+      "coverage": -0.12048192771084343,
+      "voicingFalseAlarm": 0.02608695652173913,
+      "noteF1": -0.1471861471861472
+    },
+    {
+      "condition": "room-speech-transients",
+      "rpa50": -0.38353413654618473,
+      "coverage": -0.34337349397590367,
+      "voicingFalseAlarm": -0.008695652173913042,
+      "noteF1": -0.3535353535353535
+    }
+  ],
+  "limitations": [
+    "Single phrase/room; no independent statistical sample or real-user accuracy claim",
+    "Real readings in synthetic scene, not live conversation",
+    "Performed MIDI gate plus physical/FIR delay; acoustic attack/release uncertainty remains",
+    "Pitch center timestamps are offline; Analyzer event availability may be later than onset timestamp",
+    "Shared-host single compute run; no audio-device or browser latency measurement",
+    "N1 frozen inputs not used for T0 training"
+  ],
+  "executionValidation": {
+    "targetedTestsPassed": 4,
+    "sourceClean": true,
+    "noRetuning": true,
+    "noConcurrentLocalCpuJobs": true,
+    "inputRescaledOrRegenerated": false,
+    "negativeRateDenominatorSeconds": 8.768,
+    "unprocessedTailMilliseconds": 7.4375,
+    "positiveGridCategoriesPercent": {
+      "mono": 58.38218053927315,
+      "unvoiced": 13.481828839390387,
+      "boundaryGuard": 28.13599062133646
+    },
+    "warning": "Only 12 notes and one scene. A negative zero accepted-note count does not imply robustness: transient conditions produced12 onset events each, retained as unknown. Positive unvoiced labels are MIDI-gate based; acoustic release may remain."
+  }
+}
