@@ -22,11 +22,13 @@ export function assessQuality(samples,noiseRms){
  const snrDb=noiseRms>0?20*Math.log10(Math.max(rms,1e-9)/noiseRms):null;
  return {status:peak>=.999?'clipped':rms<.008?'weak':snrDb!==null&&snrDb<10?'noisy':pitches.length<3?'unknown':'observed',rms,peak,snrDb,pitchSpreadCents:spread,message:peak>=.999?'有削波，请自行降低设备增益':rms<.008?'信号偏弱，当前识别器可能漏听':snrDb!==null&&snrDb<10?'与底噪差距较小，请减少背景干扰':pitches.length<3?'没有稳定单音证据，请重试或手动继续':'已记录电平与音高稳定性；不诊断手型、琴或线材故障'};
 }
+export function guideAnalysisConfig(enabled,noiseRms,guide){return guide?.stage==='noise'&&guide.samples!==null?{enabled:true,noiseRms:null}:{enabled,noiseRms};}
 export class PracticeGuide{
  constructor(){this.sourceKey=null;this.demo=false;this.invalidate('选择输入后开始，也可使用合成演示');}
  invalidate(reason){this.demo=false;this.stage='input';this.noiseRms=null;this.noiseStatus='unset';this.strings=OPEN_STRINGS.map(()=>({status:'pending'}));this.stringIndex=0;this.quality=[];this.qualityIndex=0;this.samples=null;this.tuning=[];this.message=reason;this.history=[];}
  connect(key,demo=false){if(key===this.sourceKey)return false;this.invalidate('输入已变化，校准已清空');this.sourceKey=key;this.demo=demo;this.stage='noise';return true;}
- start(){this.samples=[];this.started=null;this.tuning=[];this.message=this.stage==='noise'?'请保持安静约 2 秒，不要拨弦或说话':'请按当前提示拨弦';}
+ resetAttempt(){this.samples=null;this.tuning=[];if(this.stage==='noise'){this.noiseRms=null;this.noiseStatus='unset';}if(this.stage==='strings')this.strings[this.stringIndex]={status:'pending'};if(this.stage==='quality')this.quality[this.qualityIndex]=null;}
+ start(){this.resetAttempt();if(this.stage==='noise')this.noiseStatus='measuring';this.samples=[];this.started=null;this.tuning=[];this.message=this.stage==='noise'?'请保持安静约 2 秒，不要拨弦或说话':'请按当前提示拨弦';}
  next(){this.samples=null;this.tuning=[];
   if(this.stage==='input'){this.history.push({step:'input',status:'manual-skip'});this.stage='noise';}
   else if(this.stage==='noise'){if(this.noiseStatus!=='measured'){this.noiseStatus='manual-skip';this.noiseRms=null;}this.history.push({step:'noise',status:this.noiseStatus,demo:this.demo});this.stage='strings';}
@@ -37,7 +39,7 @@ export class PracticeGuide{
  observe(result){
   if(!this.samples)return null;
   this.started??=result.timeMs;this.samples.push(result);if(this.samples.length>512)this.samples.shift();
-  if(this.stage==='noise'&&result.timeMs-this.started>=2000){const outcome=assessNoise(this.samples);this.samples=null;this.message=outcome.message;if(outcome.ok){this.noiseRms=outcome.noiseRms;this.noiseStatus='measured';}return {noise:outcome};}
+  if(this.stage==='noise'&&result.timeMs-this.started>=2000){const outcome=assessNoise(this.samples);this.samples=null;this.message=outcome.message;if(outcome.ok){this.noiseRms=outcome.noiseRms;this.noiseStatus='measured';}else{this.noiseRms=null;this.noiseStatus='rejected';}return {noise:outcome};}
   if(this.stage==='strings'){
    if(result.level.clipped){this.tuning=[];this.message='输入削波，请降低设备增益再重试';return null;}
    const reading=tuningReading(result.pitch,OPEN_STRINGS[this.stringIndex].midi);this.message=reading.text+(Number.isFinite(reading.cents)?' · '+reading.cents.toFixed(1)+' cents':'');

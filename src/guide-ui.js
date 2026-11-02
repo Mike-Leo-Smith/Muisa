@@ -14,11 +14,12 @@ export function createGuideUI({onNoise,onDemo}){
   $('lessonNotes').textContent=lesson.labels().join(' → ');$('lessonProgress').textContent=lesson.mode==='blind'&&lesson.active?'计时中，结束后反馈':`${lesson.cursor}/4 音高顺序；不是节奏成绩`;
   $('guideResults').textContent=JSON.stringify({source:guide.demo?'synthetic-demo':'system-or-unselected',noise:guide.noiseStatus,noiseRms:guide.noiseRms,strings:guide.strings.map((r,i)=>({string:OPEN_STRINGS[i].name,...r})),quality:guide.quality},null,2);
  }
- $('guideAction').onclick=()=>{if(guide.stage==='lesson'){lesson.start($('lessonMode').value,performance.now(),latestEndMs);}else if(!guide.sourceKey){guide.message='尚无输入：请授权开始、使用演示，或手动继续';}else guide.start();render();};
- $('guideNext').onclick=()=>{guide.next();render();};
- $('guideRetry').onclick=()=>{lesson.stop();if(guide.stage==='noise'){guide.noiseStatus='unset';guide.noiseRms=null;onNoise(null);}if(guide.stage==='strings')guide.strings[guide.stringIndex]={status:'pending'};if(guide.stage==='quality')guide.quality[guide.qualityIndex]=null;guide.samples=null;guide.message='已清除当前步骤结果，点击开始测量';render();};
+ function beginMeasurement(){guide.start();if(guide.stage==='noise')onNoise(null);render();}
+ $('guideAction').onclick=()=>{if(guide.stage==='lesson'){lesson.start($('lessonMode').value,performance.now(),latestEndMs);}else if(!guide.sourceKey){guide.message='尚无输入：请授权开始、使用演示，或手动继续';}else beginMeasurement();render();};
+ $('guideNext').onclick=()=>{const noise=guide.stage==='noise';guide.next();if(noise)onNoise(guide.noiseRms);render();};
+ $('guideRetry').onclick=()=>{lesson.stop();guide.resetAttempt();if(guide.stage==='noise')onNoise(null);guide.message='已清除当前步骤结果，点击开始测量';render();};
  $('guideDemo').onclick=onDemo;
  $('lessonMode').onchange=()=>{lesson.stop();lesson.mode=$('lessonMode').value;render();};
  const timer=setInterval(()=>{if(lesson.tick(performance.now()))render();},100);window.addEventListener('pagehide',()=>clearInterval(timer));
- render();return {guide,lesson,render,connect(key,demo=false){if(guide.connect(key,demo)){latestEndMs=0;lesson.stop();render();}},invalidate(reason){latestEndMs=0;guide.sourceKey=null;guide.invalidate(reason);lesson.stop();render();},observe(result){latestEndMs=result.endTimeMs;const change=guide.observe(result);if(change?.noise?.ok)onNoise(change.noise.noiseRms);if(guide.stage==='lesson'&&result.event){lesson.accept(result.event);}render();}};
+ render();return {guide,lesson,render,beginMeasurement,connect(key,demo=false){if(guide.connect(key,demo)){latestEndMs=0;lesson.stop();render();}},invalidate(reason){latestEndMs=0;guide.sourceKey=null;guide.invalidate(reason);lesson.stop();render();},observe(result){latestEndMs=result.endTimeMs;const change=guide.observe(result);if(change?.noise)onNoise(change.noise.ok?change.noise.noiseRms:null);if(guide.stage==='lesson'&&result.event){lesson.accept(result.event);}render();}};
 }

@@ -34,7 +34,11 @@ try{
  await evaluate("document.querySelector('#guideDemo').click()");await wait("document.querySelector('#guideTitle').textContent.includes('安静段')");
  await evaluate("document.querySelector('#guideAction').click()");await wait("JSON.parse(document.querySelector('#guideResults').textContent).noise==='measured'");
  assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).source"),'synthetic-demo');
+ await evaluate("document.querySelector('#calibrateNoise').click()");assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).noise"),'measuring');assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).noiseRms"),null);
+ await evaluate("document.querySelector('#guideRetry').click()");assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).noise"),'unset');
+ await evaluate("document.querySelector('#guideAction').click()");await wait("JSON.parse(document.querySelector('#guideResults').textContent).noise==='measured'");
  await evaluate("document.querySelector('#guideNext').click();document.querySelector('#guideAction').click()");await wait("JSON.parse(document.querySelector('#guideResults').textContent).strings[0].status==='measured'");
+ await evaluate("document.querySelector('#guideAction').click()");assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).strings[0].status"),'pending');
  await evaluate("for(let i=0;i<6;i++)document.querySelector('#guideNext').click()");
  assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).strings[1].status"),'manual-skip');
  await evaluate("document.querySelector('#guideAction').click()");await wait("JSON.parse(document.querySelector('#guideResults').textContent).quality.length===1");
@@ -47,7 +51,7 @@ try{
  await evaluate("document.querySelector('#preprocess').click()");assert.ok(await evaluate("document.querySelector('#guideTitle').textContent.includes('选择输入')"));assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).noise"),'unset');
  await evaluate("document.querySelector('#start').click()");await wait("document.querySelector('#status').textContent.startsWith('running')");await wait("document.querySelector('#guideTitle').textContent.includes('安静段')");
  assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).source"),'system-or-unselected');
- await evaluate("document.querySelector('#guideAction').click()");await wait("document.querySelector('#guideMessage').textContent.includes('可能混入')");assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).noise"),'unset');
+ await evaluate("document.querySelector('#guideAction').click()");await wait("document.querySelector('#guideMessage').textContent.includes('可能混入')");assert.equal(await evaluate("JSON.parse(document.querySelector('#guideResults').textContent).noise"),'rejected');
  await evaluate("document.querySelector('#stop').click()");await wait("document.querySelector('#status').textContent==='stopped'");console.log('PASS settings/source invalidate calibration; musical fake input rejected as quiet calibration');
  await cdp('Browser.setPermission',{origin:new URL(base).origin,permission:{name:'microphone'},setting:'denied'});await evaluate("document.querySelector('#start').click()");await wait("document.querySelector('#status').textContent.startsWith('denied')");console.log('PASS microphone permission denial');
  assert.deepEqual(errors,[]);console.log('PASS no page runtime exceptions');

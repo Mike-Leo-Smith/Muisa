@@ -1,5 +1,5 @@
 import {createGuideUI} from './guide-ui.js';
-import {OPEN_STRINGS} from './guide.js';
+import {OPEN_STRINGS,guideAnalysisConfig} from './guide.js';
 import {SystemInput} from './input.js';
 import {melody,tone,wav} from './fixtures.js';
 const $=id=>document.getElementById(id);
@@ -24,10 +24,10 @@ function resetWorker(){worker?.terminate();worker=new Worker('./src/worker.js',{
  if(d.alignment)$('alignment').textContent=JSON.stringify(d.type==='offline'?{mode:'offline（全序列）',...d.alignment,events:d.events}:{mode:'live（因果，结果不回改）',...d.alignment},null,2);
  if(d.type==='offline')status('本地分析完成 · '+d.count+' 个 PCM 窗口 · '+Math.round(d.cpuMs)+' ms CPU 墙钟耗时；音频仍未播放');
  };
- worker.postMessage({type:'config',config:{enabled:$('preprocess').checked,noiseRms}});
+ worker.postMessage({type:'config',config:guideAnalysisConfig($('preprocess').checked,noiseRms,guideUI?.guide)});
 }
 $('preprocess').onchange=()=>{clearDemo();clearNoise();guideUI.invalidate('处理设置变化，请重新校准');if(worker)resetWorker();};
-$('calibrateNoise').onclick=()=>{guideUI.guide.stage='noise';guideUI.guide.noiseStatus='unset';if(!input.stream&&!demoTimer){status('请先开始系统输入或演示');return;}guideUI.guide.start();guideUI.render();};
+$('calibrateNoise').onclick=()=>{guideUI.guide.stage='noise';guideUI.guide.noiseStatus='unset';if(!input.stream&&!demoTimer){status('请先开始系统输入或演示');return;}guideUI.beginMeasurement();};
 function clearNoise(){noiseRms=null;$('noiseInfo').textContent='未估计背景噪声';}
 async function refresh(){try{const prior=$('device').value;const devices=await input.devices();$('device').replaceChildren(new Option('系统默认',''),...devices.map((d,i)=>new Option(d.label||'输入 '+(i+1),d.deviceId)));$('device').value=prior;}catch(e){status('设备列表不可用：'+e.message);}}
 $('refresh').onclick=refresh;
