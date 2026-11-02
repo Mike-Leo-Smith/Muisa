@@ -1,0 +1,56 @@
+{
+  "protocol": "R1-fixed-v1",
+  "sampleRateHz": 22050,
+  "pitchWindow": 4096,
+  "pitchHop": 512,
+  "fminHz": 70,
+  "fmaxHz": 1000,
+  "jsConfidence": 0.8,
+  "yinRmsGate": 0.008,
+  "crepeThresholds": [
+    0.5,
+    0.8
+  ],
+  "gridMs": 10,
+  "boundaryGuardMs": 50,
+  "noteOnsetToleranceMs": 50,
+  "notePitchToleranceCents": 50,
+  "noteOffsetRatio": 0.2,
+  "noteOffsetMinToleranceMs": 50,
+  "basicPitchOnsetThreshold": 0.5,
+  "basicPitchFrameThreshold": 0.3,
+  "basicPitchMinimumNoteMs": 127.7,
+  "expectedRecordings": 12,
+  "expectedPlayers": 6,
+  "repeatCount": 1,
+  "excludedRecordings": [
+    "04_BN3-154-E_comp",
+    "04_Jazz1-200-B_comp",
+    "02_Funk2-119-G_comp"
+  ],
+  "pitchBins": {
+    "below40": [
+      0,
+      40
+    ],
+    "low40to51": [
+      40,
+      52
+    ],
+    "mid52to63": [
+      52,
+      64
+    ],
+    "high64to83": [
+      64,
+      84
+    ],
+    "above83": [
+      84,
+      128
+    ]
+  },
+  "expectedTotalSeconds": 287.6144,
+  "expectedNoteCount": 1612,
+  "expectedStyleCount": 5
+}

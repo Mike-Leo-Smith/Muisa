@@ -48,6 +48,8 @@ GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试
 
 已运行的可选研究：[Y1：YIN/pYIN 成对比较](experiments/yin/README.md)，[C1：CREPE tiny/small](experiments/crepe/README.md)，以及 [B1：Basic Pitch ONNX](experiments/basic-pitch/README.md)，以及 [M1：MIDI / 房间响应](experiments/room/README.md)，以及 [M2：受控采样、起音校准与预处理](experiments/sampled/README.md)，以及 [A1：因果事件级跟谱](experiments/following/README.md)，以及 [M3：同输入电平/起止校准对照](experiments/calibrated/README.md)，均包含负结果与局限，未接入在线识别器。
 
+真实数据执行端使用 [R1 本地数据接口与固定协议](experiments/real/README.md)。接口已用自建 WAV/JAMS 验证，尚未提交真实 12 条录音评测结果。
+
 ## 技术路线
 
 原生 ES modules，WebAudio / AudioWorklet 采集，Web Worker 做 DSP，UI 与 PCM/事件接口解耦。构建只检查语法并拷贝静态文件，不做转译；Node 仅用于开发服务和测试。
