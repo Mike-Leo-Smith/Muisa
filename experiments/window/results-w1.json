@@ -1,0 +1,1858 @@
+{
+  "protocol": "W1-js-window-v1",
+  "codeRevision": "565485253933ee5a54f06f42b8f14ad40938648a",
+  "configSha256": "ab7bb383435c4f3d32ad795edc2ebd5edf2f6359c373c2c158f48cef828b86df",
+  "validation": {
+    "schemaTests": 9,
+    "windowTests": 2,
+    "R1BothWindowsEqualBeforeSchemaFix": true,
+    "R1LongWindowEqualsOriginalR1JS": true,
+    "sourceEdited": false
+  },
+  "limitations": [
+    "R1 development; R2 recording/lead-family holdout only, same players, not independently unseen GuitarSet; BasicPitch training overlaps GuitarSet although not run here.",
+    "Offline22.05kHz:4096=185.760ms,2048=92.880ms. Deployed4096at48kHz=85.333ms; not evidence to halve deployed window.",
+    "Same centers,hop512,threshold0.8,guard50ms,10ms grid; no retuning. All overlapping active notes excluded, including same-pitch strings.",
+    "Metrics cover eligible stable mono/unvoiced frames, not all playing or fast transitions. Null strata retained. Frame observations correlated; no independent-frame CI.",
+    "No other local CPU jobs during measured W1 runs. Shared-host single run, compute percentiles not end-to-end latency. CPU/peakRSS not recorded by runner; observedRSS only.",
+    "Stratum macro values average only defined recordings; defined counts retained."
+  ],
+  "metricColumns": [
+    "rpa50",
+    "coverage",
+    "acceptedPrecision50",
+    "voicingFalseAlarm",
+    "octaveErrorRate"
+  ],
+  "splits": {
+    "R1": {
+      "inputManifestSha256": "1cf43f1a0c9178523c3f1d394a9abe67e99af196af34dabdbd3049ab12fa686c",
+      "counts": {
+        "mono": 5119,
+        "unvoiced": 3187,
+        "polyphonic": 4254,
+        "boundary-guard": 15904
+      },
+      "gridPercent": {
+        "mono": 17.9841,
+        "unvoiced": 11.1966,
+        "polyphonic": 14.9452,
+        "boundary-guard": 55.8741
+      },
+      "macroValuesAre": [
+        "mean",
+        "definedRecordings"
+      ],
+      "macro": [
+        {
+          "method": "js-4096",
+          "group": "all",
+          "value": "all",
+          "metrics": {
+            "rpa50": [
+              0.598773,
+              12
+            ],
+            "coverage": [
+              0.645281,
+              12
+            ],
+            "acceptedPrecision50": [
+              0.759033,
+              12
+            ],
+            "voicingFalseAlarm": [
+              0.143853,
+              12
+            ],
+            "octaveErrorRate": [
+              0.020637,
+              12
+            ]
+          },
+          "pitchBands": {
+            "below40": {
+              "rpa50": [
+                null,
+                0
+              ],
+              "coverage": [
+                null,
+                0
+              ],
+              "acceptedPrecision50": [
+                null,
+                0
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                null,
+                0
+              ]
+            },
+            "low40to51": {
+              "rpa50": [
+                0.598597,
+                8
+              ],
+              "coverage": [
+                0.601802,
+                8
+              ],
+              "acceptedPrecision50": [
+                0.992188,
+                8
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.0,
+                8
+              ]
+            },
+            "mid52to63": {
+              "rpa50": [
+                0.425892,
+                12
+              ],
+              "coverage": [
+                0.49955,
+                12
+              ],
+              "acceptedPrecision50": [
+                0.808241,
+                9
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.042897,
+                12
+              ]
+            },
+            "high64to83": {
+              "rpa50": [
+                0.605512,
+                9
+              ],
+              "coverage": [
+                0.652859,
+                9
+              ],
+              "acceptedPrecision50": [
+                0.921249,
+                7
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.025617,
+                9
+              ]
+            },
+            "above83": {
+              "rpa50": [
+                null,
+                0
+              ],
+              "coverage": [
+                null,
+                0
+              ],
+              "acceptedPrecision50": [
+                null,
+                0
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                null,
+                0
+              ]
+            }
+          },
+          "boundaryDistance": {
+            "50to105": {
+              "rpa50": [
+                0.514418,
+                12
+              ],
+              "coverage": [
+                0.57665,
+                12
+              ],
+              "acceptedPrecision50": [
+                0.725058,
+                12
+              ],
+              "voicingFalseAlarm": [
+                0.147785,
+                12
+              ],
+              "octaveErrorRate": [
+                0.022942,
+                12
+              ]
+            },
+            "105plus": {
+              "rpa50": [
+                0.879547,
+                11
+              ],
+              "coverage": [
+                0.891155,
+                11
+              ],
+              "acceptedPrecision50": [
+                0.836917,
+                12
+              ],
+              "voicingFalseAlarm": [
+                0.107977,
+                11
+              ],
+              "octaveErrorRate": [
+                0.010154,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "method": "js-4096",
+          "group": "mode",
+          "value": "comp",
+          "metrics": {
+            "rpa50": [
+              0.488717,
+              6
+            ],
+            "coverage": [
+              0.520071,
+              6
+            ],
+            "acceptedPrecision50": [
+              0.676338,
+              6
+            ],
+            "voicingFalseAlarm": [
+              0.122032,
+              6
+            ],
+            "octaveErrorRate": [
+              0.01654,
+              6
+            ]
+          },
+          "pitchBands": {},
+          "boundaryDistance": {}
+        },
+        {
+          "method": "js-4096",
+          "group": "mode",
+          "value": "solo",
+          "metrics": {
+            "rpa50": [
+              0.708829,
+              6
+            ],
+            "coverage": [
+              0.770491,
+              6
+            ],
+            "acceptedPrecision50": [
+              0.841728,
+              6
+            ],
+            "voicingFalseAlarm": [
+              0.165674,
+              6
+            ],
+            "octaveErrorRate": [
+              0.024733,
+              6
+            ]
+          },
+          "pitchBands": {},
+          "boundaryDistance": {}
+        },
+        {
+          "method": "js-2048",
+          "group": "all",
+          "value": "all",
+          "metrics": {
+            "rpa50": [
+              0.722761,
+              12
+            ],
+            "coverage": [
+              0.793449,
+              12
+            ],
+            "acceptedPrecision50": [
+              0.796728,
+              12
+            ],
+            "voicingFalseAlarm": [
+              0.159608,
+              12
+            ],
+            "octaveErrorRate": [
+              0.046943,
+              12
+            ]
+          },
+          "pitchBands": {
+            "below40": {
+              "rpa50": [
+                null,
+                0
+              ],
+              "coverage": [
+                null,
+                0
+              ],
+              "acceptedPrecision50": [
+                null,
+                0
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                null,
+                0
+              ]
+            },
+            "low40to51": {
+              "rpa50": [
+                0.673288,
+                8
+              ],
+              "coverage": [
+                0.681811,
+                8
+              ],
+              "acceptedPrecision50": [
+                0.986111,
+                8
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.008523,
+                8
+              ]
+            },
+            "mid52to63": {
+              "rpa50": [
+                0.581781,
+                12
+              ],
+              "coverage": [
+                0.667869,
+                12
+              ],
+              "acceptedPrecision50": [
+                0.789475,
+                10
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.069024,
+                12
+              ]
+            },
+            "high64to83": {
+              "rpa50": [
+                0.699891,
+                9
+              ],
+              "coverage": [
+                0.789477,
+                9
+              ],
+              "acceptedPrecision50": [
+                0.838347,
+                8
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.052263,
+                9
+              ]
+            },
+            "above83": {
+              "rpa50": [
+                null,
+                0
+              ],
+              "coverage": [
+                null,
+                0
+              ],
+              "acceptedPrecision50": [
+                null,
+                0
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                null,
+                0
+              ]
+            }
+          },
+          "boundaryDistance": {
+            "50to105": {
+              "rpa50": [
+                0.703672,
+                12
+              ],
+              "coverage": [
+                0.785022,
+                12
+              ],
+              "acceptedPrecision50": [
+                0.797308,
+                12
+              ],
+              "voicingFalseAlarm": [
+                0.17982,
+                12
+              ],
+              "octaveErrorRate": [
+                0.051611,
+                12
+              ]
+            },
+            "105plus": {
+              "rpa50": [
+                0.88396,
+                11
+              ],
+              "coverage": [
+                0.89342,
+                11
+              ],
+              "acceptedPrecision50": [
+                0.827909,
+                12
+              ],
+              "voicingFalseAlarm": [
+                0.111797,
+                11
+              ],
+              "octaveErrorRate": [
+                0.007587,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "method": "js-2048",
+          "group": "mode",
+          "value": "comp",
+          "metrics": {
+            "rpa50": [
+              0.615206,
+              6
+            ],
+            "coverage": [
+              0.710937,
+              6
+            ],
+            "acceptedPrecision50": [
+              0.724803,
+              6
+            ],
+            "voicingFalseAlarm": [
+              0.149866,
+              6
+            ],
+            "octaveErrorRate": [
+              0.071152,
+              6
+            ]
+          },
+          "pitchBands": {},
+          "boundaryDistance": {}
+        },
+        {
+          "method": "js-2048",
+          "group": "mode",
+          "value": "solo",
+          "metrics": {
+            "rpa50": [
+              0.830316,
+              6
+            ],
+            "coverage": [
+              0.87596,
+              6
+            ],
+            "acceptedPrecision50": [
+              0.868653,
+              6
+            ],
+            "voicingFalseAlarm": [
+              0.169349,
+              6
+            ],
+            "octaveErrorRate": [
+              0.022734,
+              6
+            ]
+          },
+          "pitchBands": {},
+          "boundaryDistance": {}
+        }
+      ],
+      "inventory": [
+        {
+          "id": "00_BN1-129-Eb_comp",
+          "player": "00",
+          "mode": "comp",
+          "analysisPcmSha256": "687abeebcb754ba85befdfbea16afc5a9f642b0c7311f491e31ac907b9ee3d5d",
+          "frameCounts": {
+            "mono": 90,
+            "unvoiced": 133,
+            "polyphonic": 730,
+            "boundary-guard": 1255
+          }
+        },
+        {
+          "id": "00_BN1-129-Eb_solo",
+          "player": "00",
+          "mode": "solo",
+          "analysisPcmSha256": "4b6ad656e98abe2ddbb8c45013a1145c4cfbc0aea1b8e7e06cffb6011fe288fe",
+          "frameCounts": {
+            "mono": 796,
+            "unvoiced": 71,
+            "polyphonic": 522,
+            "boundary-guard": 819
+          }
+        },
+        {
+          "id": "01_Funk1-114-Ab_comp",
+          "player": "01",
+          "mode": "comp",
+          "analysisPcmSha256": "c92b55e53425242a07a67f1266c819967f4e4d21ab95204c6432f2c3cf1526de",
+          "frameCounts": {
+            "mono": 22,
+            "unvoiced": 636,
+            "polyphonic": 94,
+            "boundary-guard": 1749
+          }
+        },
+        {
+          "id": "01_Funk1-114-Ab_solo",
+          "player": "01",
+          "mode": "solo",
+          "analysisPcmSha256": "656a09c24022273c99fd00f24b43b625104c179a6826505798593dcad87c9cf1",
+          "frameCounts": {
+            "mono": 549,
+            "unvoiced": 320,
+            "polyphonic": 3,
+            "boundary-guard": 1629
+          }
+        },
+        {
+          "id": "02_Jazz1-130-D_comp",
+          "player": "02",
+          "mode": "comp",
+          "analysisPcmSha256": "4bc942d1b5d1958b0786919a408d4b388c90597ef6e7bb16fee7f9935b877970",
+          "frameCounts": {
+            "mono": 27,
+            "unvoiced": 172,
+            "polyphonic": 791,
+            "boundary-guard": 1200
+          }
+        },
+        {
+          "id": "02_Jazz1-130-D_solo",
+          "player": "02",
+          "mode": "solo",
+          "analysisPcmSha256": "e0526b88d202fc9b041e8e6d2fc740112ae6258c210d5f9a47b55ce3e87785ba",
+          "frameCounts": {
+            "mono": 358,
+            "unvoiced": 47,
+            "polyphonic": 442,
+            "boundary-guard": 1343
+          }
+        },
+        {
+          "id": "03_Rock1-130-A_comp",
+          "player": "03",
+          "mode": "comp",
+          "analysisPcmSha256": "8187e56337d52f3ba81e1141134b4a69492d1644dcadcaceb1a67f57d2f90fe0",
+          "frameCounts": {
+            "mono": 146,
+            "unvoiced": 41,
+            "polyphonic": 494,
+            "boundary-guard": 1509
+          }
+        },
+        {
+          "id": "03_Rock1-130-A_solo",
+          "player": "03",
+          "mode": "solo",
+          "analysisPcmSha256": "ba7822d534ef30536584251f49a789798183b14b2bfaa1747101956bf9f826d4",
+          "frameCounts": {
+            "mono": 867,
+            "unvoiced": 469,
+            "polyphonic": 1,
+            "boundary-guard": 853
+          }
+        },
+        {
+          "id": "04_SS1-100-C#_comp",
+          "player": "04",
+          "mode": "comp",
+          "analysisPcmSha256": "bd24b875c15e94555c10ece01926954cd99b7d1a3ce025828bf7ccd91783ed95",
+          "frameCounts": {
+            "mono": 103,
+            "unvoiced": 21,
+            "polyphonic": 739,
+            "boundary-guard": 1992
+          }
+        },
+        {
+          "id": "04_SS1-100-C#_solo",
+          "player": "04",
+          "mode": "solo",
+          "analysisPcmSha256": "3e0f0ec857a687b25f2d752ae4e6d4c64d3116ef21814251da1ee0d6bea58230",
+          "frameCounts": {
+            "mono": 1024,
+            "unvoiced": 747,
+            "polyphonic": 12,
+            "boundary-guard": 1072
+          }
+        },
+        {
+          "id": "05_BN2-166-Ab_comp",
+          "player": "05",
+          "mode": "comp",
+          "analysisPcmSha256": "87552829e3595a23ecb64fb63f4304996b1e9e49c2c9f46036ff8704ee73702c",
+          "frameCounts": {
+            "mono": 285,
+            "unvoiced": 80,
+            "polyphonic": 426,
+            "boundary-guard": 1497
+          }
+        },
+        {
+          "id": "05_BN2-166-Ab_solo",
+          "player": "05",
+          "mode": "solo",
+          "analysisPcmSha256": "eda61d905f5f8da6c82386aa9a8d5f5ebba92739c31c6c0001b00cb41734eda5",
+          "frameCounts": {
+            "mono": 852,
+            "unvoiced": 450,
+            "polyphonic": 0,
+            "boundary-guard": 986
+          }
+        }
+      ],
+      "perClip": [
+        [
+          "00_BN1-129-Eb_comp",
+          "js-4096",
+          0.511111,
+          0.644444,
+          0.754098,
+          0.022556,
+          0.044444
+        ],
+        [
+          "00_BN1-129-Eb_comp",
+          "js-2048",
+          0.7,
+          0.722222,
+          0.926471,
+          0.022556,
+          0.011111
+        ],
+        [
+          "00_BN1-129-Eb_solo",
+          "js-4096",
+          0.649497,
+          0.69598,
+          0.903846,
+          0.253521,
+          0.040201
+        ],
+        [
+          "00_BN1-129-Eb_solo",
+          "js-2048",
+          0.698492,
+          0.727387,
+          0.939189,
+          0.183099,
+          0.028894
+        ],
+        [
+          "01_Funk1-114-Ab_comp",
+          "js-4096",
+          0.0,
+          0.0,
+          0.0,
+          0.044025,
+          0.0
+        ],
+        [
+          "01_Funk1-114-Ab_comp",
+          "js-2048",
+          0.045455,
+          0.5,
+          0.007092,
+          0.204403,
+          0.318182
+        ],
+        [
+          "01_Funk1-114-Ab_solo",
+          "js-4096",
+          0.630237,
+          0.692168,
+          0.862843,
+          0.065625,
+          0.027322
+        ],
+        [
+          "01_Funk1-114-Ab_solo",
+          "js-2048",
+          0.819672,
+          0.888889,
+          0.845865,
+          0.1375,
+          0.021858
+        ],
+        [
+          "02_Jazz1-130-D_comp",
+          "js-4096",
+          0.333333,
+          0.333333,
+          0.5625,
+          0.040698,
+          0.0
+        ],
+        [
+          "02_Jazz1-130-D_comp",
+          "js-2048",
+          0.518519,
+          0.518519,
+          0.7,
+          0.034884,
+          0.0
+        ],
+        [
+          "02_Jazz1-130-D_solo",
+          "js-4096",
+          0.575419,
+          0.667598,
+          0.861925,
+          0.0,
+          0.027933
+        ],
+        [
+          "02_Jazz1-130-D_solo",
+          "js-2048",
+          0.768156,
+          0.863128,
+          0.889968,
+          0.0,
+          0.027933
+        ],
+        [
+          "03_Rock1-130-A_comp",
+          "js-4096",
+          0.664384,
+          0.719178,
+          0.873874,
+          0.146341,
+          0.054795
+        ],
+        [
+          "03_Rock1-130-A_comp",
+          "js-2048",
+          0.69863,
+          0.767123,
+          0.836066,
+          0.243902,
+          0.068493
+        ],
+        [
+          "03_Rock1-130-A_solo",
+          "js-4096",
+          0.862745,
+          0.906574,
+          0.853881,
+          0.191898,
+          0.025375
+        ],
+        [
+          "03_Rock1-130-A_solo",
+          "js-2048",
+          0.921569,
+          0.94233,
+          0.881898,
+          0.189765,
+          0.020761
+        ],
+        [
+          "04_SS1-100-C#_comp",
+          "js-4096",
+          0.679612,
+          0.679612,
+          0.886076,
+          0.428571,
+          0.0
+        ],
+        [
+          "04_SS1-100-C#_comp",
+          "js-2048",
+          0.805825,
+          0.834951,
+          0.882979,
+          0.380952,
+          0.029126
+        ],
+        [
+          "04_SS1-100-C#_solo",
+          "js-4096",
+          0.837891,
+          0.861328,
+          0.835443,
+          0.19411,
+          0.008789
+        ],
+        [
+          "04_SS1-100-C#_solo",
+          "js-2048",
+          0.910156,
+          0.932617,
+          0.838129,
+          0.210174,
+          0.008789
+        ],
+        [
+          "05_BN2-166-Ab_comp",
+          "js-4096",
+          0.74386,
+          0.74386,
+          0.981481,
+          0.05,
+          0.0
+        ],
+        [
+          "05_BN2-166-Ab_comp",
+          "js-2048",
+          0.922807,
+          0.922807,
+          0.996212,
+          0.0125,
+          0.0
+        ],
+        [
+          "05_BN2-166-Ab_solo",
+          "js-4096",
+          0.697183,
+          0.799296,
+          0.732429,
+          0.288889,
+          0.018779
+        ],
+        [
+          "05_BN2-166-Ab_solo",
+          "js-2048",
+          0.86385,
+          0.901408,
+          0.81687,
+          0.295556,
+          0.028169
+        ]
+      ],
+      "computeSummary": {
+        "js-4096": {
+          "frameCount": 12296,
+          "clipFrameP50MsRange": [
+            1.1424799999999777,
+            1.3485130000008212
+          ],
+          "clipFrameP95MsRange": [
+            1.5195749999998043,
+            3.0819420000007085
+          ],
+          "deadlineMisses": 0,
+          "deadlineMs": 23.219954648526077,
+          "maxObservedRssBytes": 102715392
+        },
+        "js-2048": {
+          "frameCount": 12296,
+          "clipFrameP50MsRange": [
+            0.5263440000007904,
+            0.6196309999995719
+          ],
+          "clipFrameP95MsRange": [
+            0.8095610000000306,
+            1.4425920000003316
+          ],
+          "deadlineMisses": 0,
+          "deadlineMs": 23.219954648526077,
+          "maxObservedRssBytes": 102715392
+        }
+      },
+      "dataset": {
+        "recordings": 12,
+        "players": 6,
+        "styles": 5,
+        "audioSeconds": 287.6144217687075,
+        "notes": 1612,
+        "license": "CC BY 4.0",
+        "dataset": "GuitarSet1.1.0"
+      }
+    },
+    "R2": {
+      "inputManifestSha256": "58f7c6c094e74b5035410472a7f4cabc66d6ec9309553bb81676bf39dbb42dff",
+      "counts": {
+        "mono": 8760,
+        "unvoiced": 5188,
+        "polyphonic": 6683,
+        "boundary-guard": 19061
+      },
+      "gridPercent": {
+        "mono": 22.0699,
+        "unvoiced": 13.0706,
+        "polyphonic": 16.8371,
+        "boundary-guard": 48.0223
+      },
+      "macroValuesAre": [
+        "mean",
+        "definedRecordings"
+      ],
+      "macro": [
+        {
+          "method": "js-4096",
+          "group": "all",
+          "value": "all",
+          "metrics": {
+            "rpa50": [
+              0.424653,
+              12
+            ],
+            "coverage": [
+              0.473946,
+              12
+            ],
+            "acceptedPrecision50": [
+              0.530808,
+              12
+            ],
+            "voicingFalseAlarm": [
+              0.12281,
+              12
+            ],
+            "octaveErrorRate": [
+              0.01439,
+              12
+            ]
+          },
+          "pitchBands": {
+            "below40": {
+              "rpa50": [
+                0.02439,
+                3
+              ],
+              "coverage": [
+                0.109497,
+                3
+              ],
+              "acceptedPrecision50": [
+                0.5,
+                2
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.0,
+                3
+              ]
+            },
+            "low40to51": {
+              "rpa50": [
+                0.414774,
+                9
+              ],
+              "coverage": [
+                0.436815,
+                9
+              ],
+              "acceptedPrecision50": [
+                0.869433,
+                6
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.0,
+                9
+              ]
+            },
+            "mid52to63": {
+              "rpa50": [
+                0.434013,
+                11
+              ],
+              "coverage": [
+                0.532372,
+                11
+              ],
+              "acceptedPrecision50": [
+                0.692808,
+                9
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.03917,
+                11
+              ]
+            },
+            "high64to83": {
+              "rpa50": [
+                0.455666,
+                8
+              ],
+              "coverage": [
+                0.476404,
+                8
+              ],
+              "acceptedPrecision50": [
+                0.92672,
+                5
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.014472,
+                8
+              ]
+            },
+            "above83": {
+              "rpa50": [
+                null,
+                0
+              ],
+              "coverage": [
+                null,
+                0
+              ],
+              "acceptedPrecision50": [
+                null,
+                0
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                null,
+                0
+              ]
+            }
+          },
+          "boundaryDistance": {
+            "50to105": {
+              "rpa50": [
+                0.393006,
+                12
+              ],
+              "coverage": [
+                0.443608,
+                12
+              ],
+              "acceptedPrecision50": [
+                0.523733,
+                12
+              ],
+              "voicingFalseAlarm": [
+                0.1335,
+                12
+              ],
+              "octaveErrorRate": [
+                0.016903,
+                12
+              ]
+            },
+            "105plus": {
+              "rpa50": [
+                0.524147,
+                11
+              ],
+              "coverage": [
+                0.576736,
+                11
+              ],
+              "acceptedPrecision50": [
+                0.537612,
+                11
+              ],
+              "voicingFalseAlarm": [
+                0.105615,
+                12
+              ],
+              "octaveErrorRate": [
+                0.000785,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "method": "js-4096",
+          "group": "mode",
+          "value": "comp",
+          "metrics": {
+            "rpa50": [
+              0.125271,
+              6
+            ],
+            "coverage": [
+              0.192968,
+              6
+            ],
+            "acceptedPrecision50": [
+              0.202981,
+              6
+            ],
+            "voicingFalseAlarm": [
+              0.110223,
+              6
+            ],
+            "octaveErrorRate": [
+              0.016569,
+              6
+            ]
+          },
+          "pitchBands": {},
+          "boundaryDistance": {}
+        },
+        {
+          "method": "js-4096",
+          "group": "mode",
+          "value": "solo",
+          "metrics": {
+            "rpa50": [
+              0.724034,
+              6
+            ],
+            "coverage": [
+              0.754925,
+              6
+            ],
+            "acceptedPrecision50": [
+              0.858635,
+              6
+            ],
+            "voicingFalseAlarm": [
+              0.135396,
+              6
+            ],
+            "octaveErrorRate": [
+              0.012212,
+              6
+            ]
+          },
+          "pitchBands": {},
+          "boundaryDistance": {}
+        },
+        {
+          "method": "js-2048",
+          "group": "all",
+          "value": "all",
+          "metrics": {
+            "rpa50": [
+              0.510173,
+              12
+            ],
+            "coverage": [
+              0.594476,
+              12
+            ],
+            "acceptedPrecision50": [
+              0.598735,
+              12
+            ],
+            "voicingFalseAlarm": [
+              0.145234,
+              12
+            ],
+            "octaveErrorRate": [
+              0.026248,
+              12
+            ]
+          },
+          "pitchBands": {
+            "below40": {
+              "rpa50": [
+                0.073171,
+                3
+              ],
+              "coverage": [
+                0.151185,
+                3
+              ],
+              "acceptedPrecision50": [
+                0.5,
+                2
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.0,
+                3
+              ]
+            },
+            "low40to51": {
+              "rpa50": [
+                0.530831,
+                9
+              ],
+              "coverage": [
+                0.787647,
+                9
+              ],
+              "acceptedPrecision50": [
+                0.672156,
+                9
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.00692,
+                9
+              ]
+            },
+            "mid52to63": {
+              "rpa50": [
+                0.534475,
+                11
+              ],
+              "coverage": [
+                0.648346,
+                11
+              ],
+              "acceptedPrecision50": [
+                0.781557,
+                10
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.075289,
+                11
+              ]
+            },
+            "high64to83": {
+              "rpa50": [
+                0.538913,
+                8
+              ],
+              "coverage": [
+                0.56653,
+                8
+              ],
+              "acceptedPrecision50": [
+                0.844641,
+                7
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                0.0111,
+                8
+              ]
+            },
+            "above83": {
+              "rpa50": [
+                null,
+                0
+              ],
+              "coverage": [
+                null,
+                0
+              ],
+              "acceptedPrecision50": [
+                null,
+                0
+              ],
+              "voicingFalseAlarm": [
+                null,
+                0
+              ],
+              "octaveErrorRate": [
+                null,
+                0
+              ]
+            }
+          },
+          "boundaryDistance": {
+            "50to105": {
+              "rpa50": [
+                0.514479,
+                12
+              ],
+              "coverage": [
+                0.600924,
+                12
+              ],
+              "acceptedPrecision50": [
+                0.608495,
+                12
+              ],
+              "voicingFalseAlarm": [
+                0.14797,
+                12
+              ],
+              "octaveErrorRate": [
+                0.030286,
+                12
+              ]
+            },
+            "105plus": {
+              "rpa50": [
+                0.51586,
+                11
+              ],
+              "coverage": [
+                0.594511,
+                11
+              ],
+              "acceptedPrecision50": [
+                0.48923,
+                12
+              ],
+              "voicingFalseAlarm": [
+                0.176705,
+                12
+              ],
+              "octaveErrorRate": [
+                0.006251,
+                11
+              ]
+            }
+          }
+        },
+        {
+          "method": "js-2048",
+          "group": "mode",
+          "value": "comp",
+          "metrics": {
+            "rpa50": [
+              0.204014,
+              6
+            ],
+            "coverage": [
+              0.344319,
+              6
+            ],
+            "acceptedPrecision50": [
+              0.302511,
+              6
+            ],
+            "voicingFalseAlarm": [
+              0.168379,
+              6
+            ],
+            "octaveErrorRate": [
+              0.046705,
+              6
+            ]
+          },
+          "pitchBands": {},
+          "boundaryDistance": {}
+        },
+        {
+          "method": "js-2048",
+          "group": "mode",
+          "value": "solo",
+          "metrics": {
+            "rpa50": [
+              0.816332,
+              6
+            ],
+            "coverage": [
+              0.844634,
+              6
+            ],
+            "acceptedPrecision50": [
+              0.894958,
+              6
+            ],
+            "voicingFalseAlarm": [
+              0.122088,
+              6
+            ],
+            "octaveErrorRate": [
+              0.005791,
+              6
+            ]
+          },
+          "pitchBands": {},
+          "boundaryDistance": {}
+        }
+      ],
+      "inventory": [
+        {
+          "id": "00_BN3-119-G_comp",
+          "player": "00",
+          "mode": "comp",
+          "analysisPcmSha256": "8df12708566c8944a98bec2b282c1540afeeaeb97a5b9226f8f47d08f5f47848",
+          "frameCounts": {
+            "mono": 271,
+            "unvoiced": 218,
+            "polyphonic": 1033,
+            "boundary-guard": 1680
+          }
+        },
+        {
+          "id": "00_BN3-119-G_solo",
+          "player": "00",
+          "mode": "solo",
+          "analysisPcmSha256": "6a618cec3e3512e6df67b6ebdfc3cc13c6fa786709c6a93252642de205ee5e1f",
+          "frameCounts": {
+            "mono": 933,
+            "unvoiced": 151,
+            "polyphonic": 1020,
+            "boundary-guard": 1098
+          }
+        },
+        {
+          "id": "01_Funk2-108-Eb_comp",
+          "player": "01",
+          "mode": "comp",
+          "analysisPcmSha256": "df611e92ac24f56869b9d8e5276191697514a4b8b8288f0e28bce925b852ab3a",
+          "frameCounts": {
+            "mono": 66,
+            "unvoiced": 812,
+            "polyphonic": 244,
+            "boundary-guard": 2408
+          }
+        },
+        {
+          "id": "01_Funk2-108-Eb_solo",
+          "player": "01",
+          "mode": "solo",
+          "analysisPcmSha256": "6fb7e83823146dce689132a26cb75a5a6d236f7efd0a458188806e8dc69c6e3b",
+          "frameCounts": {
+            "mono": 468,
+            "unvoiced": 583,
+            "polyphonic": 40,
+            "boundary-guard": 2439
+          }
+        },
+        {
+          "id": "02_Jazz2-110-Bb_comp",
+          "player": "02",
+          "mode": "comp",
+          "analysisPcmSha256": "4ad89baff28837345d8af4bb066f9bc2a14ffb4e222a679715ea7eff6eda3948",
+          "frameCounts": {
+            "mono": 119,
+            "unvoiced": 202,
+            "polyphonic": 1718,
+            "boundary-guard": 1427
+          }
+        },
+        {
+          "id": "02_Jazz2-110-Bb_solo",
+          "player": "02",
+          "mode": "solo",
+          "analysisPcmSha256": "923c1204eafdf1483b8e8123db0febe402f113eb108cd5854a9e9e12e755184d",
+          "frameCounts": {
+            "mono": 1898,
+            "unvoiced": 168,
+            "polyphonic": 588,
+            "boundary-guard": 812
+          }
+        },
+        {
+          "id": "03_Rock2-142-D_comp",
+          "player": "03",
+          "mode": "comp",
+          "analysisPcmSha256": "ea73ce2e1bd3f8d7fafb77cbdc24aa648f1a00c330440d348bf4f380eb7f357c",
+          "frameCounts": {
+            "mono": 120,
+            "unvoiced": 92,
+            "polyphonic": 744,
+            "boundary-guard": 1724
+          }
+        },
+        {
+          "id": "03_Rock2-142-D_solo",
+          "player": "03",
+          "mode": "solo",
+          "analysisPcmSha256": "2ab15ed0b1b0f657fa0c19da4682cbb87147df6fd41c88853aa0cfe7e4b65736",
+          "frameCounts": {
+            "mono": 921,
+            "unvoiced": 392,
+            "polyphonic": 2,
+            "boundary-guard": 1365
+          }
+        },
+        {
+          "id": "04_SS2-107-Ab_comp",
+          "player": "04",
+          "mode": "comp",
+          "analysisPcmSha256": "26827e5e97b68f48440ac9e71d64a53c9a83e451bd2f7ef6f7d703b037a00c03",
+          "frameCounts": {
+            "mono": 61,
+            "unvoiced": 58,
+            "polyphonic": 782,
+            "boundary-guard": 2663
+          }
+        },
+        {
+          "id": "04_SS2-107-Ab_solo",
+          "player": "04",
+          "mode": "solo",
+          "analysisPcmSha256": "86e72beec8d9184d00c71571c895c5ec0f4479f88ca1ac01e18b600d25a87419",
+          "frameCounts": {
+            "mono": 2043,
+            "unvoiced": 457,
+            "polyphonic": 2,
+            "boundary-guard": 1062
+          }
+        },
+        {
+          "id": "05_Funk3-112-C#_comp",
+          "player": "05",
+          "mode": "comp",
+          "analysisPcmSha256": "68cd906c5a3172f39897cb9c4ebda43f8ae68c70e1a12974f278a2c84ff61258",
+          "frameCounts": {
+            "mono": 4,
+            "unvoiced": 1582,
+            "polyphonic": 510,
+            "boundary-guard": 1308
+          }
+        },
+        {
+          "id": "05_Funk3-112-C#_solo",
+          "player": "05",
+          "mode": "solo",
+          "analysisPcmSha256": "4cf6dd7add79b89e48fb5dece9de5c6fc1c855f53c7ab506ef72c834d1fee63d",
+          "frameCounts": {
+            "mono": 1856,
+            "unvoiced": 473,
+            "polyphonic": 0,
+            "boundary-guard": 1075
+          }
+        }
+      ],
+      "perClip": [
+        [
+          "00_BN3-119-G_comp",
+          "js-4096",
+          0.575646,
+          0.686347,
+          0.712329,
+          0.151376,
+          0.02214
+        ],
+        [
+          "00_BN3-119-G_comp",
+          "js-2048",
+          0.682657,
+          0.833948,
+          0.714286,
+          0.151376,
+          0.088561
+        ],
+        [
+          "00_BN3-119-G_solo",
+          "js-4096",
+          0.810289,
+          0.826367,
+          0.96799,
+          0.066225,
+          0.002144
+        ],
+        [
+          "00_BN3-119-G_solo",
+          "js-2048",
+          0.877814,
+          0.891747,
+          0.979665,
+          0.02649,
+          0.004287
+        ],
+        [
+          "01_Funk2-108-Eb_comp",
+          "js-4096",
+          0.0,
+          0.060606,
+          0.0,
+          0.051724,
+          0.060606
+        ],
+        [
+          "01_Funk2-108-Eb_comp",
+          "js-2048",
+          0.0,
+          0.272727,
+          0.0,
+          0.220443,
+          0.166667
+        ],
+        [
+          "01_Funk2-108-Eb_solo",
+          "js-4096",
+          0.290598,
+          0.40812,
+          0.418462,
+          0.229846,
+          0.053419
+        ],
+        [
+          "01_Funk2-108-Eb_solo",
+          "js-2048",
+          0.600427,
+          0.726496,
+          0.55754,
+          0.281304,
+          0.017094
+        ],
+        [
+          "02_Jazz2-110-Bb_comp",
+          "js-4096",
+          0.117647,
+          0.302521,
+          0.155556,
+          0.267327,
+          0.0
+        ],
+        [
+          "02_Jazz2-110-Bb_comp",
+          "js-2048",
+          0.168067,
+          0.403361,
+          0.150376,
+          0.420792,
+          0.0
+        ],
+        [
+          "02_Jazz2-110-Bb_solo",
+          "js-4096",
+          0.913066,
+          0.923077,
+          0.982426,
+          0.071429,
+          0.001581
+        ],
+        [
+          "02_Jazz2-110-Bb_solo",
+          "js-2048",
+          0.932034,
+          0.934141,
+          0.991036,
+          0.071429,
+          0.0
+        ],
+        [
+          "03_Rock2-142-D_comp",
+          "js-4096",
+          0.058333,
+          0.108333,
+          0.35,
+          0.076087,
+          0.016667
+        ],
+        [
+          "03_Rock2-142-D_comp",
+          "js-2048",
+          0.275,
+          0.408333,
+          0.634615,
+          0.032609,
+          0.025
+        ],
+        [
+          "03_Rock2-142-D_solo",
+          "js-4096",
+          0.824104,
+          0.851249,
+          0.895047,
+          0.163265,
+          0.008686
+        ],
+        [
+          "03_Rock2-142-D_solo",
+          "js-2048",
+          0.934853,
+          0.952226,
+          0.933839,
+          0.114796,
+          0.006515
+        ],
+        [
+          "04_SS2-107-Ab_comp",
+          "js-4096",
+          0.0,
+          0.0,
+          0.0,
+          0.103448,
+          0.0
+        ],
+        [
+          "04_SS2-107-Ab_comp",
+          "js-2048",
+          0.098361,
+          0.147541,
+          0.315789,
+          0.172414,
+          0.0
+        ],
+        [
+          "04_SS2-107-Ab_solo",
+          "js-4096",
+          0.60744,
+          0.617719,
+          0.897974,
+          0.262582,
+          0.006363
+        ],
+        [
+          "04_SS2-107-Ab_solo",
+          "js-2048",
+          0.625061,
+          0.634851,
+          0.90825,
+          0.238512,
+          0.006853
+        ],
+        [
+          "05_Funk3-112-C#_comp",
+          "js-4096",
+          0.0,
+          0.0,
+          0.0,
+          0.011378,
+          0.0
+        ],
+        [
+          "05_Funk3-112-C#_comp",
+          "js-2048",
+          0.0,
+          0.0,
+          0.0,
+          0.012642,
+          0.0
+        ],
+        [
+          "05_Funk3-112-C#_solo",
+          "js-4096",
+          0.898707,
+          0.903017,
+          0.989911,
+          0.019027,
+          0.001078
+        ],
+        [
+          "05_Funk3-112-C#_solo",
+          "js-2048",
+          0.927802,
+          0.928341,
+          0.99942,
+          0.0,
+          0.0
+        ]
+      ],
+      "computeSummary": {
+        "js-4096": {
+          "frameCount": 17130,
+          "clipFrameP50MsRange": [
+            1.1048850000006496,
+            1.311148000000685
+          ],
+          "clipFrameP95MsRange": [
+            1.5260940000007395,
+            2.073630000002595
+          ],
+          "deadlineMisses": 0,
+          "deadlineMs": 23.219954648526077,
+          "maxObservedRssBytes": 106319872
+        },
+        "js-2048": {
+          "frameCount": 17130,
+          "clipFrameP50MsRange": [
+            0.48660499999823514,
+            0.616385999997874
+          ],
+          "clipFrameP95MsRange": [
+            0.7275700000009238,
+            1.274293000002217
+          ],
+          "deadlineMisses": 0,
+          "deadlineMs": 23.219954648526077,
+          "maxObservedRssBytes": 106319872
+        }
+      },
+      "dataset": {
+        "recordings": 12,
+        "players": 6,
+        "styles": 5,
+        "audioSeconds": 399.85437641723354,
+        "notes": 1976,
+        "license": "CC BY 4.0",
+        "dataset": "GuitarSet1.1.0"
+      }
+    }
+  },
+  "perClipColumns": [
+    "id",
+    "method",
+    "rpa50",
+    "coverage",
+    "acceptedPrecision50",
+    "voicingFalseAlarm",
+    "octaveErrorRate"
+  ]
+}

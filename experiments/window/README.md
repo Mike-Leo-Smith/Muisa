@@ -29,3 +29,7 @@ python experiments/window/report.py WORK
 ```
 
 R2只改输入、manifest哈希、split和新work目录。prepare输出inspection.json供核对；run拒绝不同代码/配置/PCM绑定；report.json不含原始音频或逐帧预测，原始cache留执行端。所有公开报告需保留codeRevision/configSha256/inputManifestSha256和split。合成接口验证用 `--split synthetic`，不当真实准确率。
+
+## 固定协议结果
+
+R1/R2 已由独立云执行端完成，见 [W1 结果与限制](RESULTS_W1.md) 和 [完整脱敏摘要](results-w1.json)。短窗改善部分覆盖和边界区间，同时增加八度错误/无音误报；线上窗长不变。
