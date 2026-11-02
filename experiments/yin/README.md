@@ -37,7 +37,7 @@ node experiments/yin/report.js
 - weak：JS 和 RMS-gated YIN 全拒识，原始 YIN/pYIN 恢复目标音高，但付出静音/边界误报代价。后续应研究自适应置信度与弱音，而非仅降低固定门限。
 - clean 的非发声**中心**帧也可因窗口跨越 attack/release 被判有声；stable 指标单独给出，不能把它们都当纯噪声误报。
 
-该机器上 JS clean 每窗 p50≈1.09 ms、p95≈1.34 ms，无 hop deadline miss；librosa YIN/pYIN clean 整段 p50≈35/173 ms，首次 kernel/JIT 预热合计约16.5秒。整段三次计时只是探索，不是稳定 p95 或首音延迟。Python 进程 peak RSS 约432–447 MiB，包含解释器、依赖和 JIT；JS 进程 RSS 约51–62 MiB。两者不是增量模型内存的公平比较，也不是手机基准。
+该机器上 JS clean 每窗 p50≈1.09 ms、p95≈1.34 ms，无 hop deadline miss；librosa YIN/pYIN clean 整段 p50≈35/173 ms，首次 kernel/JIT 预热合计约16.5秒。整段三次计时只是探索，不是稳定 p95 或首音延迟。Python 进程 peak RSS 约422–437 MiB，包含解释器、依赖和 JIT；JS 进程 RSS 约51–62 MiB。两者不是增量模型内存的公平比较，也不是手机基准。
 
 ## 决策与下一项
 
