@@ -9,6 +9,12 @@ class ModelTests(unittest.TestCase):
  def test_onset_at_hop_boundary_is_not_in_previous_frame(self):
   for sample,index in [(0,0),(255,0),(256,1),(257,1),(512,2),(2400,9)]:self.assertEqual(onset_frame_index(sample,256),index)
   with self.assertRaises(ValueError):onset_frame_index(-1,256)
+ def test_partial_empty_or_invalid_chunk_is_rejected(self):
+  state=self.model.states(1)
+  for length in [0,1,255,257,513]:
+   with self.assertRaisesRegex(ValueError,'hop-multiple'):self.model(torch.zeros(1,1,length),*state)
+  with self.assertRaises(ValueError):self.model(torch.full((1,1,256),float('nan')),*state)
+  with self.assertRaises(ValueError):self.model(torch.zeros(1,1,256),state[0][:,:,:1],state[1])
  def test_shapes_gradients_masks(self):
   pcm,labels,_=toy_batch(C);y,*_=self.model(pcm,*self.model.states(len(pcm)));self.assertEqual(tuple(y.shape),(4,128,51));loss,parts=masked_loss(y,labels,C);loss.backward();self.assertTrue(all(torch.isfinite(p.grad).all() for p in self.model.parameters() if p.grad is not None));self.assertTrue(all(p.weight.grad is not None for p in self.model.tcn));self.assertTrue(torch.isfinite(loss));
   empty={k:torch.zeros_like(v) for k,v in labels.items()};zero,_=masked_loss(y,empty,C);self.assertEqual(zero.item(),0)

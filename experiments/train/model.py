@@ -12,7 +12,15 @@ class TinyGuitar(nn.Module):
   self.tcn=nn.ModuleList([nn.Conv1d(c['channels'],c['channels'],3,dilation=d) for d in c['dilations']])
   self.head=nn.Conv1d(c['channels'],2+c['midiMax']-c['midiMin']+1,1)
  def states(self,batch):return torch.zeros(batch,1,self.window-self.hop),torch.zeros(batch,self.c['channels'],self.context)
+ def validate_inputs(self,pcm,pcm_state,feature_state):
+  if pcm.ndim!=3 or pcm.shape[1]!=1 or pcm.shape[0]<=0 or pcm.shape[-1]<=0 or pcm.shape[-1]%self.hop:raise ValueError('PCM must be [B,1,L] with positive hop-multiple L')
+  if pcm_state.shape!=(pcm.shape[0],1,self.window-self.hop) or feature_state.shape!=(pcm.shape[0],self.c['channels'],self.context):raise ValueError('Invalid streaming state shape')
+  for x in [pcm,pcm_state,feature_state]:
+   if x.dtype!=torch.float32 or x.device!=pcm.device or not torch.isfinite(x).all():raise ValueError('Streaming PCM/states must be finite float32 on one device')
  def forward(self,pcm,pcm_state,feature_state):
+  # Exported ONNX cannot carry Python input checks: inference.py enforces the
+  # same contract at the host boundary, including the original frozen graph.
+  if not torch.onnx.is_in_onnx_export() and not torch.jit.is_tracing():self.validate_inputs(pcm,pcm_state,feature_state)
   history=torch.cat([pcm_state,pcm],-1);spectrum=F.conv1d(history,self.dft,stride=self.hop);magnitude=torch.sqrt(spectrum[:,:self.bins,:]**2+spectrum[:,self.bins:,:]**2+1e-12)
   logmag=torch.log1p(100*magnitude);b,_,steps=logmag.shape
   features=self.encoder(logmag.transpose(1,2).reshape(-1,1,self.bins)).reshape(b,steps,self.c['channels']).transpose(1,2)
