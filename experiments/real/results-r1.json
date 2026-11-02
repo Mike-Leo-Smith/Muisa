@@ -1,0 +1,930 @@
+{
+  "status": "GuitarSet-in-dataset-development-diagnostic",
+  "codeRevision": "89feca126e3c14798b8f8c7b81b6ff903afa2a63",
+  "configSha256": "74156f09af63dbe885c417f07f52f02dc54ef657f991384aad727a0728a2e609",
+  "trustedSubsetZipSha256": "ddd6daf31cd0b2b0861d86d6580a09384c15a2eb6c853b2c4cad7c97c7acf3db",
+  "counts": {
+    "mono": 5119,
+    "unvoiced": 3187,
+    "polyphonic": 4254,
+    "boundary-guard": 15904
+  },
+  "percentOfGrid": {
+    "mono": 17.984120292299043,
+    "unvoiced": 11.196599213041035,
+    "polyphonic": 14.945193929173692,
+    "boundary-guard": 55.87408656548622
+  },
+  "compute": {
+    "js": {
+      "clipWallSeconds": 14.895100509,
+      "clipCpuSeconds": null,
+      "peakRssKiB": null,
+      "maxObservedRssBytes": 94130176,
+      "loadAndWarmupMs": null
+    },
+    "yin": {
+      "clipWallSeconds": 21.310303526992357,
+      "clipCpuSeconds": 21.364682583000004,
+      "peakRssKiB": 538804,
+      "maxObservedRssBytes": null,
+      "loadAndWarmupMs": 21058.22296900078
+    },
+    "crepe": {
+      "clipWallSeconds": 47.87081781199595,
+      "clipCpuSeconds": 86.517898602,
+      "peakRssKiB": 852504,
+      "maxObservedRssBytes": null,
+      "loadAndWarmupMs": 2441.580807997525
+    },
+    "basic": {
+      "clipWallSeconds": 20.556789812995703,
+      "clipCpuSeconds": 25.583813051,
+      "peakRssKiB": 442900,
+      "maxObservedRssBytes": null,
+      "loadAndWarmupMs": 744.2046549986117
+    }
+  },
+  "validation": {
+    "schemaTests": 8,
+    "mainTests": 32,
+    "sourceClean": true,
+    "crepeRerunPredictionEquality": "Exact equality for all variants and bindings across all 12 recordings"
+  },
+  "timingCaveats": [
+    "Initial CREPE run overlapped a 4.25-second Node test rerun near its final 3 clips. Initial caches and report retained privately.",
+    "Final report uses unchanged CREPE isolated rerun with no concurrent local test process. Shared host and one repetition remain; not robust benchmark or live latency.",
+    "YIN and pYIN share combined clip timing. JS CPU not recorded; JS RSS is observed process RSS, not peak.",
+    "BasicPitch first clip includes warmup: 15.767 seconds; subsequent clips 0.307–0.542 seconds. Load/warmup separately recorded where available."
+  ],
+  "dependencyCaveat": "BasicPitch official 0.4.0 ONNX-only no-deps lock; pip check expected missing tensorflow. YIN/CREPE pip check clean.",
+  "dataset": {
+    "name": "GuitarSet1.1.0",
+    "license": "CC BY 4.0",
+    "doi": "10.5281/zenodo.3371780",
+    "recordings": 12,
+    "players": 6,
+    "styles": 5,
+    "seconds": 287.6144217687075,
+    "notes": 1612,
+    "limitations": [
+      "BasicPitch training includes GuitarSet: not unseen generalization",
+      "Note MIDI mean pitch targets, not instantaneous pitch contour; vibrato/bends may contribute errors",
+      "50ms annotation boundary guard is an evaluation convention, not measured uncertainty",
+      "All overlapping active notes, including same-pitch strings, excluded from monophonic pitch denominator",
+      "No manual annotation correction, normalization, or tuning on this subset",
+      "Correlated recording/frame observations: macro summaries, no frame-independent confidence intervals",
+      "Serial full-recording model calls; compute ratio is not live latency; first-clip warmup may affect BasicPitch",
+      "Stable mono scoring covers only17.984% of the grid; boundary guard excludes55.874%. Not representative of all playing or fast transitions."
+    ]
+  },
+  "config": {
+    "protocol": "R1-fixed-v1",
+    "sampleRateHz": 22050,
+    "pitchWindow": 4096,
+    "pitchHop": 512,
+    "fminHz": 70,
+    "fmaxHz": 1000,
+    "jsConfidence": 0.8,
+    "yinRmsGate": 0.008,
+    "crepeThresholds": [
+      0.5,
+      0.8
+    ],
+    "gridMs": 10,
+    "boundaryGuardMs": 50,
+    "noteOnsetToleranceMs": 50,
+    "notePitchToleranceCents": 50,
+    "noteOffsetRatio": 0.2,
+    "noteOffsetMinToleranceMs": 50,
+    "basicPitchOnsetThreshold": 0.5,
+    "basicPitchFrameThreshold": 0.3,
+    "basicPitchMinimumNoteMs": 127.7,
+    "expectedRecordings": 12,
+    "expectedPlayers": 6,
+    "repeatCount": 1,
+    "excludedRecordings": [
+      "04_BN3-154-E_comp",
+      "04_Jazz1-200-B_comp",
+      "02_Funk2-119-G_comp"
+    ],
+    "pitchBins": {
+      "below40": [
+        0,
+        40
+      ],
+      "low40to51": [
+        40,
+        52
+      ],
+      "mid52to63": [
+        52,
+        64
+      ],
+      "high64to83": [
+        64,
+        84
+      ],
+      "above83": [
+        84,
+        128
+      ]
+    },
+    "expectedTotalSeconds": 287.6144,
+    "expectedNoteCount": 1612,
+    "expectedStyleCount": 5
+  },
+  "macro": {
+    "basic-pitch": {
+      "onsetPitch_precision": 0.727432,
+      "onsetPitch_recall": 0.786704,
+      "onsetPitch_f1": 0.746139,
+      "onsetPitchOffset_precision": 0.479805,
+      "onsetPitchOffset_recall": 0.512234,
+      "onsetPitchOffset_f1": 0.490705
+    },
+    "crepe-tiny-0.5": {
+      "rpa10": 0.733443,
+      "rpa25": 0.8299,
+      "rpa50": 0.853807,
+      "coverage": 0.927653,
+      "acceptedPrecision50": 0.721761,
+      "voicingFalseAlarm": 0.382636
+    },
+    "crepe-tiny-0.8": {
+      "rpa10": 0.628359,
+      "rpa25": 0.689141,
+      "rpa50": 0.702511,
+      "coverage": 0.730002,
+      "acceptedPrecision50": 0.871777,
+      "voicingFalseAlarm": 0.163144
+    },
+    "js-native": {
+      "rpa10": 0.496662,
+      "rpa25": 0.586033,
+      "rpa50": 0.598773,
+      "coverage": 0.645281,
+      "acceptedPrecision50": 0.759033,
+      "voicingFalseAlarm": 0.143853
+    },
+    "pyin": {
+      "rpa10": 0.560171,
+      "rpa25": 0.678299,
+      "rpa50": 0.703886,
+      "coverage": 0.903817,
+      "acceptedPrecision50": 0.574168,
+      "voicingFalseAlarm": 0.649245
+    },
+    "yin-native": {
+      "rpa10": 0.534436,
+      "rpa25": 0.639895,
+      "rpa50": 0.671909,
+      "coverage": 1,
+      "acceptedPrecision50": 0.45257,
+      "voicingFalseAlarm": 1
+    },
+    "yin-rms": {
+      "rpa10": 0.503467,
+      "rpa25": 0.605996,
+      "rpa50": 0.63801,
+      "coverage": 0.960112,
+      "acceptedPrecision50": 0.528908,
+      "voicingFalseAlarm": 0.514113
+    }
+  },
+  "macroWeighting": "Recording macro; equal-player macro identical because each player contributes2 recordings.",
+  "recordings": [
+    {
+      "id": "00_BN1-129-Eb_comp",
+      "player": "00",
+      "style": "Bossa Nova",
+      "mode": "comp",
+      "sourceWavSha256": "59e1e3c9bebdabd48afe28050a2c031e6cf36e5697268301cdf2e74bc66b71f1",
+      "sourceJamsSha256": "cd79564c51d0dec7d04e010d31525e9f7d2b9d41cf6116118a66ac5a8c181007",
+      "analysisPcmSha256": "687abeebcb754ba85befdfbea16afc5a9f642b0c7311f491e31ac907b9ee3d5d",
+      "durationSeconds": 22.32439909297052,
+      "noteCount": 133,
+      "frameCounts": {
+        "mono": 90,
+        "unvoiced": 133,
+        "polyphonic": 730,
+        "boundary-guard": 1255
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.511111,
+          "coverage": 0.644444,
+          "voicingFalseAlarm": 0.022556
+        },
+        "yin-native": {
+          "rpa50": 0.6,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.566667,
+          "coverage": 0.933333,
+          "voicingFalseAlarm": 0.413534
+        },
+        "pyin": {
+          "rpa50": 0.622222,
+          "coverage": 0.822222,
+          "voicingFalseAlarm": 0.428571
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.911111,
+          "coverage": 0.988889,
+          "voicingFalseAlarm": 0.090226
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.6,
+          "coverage": 0.677778,
+          "voicingFalseAlarm": 0
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.686667,
+            "recall": 0.774436,
+            "f1": 0.727915
+          },
+          "onsetPitchOffset": {
+            "precision": 0.446667,
+            "recall": 0.503759,
+            "f1": 0.473498
+          }
+        }
+      }
+    },
+    {
+      "id": "00_BN1-129-Eb_solo",
+      "player": "00",
+      "style": "Bossa Nova",
+      "mode": "solo",
+      "sourceWavSha256": "2a6057d0485d8ee2f4a04175ee085d610c0f7a13194e083b13ce803bec091d43",
+      "sourceJamsSha256": "2258ef6f5dc58437f2807dfc0c05416ad8498cd345f95d6563b13d19283e6d54",
+      "analysisPcmSha256": "4b6ad656e98abe2ddbb8c45013a1145c4cfbc0aea1b8e7e06cffb6011fe288fe",
+      "durationSeconds": 22.32439909297052,
+      "noteCount": 71,
+      "frameCounts": {
+        "mono": 796,
+        "unvoiced": 71,
+        "polyphonic": 522,
+        "boundary-guard": 819
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.649497,
+          "coverage": 0.69598,
+          "voicingFalseAlarm": 0.253521
+        },
+        "yin-native": {
+          "rpa50": 0.869347,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.657035,
+          "coverage": 0.787688,
+          "voicingFalseAlarm": 0.408451
+        },
+        "pyin": {
+          "rpa50": 0.922111,
+          "coverage": 0.987437,
+          "voicingFalseAlarm": 0.929577
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.929648,
+          "coverage": 0.95603,
+          "voicingFalseAlarm": 0.859155
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.796482,
+          "coverage": 0.796482,
+          "voicingFalseAlarm": 0.619718
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.652632,
+            "recall": 0.873239,
+            "f1": 0.746988
+          },
+          "onsetPitchOffset": {
+            "precision": 0.505263,
+            "recall": 0.676056,
+            "f1": 0.578313
+          }
+        }
+      }
+    },
+    {
+      "id": "01_Funk1-114-Ab_comp",
+      "player": "01",
+      "style": "Funk",
+      "mode": "comp",
+      "sourceWavSha256": "9ee4888317faba89ba1a9929d6e3b044a3363eb925e6c432b2b30e4f3c83ab22",
+      "sourceJamsSha256": "429e06078c84f38ae3d551bdf594d0cac75a58c43783b23e1d436363a9fbe97a",
+      "analysisPcmSha256": "c92b55e53425242a07a67f1266c819967f4e4d21ab95204c6432f2c3cf1526de",
+      "durationSeconds": 25.258390022675737,
+      "noteCount": 232,
+      "frameCounts": {
+        "mono": 22,
+        "unvoiced": 636,
+        "polyphonic": 94,
+        "boundary-guard": 1749
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0,
+          "coverage": 0,
+          "voicingFalseAlarm": 0.044025
+        },
+        "yin-native": {
+          "rpa50": 0,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0,
+          "coverage": 1,
+          "voicingFalseAlarm": 0.990566
+        },
+        "pyin": {
+          "rpa50": 0,
+          "coverage": 1,
+          "voicingFalseAlarm": 0.981132
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.545455,
+          "coverage": 0.772727,
+          "voicingFalseAlarm": 0.378931
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.409091,
+          "coverage": 0.409091,
+          "voicingFalseAlarm": 0.012579
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.814286,
+            "recall": 0.491379,
+            "f1": 0.612903
+          },
+          "onsetPitchOffset": {
+            "precision": 0.407143,
+            "recall": 0.24569,
+            "f1": 0.306452
+          }
+        }
+      }
+    },
+    {
+      "id": "01_Funk1-114-Ab_solo",
+      "player": "01",
+      "style": "Funk",
+      "mode": "solo",
+      "sourceWavSha256": "8e301305985cf6d26bfe0abfb76b60adb29df962d91071985b5dc65eba0cdd4e",
+      "sourceJamsSha256": "42fe7a65d53eec16a3dfa5cea2b9af01fbd1e09b6025f80c45501f25c28d6fd8",
+      "analysisPcmSha256": "656a09c24022273c99fd00f24b43b625104c179a6826505798593dcad87c9cf1",
+      "durationSeconds": 25.258390022675737,
+      "noteCount": 120,
+      "frameCounts": {
+        "mono": 549,
+        "unvoiced": 320,
+        "polyphonic": 3,
+        "boundary-guard": 1629
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.630237,
+          "coverage": 0.692168,
+          "voicingFalseAlarm": 0.065625
+        },
+        "yin-native": {
+          "rpa50": 0.763206,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.757741,
+          "coverage": 0.994536,
+          "voicingFalseAlarm": 0.634375
+        },
+        "pyin": {
+          "rpa50": 0.790528,
+          "coverage": 0.945355,
+          "voicingFalseAlarm": 0.75
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.925319,
+          "coverage": 0.979964,
+          "voicingFalseAlarm": 0.340625
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.750455,
+          "coverage": 0.777778,
+          "voicingFalseAlarm": 0.05625
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.743363,
+            "recall": 0.7,
+            "f1": 0.72103
+          },
+          "onsetPitchOffset": {
+            "precision": 0.442478,
+            "recall": 0.416667,
+            "f1": 0.429185
+          }
+        }
+      }
+    },
+    {
+      "id": "02_Jazz1-130-D_comp",
+      "player": "02",
+      "style": "Jazz",
+      "mode": "comp",
+      "sourceWavSha256": "7b769c278bb3d44440420a79cba1e486119f823a33f78465aa9acdcdef277df5",
+      "sourceJamsSha256": "e06bd1f4e088b0a0892366193a2d951420288cd9709bfaaacdafd320bf55489e",
+      "analysisPcmSha256": "4bc942d1b5d1958b0786919a408d4b388c90597ef6e7bb16fee7f9935b877970",
+      "durationSeconds": 22.14721088435374,
+      "noteCount": 203,
+      "frameCounts": {
+        "mono": 27,
+        "unvoiced": 172,
+        "polyphonic": 791,
+        "boundary-guard": 1200
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.333333,
+          "coverage": 0.333333,
+          "voicingFalseAlarm": 0.040698
+        },
+        "yin-native": {
+          "rpa50": 0.555556,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.555556,
+          "coverage": 1,
+          "voicingFalseAlarm": 0.27907
+        },
+        "pyin": {
+          "rpa50": 0.407407,
+          "coverage": 0.555556,
+          "voicingFalseAlarm": 0.47093
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.518519,
+          "coverage": 0.592593,
+          "voicingFalseAlarm": 0.116279
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.111111,
+          "coverage": 0.111111,
+          "voicingFalseAlarm": 0
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.707921,
+            "recall": 0.704433,
+            "f1": 0.706173
+          },
+          "onsetPitchOffset": {
+            "precision": 0.341584,
+            "recall": 0.339901,
+            "f1": 0.340741
+          }
+        }
+      }
+    },
+    {
+      "id": "02_Jazz1-130-D_solo",
+      "player": "02",
+      "style": "Jazz",
+      "mode": "solo",
+      "sourceWavSha256": "178728e013d354d2dd8c0818df8dc03cf553d81e6bb43d45a996fc6df5652433",
+      "sourceJamsSha256": "5f93ac1ad29010d98348ec1ef30bf075ed31f77fa9c7261788a02fc02dba66b2",
+      "analysisPcmSha256": "e0526b88d202fc9b041e8e6d2fc740112ae6258c210d5f9a47b55ce3e87785ba",
+      "durationSeconds": 22.14721088435374,
+      "noteCount": 110,
+      "frameCounts": {
+        "mono": 358,
+        "unvoiced": 47,
+        "polyphonic": 442,
+        "boundary-guard": 1343
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.575419,
+          "coverage": 0.667598,
+          "voicingFalseAlarm": 0
+        },
+        "yin-native": {
+          "rpa50": 0.648045,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.606145,
+          "coverage": 0.944134,
+          "voicingFalseAlarm": 0.106383
+        },
+        "pyin": {
+          "rpa50": 0.698324,
+          "coverage": 0.935754,
+          "voicingFalseAlarm": 0.297872
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.927374,
+          "coverage": 0.980447,
+          "voicingFalseAlarm": 0.361702
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.865922,
+          "coverage": 0.891061,
+          "voicingFalseAlarm": 0.06383
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.624204,
+            "recall": 0.890909,
+            "f1": 0.734082
+          },
+          "onsetPitchOffset": {
+            "precision": 0.312102,
+            "recall": 0.445455,
+            "f1": 0.367041
+          }
+        }
+      }
+    },
+    {
+      "id": "03_Rock1-130-A_comp",
+      "player": "03",
+      "style": "Rock",
+      "mode": "comp",
+      "sourceWavSha256": "5e71387daf08213651f8b8f0d9b1db7d589cbc6b9fefd8e052e13a1f8f7286ca",
+      "sourceJamsSha256": "502ab4f7788bad71bafe9572ba185e698b3cf82576be105acd6d4112b711f1fa",
+      "analysisPcmSha256": "8187e56337d52f3ba81e1141134b4a69492d1644dcadcaceb1a67f57d2f90fe0",
+      "durationSeconds": 22.14721088435374,
+      "noteCount": 212,
+      "frameCounts": {
+        "mono": 146,
+        "unvoiced": 41,
+        "polyphonic": 494,
+        "boundary-guard": 1509
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.664384,
+          "coverage": 0.719178,
+          "voicingFalseAlarm": 0.146341
+        },
+        "yin-native": {
+          "rpa50": 0.739726,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.739726,
+          "coverage": 1,
+          "voicingFalseAlarm": 0.365854
+        },
+        "pyin": {
+          "rpa50": 0.739726,
+          "coverage": 1,
+          "voicingFalseAlarm": 0.780488
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.767123,
+          "coverage": 0.917808,
+          "voicingFalseAlarm": 0.268293
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.575342,
+          "coverage": 0.69863,
+          "voicingFalseAlarm": 0.146341
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.649533,
+            "recall": 0.65566,
+            "f1": 0.652582
+          },
+          "onsetPitchOffset": {
+            "precision": 0.327103,
+            "recall": 0.330189,
+            "f1": 0.328638
+          }
+        }
+      }
+    },
+    {
+      "id": "03_Rock1-130-A_solo",
+      "player": "03",
+      "style": "Rock",
+      "mode": "solo",
+      "sourceWavSha256": "eb0175a92ae22478d64060e5c72043ad8fa58d7c75ee519d1558746db3c1d5b1",
+      "sourceJamsSha256": "0b297ab7bfa569c6614f5bcb6710662c0c48b0cd42e3fe57c067be61f087c4db",
+      "analysisPcmSha256": "ba7822d534ef30536584251f49a789798183b14b2bfaa1747101956bf9f826d4",
+      "durationSeconds": 22.14721088435374,
+      "noteCount": 58,
+      "frameCounts": {
+        "mono": 867,
+        "unvoiced": 469,
+        "polyphonic": 1,
+        "boundary-guard": 853
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.862745,
+          "coverage": 0.906574,
+          "voicingFalseAlarm": 0.191898
+        },
+        "yin-native": {
+          "rpa50": 0.856978,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.856978,
+          "coverage": 0.998847,
+          "voicingFalseAlarm": 0.364606
+        },
+        "pyin": {
+          "rpa50": 0.94925,
+          "coverage": 0.971165,
+          "voicingFalseAlarm": 0.579957
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.966551,
+          "coverage": 0.980392,
+          "voicingFalseAlarm": 0.277186
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.929642,
+          "coverage": 0.929642,
+          "voicingFalseAlarm": 0.189765
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.913793,
+            "recall": 0.913793,
+            "f1": 0.913793
+          },
+          "onsetPitchOffset": {
+            "precision": 0.87931,
+            "recall": 0.87931,
+            "f1": 0.87931
+          }
+        }
+      }
+    },
+    {
+      "id": "04_SS1-100-C#_comp",
+      "player": "04",
+      "style": "Singer-Songwriter",
+      "mode": "comp",
+      "sourceWavSha256": "39b592e5ab79e457a7901e865b4320e04014903465acdebd64235b4f44416650",
+      "sourceJamsSha256": "9cee71992ad50e4aca49266702a4c92098a9299bc4051c3daf7aed160ec5914c",
+      "analysisPcmSha256": "bd24b875c15e94555c10ece01926954cd99b7d1a3ce025828bf7ccd91783ed95",
+      "durationSeconds": 28.8,
+      "noteCount": 162,
+      "frameCounts": {
+        "mono": 103,
+        "unvoiced": 21,
+        "polyphonic": 739,
+        "boundary-guard": 1992
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.679612,
+          "coverage": 0.679612,
+          "voicingFalseAlarm": 0.428571
+        },
+        "yin-native": {
+          "rpa50": 0.640777,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.640777,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "pyin": {
+          "rpa50": 0.640777,
+          "coverage": 0.718447,
+          "voicingFalseAlarm": 0.714286
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.84466,
+          "coverage": 0.980583,
+          "voicingFalseAlarm": 0.761905
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.786408,
+          "coverage": 0.854369,
+          "voicingFalseAlarm": 0.380952
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.52809,
+            "recall": 0.87037,
+            "f1": 0.657343
+          },
+          "onsetPitchOffset": {
+            "precision": 0.168539,
+            "recall": 0.277778,
+            "f1": 0.20979
+          }
+        }
+      }
+    },
+    {
+      "id": "04_SS1-100-C#_solo",
+      "player": "04",
+      "style": "Singer-Songwriter",
+      "mode": "solo",
+      "sourceWavSha256": "753a0b4d27b68ed362a1c509bb14300dd23f2c5bf2a8513c76c28006aa408543",
+      "sourceJamsSha256": "fe955570ebba65ee8d0b1dba965bada2832bdb889f386844e694b87c2cf54088",
+      "analysisPcmSha256": "3e0f0ec857a687b25f2d752ae4e6d4c64d3116ef21814251da1ee0d6bea58230",
+      "durationSeconds": 28.8,
+      "noteCount": 71,
+      "frameCounts": {
+        "mono": 1024,
+        "unvoiced": 747,
+        "polyphonic": 12,
+        "boundary-guard": 1072
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.837891,
+          "coverage": 0.861328,
+          "voicingFalseAlarm": 0.19411
+        },
+        "yin-native": {
+          "rpa50": 0.883789,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.836914,
+          "coverage": 0.953125,
+          "voicingFalseAlarm": 0.448461
+        },
+        "pyin": {
+          "rpa50": 0.967773,
+          "coverage": 1,
+          "voicingFalseAlarm": 0.531459
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.952148,
+          "coverage": 1,
+          "voicingFalseAlarm": 0.389558
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.904297,
+          "coverage": 0.90918,
+          "voicingFalseAlarm": 0.282463
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.8,
+            "recall": 0.788732,
+            "f1": 0.794326
+          },
+          "onsetPitchOffset": {
+            "precision": 0.671429,
+            "recall": 0.661972,
+            "f1": 0.666667
+          }
+        }
+      }
+    },
+    {
+      "id": "05_BN2-166-Ab_comp",
+      "player": "05",
+      "style": "Bossa Nova",
+      "mode": "comp",
+      "sourceWavSha256": "58e771edbaedf69eb0216b8e77c82f468e8f0dd6045bfdcda585a0f346f86213",
+      "sourceJamsSha256": "410e7373f7753871225bdc99f0f96d4f9e911fb72602427e1b177458430a4fda",
+      "analysisPcmSha256": "87552829e3595a23ecb64fb63f4304996b1e9e49c2c9f46036ff8704ee73702c",
+      "durationSeconds": 23.13,
+      "noteCount": 173,
+      "frameCounts": {
+        "mono": 285,
+        "unvoiced": 80,
+        "polyphonic": 426,
+        "boundary-guard": 1497
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.74386,
+          "coverage": 0.74386,
+          "voicingFalseAlarm": 0.05
+        },
+        "yin-native": {
+          "rpa50": 0.775439,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.775439,
+          "coverage": 0.982456,
+          "voicingFalseAlarm": 0.6625
+        },
+        "pyin": {
+          "rpa50": 0.782456,
+          "coverage": 0.929825,
+          "voicingFalseAlarm": 0.8
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.992982,
+          "coverage": 0.996491,
+          "voicingFalseAlarm": 0.35
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.807018,
+          "coverage": 0.807018,
+          "voicingFalseAlarm": 0.0125
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.724638,
+            "recall": 0.867052,
+            "f1": 0.789474
+          },
+          "onsetPitchOffset": {
+            "precision": 0.458937,
+            "recall": 0.549133,
+            "f1": 0.5
+          }
+        }
+      }
+    },
+    {
+      "id": "05_BN2-166-Ab_solo",
+      "player": "05",
+      "style": "Bossa Nova",
+      "mode": "solo",
+      "sourceWavSha256": "8768a9309b9b7265c92b2b4bd816bebd3f09ee1ba4c7a5a9f1bcdab7a207e926",
+      "sourceJamsSha256": "26d57e376300e22f9be29270492fb0a530a236e3e3d26529342348c815259c45",
+      "analysisPcmSha256": "eda61d905f5f8da6c82386aa9a8d5f5ebba92739c31c6c0001b00cb41734eda5",
+      "durationSeconds": 23.13,
+      "noteCount": 67,
+      "frameCounts": {
+        "mono": 852,
+        "unvoiced": 450,
+        "polyphonic": 0,
+        "boundary-guard": 986
+      },
+      "metrics": {
+        "js-native": {
+          "rpa50": 0.697183,
+          "coverage": 0.799296,
+          "voicingFalseAlarm": 0.288889
+        },
+        "yin-native": {
+          "rpa50": 0.730047,
+          "coverage": 1,
+          "voicingFalseAlarm": 1
+        },
+        "yin-rms": {
+          "rpa50": 0.663146,
+          "coverage": 0.92723,
+          "voicingFalseAlarm": 0.495556
+        },
+        "pyin": {
+          "rpa50": 0.926056,
+          "coverage": 0.980047,
+          "voicingFalseAlarm": 0.526667
+        },
+        "crepe-tiny-0.5": {
+          "rpa50": 0.964789,
+          "coverage": 0.985915,
+          "voicingFalseAlarm": 0.397778
+        },
+        "crepe-tiny-0.8": {
+          "rpa50": 0.894366,
+          "coverage": 0.897887,
+          "voicingFalseAlarm": 0.193333
+        },
+        "basic-pitch": {
+          "onsetPitch": {
+            "precision": 0.884058,
+            "recall": 0.910448,
+            "f1": 0.897059
+          },
+          "onsetPitchOffset": {
+            "precision": 0.797101,
+            "recall": 0.820896,
+            "f1": 0.808824
+          }
+        }
+      }
+    }
+  ]
+}
