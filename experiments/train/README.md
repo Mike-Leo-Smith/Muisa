@@ -23,3 +23,5 @@ python3 -m venv /path/to/t0-env
 首次120步权重按 [frozen-t0.json](frozen-t0.json) 固定，私有交付，未重训。第一轮真实音频诊断遵守 [固定帧级协议](FRAME_EVALUATION.md)：activity阈值0.5、argmax MIDI、右对齐hop结束时刻、latest-available≤grid、无未来插值；没有已定义event decoder，不报告note F1。跨ORT版本先用私有固定向量检查数值/状态，不静默放宽容差。
 
 后续源码分别修复：精确hop边界onset归属；先选有效mask再计算loss（忽略非法/NaN占位，监督区非法目标拒绝）；拒绝空/非整hop chunk与非法state。ONNX图自身不含Python断言，`inference.py`提供同等host校验和warmup时标。八项独立T0回归通过，包括临时随机模型导出/host检查；该临时模型不是新训练checkpoint，也未覆盖原模型。
+
+原始冻结模型的真实诊断已完成：[失败分析](RESULTS_T0_REAL.md)、[18 条脱敏结果](results-t0-real.json)。ORT 1.23.2 parity 通过，但真实 pitch 迁移失败；不部署、不以 activity F1 代替 pitch 准确率。后续仅准备 [T1 数据契约](t1/README.md)。

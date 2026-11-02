@@ -1,0 +1,903 @@
+{
+  "status": "frozen-original-T0-development-diagnostic",
+  "modelSha256": "82c51d63b7504f02c48b4adee5a7b384e3dfb5a6a5a914db8af9cb41527f11b3",
+  "originalTrainingRevision": "cbdc9a1ef984058f8faf321c058483e7be411b03",
+  "evaluationScriptSha256": "ec4d6d4d4fba8cd8189f0ea390d7dba65ef235ffbe57c07dd059f9c3f1149f1c",
+  "evaluationConfigSha256": "049be1b08575716a659548ee08e10bdb26f07f961f28fffc2364b9a3271b02fa",
+  "runtime": {
+    "onnxruntime": "1.23.2",
+    "numpy": "2.2.6",
+    "scipy": "1.15.3",
+    "soundfile": "0.14.0",
+    "python": "3.12.14",
+    "originalExportRuntime": "1.22.0",
+    "crossVersionFixtureParity": {
+      "status": "passed",
+      "onnxruntime": "1.23.2",
+      "modelSha256": "82c51d63b7504f02c48b4adee5a7b384e3dfb5a6a5a914db8af9cb41527f11b3",
+      "atol": 0.0001,
+      "rtol": 0.0001,
+      "cases": [
+        {
+          "case": 0,
+          "hops": 3,
+          "maxAbsoluteErrorsLogitsPcmFeature": [
+            3.814697265625e-06,
+            0.0,
+            7.152557373046875e-07
+          ]
+        },
+        {
+          "case": 1,
+          "hops": 5,
+          "maxAbsoluteErrorsLogitsPcmFeature": [
+            7.62939453125e-06,
+            0.0,
+            2.384185791015625e-06
+          ]
+        }
+      ]
+    },
+    "syntheticChunkConsistencyMaxErrors": [
+      7.62939453125e-06,
+      0.0,
+      7.152557373046875e-07
+    ],
+    "modelLoadMs": 9.274052001273958,
+    "parityFixtureZipSha256": "76caebd930b8156c4ae3bd8810dfff3aed7b17fc1ad714547f3346db947594cd"
+  },
+  "config": {
+    "sampleRateHz": 16000,
+    "hopSamples": 256,
+    "windowSamples": 1024,
+    "activityThreshold": 0.5,
+    "onsetThreshold": 0.5,
+    "pitchMin": 36,
+    "pitchMax": 84,
+    "warmupFrames": 3,
+    "mapping": "latest valid hop-end <= grid time; no center shift",
+    "gridStartMs": 100,
+    "gridEndMarginMs": 150,
+    "gridMs": 10,
+    "boundaryGuardMs": 50,
+    "eventDecoder": null,
+    "resample": "scipy.signal.resample_poly default window/padtype, float32, no normalization",
+    "provider": "CPUExecutionProvider",
+    "intraThreads": 2,
+    "interThreads": 1
+  },
+  "macro": [
+    {
+      "group": "R1-all",
+      "recordings": 12,
+      "pitch": {
+        "oracleMonoClassAccuracy": 0.0971916016342634,
+        "activityGatedClassAccuracy": 0.047613245554101846,
+        "oracleMonoWithin50Cents": 0.0971916016342634,
+        "activityGatedWithin50Cents": 0.047613245554101846,
+        "coverage": 0.49653201762200494,
+        "voicingFalseAlarm": 0.06792540793686608,
+        "acceptedPrecision50": 0.08435961359334265,
+        "octaveErrors": 4.666666666666667
+      },
+      "activity": {
+        "precision": 0.9439528428402135,
+        "recall": 0.6201140240689956,
+        "f1": 0.7196996546570804,
+        "accuracy": 0.6863748715569146
+      }
+    },
+    {
+      "group": "R1-solo",
+      "recordings": 6,
+      "pitch": {
+        "oracleMonoClassAccuracy": 0.09050192472971401,
+        "activityGatedClassAccuracy": 0.030157997957518765,
+        "oracleMonoWithin50Cents": 0.09050192472971401,
+        "activityGatedWithin50Cents": 0.030157997957518765,
+        "coverage": 0.4004885686199926,
+        "voicingFalseAlarm": 0.041531769426826896,
+        "acceptedPrecision50": 0.081563263883933,
+        "octaveErrors": 6.0
+      },
+      "activity": {
+        "precision": 0.9619452511233919,
+        "recall": 0.4416240248056032,
+        "f1": 0.5978130216407368,
+        "accuracy": 0.5649740150216078
+      }
+    },
+    {
+      "group": "R1-comp",
+      "recordings": 6,
+      "pitch": {
+        "oracleMonoClassAccuracy": 0.1038812785388128,
+        "activityGatedClassAccuracy": 0.06506849315068493,
+        "oracleMonoWithin50Cents": 0.1038812785388128,
+        "activityGatedWithin50Cents": 0.06506849315068493,
+        "coverage": 0.5925754666240174,
+        "voicingFalseAlarm": 0.09431904644690527,
+        "acceptedPrecision50": 0.08715596330275228,
+        "octaveErrors": 3.3333333333333335
+      },
+      "activity": {
+        "precision": 0.9259604345570353,
+        "recall": 0.7986040233323882,
+        "f1": 0.8415862876734241,
+        "accuracy": 0.8077757280922214
+      }
+    }
+  ],
+  "limitations": [
+    "Original120-step mathematical harmonic training model; no retraining or tuning.",
+    "R1 previously inspected development data; N1 one synthetic room/phrase with real readings, not conversation or general-noise benchmark.",
+    "Quantized semitone MIDI only, no continuous F0 or fine tuning estimate.",
+    "Trailing hop-end causal hold mapping differs from offline baseline center mapping; resampling performed offline.",
+    "MIDI-gate/note-annotation activity proxy may disagree with acoustic attack/release.",
+    "Known original onset-label, masked-loss and nonhop-state bugs retained; evaluation uses positive full hops only and no training loss.",
+    "Event F1 undefined because no frozen event decoder."
+  ],
+  "rows": [
+    {
+      "split": "R1",
+      "id": "00_BN1-129-Eb_comp",
+      "mode": "comp",
+      "inputSha256": "59e1e3c9bebdabd48afe28050a2c031e6cf36e5697268301cdf2e74bc66b71f1",
+      "resampledPcmSha256": "323ce4ea30897c186c362e3599316d13ed299c7be19a4a41179d0519af26fa05",
+      "sourceSeconds": 22.32439909297052,
+      "inferenceHops": 1395,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 71,
+      "discardedTailMs": 4.4375,
+      "frameCounts": {
+        "mono": 90,
+        "unvoiced": 133,
+        "polyphonic": 730,
+        "boundary-guard": 1255
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 90,
+        "unvoicedFrames": 133,
+        "polyActivityFrames": 730,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 508,
+          "fp": 0,
+          "fn": 312,
+          "tn": 133,
+          "f1": 0.7650602409638554
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.0,
+          "activityGatedClassAccuracy": 0.0,
+          "coverage": 0.35555555555555557,
+          "voicingFalseAlarm": 0.0,
+          "acceptedPrecision50": 0.0,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "00_BN1-129-Eb_solo",
+      "mode": "solo",
+      "inputSha256": "2a6057d0485d8ee2f4a04175ee085d610c0f7a13194e083b13ce803bec091d43",
+      "resampledPcmSha256": "b2df0c693650e21123bafd9829e89a14cbd7e32e6a42599f5a66fc0c792bcf36",
+      "sourceSeconds": 22.32439909297052,
+      "inferenceHops": 1395,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 71,
+      "discardedTailMs": 4.4375,
+      "frameCounts": {
+        "mono": 796,
+        "unvoiced": 71,
+        "polyphonic": 522,
+        "boundary-guard": 819
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 796,
+        "unvoicedFrames": 71,
+        "polyActivityFrames": 522,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 412,
+          "fp": 4,
+          "fn": 906,
+          "tn": 67,
+          "f1": 0.47520184544405997
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.07914572864321608,
+          "activityGatedClassAccuracy": 0.02512562814070352,
+          "coverage": 0.17336683417085427,
+          "voicingFalseAlarm": 0.056338028169014086,
+          "acceptedPrecision50": 0.14084507042253522,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "01_Funk1-114-Ab_comp",
+      "mode": "comp",
+      "inputSha256": "9ee4888317faba89ba1a9929d6e3b044a3363eb925e6c432b2b30e4f3c83ab22",
+      "resampledPcmSha256": "e3f525743ae3c072da6c5fd72ddbfda73663c11d469cd27a19721bb019e55985",
+      "sourceSeconds": 25.258390022675737,
+      "inferenceHops": 1578,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 167,
+      "discardedTailMs": 10.4375,
+      "frameCounts": {
+        "mono": 22,
+        "unvoiced": 636,
+        "polyphonic": 94,
+        "boundary-guard": 1749
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 22,
+        "unvoicedFrames": 636,
+        "polyActivityFrames": 94,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 107,
+          "fp": 77,
+          "fn": 9,
+          "tn": 559,
+          "f1": 0.7133333333333334
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.0,
+          "activityGatedClassAccuracy": 0.0,
+          "coverage": 0.7272727272727273,
+          "voicingFalseAlarm": 0.12106918238993711,
+          "acceptedPrecision50": 0.0,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "01_Funk1-114-Ab_solo",
+      "mode": "solo",
+      "inputSha256": "8e301305985cf6d26bfe0abfb76b60adb29df962d91071985b5dc65eba0cdd4e",
+      "resampledPcmSha256": "49f033841e9f01b79999185613775f124460b42eacb4ba0d7ba3248303631988",
+      "sourceSeconds": 25.258390022675737,
+      "inferenceHops": 1578,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 167,
+      "discardedTailMs": 10.4375,
+      "frameCounts": {
+        "mono": 549,
+        "unvoiced": 320,
+        "polyphonic": 3,
+        "boundary-guard": 1629
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 549,
+        "unvoicedFrames": 320,
+        "polyActivityFrames": 3,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 240,
+          "fp": 29,
+          "fn": 312,
+          "tn": 291,
+          "f1": 0.584652862362972
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.08378870673952642,
+          "activityGatedClassAccuracy": 0.058287795992714025,
+          "coverage": 0.43169398907103823,
+          "voicingFalseAlarm": 0.090625,
+          "acceptedPrecision50": 0.12030075187969924,
+          "octaveErrors": 15
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "02_Jazz1-130-D_comp",
+      "mode": "comp",
+      "inputSha256": "7b769c278bb3d44440420a79cba1e486119f823a33f78465aa9acdcdef277df5",
+      "resampledPcmSha256": "6b18f7eb45e5993bf57e3c129dedd3022e03e76e9b3bba9fecf68319867135be",
+      "sourceSeconds": 22.14721088435374,
+      "inferenceHops": 1384,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 52,
+      "discardedTailMs": 3.25,
+      "frameCounts": {
+        "mono": 27,
+        "unvoiced": 172,
+        "polyphonic": 791,
+        "boundary-guard": 1200
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 27,
+        "unvoicedFrames": 172,
+        "polyActivityFrames": 791,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 695,
+          "fp": 2,
+          "fn": 123,
+          "tn": 170,
+          "f1": 0.9174917491749175
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.0,
+          "activityGatedClassAccuracy": 0.0,
+          "coverage": 0.7777777777777778,
+          "voicingFalseAlarm": 0.011627906976744186,
+          "acceptedPrecision50": 0.0,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "02_Jazz1-130-D_solo",
+      "mode": "solo",
+      "inputSha256": "178728e013d354d2dd8c0818df8dc03cf553d81e6bb43d45a996fc6df5652433",
+      "resampledPcmSha256": "3bcb466929d9addf5a2465e35c6090617a7eaaf339e9a69032d8cf35af54414f",
+      "sourceSeconds": 22.14721088435374,
+      "inferenceHops": 1384,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 52,
+      "discardedTailMs": 3.25,
+      "frameCounts": {
+        "mono": 358,
+        "unvoiced": 47,
+        "polyphonic": 442,
+        "boundary-guard": 1343
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 358,
+        "unvoicedFrames": 47,
+        "polyActivityFrames": 442,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 260,
+          "fp": 0,
+          "fn": 540,
+          "tn": 47,
+          "f1": 0.49056603773584906
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.08379888268156424,
+          "activityGatedClassAccuracy": 0.019553072625698324,
+          "coverage": 0.22346368715083798,
+          "voicingFalseAlarm": 0.0,
+          "acceptedPrecision50": 0.0875,
+          "octaveErrors": 9
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "03_Rock1-130-A_comp",
+      "mode": "comp",
+      "inputSha256": "5e71387daf08213651f8b8f0d9b1db7d589cbc6b9fefd8e052e13a1f8f7286ca",
+      "resampledPcmSha256": "8456b810f9f5383f5ade9fad4afc6645e0d34850f04cc3fbbb4dad72e7e557bd",
+      "sourceSeconds": 22.14721088435374,
+      "inferenceHops": 1384,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 52,
+      "discardedTailMs": 3.25,
+      "frameCounts": {
+        "mono": 146,
+        "unvoiced": 41,
+        "polyphonic": 494,
+        "boundary-guard": 1509
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 146,
+        "unvoicedFrames": 41,
+        "polyActivityFrames": 494,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 539,
+          "fp": 8,
+          "fn": 101,
+          "tn": 33,
+          "f1": 0.9081718618365627
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.6232876712328768,
+          "activityGatedClassAccuracy": 0.3904109589041096,
+          "coverage": 0.6917808219178082,
+          "voicingFalseAlarm": 0.1951219512195122,
+          "acceptedPrecision50": 0.5229357798165137,
+          "octaveErrors": 10
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "03_Rock1-130-A_solo",
+      "mode": "solo",
+      "inputSha256": "eb0175a92ae22478d64060e5c72043ad8fa58d7c75ee519d1558746db3c1d5b1",
+      "resampledPcmSha256": "58fdc7a727a69d91c8ea7ac5a5105d4e73b90c8b90121b5f478368c5d7343660",
+      "sourceSeconds": 22.14721088435374,
+      "inferenceHops": 1384,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 52,
+      "discardedTailMs": 3.25,
+      "frameCounts": {
+        "mono": 867,
+        "unvoiced": 469,
+        "polyphonic": 1,
+        "boundary-guard": 853
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 867,
+        "unvoicedFrames": 469,
+        "polyActivityFrames": 1,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 502,
+          "fp": 16,
+          "fn": 366,
+          "tn": 453,
+          "f1": 0.7243867243867244
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.0461361014994233,
+          "activityGatedClassAccuracy": 0.03575547866205306,
+          "coverage": 0.5778546712802768,
+          "voicingFalseAlarm": 0.03411513859275053,
+          "acceptedPrecision50": 0.059961315280464215,
+          "octaveErrors": 12
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "04_SS1-100-C#_comp",
+      "mode": "comp",
+      "inputSha256": "39b592e5ab79e457a7901e865b4320e04014903465acdebd64235b4f44416650",
+      "resampledPcmSha256": "9b8cff3bd87d071c02f2772dcd7615d30fa095aca47f1564494c2e2ecc0822f9",
+      "sourceSeconds": 28.8,
+      "inferenceHops": 1800,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 0,
+      "discardedTailMs": 0.0,
+      "frameCounts": {
+        "mono": 103,
+        "unvoiced": 21,
+        "polyphonic": 739,
+        "boundary-guard": 1992
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 103,
+        "unvoicedFrames": 21,
+        "polyActivityFrames": 739,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 600,
+          "fp": 5,
+          "fn": 242,
+          "tn": 16,
+          "f1": 0.82930200414651
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.0,
+          "activityGatedClassAccuracy": 0.0,
+          "coverage": 0.21359223300970873,
+          "voicingFalseAlarm": 0.23809523809523808,
+          "acceptedPrecision50": 0.0,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "04_SS1-100-C#_solo",
+      "mode": "solo",
+      "inputSha256": "753a0b4d27b68ed362a1c509bb14300dd23f2c5bf2a8513c76c28006aa408543",
+      "resampledPcmSha256": "c1d2acb880a96ba56442d5433dd4c4a875bdeb3b2cce24f842cc54862d76f21c",
+      "sourceSeconds": 28.8,
+      "inferenceHops": 1800,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 0,
+      "discardedTailMs": 0.0,
+      "frameCounts": {
+        "mono": 1024,
+        "unvoiced": 747,
+        "polyphonic": 12,
+        "boundary-guard": 1072
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 1024,
+        "unvoicedFrames": 747,
+        "polyActivityFrames": 12,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 472,
+          "fp": 21,
+          "fn": 564,
+          "tn": 726,
+          "f1": 0.6173969914977109
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.0341796875,
+          "activityGatedClassAccuracy": 0.017578125,
+          "coverage": 0.453125,
+          "voicingFalseAlarm": 0.028112449799196786,
+          "acceptedPrecision50": 0.03711340206185567,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "05_BN2-166-Ab_comp",
+      "mode": "comp",
+      "inputSha256": "58e771edbaedf69eb0216b8e77c82f468e8f0dd6045bfdcda585a0f346f86213",
+      "resampledPcmSha256": "cb512ab6c5737d153d7d2e43e87e2b0141529127231e0815b687b27dabf0676c",
+      "sourceSeconds": 23.13,
+      "inferenceHops": 1445,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 160,
+      "discardedTailMs": 10.0,
+      "frameCounts": {
+        "mono": 285,
+        "unvoiced": 80,
+        "polyphonic": 426,
+        "boundary-guard": 1497
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 285,
+        "unvoicedFrames": 80,
+        "polyActivityFrames": 426,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 601,
+          "fp": 0,
+          "fn": 110,
+          "tn": 80,
+          "f1": 0.9161585365853658
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.0,
+          "activityGatedClassAccuracy": 0.0,
+          "coverage": 0.7894736842105263,
+          "voicingFalseAlarm": 0.0,
+          "acceptedPrecision50": 0.0,
+          "octaveErrors": 10
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "R1",
+      "id": "05_BN2-166-Ab_solo",
+      "mode": "solo",
+      "inputSha256": "8768a9309b9b7265c92b2b4bd816bebd3f09ee1ba4c7a5a9f1bcdab7a207e926",
+      "resampledPcmSha256": "4c86fbd80d3703263a44eb767df0486c6a8702b6f8e9b386024ce66e06b65aed",
+      "sourceSeconds": 23.13,
+      "inferenceHops": 1445,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 160,
+      "discardedTailMs": 10.0,
+      "frameCounts": {
+        "mono": 852,
+        "unvoiced": 450,
+        "polyphonic": 0,
+        "boundary-guard": 986
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 852,
+        "unvoicedFrames": 450,
+        "polyActivityFrames": 0,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 463,
+          "fp": 18,
+          "fn": 389,
+          "tn": 432,
+          "f1": 0.6946736684171043
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.215962441314554,
+          "activityGatedClassAccuracy": 0.02464788732394366,
+          "coverage": 0.5434272300469484,
+          "voicingFalseAlarm": 0.04,
+          "acceptedPrecision50": 0.04365904365904366,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "N1",
+      "id": "room-only",
+      "mode": null,
+      "inputSha256": "0feb9a1e88f8ffcf399810946545b631141078bf9c0c1522bda1ff4796cf4d83",
+      "resampledPcmSha256": "2ca2a4195d87f9659ade783d20216d0d3c0f74789e8a46dc777f943524c82dce",
+      "sourceSeconds": 8.7754375,
+      "inferenceHops": 548,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 119,
+      "discardedTailMs": 7.4375,
+      "frameCounts": {
+        "mono": 498,
+        "unvoiced": 115,
+        "polyphonic": 0,
+        "boundary-guard": 240
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 498,
+        "unvoicedFrames": 115,
+        "polyActivityFrames": 0,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 287,
+          "fp": 2,
+          "fn": 211,
+          "tn": 113,
+          "f1": 0.7293519695044473
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.25502008032128515,
+          "activityGatedClassAccuracy": 0.09437751004016064,
+          "coverage": 0.5763052208835341,
+          "voicingFalseAlarm": 0.017391304347826087,
+          "acceptedPrecision50": 0.16262975778546712,
+          "octaveErrors": 12
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "N1",
+      "id": "room-speech",
+      "mode": null,
+      "inputSha256": "bed44da8a328e6076c7db76dbae0d4f702db34bc754f9482325c1dbbbae33e4e",
+      "resampledPcmSha256": "05cc22c21e30ab5ae60a1a2b4217db336a342911834c2b5181db10c332504b92",
+      "sourceSeconds": 8.7754375,
+      "inferenceHops": 548,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 119,
+      "discardedTailMs": 7.4375,
+      "frameCounts": {
+        "mono": 498,
+        "unvoiced": 115,
+        "polyphonic": 0,
+        "boundary-guard": 240
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 498,
+        "unvoicedFrames": 115,
+        "polyActivityFrames": 0,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 314,
+          "fp": 9,
+          "fn": 184,
+          "tn": 106,
+          "f1": 0.7649208282582217
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.26907630522088355,
+          "activityGatedClassAccuracy": 0.1465863453815261,
+          "coverage": 0.6305220883534136,
+          "voicingFalseAlarm": 0.0782608695652174,
+          "acceptedPrecision50": 0.2260061919504644,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "N1",
+      "id": "room-speech-transients",
+      "mode": null,
+      "inputSha256": "0d263c9743a0973785b1726bbe01e7b0c150ea9ef08c0e249a07e6d909d04cfb",
+      "resampledPcmSha256": "d3e6363bd7890a41b1562fc9d7f1b4aaf9355a3e943b66b7883f484c857df1c1",
+      "sourceSeconds": 8.7754375,
+      "inferenceHops": 548,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 119,
+      "discardedTailMs": 7.4375,
+      "frameCounts": {
+        "mono": 498,
+        "unvoiced": 115,
+        "polyphonic": 0,
+        "boundary-guard": 240
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 498,
+        "unvoicedFrames": 115,
+        "polyActivityFrames": 0,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 304,
+          "fp": 13,
+          "fn": 194,
+          "tn": 102,
+          "f1": 0.7460122699386503
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": 0.26305220883534136,
+          "activityGatedClassAccuracy": 0.16265060240963855,
+          "coverage": 0.6104417670682731,
+          "voicingFalseAlarm": 0.11304347826086956,
+          "acceptedPrecision50": 0.2555205047318612,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "N1",
+      "id": "speech-only",
+      "mode": null,
+      "inputSha256": "963d3dbbf7774ff35e4fe17c2c45b9cdc9c0b99b10a25b87f2b3ae493c6c360c",
+      "resampledPcmSha256": "0722353c7c4e7ea45906cd9372439c619090f7a9629966735d1b6196079cc1a6",
+      "sourceSeconds": 8.7754375,
+      "inferenceHops": 548,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 119,
+      "discardedTailMs": 7.4375,
+      "frameCounts": {
+        "mono": 0,
+        "unvoiced": 853,
+        "polyphonic": 0,
+        "boundary-guard": 0
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 0,
+        "unvoicedFrames": 853,
+        "polyActivityFrames": 0,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 0,
+          "fp": 129,
+          "fn": 0,
+          "tn": 724,
+          "f1": 0.0
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": null,
+          "activityGatedClassAccuracy": null,
+          "coverage": null,
+          "voicingFalseAlarm": 0.15123094958968347,
+          "acceptedPrecision50": 0.0,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "N1",
+      "id": "transients-only",
+      "mode": null,
+      "inputSha256": "d34b25e8cd908b4f35c3ebe3dde20972c0dd2152926322e983ea68f342fc720e",
+      "resampledPcmSha256": "2982a3aebd4120c44386927f745fa853d6bae6a14cf67d674b28fb1bfd1497b7",
+      "sourceSeconds": 8.7754375,
+      "inferenceHops": 548,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 119,
+      "discardedTailMs": 7.4375,
+      "frameCounts": {
+        "mono": 0,
+        "unvoiced": 853,
+        "polyphonic": 0,
+        "boundary-guard": 0
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 0,
+        "unvoicedFrames": 853,
+        "polyActivityFrames": 0,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 0,
+          "fp": 49,
+          "fn": 0,
+          "tn": 804,
+          "f1": 0.0
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": null,
+          "activityGatedClassAccuracy": null,
+          "coverage": null,
+          "voicingFalseAlarm": 0.05744431418522861,
+          "acceptedPrecision50": 0.0,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    },
+    {
+      "split": "N1",
+      "id": "speech-transients-only",
+      "mode": null,
+      "inputSha256": "9f6388d1dc59c171ac68be795f420d85a80ee56741f4bc4d38e5fa502386b560",
+      "resampledPcmSha256": "1a9f3b4eed417eb9d5dcf6b1341d6e0b5c620f2e232f0661b3fb012f0a3d6efa",
+      "sourceSeconds": 8.7754375,
+      "inferenceHops": 548,
+      "warmupExcludedHops": 3,
+      "discardedTailSamples": 119,
+      "discardedTailMs": 7.4375,
+      "frameCounts": {
+        "mono": 0,
+        "unvoiced": 853,
+        "polyphonic": 0,
+        "boundary-guard": 0
+      },
+      "gridSupportExcludedFrames": 0,
+      "metrics": {
+        "monoFrames": 0,
+        "unvoicedFrames": 853,
+        "polyActivityFrames": 0,
+        "outOfRangeMonoFrames": 0,
+        "activity": {
+          "tp": 0,
+          "fp": 130,
+          "fn": 0,
+          "tn": 723,
+          "f1": 0.0
+        },
+        "pitch": {
+          "oracleMonoClassAccuracy": null,
+          "activityGatedClassAccuracy": null,
+          "coverage": null,
+          "voicingFalseAlarm": 0.15240328253223914,
+          "acceptedPrecision50": 0.0,
+          "octaveErrors": 0
+        }
+      },
+      "eventF1": null
+    }
+  ],
+  "totals": {
+    "R1": {
+      "recordings": 12,
+      "wallSeconds": 3.561394158001349,
+      "cpuSeconds": 7.095285309000002,
+      "maxProcessPeakRssKiB": 157576,
+      "maxHopP95Ms": 0.310824400912679,
+      "deadlineMisses": 0,
+      "gridSupportExcludedFrames": 0,
+      "outOfRangeMonoFrames": 0
+    },
+    "N1": {
+      "recordings": 6,
+      "wallSeconds": 0.5897436409977672,
+      "cpuSeconds": 1.1722525409999989,
+      "maxProcessPeakRssKiB": 157576,
+      "maxHopP95Ms": 0.28274915130168665,
+      "deadlineMisses": 0,
+      "gridSupportExcludedFrames": 0,
+      "outOfRangeMonoFrames": 0
+    }
+  },
+  "interpretation": "The120-step toy-trained model fails real-recording pitch transfer in this fixed diagnostic. Activity F1 is not pitch accuracy. N1 increases in pitch score with interference do not establish robustness. No events/F1 decoded; no retraining or tuning."
+}
