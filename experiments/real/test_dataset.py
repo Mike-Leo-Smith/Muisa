@@ -24,6 +24,13 @@ class DatasetTests(unittest.TestCase):
   with wave.open(str(wav),'wb') as w:w.setnchannels(1);w.setsampwidth(2);w.setframerate(8000);w.writeframes(bytes(16000))
   item=dict(id='00_BN1-120-C_solo',player='00',style='BN',mode='solo',wav='x.wav',jams='x.jams',wavSha256='0'*64,jamsSha256=sha(self.j));idx=self.root/'index.json';idx.write_text(json.dumps(dict(schema='muisa-r1-local-v1',license='CC0',provenance='synthetic',recordings=[item])))
   with self.assertRaisesRegex(ValueError,'SHA256 mismatch'):load_index(self.root,idx,self.config)
+ def test_actual_native_manifest_schema(self):
+  self.write([dict(time=.2,duration=.5,value=60.12,confidence=None)]);j=self.root/'00_BN1-120-C_solo.jams';self.j.rename(j);wav=self.root/'00_BN1-120-C_solo_mic.wav'
+  with wave.open(str(wav),'wb') as w:w.setnchannels(1);w.setsampwidth(2);w.setframerate(8000);w.writeframes(bytes(16000))
+  native=dict(recordings=[dict(archive_path=wav.name,performer='00',part='solo',style='Bossa Nova',bytes=wav.stat().st_size,sha256=sha(wav),channels=1,sample_rate_hz=8000,frames=8000,sample_width_bytes=2,duration_seconds=1,annotation=dict(archive_path=j.name,bytes=j.stat().st_size,sha256=sha(j)))])
+  index=self.root/'manifest.json';index.write_text(json.dumps(native));rows,_=load_index(self.root,index,self.config);self.assertEqual(rows[0]['style'],'Bossa Nova');self.assertEqual(rows[0]['notes'][0]['midi'],60.12)
+  native['recordings'][0]['frames']=123;index.write_text(json.dumps(native))
+  with self.assertRaisesRegex(ValueError,'metadata mismatch'):load_index(self.root,index,self.config)
  def test_known_errata_rejected(self):
   idx=self.root/'index.json';idx.write_text(json.dumps(dict(schema='muisa-r1-local-v1',license='CC0',provenance='synthetic',recordings=[dict(id=self.config['excludedRecordings'][0])])))
   with self.assertRaisesRegex(ValueError,'erratum'):load_index(self.root,idx,self.config)

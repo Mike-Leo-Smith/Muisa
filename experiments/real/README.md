@@ -17,7 +17,13 @@
 
 ## 输入契约
 
-CLI输入为本地目录，无网络下载。推荐用已校验私有ZIP重新做安全解包和显式index：
+CLI输入为本地目录，无网络下载。**本次实际子集可直接用根目录原始manifest.json**：recordings[].archive_path/performer/part/style及嵌套annotation.archive_path，各自bytes/sha256，WAV channels/sample_rate_hz/frames/sample_width_bytes/duration_seconds均逐项校验。style允许Bossa Nova等全名；data_source弦索引原样保留。
+
+```sh
+/tmp/muisa-r1-yin/bin/python experiments/real/prepare.py --dataset "$R1_DATASET" --index "$R1_DATASET/manifest.json" --work /tmp/muisa-r1/work
+```
+
+无需再次解压或手工转字段。下述ZIP导入/显式index仅是其他已核验包装的可选入口：
 
 ```sh
 python3 experiments/real/index_dataset.py --zip "$R1_ZIP" --sha256 "$TRUSTED_ZIP_SHA256" --destination /tmp/muisa-r1/data
@@ -79,7 +85,7 @@ prepare拒绝覆盖现有prepared工作目录；要恢复只重跑model命令。
 
 ## 本地验证证据
 
-六项stdlib接口测试已执行：浮点音高/null confidence、拒绝重复/非法时长、共用边界/重叠mask、路径越界、hash失败、errata拒绝。三平台快CI运行这些测试；不会安装模型或拉数据。
+七项stdlib接口测试已执行：浮点音高/null confidence、拒绝重复/非法时长、共用边界/重叠mask、路径越界、hash失败、errata拒绝。三平台快CI运行这些测试；不会安装模型或拉数据。
 
 完整模型接口用自建3秒混合单音/重叠片段跑通，独立命令：
 
