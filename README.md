@@ -54,7 +54,7 @@ GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试
 
 ## 目录与下一步
 
-- [产品/课程草案](docs/PLAN.md)、[接口契约](docs/INTERFACES.md)、[竞品参考](docs/competitors.md)、[识别研究与实验计划](docs/RECOGNITION_RESEARCH.md)。
+- [产品/课程草案](docs/PLAN.md)、[接口契约](docs/INTERFACES.md)、[竞品参考](docs/competitors.md)、[识别研究与实验计划](docs/RECOGNITION_RESEARCH.md)、[MIDI/空间合成研究](docs/SYNTHESIS_RESEARCH.md)。
 - `src/input.js` / `capture-worklet.js`：设备授权、PCM、停止/异常。
 - `src/dsp.js` / `preprocess.js`：单音、起音、和弦候选与可关闭预处理。
 - `src/score.js`：声明式短谱、因果跟随、离线编辑距离。
