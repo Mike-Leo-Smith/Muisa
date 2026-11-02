@@ -1,5 +1,5 @@
 import {spawn} from 'node:child_process';
-const port='8123',base=`http://127.0.0.1:${port}`;
+const port='8123',basePath=process.env.BASE_PATH||'/',base=`http://127.0.0.1:${port}${basePath}`;
 const server=spawn(process.execPath,['scripts/serve.js'],{env:{...process.env,PORT:port,SERVE_ROOT:'dist'},stdio:'inherit'});
 try{
  let ready=false;for(let i=0;i<100;i++){try{if((await fetch(base)).ok){ready=true;break;}}catch{}await new Promise(r=>setTimeout(r,100));}

@@ -16,7 +16,7 @@ npm run build
 npm start
 ```
 
-在**运行服务的同一台电脑**打开 http://localhost:8000 。Windows、macOS、Linux 使用相同命令。也可解压源码 ZIP 后进入含 package.json 的目录运行。云端开发机的 `127.0.0.1` 不能直接在另一台电脑打开；远程使用需要安全端口转发或 HTTPS 托管，本项目不自动部署。
+在**运行服务的同一台电脑**打开 http://localhost:8000 。Windows、macOS、Linux 使用相同命令。也可解压源码 ZIP 后进入含 package.json 的目录运行。云端开发机的 `127.0.0.1` 不能直接在另一台电脑打开；远程使用需要安全端口转发或 HTTPS 托管，也可通过配置好的 GitHub Pages 流程发布。
 
 浏览器麦克风需要 localhost 或 HTTPS，并由用户点击授权。系统音频输入能否使用取决于操作系统、驱动和浏览器暴露；不保证自动访问任意硬件。
 
@@ -42,7 +42,7 @@ node scripts/noise-benchmark.js  # 14 组原始/预处理对照
 
 浏览器测试需安装 Chromium/Chrome，可通过 `CHROMIUM_PATH` 指定可执行文件；默认 `/usr/bin/chromium`。它使用假麦克风和生成 WAV，不访问真实麦克风。结果与已知失败见 [验证记录](docs/VALIDATION.md)。
 
-GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试与 fixture 生成；Linux Chrome 另测构建产物的生成 PCM、和弦、文件解码、假麦克风到实时对齐、拒绝权限和页面异常。工作流使用固定 SHA 的官方 [checkout](https://github.com/actions/checkout) 与 [setup-node](https://github.com/actions/setup-node)，权限仅 contents:read，无自定义密钥或部署。
+GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试与 fixture 生成；Linux Chrome 另测构建产物的生成 PCM、和弦、文件解码、假麦克风到实时对齐、拒绝权限和页面异常。工作流使用固定 SHA 的官方 [checkout](https://github.com/actions/checkout) 与 [setup-node](https://github.com/actions/setup-node)，测试权限仅 contents:read；部署 job 单独使用 pages:write 与 id-token:write，无自定义密钥。
 
 跨平台 Node 测试通过不等于真实硬件通过。当前真实琴、Windows/macOS 麦克风、Safari、Firefox 和手机音频链路均未验证；实际 CI 状态以仓库 Actions 为准。
 
@@ -62,3 +62,9 @@ GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试
 - `scripts/`、`test/`：构建、服务、生成器、浏览器和 PCM 测试。
 
 下一步用主动提供的真实琴录音完善标注集，优先改进连续换音、重复拨弦、弱音和噪声误判。和弦仅限 C/Am/G/Em/D/Dm/F 候选，不能诊断实际弦品或任意复音。录音保存如后续加入，应默认本地并由用户主动操作；不后台收集。
+
+## GitHub Pages
+
+同一 CI 的 deploy job 依赖三平台 core 与 browser 全部成功；只 master 的 push / 手动触发可发布，PR 不部署。browser job 在 `/` 与 `/Muisa/` 两个路径运行同样检查，然后上传它实际测试过的 dist；发布 job 不重新构建。首次需仓库管理员将 Settings → Pages → Build and deployment → Source 设为 GitHub Actions。普通 GITHUB_TOKEN 不能首次启用站点，本项目不要求生成 PAT。
+
+部署后工作流使用官方返回的 page_url 验证 HTTPS、version.json 提交 SHA 以及每个静态资源 hash。麦克风仍必须用户主动授权，音频不上传；远端假麦克风测试不代表用户设备已通过。没有 WASM / SharedArrayBuffer，也不需要额外 COOP/COEP 或 service worker。

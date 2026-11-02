@@ -2,10 +2,14 @@ import {createServer} from 'node:http';
 import {readFile} from 'node:fs/promises';
 import {resolve,extname,sep} from 'node:path';
 const root=resolve(process.env.SERVE_ROOT||'.');
+const basePath=process.env.BASE_PATH||'/';
+if(!basePath.startsWith('/')||!basePath.endsWith('/'))throw Error('BASE_PATH must start/end with /');
 const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.json':'application/json'};
 createServer(async(req,res)=>{
- try{const path=decodeURIComponent(new URL(req.url,'http://localhost').pathname),relative=path==='/'?'index.html':path.slice(1);
- if(relative!=='index.html'&&!relative.startsWith('src/')){res.writeHead(404);res.end();return;}
+ try{const path=decodeURIComponent(new URL(req.url,'http://localhost').pathname);
+ if(!path.startsWith(basePath)){res.writeHead(404);res.end();return;}
+ const relative=path===basePath?'index.html':path.slice(basePath.length);
+ if(relative!=='index.html'&&relative!=='version.json'&&!relative.startsWith('src/')){res.writeHead(404);res.end();return;}
  const file=resolve(root,relative);if(!file.startsWith(root+sep)){res.writeHead(403);res.end();return;}
  const bytes=await readFile(file);res.writeHead(200,{'Content-Type':types[extname(file)]||'application/octet-stream'});res.end(bytes);
  }catch{res.writeHead(404);res.end();}

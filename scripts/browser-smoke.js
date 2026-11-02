@@ -17,8 +17,11 @@ try{
  cdp=(method,params={})=>new Promise((resolve,reject)=>{const id=++next;pending.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
  const evaluate=async expression=>{const r=await cdp('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(JSON.stringify(r.exceptionDetails));return r.result.value;};
  const wait=async expression=>{for(let i=0;i<150;i++){if(await evaluate(expression))return;await delay(100);}throw Error('Timeout: '+expression);};
- await cdp('Runtime.enable');await cdp('Page.enable');await cdp('Browser.grantPermissions',{origin:base,permissions:['audioCapture']});
+ await cdp('Runtime.enable');await cdp('Page.enable');await cdp('Browser.grantPermissions',{origin:new URL(base).origin,permissions:['audioCapture']});
  await cdp('Page.navigate',{url:base});await wait("!!document.querySelector('#sample')");await delay(200);
+ assert.equal(await evaluate('window.isSecureContext'),true);
+ assert.equal(await evaluate("document.querySelector('#status').textContent"),'尚未访问输入设备');
+ console.log('PASS secure context and no automatic microphone permission request');
  await evaluate("document.querySelector('#sample').click()");await wait("document.querySelector('#status').textContent.includes('本地分析完成')");
  const melody=JSON.parse(await evaluate("document.querySelector('#alignment').textContent"));assert.equal(melody.events.length,8);assert.equal(melody.cost,0);console.log('PASS browser generated PCM -> worker DSP -> 8 notes -> offline alignment');
  await evaluate("document.querySelector('#chordSample').click()");await wait("document.querySelector('#status').textContent.includes('本地分析完成')");assert.equal(await evaluate("document.querySelector('#chord').textContent"),'C');console.log('PASS browser C chord baseline');
@@ -27,7 +30,7 @@ try{
  const live=JSON.parse(await evaluate("document.querySelector('#alignment').textContent"));assert.ok(Math.abs(live.event.midi-[64,65,67,65,64,67,65,64][live.index])<.5);assert.ok(live.event.confidence>=.8);assert.ok(live.event.onsetMs>=0);await evaluate("document.querySelector('#stop').click()");await wait("document.querySelector('#status').textContent==='stopped'");console.log('PASS browser fake microphone -> AudioWorklet -> live follower -> stop (not physical hardware)');
  const lifecycle=await evaluate(`(async()=>{const {SystemInput}=await import('./src/input.js');const samples=[];const source=new SystemInput(f=>samples.push(f.startSample),()=>{});const wait=()=>new Promise((resolve,reject)=>{let count=0;const timer=setInterval(()=>{if(samples.length>=3){clearInterval(timer);resolve();}else if(++count>100){clearInterval(timer);reject(Error('capture timeout'));}},30);});await source.start();await wait();const clock=samples.slice(),tracks=source.stream.getTracks(),context=source.context;await source.stop();const closed=context.state==='closed'&&tracks.every(t=>t.readyState==='ended');samples.length=0;await source.start();await wait();const restart=samples.slice();await source.stop();return {clock,closed,restart};})()`);
  assert.ok(lifecycle.closed);assert.ok(lifecycle.clock.slice(1).every((v,i)=>v>lifecycle.clock[i]));assert.equal(lifecycle.clock[0],0);assert.equal(lifecycle.restart[0],0);console.log('PASS input sample clock, stop cleanup and restart isolation');
- await cdp('Browser.setPermission',{origin:base,permission:{name:'microphone'},setting:'denied'});await evaluate("document.querySelector('#start').click()");await wait("document.querySelector('#status').textContent.startsWith('denied')");console.log('PASS microphone permission denial');
+ await cdp('Browser.setPermission',{origin:new URL(base).origin,permission:{name:'microphone'},setting:'denied'});await evaluate("document.querySelector('#start').click()");await wait("document.querySelector('#status').textContent.startsWith('denied')");console.log('PASS microphone permission denial');
  assert.deepEqual(errors,[]);console.log('PASS no page runtime exceptions');
 }finally{
  // Ask the actual browser to close, not just the launcher process. Chrome wrappers
