@@ -1,4 +1,4 @@
-import {preprocess} from './preprocess.js';
+import {preprocess,backgroundRms} from './preprocess.js';
 export const hz = midi => 440 * 2 ** ((midi - 69) / 12);
 export const midiOf = frequency => 69 + 12 * Math.log2(frequency / 440);
 export function level(x) {
@@ -79,7 +79,7 @@ export class Analyzer {
     this.chordBuffer.copyWithin(0,chunk.length);this.chordBuffer.set(chunk,this.chordBuffer.length-chunk.length);
     this.chordFilled=Math.min(this.chordBuffer.length,this.chordFilled+chunk.length);
     if(this.frames++%4===0 && this.chordFilled===this.chordBuffer.length) this.lastChord=metrics.clipped||processed.uncertain?{label:null,reason:'clipped-or-noisy',candidates:[]}:chord(this.chordBuffer,rate);
-    return {timeMs:time,discontinuity,level:metrics,pitch:detected,chord:this.lastChord,event};
+    return {timeMs:time,endTimeMs:(startSample+raw.length)/rate*1000,discontinuity,level:metrics,centeredRms:backgroundRms(raw),pitch:detected,chord:this.lastChord,event};
   }
 }
 export function* frames(channels, sampleRateHz, windowSize=4096, hopSize=1024){

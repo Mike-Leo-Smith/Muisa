@@ -39,3 +39,9 @@
 本地 32 项自动测试通过，浏览器扩为 7 项检查：新增实际匹配音高/索引断言、采样时钟推进、stop/restart 隔离与 track/context cleanup。修复校准 raw DC RMS 与 gate DC-free RMS 的域不一致，以及掉帧后 stale chord / 人工起音问题。重复或倒退时间戳、不同流/采样率、非法 PCM 显式拒绝。
 
 保留而未掩盖的失败：sample 0 起音当前被定位到首个 tail hop（48k 下 64ms）；截断不足窗口和尾部极短音可能无事件；快速重复/连音仍漏检。标准一对一事件指标、pitch RPA/voicing/coverage、纯噪声误事件率与计算延迟分位数已有机器可读框架。新 runner 只实跑自制 PCM，真实 GuitarSet/IDMT 数据、offset、完整和弦和硬件延迟尚未评估。详见 RECOGNITION_RESEARCH.md。
+
+## 校准/第一课开发切片
+
+新增 6 个 Node 测试后总计 38 项；Linux Chromium 的 root 与 `/Muisa/` 路径新增 3 组浏览器检查，总计 11 组（不是 11 种真实设备）。覆盖同域底噪、静音/混入信号、错误音区/倍频、质量诊断、跳过与状态失效、跟弹/填空/盲弹；浏览器实际 PCM 经 worker 检查演示校准和第一课，并检查 musical fake-input 不能当安静段通过。
+
+这里的演示信号只是确定性测试输入，不是逼真琴声。真实硬件、真实用户校准与教学有效性仍未验证。参见 [具体流程和限制](PRACTICE_GUIDE.md) 与 [真实录音 R1 诊断](../experiments/real/RESULTS_R1.md)。

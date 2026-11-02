@@ -1,6 +1,6 @@
 # Muisa
 
-面向个人练琴的 Web 音频实验台。先验证通用音频接入、单音/起音、有限候选和弦与短谱对齐，再逐步组合慢练、loop、反馈、填空和无提示练习。
+面向个人练琴的 Web 原型：输入校准、六根空弦检查与一根弦三个音的第一课，保留 Debug 音频实验台。识别基础仍在验证中。
 
 当前是可以运行的算法原型，不是已验证的完整吉他教师。所有音频处理在本地浏览器进行，不上传录音；没有账号、付费服务或硬件白名单。
 
@@ -20,7 +20,11 @@ npm start
 
 浏览器麦克风需要 localhost 或 HTTPS，并由用户点击授权。系统音频输入能否使用取决于操作系统、驱动和浏览器暴露；不保证自动访问任意硬件。
 
-## 实验流程
+## 校准与练习
+
+先选择系统输入并主动授权，按向导完成安静段、空弦音准和三种力度检查，再尝试第一课的跟弹、填空与无提示。每步可以跳过，跳过与识别通过分开记录。无硬件可用“合成演示”验证流程；它是测试信号，不是吉他音色示范。详见 [校准与第一课边界](docs/PRACTICE_GUIDE.md)。
+
+## Debug 实验流程
 
 1. 无硬件时点击“分析生成的单音示例 / C 大三和弦示例”。
 2. 选择本地音频文件（20 MB / 解码后 60 秒以内），在浏览器解码并演后分析；回放需主动点击播放器。
@@ -32,7 +36,7 @@ npm start
 ## 测试与 CI
 
 ```sh
-npm test                   # PCM 算法、生命周期与指标：32 项
+npm test                   # PCM 算法、生命周期与指标：38 项
 npm run build              # JS 语法检查 + dist 静态应用
 npm run fixtures           # 生成 6 个本地 PCM16 WAV
 npm run test:report         # JUnit 报告写入 reports/unit.xml
@@ -48,7 +52,7 @@ GitHub Actions 在 Linux / Windows / macOS + Node 22 执行构建、核心测试
 
 已运行的可选研究：[Y1：YIN/pYIN 成对比较](experiments/yin/README.md)，[C1：CREPE tiny/small](experiments/crepe/README.md)，以及 [B1：Basic Pitch ONNX](experiments/basic-pitch/README.md)，以及 [M1：MIDI / 房间响应](experiments/room/README.md)，以及 [M2：受控采样、起音校准与预处理](experiments/sampled/README.md)，以及 [A1：因果事件级跟谱](experiments/following/README.md)，以及 [M3：同输入电平/起止校准对照](experiments/calibrated/README.md)，均包含负结果与局限，未接入在线识别器。
 
-真实数据执行端使用 [R1 本地数据接口与固定协议](experiments/real/README.md)。接口已用自建 WAV/JAMS 验证，尚未提交真实 12 条录音评测结果。
+真实数据执行端使用 [R1 本地数据接口与固定协议](experiments/real/README.md)。已完成固定协议的 12 条真实录音开发诊断，见 [R1 结果与局限](experiments/real/RESULTS_R1.md)。稳定单音仅覆盖网格的 17.984%，不代表所有吉他演奏准确率。
 
 ## 技术路线
 
