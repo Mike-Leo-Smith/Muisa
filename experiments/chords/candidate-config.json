@@ -1,0 +1,14 @@
+{
+  "protocol": "C2-harmonic-nnls-development-v1",
+  "evaluationConfigSha256": "125272dbe4d343c81f5199f2026558732be4d716edf5582826722a3955c206b2",
+  "baselineDspSha256": "a3db9796d48690f822e821a7ca985b836afab275b873c9edac6ce54804bf742b",
+  "allowedSplit": "development-observed",
+  "analysisSampleRateHz": 48000,
+  "windowSamples": 16384,
+  "hopSamples": 4096,
+  "harmonicModel": {"minMidi":40,"maxMidi":83,"maxHz":4000,"harmonics":6,"decays":[0.8,1.4,2],"iterations":32,"minRms":0.008,"evidence":0.88,"weakest":0.035,"margin":0.08,"maxResidual":0.65},
+  "smoothing": false,
+  "training": false,
+  "thresholdSelection": "fixed on controlled synthetic development fixtures before real C2 inference",
+  "publishOnline": false
+}

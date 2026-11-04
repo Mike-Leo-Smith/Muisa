@@ -1,0 +1,1922 @@
+{
+  "status": "mathematical-synthetic-development-only-not-real-guitar",
+  "cases": 52,
+  "methods": {
+    "baseline": {
+      "correct": 44,
+      "total": 52
+    },
+    "rawThresholdOnly": {
+      "correct": 44,
+      "total": 52
+    },
+    "raw24": {
+      "correct": 44,
+      "total": 52
+    },
+    "harmonic24": {
+      "correct": 46,
+      "total": 52
+    }
+  },
+  "rows": [
+    {
+      "id": "C-sine",
+      "label": "C",
+      "condition": "sine",
+      "baseline": "C",
+      "rawThresholdOnly": "C",
+      "raw24": "C",
+      "harmonic24": "C",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.9996657044030585,
+        "weakest": 0.33318630484544987
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.9958404866843416,
+        "weakest": 0.32842399985110404
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.3207609434062983,
+      "computeMs": {
+        "baseline": 13.412800999999945,
+        "harmonic24": 18.10532599999999
+      }
+    },
+    {
+      "id": "C-harmonic",
+      "label": "C",
+      "condition": "harmonic",
+      "baseline": "C",
+      "rawThresholdOnly": "C",
+      "raw24": "C",
+      "harmonic24": "C",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.97523622482647,
+        "weakest": 0.30683049490589376
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.9928270497920382,
+        "weakest": 0.32700424739569633
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.11196454072164977,
+      "computeMs": {
+        "baseline": 7.997784000000024,
+        "harmonic24": 4.274736999999959
+      }
+    },
+    {
+      "id": "C-weak-third",
+      "label": "C",
+      "condition": "weak-third",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": "C",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.9822004487326863,
+        "weakest": 0.027567135839029436
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.9936490271594095,
+        "weakest": 0.10943787184915536
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.11352184417620279,
+      "computeMs": {
+        "baseline": 7.960219000000052,
+        "harmonic24": 3.577562999999941
+      }
+    },
+    {
+      "id": "C-inversion",
+      "label": "C",
+      "condition": "inversion",
+      "baseline": "C",
+      "rawThresholdOnly": "C",
+      "raw24": "C",
+      "harmonic24": "C",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.9744301756223636,
+        "weakest": 0.31414884741683924
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.9927492723122012,
+        "weakest": 0.32848557634353565
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.14652518010806095,
+      "computeMs": {
+        "baseline": 8.265150999999946,
+        "harmonic24": 2.699269999999956
+      }
+    },
+    {
+      "id": "C-strum",
+      "label": "C",
+      "condition": "strum",
+      "baseline": "C",
+      "rawThresholdOnly": "C",
+      "raw24": "C",
+      "harmonic24": "C",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.9733872284588443,
+        "weakest": 0.307701511092521
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.9526614419165707,
+        "weakest": 0.2954927141383323
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.10740134142353812,
+      "computeMs": {
+        "baseline": 7.8896239999999125,
+        "harmonic24": 2.735053999999991
+      }
+    },
+    {
+      "id": "C-detuned20cents",
+      "label": "C",
+      "condition": "detuned20cents",
+      "baseline": "C",
+      "rawThresholdOnly": "C",
+      "raw24": "C",
+      "harmonic24": "C",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.9975386873775852,
+        "weakest": 0.25349655073318234
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.921938354198783,
+        "weakest": 0.2810877134134806
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.6194832895246885,
+      "computeMs": {
+        "baseline": 8.060797999999977,
+        "harmonic24": 4.882327000000032
+      }
+    },
+    {
+      "id": "Am-sine",
+      "label": "Am",
+      "condition": "sine",
+      "baseline": "Am",
+      "rawThresholdOnly": "Am",
+      "raw24": "Am",
+      "harmonic24": "Am",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Am",
+        "evidence": 0.9994690590511294,
+        "weakest": 0.3330727316124426
+      },
+      "candidateTop": {
+        "label": "Am",
+        "evidence": 0.9909587836241925,
+        "weakest": 0.3271639332019396
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.3150133968134846,
+      "computeMs": {
+        "baseline": 8.929555999999934,
+        "harmonic24": 2.569087999999965
+      }
+    },
+    {
+      "id": "Am-harmonic",
+      "label": "Am",
+      "condition": "harmonic",
+      "baseline": "Am",
+      "rawThresholdOnly": "Am",
+      "raw24": "Am",
+      "harmonic24": "Am",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Am",
+        "evidence": 0.9732059002853313,
+        "weakest": 0.30531308354630055
+      },
+      "candidateTop": {
+        "label": "Am",
+        "evidence": 0.9813946968297087,
+        "weakest": 0.32503495331189297
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.08708537300444512,
+      "computeMs": {
+        "baseline": 7.838357999999971,
+        "harmonic24": 2.892818000000034
+      }
+    },
+    {
+      "id": "Am-weak-third",
+      "label": "Am",
+      "condition": "weak-third",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": "Am",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Am",
+        "evidence": 0.979811910085502,
+        "weakest": 0.02720188666191405
+      },
+      "candidateTop": {
+        "label": "Am",
+        "evidence": 0.9821994737960181,
+        "weakest": 0.11183742821046477
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.09177459569207844,
+      "computeMs": {
+        "baseline": 9.109051000000022,
+        "harmonic24": 3.7716009999999187
+      }
+    },
+    {
+      "id": "Am-inversion",
+      "label": "Am",
+      "condition": "inversion",
+      "baseline": "Am",
+      "rawThresholdOnly": "Am",
+      "raw24": "Am",
+      "harmonic24": "Am",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Am",
+        "evidence": 0.9725118236973816,
+        "weakest": 0.3162356606160405
+      },
+      "candidateTop": {
+        "label": "Am",
+        "evidence": 0.9833069285588718,
+        "weakest": 0.3260541853410603
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.11265177809735263,
+      "computeMs": {
+        "baseline": 7.864116999999965,
+        "harmonic24": 2.600795000000062
+      }
+    },
+    {
+      "id": "Am-strum",
+      "label": "Am",
+      "condition": "strum",
+      "baseline": "Am",
+      "rawThresholdOnly": "Am",
+      "raw24": "Am",
+      "harmonic24": "Am",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Am",
+        "evidence": 0.9707849240080576,
+        "weakest": 0.2972816985194516
+      },
+      "candidateTop": {
+        "label": "Am",
+        "evidence": 0.925264239250822,
+        "weakest": 0.2811058673656567
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.13629923369018063,
+      "computeMs": {
+        "baseline": 7.626885000000016,
+        "harmonic24": 2.9627209999999877
+      }
+    },
+    {
+      "id": "Am-detuned20cents",
+      "label": "Am",
+      "condition": "detuned20cents",
+      "baseline": "Am",
+      "rawThresholdOnly": "Am",
+      "raw24": "Am",
+      "harmonic24": "Am",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Am",
+        "evidence": 0.9945445626484992,
+        "weakest": 0.27336768147897955
+      },
+      "candidateTop": {
+        "label": "Am",
+        "evidence": 0.8922056174512196,
+        "weakest": 0.27744188998314934
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.5464387466128152,
+      "computeMs": {
+        "baseline": 9.198504999999955,
+        "harmonic24": 2.5824069999999892
+      }
+    },
+    {
+      "id": "G-sine",
+      "label": "G",
+      "condition": "sine",
+      "baseline": "G",
+      "rawThresholdOnly": "G",
+      "raw24": "G",
+      "harmonic24": "G",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "G",
+        "evidence": 0.999349097384887,
+        "weakest": 0.3330325901121679
+      },
+      "candidateTop": {
+        "label": "G",
+        "evidence": 0.9922435669547649,
+        "weakest": 0.32695839476934185
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.3130194945184816,
+      "computeMs": {
+        "baseline": 7.615527999999927,
+        "harmonic24": 2.7421450000000505
+      }
+    },
+    {
+      "id": "G-harmonic",
+      "label": "G",
+      "condition": "harmonic",
+      "baseline": "G",
+      "rawThresholdOnly": "G",
+      "raw24": "G",
+      "harmonic24": "G",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "G",
+        "evidence": 0.9729630142926283,
+        "weakest": 0.3045315402922059
+      },
+      "candidateTop": {
+        "label": "G",
+        "evidence": 0.9797235381054569,
+        "weakest": 0.3205909137126787
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.08365641464666038,
+      "computeMs": {
+        "baseline": 7.55370599999992,
+        "harmonic24": 2.509008999999992
+      }
+    },
+    {
+      "id": "G-weak-third",
+      "label": "G",
+      "condition": "weak-third",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": "G",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "G",
+        "evidence": 0.9797519215250136,
+        "weakest": 0.02715572835300635
+      },
+      "candidateTop": {
+        "label": "G",
+        "evidence": 0.9806297443444356,
+        "weakest": 0.10633948433322181
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.08278937519987378,
+      "computeMs": {
+        "baseline": 7.694385000000011,
+        "harmonic24": 2.5618769999999813
+      }
+    },
+    {
+      "id": "G-inversion",
+      "label": "G",
+      "condition": "inversion",
+      "baseline": "G",
+      "rawThresholdOnly": "G",
+      "raw24": "G",
+      "harmonic24": "G",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "G",
+        "evidence": 0.9721930363576523,
+        "weakest": 0.31604881992759226
+      },
+      "candidateTop": {
+        "label": "G",
+        "evidence": 0.9843058179464413,
+        "weakest": 0.3256782210257316
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.10497199409328102,
+      "computeMs": {
+        "baseline": 8.236988999999994,
+        "harmonic24": 2.284656000000041
+      }
+    },
+    {
+      "id": "G-strum",
+      "label": "G",
+      "condition": "strum",
+      "baseline": "G",
+      "rawThresholdOnly": "G",
+      "raw24": "G",
+      "harmonic24": "G",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "G",
+        "evidence": 0.9709214518753714,
+        "weakest": 0.318664107770749
+      },
+      "candidateTop": {
+        "label": "G",
+        "evidence": 0.9497621521625841,
+        "weakest": 0.298546056676056
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.08938378996366149,
+      "computeMs": {
+        "baseline": 8.027127999999948,
+        "harmonic24": 2.5119540000000598
+      }
+    },
+    {
+      "id": "G-detuned20cents",
+      "label": "G",
+      "condition": "detuned20cents",
+      "baseline": "G",
+      "rawThresholdOnly": "G",
+      "raw24": "G",
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "G",
+        "evidence": 0.98940811823914,
+        "weakest": 0.28834898623545624
+      },
+      "candidateTop": {
+        "label": "G",
+        "evidence": 0.8703306366664082,
+        "weakest": 0.27637501457714064
+      },
+      "candidateChecks": {
+        "evidence": false,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.5051408856361697,
+      "computeMs": {
+        "baseline": 8.035439999999994,
+        "harmonic24": 2.8222130000000334
+      }
+    },
+    {
+      "id": "Em-sine",
+      "label": "Em",
+      "condition": "sine",
+      "baseline": "Em",
+      "rawThresholdOnly": "Em",
+      "raw24": "Em",
+      "harmonic24": "Em",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Em",
+        "evidence": 0.9968764137115159,
+        "weakest": 0.3319712578648685
+      },
+      "candidateTop": {
+        "label": "Em",
+        "evidence": 0.9996341039835827,
+        "weakest": 0.32994993838649916
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.31058964237494363,
+      "computeMs": {
+        "baseline": 7.533617000000049,
+        "harmonic24": 2.3820709999999963
+      }
+    },
+    {
+      "id": "Em-harmonic",
+      "label": "Em",
+      "condition": "harmonic",
+      "baseline": "Em",
+      "rawThresholdOnly": "Em",
+      "raw24": "Em",
+      "harmonic24": "Em",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Em",
+        "evidence": 0.9702418168631041,
+        "weakest": 0.30379332162508593
+      },
+      "candidateTop": {
+        "label": "Em",
+        "evidence": 0.9762741211122287,
+        "weakest": 0.3233033771348688
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.07298863794685717,
+      "computeMs": {
+        "baseline": 7.538022999999953,
+        "harmonic24": 2.554116000000022
+      }
+    },
+    {
+      "id": "Em-weak-third",
+      "label": "Em",
+      "condition": "weak-third",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": "Em",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Em",
+        "evidence": 0.9756501129860092,
+        "weakest": 0.026909671364162575
+      },
+      "candidateTop": {
+        "label": "Em",
+        "evidence": 0.9791953859517983,
+        "weakest": 0.11227077756540924
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.0708672523455065,
+      "computeMs": {
+        "baseline": 8.345720000000028,
+        "harmonic24": 2.726511999999957
+      }
+    },
+    {
+      "id": "Em-inversion",
+      "label": "Em",
+      "condition": "inversion",
+      "baseline": "Em",
+      "rawThresholdOnly": "Em",
+      "raw24": "Em",
+      "harmonic24": "Em",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Em",
+        "evidence": 0.9716864800705723,
+        "weakest": 0.3151032589694179
+      },
+      "candidateTop": {
+        "label": "Em",
+        "evidence": 0.976822049540586,
+        "weakest": 0.32141153482792
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.08492442618375669,
+      "computeMs": {
+        "baseline": 8.489112999999975,
+        "harmonic24": 2.2823319999999967
+      }
+    },
+    {
+      "id": "Em-strum",
+      "label": "Em",
+      "condition": "strum",
+      "baseline": "Em",
+      "rawThresholdOnly": "Em",
+      "raw24": "Em",
+      "harmonic24": "Em",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Em",
+        "evidence": 0.9664457307045766,
+        "weakest": 0.3002943912124464
+      },
+      "candidateTop": {
+        "label": "Em",
+        "evidence": 0.9305717050513512,
+        "weakest": 0.28612154015275365
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.1067448574786014,
+      "computeMs": {
+        "baseline": 7.652742999999987,
+        "harmonic24": 2.2960230000001047
+      }
+    },
+    {
+      "id": "Em-detuned20cents",
+      "label": "Em",
+      "condition": "detuned20cents",
+      "baseline": "Em",
+      "rawThresholdOnly": "Em",
+      "raw24": "Em",
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Em",
+        "evidence": 0.9638685109762654,
+        "weakest": 0.29750905197700245
+      },
+      "candidateTop": {
+        "label": "Em",
+        "evidence": 0.8479864908251538,
+        "weakest": 0.2731090997456858
+      },
+      "candidateChecks": {
+        "evidence": false,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.43468103861844637,
+      "computeMs": {
+        "baseline": 8.026427000000012,
+        "harmonic24": 2.5157789999999522
+      }
+    },
+    {
+      "id": "D-sine",
+      "label": "D",
+      "condition": "sine",
+      "baseline": "D",
+      "rawThresholdOnly": "D",
+      "raw24": "D",
+      "harmonic24": "D",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "D",
+        "evidence": 0.9999396600101502,
+        "weakest": 0.3332973442283591
+      },
+      "candidateTop": {
+        "label": "D",
+        "evidence": 0.9997202521022902,
+        "weakest": 0.32893051733595197
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.32834353739526423,
+      "computeMs": {
+        "baseline": 7.918677000000002,
+        "harmonic24": 2.7602019999999357
+      }
+    },
+    {
+      "id": "D-harmonic",
+      "label": "D",
+      "condition": "harmonic",
+      "baseline": "D",
+      "rawThresholdOnly": "D",
+      "raw24": "D",
+      "harmonic24": "D",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "D",
+        "evidence": 0.9772044221380943,
+        "weakest": 0.30821953221358717
+      },
+      "candidateTop": {
+        "label": "D",
+        "evidence": 0.9964198676424687,
+        "weakest": 0.3289263712090356
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.12434110620404776,
+      "computeMs": {
+        "baseline": 7.716386999999941,
+        "harmonic24": 2.837225999999987
+      }
+    },
+    {
+      "id": "D-weak-third",
+      "label": "D",
+      "condition": "weak-third",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": "D",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": false
+      },
+      "baselineTop": {
+        "label": "D",
+        "evidence": 0.9828856395759605,
+        "weakest": 0.027521291343526967
+      },
+      "candidateTop": {
+        "label": "D",
+        "evidence": 0.9974254736149496,
+        "weakest": 0.11024914746130174
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.12800602082935342,
+      "computeMs": {
+        "baseline": 7.543491000000017,
+        "harmonic24": 3.6154490000000123
+      }
+    },
+    {
+      "id": "D-inversion",
+      "label": "D",
+      "condition": "inversion",
+      "baseline": "D",
+      "rawThresholdOnly": "D",
+      "raw24": "D",
+      "harmonic24": "D",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "D",
+        "evidence": 0.9762771113306293,
+        "weakest": 0.3154242033916124
+      },
+      "candidateTop": {
+        "label": "D",
+        "evidence": 0.9947830012047562,
+        "weakest": 0.3265398472649226
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.16170628199525647,
+      "computeMs": {
+        "baseline": 7.74884499999996,
+        "harmonic24": 2.6148259999999937
+      }
+    },
+    {
+      "id": "D-strum",
+      "label": "D",
+      "condition": "strum",
+      "baseline": "D",
+      "rawThresholdOnly": "D",
+      "raw24": "D",
+      "harmonic24": "D",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "D",
+        "evidence": 0.9772087965996229,
+        "weakest": 0.31096889024540436
+      },
+      "candidateTop": {
+        "label": "D",
+        "evidence": 0.9765038483250834,
+        "weakest": 0.32287546973743014
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.12558124938160828,
+      "computeMs": {
+        "baseline": 7.788274000000001,
+        "harmonic24": 2.3058180000000448
+      }
+    },
+    {
+      "id": "D-detuned20cents",
+      "label": "D",
+      "condition": "detuned20cents",
+      "baseline": "D",
+      "rawThresholdOnly": "D",
+      "raw24": "D",
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "D",
+        "evidence": 0.9983695995055739,
+        "weakest": 0.23519961267704664
+      },
+      "candidateTop": {
+        "label": "D",
+        "evidence": 0.9362209256068053,
+        "weakest": 0.27893711920834435
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": false
+      },
+      "relativeResidual": 0.6667501352207632,
+      "computeMs": {
+        "baseline": 7.682416999999987,
+        "harmonic24": 2.2918470000000752
+      }
+    },
+    {
+      "id": "Dm-sine",
+      "label": "Dm",
+      "condition": "sine",
+      "baseline": "Dm",
+      "rawThresholdOnly": "Dm",
+      "raw24": "Dm",
+      "harmonic24": "Dm",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Dm",
+        "evidence": 0.9999201673027119,
+        "weakest": 0.33330065406762543
+      },
+      "candidateTop": {
+        "label": "Dm",
+        "evidence": 0.9966341121600304,
+        "weakest": 0.3282790047783035
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.32769875083347905,
+      "computeMs": {
+        "baseline": 8.03695300000004,
+        "harmonic24": 2.6630569999999807
+      }
+    },
+    {
+      "id": "Dm-harmonic",
+      "label": "Dm",
+      "condition": "harmonic",
+      "baseline": "Dm",
+      "rawThresholdOnly": "Dm",
+      "raw24": "Dm",
+      "harmonic24": "Dm",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Dm",
+        "evidence": 0.9771151675309857,
+        "weakest": 0.30821028629490177
+      },
+      "candidateTop": {
+        "label": "Dm",
+        "evidence": 0.9877933888247894,
+        "weakest": 0.32511706558336184
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.12349663600665953,
+      "computeMs": {
+        "baseline": 7.642628999999943,
+        "harmonic24": 2.440637000000038
+      }
+    },
+    {
+      "id": "Dm-weak-third",
+      "label": "Dm",
+      "condition": "weak-third",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": "Dm",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": false
+      },
+      "baselineTop": {
+        "label": "Dm",
+        "evidence": 0.9828764096802464,
+        "weakest": 0.027508192602233538
+      },
+      "candidateTop": {
+        "label": "Dm",
+        "evidence": 0.989651341724341,
+        "weakest": 0.1136844747636923
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.12761967556495274,
+      "computeMs": {
+        "baseline": 7.533787000000075,
+        "harmonic24": 2.905275999999958
+      }
+    },
+    {
+      "id": "Dm-inversion",
+      "label": "Dm",
+      "condition": "inversion",
+      "baseline": "Dm",
+      "rawThresholdOnly": "Dm",
+      "raw24": "Dm",
+      "harmonic24": "Dm",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Dm",
+        "evidence": 0.97618464090229,
+        "weakest": 0.3153778854433134
+      },
+      "candidateTop": {
+        "label": "Dm",
+        "evidence": 0.9859751397507853,
+        "weakest": 0.32389690594504594
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.15618072938752517,
+      "computeMs": {
+        "baseline": 7.860672000000022,
+        "harmonic24": 2.796293999999989
+      }
+    },
+    {
+      "id": "Dm-strum",
+      "label": "Dm",
+      "condition": "strum",
+      "baseline": "Dm",
+      "rawThresholdOnly": "Dm",
+      "raw24": "Dm",
+      "harmonic24": "Dm",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Dm",
+        "evidence": 0.9771254634538928,
+        "weakest": 0.3125197654356283
+      },
+      "candidateTop": {
+        "label": "Dm",
+        "evidence": 0.9665217377685258,
+        "weakest": 0.3180980238770809
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.11867737160490699,
+      "computeMs": {
+        "baseline": 7.685021000000006,
+        "harmonic24": 2.9726459999999406
+      }
+    },
+    {
+      "id": "Dm-detuned20cents",
+      "label": "Dm",
+      "condition": "detuned20cents",
+      "baseline": "Dm",
+      "rawThresholdOnly": "Dm",
+      "raw24": "Dm",
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "Dm",
+        "evidence": 0.9972099199883524,
+        "weakest": 0.22970377410716486
+      },
+      "candidateTop": {
+        "label": "Dm",
+        "evidence": 0.9286896393009295,
+        "weakest": 0.27619079732506846
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": false
+      },
+      "relativeResidual": 0.6564815344707012,
+      "computeMs": {
+        "baseline": 7.795664999999985,
+        "harmonic24": 3.857748000000015
+      }
+    },
+    {
+      "id": "F-sine",
+      "label": "F",
+      "condition": "sine",
+      "baseline": "F",
+      "rawThresholdOnly": "F",
+      "raw24": "F",
+      "harmonic24": "F",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "F",
+        "evidence": 0.9957435093940559,
+        "weakest": 0.3317084753475833
+      },
+      "candidateTop": {
+        "label": "F",
+        "evidence": 0.9903464440878498,
+        "weakest": 0.3259757415039145
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.31070400606029663,
+      "computeMs": {
+        "baseline": 8.653866999999991,
+        "harmonic24": 2.956702000000064
+      }
+    },
+    {
+      "id": "F-harmonic",
+      "label": "F",
+      "condition": "harmonic",
+      "baseline": "F",
+      "rawThresholdOnly": "F",
+      "raw24": "F",
+      "harmonic24": "F",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "F",
+        "evidence": 0.969652084730034,
+        "weakest": 0.30234385180455475
+      },
+      "candidateTop": {
+        "label": "F",
+        "evidence": 0.9797812104042127,
+        "weakest": 0.319559730993203
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.0781504319814012,
+      "computeMs": {
+        "baseline": 7.829995999999937,
+        "harmonic24": 4.922857000000022
+      }
+    },
+    {
+      "id": "F-weak-third",
+      "label": "F",
+      "condition": "weak-third",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": "F",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "F",
+        "evidence": 0.9753240885702191,
+        "weakest": 0.026740269099310345
+      },
+      "candidateTop": {
+        "label": "F",
+        "evidence": 0.9801334695861298,
+        "weakest": 0.1059368889359613
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.07422225404253288,
+      "computeMs": {
+        "baseline": 12.552706999999941,
+        "harmonic24": 2.7482230000000527
+      }
+    },
+    {
+      "id": "F-inversion",
+      "label": "F",
+      "condition": "inversion",
+      "baseline": "F",
+      "rawThresholdOnly": "F",
+      "raw24": "F",
+      "harmonic24": "F",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "F",
+        "evidence": 0.9715638229235911,
+        "weakest": 0.3154645412808087
+      },
+      "candidateTop": {
+        "label": "F",
+        "evidence": 0.9826044989450614,
+        "weakest": 0.32570881016653547
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.09002607119798557,
+      "computeMs": {
+        "baseline": 7.910755999999992,
+        "harmonic24": 3.291549000000032
+      }
+    },
+    {
+      "id": "F-strum",
+      "label": "F",
+      "condition": "strum",
+      "baseline": "F",
+      "rawThresholdOnly": "F",
+      "raw24": "F",
+      "harmonic24": "F",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "F",
+        "evidence": 0.9685274547655701,
+        "weakest": 0.3066062005497896
+      },
+      "candidateTop": {
+        "label": "F",
+        "evidence": 0.9525687481329823,
+        "weakest": 0.3144694133873982
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.07878515778551319,
+      "computeMs": {
+        "baseline": 7.924015000000054,
+        "harmonic24": 2.4653639999999086
+      }
+    },
+    {
+      "id": "F-detuned20cents",
+      "label": "F",
+      "condition": "detuned20cents",
+      "baseline": "F",
+      "rawThresholdOnly": "F",
+      "raw24": "F",
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "F",
+        "evidence": 0.9772546292207922,
+        "weakest": 0.2968732609526648
+      },
+      "candidateTop": {
+        "label": "F",
+        "evidence": 0.8754385842819744,
+        "weakest": 0.28180006371690003
+      },
+      "candidateChecks": {
+        "evidence": false,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.4622853163489923,
+      "computeMs": {
+        "baseline": 7.963333999999918,
+        "harmonic24": 2.566534000000047
+      }
+    },
+    {
+      "id": "missing-third",
+      "label": null,
+      "condition": "missing-third",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.9829012788485878,
+        "weakest": 0.000013045814594408972
+      },
+      "candidateTop": {
+        "label": "Cm",
+        "evidence": 0.9929829995354087,
+        "weakest": 0.000023129070661270683
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": false,
+        "margin": false,
+        "residual": true
+      },
+      "relativeResidual": 0.11424364531152312,
+      "computeMs": {
+        "baseline": 7.899028999999928,
+        "harmonic24": 2.4710520000000997
+      }
+    },
+    {
+      "id": "single",
+      "label": null,
+      "condition": "single",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": false,
+        "margin": false
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.9992664102160722,
+        "weakest": 0.0000276724336432686
+      },
+      "candidateTop": {
+        "label": "Cm",
+        "evidence": 0.9900480746336712,
+        "weakest": 0.000013256042836020966
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": false,
+        "margin": false,
+        "residual": true
+      },
+      "relativeResidual": 0.0794751254349781,
+      "computeMs": {
+        "baseline": 7.713492999999971,
+        "harmonic24": 2.4458059999999477
+      }
+    },
+    {
+      "id": "seventh",
+      "label": null,
+      "condition": "seventh",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": false,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.7399744692199693,
+        "weakest": 0.23282395371142364
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.7473782186141957,
+        "weakest": 0.246231288750179
+      },
+      "candidateChecks": {
+        "evidence": false,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.12312089485442629,
+      "computeMs": {
+        "baseline": 7.944926000000123,
+        "harmonic24": 2.6873829999999543
+      }
+    },
+    {
+      "id": "sus",
+      "label": null,
+      "condition": "sus",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": false,
+        "weakest": false,
+        "margin": false
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.6850021956178688,
+        "weakest": 0.000026316932831097584
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.6636817727317509,
+        "weakest": 0.000988409940337079
+      },
+      "candidateChecks": {
+        "evidence": false,
+        "weakest": false,
+        "margin": false,
+        "residual": true
+      },
+      "relativeResidual": 0.11490739954130147,
+      "computeMs": {
+        "baseline": 8.185372000000143,
+        "harmonic24": 2.602046999999857
+      }
+    },
+    {
+      "id": "OOV-Fsharp",
+      "label": null,
+      "condition": "OOV-Fsharp",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": false,
+        "weakest": false,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "D",
+        "evidence": 0.30519840558610317,
+        "weakest": 0.00007195757623411128
+      },
+      "candidateTop": {
+        "label": "F#",
+        "evidence": 0.9787330127322125,
+        "weakest": 0.3198621576189345
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.07962046687289168,
+      "computeMs": {
+        "baseline": 7.666594000000032,
+        "harmonic24": 2.648065000000088
+      }
+    },
+    {
+      "id": "weak-seventh",
+      "label": null,
+      "condition": "weak-OOV-extension",
+      "baseline": "C",
+      "rawThresholdOnly": "C",
+      "raw24": "C",
+      "harmonic24": "C",
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": true,
+        "weakest": true,
+        "margin": true
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.9562209603269038,
+        "weakest": 0.300851727487474
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.9157224785483291,
+        "weakest": 0.3016266157110857
+      },
+      "candidateChecks": {
+        "evidence": true,
+        "weakest": true,
+        "margin": true,
+        "residual": true
+      },
+      "relativeResidual": 0.11278578662911942,
+      "computeMs": {
+        "baseline": 7.563861000000088,
+        "harmonic24": 2.5824479999998857
+      }
+    },
+    {
+      "id": "quiet-C",
+      "label": null,
+      "condition": "gate",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": true,
+        "notTopReference": null,
+        "evidence": false,
+        "weakest": false,
+        "margin": false
+      },
+      "baselineTop": null,
+      "candidateTop": null,
+      "candidateChecks": null,
+      "relativeResidual": null,
+      "computeMs": {
+        "baseline": 0.13863500000002205,
+        "harmonic24": 0.2387740000001486
+      }
+    },
+    {
+      "id": "silence",
+      "label": null,
+      "condition": "gate",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": true,
+        "notTopReference": null,
+        "evidence": false,
+        "weakest": false,
+        "margin": false
+      },
+      "baselineTop": null,
+      "candidateTop": null,
+      "candidateChecks": null,
+      "relativeResidual": null,
+      "computeMs": {
+        "baseline": 0.17343699999992168,
+        "harmonic24": 0.19471900000007736
+      }
+    },
+    {
+      "id": "noise-only",
+      "label": null,
+      "condition": "negative",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": false,
+        "weakest": true,
+        "margin": false
+      },
+      "baselineTop": {
+        "label": "G",
+        "evidence": 0.3683354514191579,
+        "weakest": 0.08947869550555161
+      },
+      "candidateTop": {
+        "label": "Em",
+        "evidence": 0.29390474055010724,
+        "weakest": 0.09254165449965696
+      },
+      "candidateChecks": {
+        "evidence": false,
+        "weakest": true,
+        "margin": false,
+        "residual": false
+      },
+      "relativeResidual": 0.8086607075172214,
+      "computeMs": {
+        "baseline": 8.229808000000048,
+        "harmonic24": 2.7930699999999433
+      }
+    },
+    {
+      "id": "mid-window-change",
+      "label": null,
+      "condition": "transition-unknown",
+      "baseline": null,
+      "rawThresholdOnly": null,
+      "raw24": null,
+      "harmonic24": null,
+      "baselineChecks": {
+        "quiet": false,
+        "notTopReference": null,
+        "evidence": false,
+        "weakest": true,
+        "margin": false
+      },
+      "baselineTop": {
+        "label": "C",
+        "evidence": 0.74181124852615,
+        "weakest": 0.1392954851209613
+      },
+      "candidateTop": {
+        "label": "C",
+        "evidence": 0.5369203092922484,
+        "weakest": 0.14043656222910328
+      },
+      "candidateChecks": {
+        "evidence": false,
+        "weakest": true,
+        "margin": false,
+        "residual": true
+      },
+      "relativeResidual": 0.42202729379647774,
+      "computeMs": {
+        "baseline": 7.958605999999918,
+        "harmonic24": 2.5115630000000237
+      }
+    }
+  ]
+}
