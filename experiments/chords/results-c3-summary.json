@@ -1,0 +1,262 @@
+{
+  "protocol": "C3-chroma-contrast-development-v1",
+  "status": "completed-independent-private-environment",
+  "summaryOnly": true,
+  "codeRevision": "45f35c272a86c917f170596f0cb0f6e3b638c5dd",
+  "configSha256": "b429976237fdb582212ff75f0b284c7169778b7a9384640079112387d2085e6a",
+  "runtime": {
+    "node": "24.22.1",
+    "wallSeconds": 37.597,
+    "userCpuSeconds": 37.12,
+    "peakRssKiB": 98060
+  },
+  "validation": {
+    "sourceModified": false,
+    "baselineAndC2ThresholdExactlyReproduced": true,
+    "sameC1PcmAndLabels": true,
+    "R2AccessedOrRun": false,
+    "resampled": false,
+    "trained": false,
+    "onlineDspChanged": false
+  },
+  "data": {
+    "recordings": 6,
+    "seconds": 143.807,
+    "frames": 1664,
+    "stableFrames": 1354,
+    "transitionFrames": 310,
+    "stableSupportedFrames": 200,
+    "stableOovFrames": 1154,
+    "transitionSupportedFrames": 35,
+    "transitionOovFrames": 275,
+    "supportedStableRecording": "02_Jazz1-130-D_comp",
+    "stableOovErrorsRecording": "03_Rock1-130-A_comp"
+  },
+  "methods": {
+    "baseline": {
+      "stable": {
+        "supported": 200,
+        "correct": 29,
+        "acceptedSupported": 29,
+        "coverage": 0.145,
+        "accuracy": 0.145,
+        "oov": 1154,
+        "oovAccepted": 11,
+        "oovFalseAcceptance": 0.009532062391681109,
+        "acceptedKnownTruthPrecision": 0.725,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 23,
+            "recall": 0.15333333333333332
+          },
+          "G": {
+            "frames": 50,
+            "correct": 6,
+            "recall": 0.12
+          }
+        }
+      },
+      "transition": {
+        "supported": 35,
+        "correct": 3,
+        "oov": 275,
+        "oovAccepted": 4,
+        "acceptedKnownTruthPrecision": 0.42857142857142855
+      }
+    },
+    "rawThresholdOnly": {
+      "stable": {
+        "supported": 200,
+        "correct": 45,
+        "acceptedSupported": 45,
+        "coverage": 0.225,
+        "accuracy": 0.225,
+        "oov": 1154,
+        "oovAccepted": 11,
+        "oovFalseAcceptance": 0.009532062391681109,
+        "acceptedKnownTruthPrecision": 0.8035714285714286,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 32,
+            "recall": 0.21333333333333335
+          },
+          "G": {
+            "frames": 50,
+            "correct": 13,
+            "recall": 0.26
+          }
+        }
+      },
+      "transition": {
+        "supported": 35,
+        "correct": 2,
+        "oov": 275,
+        "oovAccepted": 3,
+        "acceptedKnownTruthPrecision": 0.4
+      }
+    },
+    "sqrtTriads": {
+      "stable": {
+        "supported": 200,
+        "correct": 71,
+        "acceptedSupported": 71,
+        "coverage": 0.355,
+        "accuracy": 0.355,
+        "oov": 1154,
+        "oovAccepted": 20,
+        "oovFalseAcceptance": 0.01733102253032929,
+        "acceptedKnownTruthPrecision": 0.7802197802197802,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 50,
+            "recall": 0.3333333333333333
+          },
+          "G": {
+            "frames": 50,
+            "correct": 21,
+            "recall": 0.42
+          }
+        }
+      },
+      "transition": {
+        "supported": 35,
+        "correct": 3,
+        "oov": 275,
+        "oovAccepted": 6,
+        "acceptedKnownTruthPrecision": 0.3333333333333333
+      }
+    },
+    "linearExpanded": {
+      "stable": {
+        "supported": 200,
+        "correct": 16,
+        "acceptedSupported": 16,
+        "coverage": 0.08,
+        "accuracy": 0.08,
+        "oov": 1154,
+        "oovAccepted": 12,
+        "oovFalseAcceptance": 0.010398613518197574,
+        "acceptedKnownTruthPrecision": 0.5714285714285714,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 13,
+            "recall": 0.08666666666666667
+          },
+          "G": {
+            "frames": 50,
+            "correct": 3,
+            "recall": 0.06
+          }
+        }
+      },
+      "transition": {
+        "supported": 35,
+        "correct": 2,
+        "oov": 275,
+        "oovAccepted": 7,
+        "acceptedKnownTruthPrecision": 0.2222222222222222
+      }
+    },
+    "contrastExpanded": {
+      "stable": {
+        "supported": 200,
+        "correct": 63,
+        "acceptedSupported": 63,
+        "coverage": 0.315,
+        "accuracy": 0.315,
+        "oov": 1154,
+        "oovAccepted": 15,
+        "oovFalseAcceptance": 0.012998266897746967,
+        "acceptedKnownTruthPrecision": 0.8076923076923077,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 46,
+            "recall": 0.30666666666666664
+          },
+          "G": {
+            "frames": 50,
+            "correct": 17,
+            "recall": 0.34
+          }
+        }
+      },
+      "transition": {
+        "supported": 35,
+        "correct": 3,
+        "oov": 275,
+        "oovAccepted": 5,
+        "acceptedKnownTruthPrecision": 0.375
+      }
+    }
+  },
+  "diagnostics": {
+    "stableSupported": {
+      "frames": 200,
+      "accepted": 63,
+      "quiet": 2,
+      "uncertain": 133,
+      "oovRejected": 2,
+      "similarityFailed": 117,
+      "marginFailed": 71,
+      "allTonesFailed": 39,
+      "topLabelAvailable": 198,
+      "topMismatch": 75,
+      "gateCountsOverlap": true
+    },
+    "stableOov": {
+      "frames": 1154,
+      "accepted": 15,
+      "uncertain": 920,
+      "oovRejected": 215,
+      "quiet": 4
+    },
+    "baselineStableSupported": {
+      "evidenceFailed": 91,
+      "weakestFailed": 143,
+      "marginFailed": 105,
+      "topMismatchExcludingQuiet": 14
+    }
+  },
+  "compute": {
+    "contrastIncrement": {
+      "clipP50RangeMs": [
+        0.062,
+        0.076
+      ],
+      "clipP95RangeMs": [
+        0.278,
+        0.407
+      ],
+      "deadlineMisses": 0
+    },
+    "contrastPipeline": {
+      "clipP50RangeMs": [
+        16.63,
+        17.94
+      ],
+      "clipP95RangeMs": [
+        29.53,
+        36.44
+      ],
+      "deadlineMisses": 25
+    },
+    "baselineDeadlineMisses": 25,
+    "hopDeadlineMs": 85.333,
+    "otherAblationsTimedIndependently": false
+  },
+  "limitations": [
+    "Summary transcribed from independent evaluation report; full JSON not available in this container",
+    "R1 repeatedly observed development, not unbiased test; all supported stable truth D/G in one recording",
+    "Other five recordings have undefined supported accuracy, not zero",
+    "OOV false accepts all in one Rock recording; no N/silence truth and no unknown truth excluded",
+    "Overlapping frames correlated; template spaces differ, top mismatch not standalone quality metric",
+    "Performed labels retain score-root and segmentation prior; no listening audit",
+    "No noise robustness, per-string correctness or stable-output/device latency claim",
+    "Recall increase accompanies OOV false-accept increase; not universal improvement"
+  ]
+}
