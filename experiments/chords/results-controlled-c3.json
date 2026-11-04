@@ -1,0 +1,1991 @@
+{
+  "status": "synthetic-development-selection-not-holdout",
+  "configs": {
+    "quarterPowerInitial": {
+      "exponent": 0.25,
+      "minSimilarity": 0.9,
+      "minMargin": 0.04
+    },
+    "sqrtStrict": {
+      "exponent": 0.5,
+      "minSimilarity": 0.9,
+      "minMargin": 0.04
+    },
+    "sqrtSelected": {
+      "exponent": 0.5,
+      "relativeFloor": 0.002,
+      "minSimilarity": 0.85,
+      "minMargin": 0.02,
+      "minToneFraction": 0.06,
+      "includeExtended": true
+    }
+  },
+  "selected": "sqrtSelected",
+  "selectionReason": "Quarter power amplified harmonic leakage; strict sqrt rejected all weak-third fixtures. Selected sqrt is a bounded next real-development candidate, not validated improvement.",
+  "cases": 52,
+  "counts": {
+    "baseline": 44,
+    "quarterPowerInitial": 24,
+    "sqrtStrict": 44,
+    "sqrtSelected": 47
+  },
+  "rows": [
+    {
+      "id": "C-sine",
+      "label": "C",
+      "condition": "sine",
+      "baseline": "C",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.1339745961749932
+        },
+        "sqrtStrict": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.133974596053287
+        },
+        "sqrtSelected": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.133974596053287
+        }
+      }
+    },
+    {
+      "id": "C-harmonic",
+      "label": "C",
+      "condition": "harmonic",
+      "baseline": "C",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.003893924160754958
+        },
+        "sqrtStrict": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07460773191086512
+        },
+        "sqrtSelected": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07460773191086512
+        }
+      }
+    },
+    {
+      "id": "C-weak-third",
+      "label": "C",
+      "condition": "weak-third",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.022224308835025686
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "C",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.02223297954308545
+        },
+        "sqrtSelected": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.02223297954308545
+        }
+      }
+    },
+    {
+      "id": "C-inversion",
+      "label": "C",
+      "condition": "inversion",
+      "baseline": "C",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0030050462052766402
+        },
+        "sqrtStrict": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07376228527334638
+        },
+        "sqrtSelected": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07376228527334638
+        }
+      }
+    },
+    {
+      "id": "C-strum",
+      "label": "C",
+      "condition": "strum",
+      "baseline": "C",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.00161054733226218
+        },
+        "sqrtStrict": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07240375047144698
+        },
+        "sqrtSelected": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07240375047144698
+        }
+      }
+    },
+    {
+      "id": "C-detuned20cents",
+      "label": "C",
+      "condition": "detuned20cents",
+      "baseline": "C",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13236573164986232
+        },
+        "sqrtStrict": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13321452276263612
+        },
+        "sqrtSelected": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13321452276263612
+        }
+      }
+    },
+    {
+      "id": "Am-sine",
+      "label": "Am",
+      "condition": "sine",
+      "baseline": "Am",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13397459583642757
+        },
+        "sqrtStrict": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13397459469894946
+        },
+        "sqrtSelected": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13397459469894946
+        }
+      }
+    },
+    {
+      "id": "Am-harmonic",
+      "label": "Am",
+      "condition": "harmonic",
+      "baseline": "Am",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0037590014501986957
+        },
+        "sqrtStrict": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07441664644197088
+        },
+        "sqrtSelected": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07441664644197088
+        }
+      }
+    },
+    {
+      "id": "Am-weak-third",
+      "label": "Am",
+      "condition": "weak-third",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.01636486486401123
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "Am",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.016613416706244055
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.016613416706244055
+        }
+      }
+    },
+    {
+      "id": "Am-inversion",
+      "label": "Am",
+      "condition": "inversion",
+      "baseline": "Am",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.002738622374081734
+        },
+        "sqrtStrict": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07344489886623884
+        },
+        "sqrtSelected": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07344489886623884
+        }
+      }
+    },
+    {
+      "id": "Am-strum",
+      "label": "Am",
+      "condition": "strum",
+      "baseline": "Am",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0010437002838205034
+        },
+        "sqrtStrict": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.0717661793385842
+        },
+        "sqrtSelected": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.0717661793385842
+        }
+      }
+    },
+    {
+      "id": "Am-detuned20cents",
+      "label": "Am",
+      "condition": "detuned20cents",
+      "baseline": "Am",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.12940750889434438
+        },
+        "sqrtStrict": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13331389668477267
+        },
+        "sqrtSelected": {
+          "label": "Am",
+          "topLabel": "Am",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13331389668477267
+        }
+      }
+    },
+    {
+      "id": "G-sine",
+      "label": "G",
+      "condition": "sine",
+      "baseline": "G",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13397459608159745
+        },
+        "sqrtStrict": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.1339745956797218
+        },
+        "sqrtSelected": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.1339745956797218
+        }
+      }
+    },
+    {
+      "id": "G-harmonic",
+      "label": "G",
+      "condition": "harmonic",
+      "baseline": "G",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.003242639279398829
+        },
+        "sqrtStrict": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07391705259926407
+        },
+        "sqrtSelected": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07391705259926407
+        }
+      }
+    },
+    {
+      "id": "G-weak-third",
+      "label": "G",
+      "condition": "weak-third",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.01581864774573738
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "G",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.016091872229569426
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.016091872229569426
+        }
+      }
+    },
+    {
+      "id": "G-inversion",
+      "label": "G",
+      "condition": "inversion",
+      "baseline": "G",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0026142254410616017
+        },
+        "sqrtStrict": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07332345098887183
+        },
+        "sqrtSelected": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07332345098887183
+        }
+      }
+    },
+    {
+      "id": "G-strum",
+      "label": "G",
+      "condition": "strum",
+      "baseline": "G",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0008578916460899588
+        },
+        "sqrtStrict": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07161320733547327
+        },
+        "sqrtSelected": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07161320733547327
+        }
+      }
+    },
+    {
+      "id": "G-detuned20cents",
+      "label": "G",
+      "condition": "detuned20cents",
+      "baseline": "G",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.05083002831074013
+        },
+        "sqrtStrict": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.11071655019841364
+        },
+        "sqrtSelected": {
+          "label": "G",
+          "topLabel": "G",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.11071655019841364
+        }
+      }
+    },
+    {
+      "id": "Em-sine",
+      "label": "Em",
+      "condition": "sine",
+      "baseline": "Em",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.1320640495411316
+        },
+        "sqrtStrict": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.1338042250595911
+        },
+        "sqrtSelected": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.1338042250595911
+        }
+      }
+    },
+    {
+      "id": "Em-harmonic",
+      "label": "Em",
+      "condition": "harmonic",
+      "baseline": "Em",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.003200904815481076
+        },
+        "sqrtStrict": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07382685529933208
+        },
+        "sqrtSelected": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07382685529933208
+        }
+      }
+    },
+    {
+      "id": "Em-weak-third",
+      "label": "Em",
+      "condition": "weak-third",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Em",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.014790764015443991
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "Em",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.015266744200902793
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.015266744200902793
+        }
+      }
+    },
+    {
+      "id": "Em-inversion",
+      "label": "Em",
+      "condition": "inversion",
+      "baseline": "Em",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.002284838221293106
+        },
+        "sqrtStrict": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07299047208995313
+        },
+        "sqrtSelected": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07299047208995313
+        }
+      }
+    },
+    {
+      "id": "Em-strum",
+      "label": "Em",
+      "condition": "strum",
+      "baseline": "Em",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.00037650892105356437
+        },
+        "sqrtStrict": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.0710123473008738
+        },
+        "sqrtSelected": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.0710123473008738
+        }
+      }
+    },
+    {
+      "id": "Em-detuned20cents",
+      "label": "Em",
+      "condition": "detuned20cents",
+      "baseline": "Em",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.053404670060440584
+        },
+        "sqrtStrict": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.11204794843227617
+        },
+        "sqrtSelected": {
+          "label": "Em",
+          "topLabel": "Em",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.11204794843227617
+        }
+      }
+    },
+    {
+      "id": "D-sine",
+      "label": "D",
+      "condition": "sine",
+      "baseline": "D",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.1339745962103025
+        },
+        "sqrtStrict": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.133974596194526
+        },
+        "sqrtSelected": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.133974596194526
+        }
+      }
+    },
+    {
+      "id": "D-harmonic",
+      "label": "D",
+      "condition": "harmonic",
+      "baseline": "D",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.008188486382925686
+        },
+        "sqrtStrict": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.0786493672829014
+        },
+        "sqrtSelected": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.0786493672829014
+        }
+      }
+    },
+    {
+      "id": "D-weak-third",
+      "label": "D",
+      "condition": "weak-third",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.022717553962028902
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "D",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.022648335977049405
+        },
+        "sqrtSelected": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.022648335977049405
+        }
+      }
+    },
+    {
+      "id": "D-inversion",
+      "label": "D",
+      "condition": "inversion",
+      "baseline": "D",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0070551237358724705
+        },
+        "sqrtStrict": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07761267819437212
+        },
+        "sqrtSelected": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07761267819437212
+        }
+      }
+    },
+    {
+      "id": "D-strum",
+      "label": "D",
+      "condition": "strum",
+      "baseline": "D",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.008108039608494488
+        },
+        "sqrtStrict": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07859741583691682
+        },
+        "sqrtSelected": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07859741583691682
+        }
+      }
+    },
+    {
+      "id": "D-detuned20cents",
+      "label": "D",
+      "condition": "detuned20cents",
+      "baseline": "D",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13244338080707907
+        },
+        "sqrtStrict": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13286678291198573
+        },
+        "sqrtSelected": {
+          "label": "D",
+          "topLabel": "D",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13286678291198573
+        }
+      }
+    },
+    {
+      "id": "Dm-sine",
+      "label": "Dm",
+      "condition": "sine",
+      "baseline": "Dm",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13397459621392227
+        },
+        "sqrtStrict": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13397459620900443
+        },
+        "sqrtSelected": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13397459620900443
+        }
+      }
+    },
+    {
+      "id": "Dm-harmonic",
+      "label": "Dm",
+      "condition": "harmonic",
+      "baseline": "Dm",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.008041193583165351
+        },
+        "sqrtStrict": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07851310617263763
+        },
+        "sqrtSelected": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07851310617263763
+        }
+      }
+    },
+    {
+      "id": "Dm-weak-third",
+      "label": "Dm",
+      "condition": "weak-third",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.02269529384459923
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.02262278634998971
+        },
+        "sqrtSelected": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.02262278634998971
+        }
+      }
+    },
+    {
+      "id": "Dm-inversion",
+      "label": "Dm",
+      "condition": "inversion",
+      "baseline": "Dm",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.006846772871267892
+        },
+        "sqrtStrict": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.0774178467307175
+        },
+        "sqrtSelected": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.0774178467307175
+        }
+      }
+    },
+    {
+      "id": "Dm-strum",
+      "label": "Dm",
+      "condition": "strum",
+      "baseline": "Dm",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.00799536593161021
+        },
+        "sqrtStrict": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07849427547308618
+        },
+        "sqrtSelected": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07849427547308618
+        }
+      }
+    },
+    {
+      "id": "Dm-detuned20cents",
+      "label": "Dm",
+      "condition": "detuned20cents",
+      "baseline": "Dm",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13190535616401988
+        },
+        "sqrtStrict": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13281218970000774
+        },
+        "sqrtSelected": {
+          "label": "Dm",
+          "topLabel": "Dm",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.13281218970000774
+        }
+      }
+    },
+    {
+      "id": "F-sine",
+      "label": "F",
+      "condition": "sine",
+      "baseline": "F",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.04576943076602791
+        },
+        "sqrtStrict": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.10748985105762032
+        },
+        "sqrtSelected": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.10748985105762032
+        }
+      }
+    },
+    {
+      "id": "F-harmonic",
+      "label": "F",
+      "condition": "harmonic",
+      "baseline": "F",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "F:maj7",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0017670164225499496
+        },
+        "sqrtStrict": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.06893000714214625
+        },
+        "sqrtSelected": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.06893000714214625
+        }
+      }
+    },
+    {
+      "id": "F-weak-third",
+      "label": "F",
+      "condition": "weak-third",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "F",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.014665936133672397
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "F",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.015150239637075402
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.015150239637075402
+        }
+      }
+    },
+    {
+      "id": "F-inversion",
+      "label": "F",
+      "condition": "inversion",
+      "baseline": "F",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0017897385422911416
+        },
+        "sqrtStrict": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07251502843420021
+        },
+        "sqrtSelected": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07251502843420021
+        }
+      }
+    },
+    {
+      "id": "F-strum",
+      "label": "F",
+      "condition": "strum",
+      "baseline": "F",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "F:maj7",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0020059179710352204
+        },
+        "sqrtStrict": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.06871427128717456
+        },
+        "sqrtSelected": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.06871427128717456
+        }
+      }
+    },
+    {
+      "id": "F-detuned20cents",
+      "label": "F",
+      "condition": "detuned20cents",
+      "baseline": "F",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.04581854395739937
+        },
+        "sqrtStrict": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.10774133499001837
+        },
+        "sqrtSelected": {
+          "label": "F",
+          "topLabel": "F",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.10774133499001837
+        }
+      }
+    },
+    {
+      "id": "missing-third",
+      "label": null,
+      "condition": "missing-third",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C:sus2",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "C:sus2",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "C:sus2",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0
+        }
+      }
+    },
+    {
+      "id": "single",
+      "label": null,
+      "condition": "single",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": false
+          },
+          "margin": 0
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "C",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": false
+          },
+          "margin": 0
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "C",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": false
+          },
+          "margin": 0
+        }
+      }
+    },
+    {
+      "id": "seventh",
+      "label": null,
+      "condition": "seventh",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C:7",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.12241106730603668
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "C:7",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.12610274034375313
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "C:7",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.12610274034375313
+        }
+      }
+    },
+    {
+      "id": "sus",
+      "label": null,
+      "condition": "sus",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C:sus4",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "C:sus4",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "C:sus4",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0
+        }
+      }
+    },
+    {
+      "id": "OOV-Fsharp",
+      "label": null,
+      "condition": "OOV-Fsharp",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "F#",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0014936036378855322
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "F#",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07221310311566209
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "F#",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07221310311566209
+        }
+      }
+    },
+    {
+      "id": "weak-seventh",
+      "label": null,
+      "condition": "weak-OOV-extension",
+      "baseline": "C",
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "C:7",
+          "checks": {
+            "similarity": true,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.007634328831878423
+        },
+        "sqrtStrict": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.06234518634736641
+        },
+        "sqrtSelected": {
+          "label": "C",
+          "topLabel": "C",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.06234518634736641
+        }
+      }
+    },
+    {
+      "id": "quiet-C",
+      "label": null,
+      "condition": "gate",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": null,
+          "checks": null,
+          "margin": null
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": null,
+          "checks": null,
+          "margin": null
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": null,
+          "checks": null,
+          "margin": null
+        }
+      }
+    },
+    {
+      "id": "silence",
+      "label": null,
+      "condition": "gate",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": null,
+          "checks": null,
+          "margin": null
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": null,
+          "checks": null,
+          "margin": null
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": null,
+          "checks": null,
+          "margin": null
+        }
+      }
+    },
+    {
+      "id": "noise-only",
+      "label": null,
+      "condition": "negative",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "E:min7",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.00004982393923547157
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "E:min7",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0000941151460452927
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "E:min7",
+          "checks": {
+            "similarity": false,
+            "margin": false,
+            "allTones": true
+          },
+          "margin": 0.0000941151460452927
+        }
+      }
+    },
+    {
+      "id": "mid-window-change",
+      "label": null,
+      "condition": "transition-unknown",
+      "baseline": null,
+      "variants": {
+        "quarterPowerInitial": {
+          "label": null,
+          "topLabel": "A:min7",
+          "checks": {
+            "similarity": false,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.06538109379713752
+        },
+        "sqrtStrict": {
+          "label": null,
+          "topLabel": "A:min7",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07759864318091236
+        },
+        "sqrtSelected": {
+          "label": null,
+          "topLabel": "A:min7",
+          "checks": {
+            "similarity": true,
+            "margin": true,
+            "allTones": true
+          },
+          "margin": 0.07759864318091236
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Same52 known mathematical cases used for selection; no independent accuracy claim",
+    "Weak seventh remains false accepted; no claim to fix OOV ambiguity",
+    "No real C3 data observed during configuration selection"
+  ]
+}

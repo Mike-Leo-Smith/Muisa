@@ -1,0 +1,15 @@
+{
+  "protocol": "C3-chroma-contrast-development-v1",
+  "evaluationConfigSha256": "125272dbe4d343c81f5199f2026558732be4d716edf5582826722a3955c206b2",
+  "baselineDspSha256": "a3db9796d48690f822e821a7ca985b836afab275b873c9edac6ce54804bf742b",
+  "counterfactualConfigSha256": "bdba92e37e3258b39231f768901c4cb8839e6f16ac935120d1b88f33280635a5",
+  "allowedSplit": "development-observed",
+  "analysisSampleRateHz": 48000,
+  "windowSamples": 16384,
+  "hopSamples": 4096,
+  "contrast": {"exponent":0.5,"relativeFloor":0.002,"minSimilarity":0.85,"minMargin":0.02,"minToneFraction":0.06,"includeExtended":true},
+  "smoothing": false,
+  "training": false,
+  "thresholdSelection": "Three controlled synthetic development configurations inspected; fixed before real C3 inference",
+  "publishOnline": false
+}

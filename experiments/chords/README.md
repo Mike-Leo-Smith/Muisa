@@ -42,3 +42,5 @@ SELECTION 是 `{ "inputManifestSha256": "...", "recordings": { "recording-id": {
 执行分工：该代码容器 r1/r1-retry 目录为空，历史 materialization/下载问题未重试；真实推理由已有私有评测环境完成并回传脱敏结果。后续改进继续使用同一哈希绑定输入。
 
 更新：C1已由独立私有环境完成，[真实结果与限制](RESULTS_C1.md)。已完成结果以 results-c1.json 为准，原config hash不改。下一阶段为独立[C2非神经候选](CANDIDATE.md)，尚未接入线上，真实C2开发结果待执行。
+
+C2真实R1结果已回传，泛音分解未胜出：[负结果](RESULTS_C2.md)。[C3固定开发候选](C3.md)继续原始chroma的幅度压缩/扩展模板对照，仍不部署，不读取R2反馈选参。
