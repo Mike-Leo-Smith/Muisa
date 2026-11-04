@@ -1,0 +1,16 @@
+{
+  "protocol": "C1-clean-chord-baseline-v1",
+  "status": "preregistered-not-run-on-real-audio",
+  "analysisSampleRateHz": 48000,
+  "windowSamples": 16384,
+  "hopSamples": 4096,
+  "boundaryGuardSeconds": 0.15,
+  "labelTarget": "performed-root-and-exact-major-minor-quality-ignore-bass",
+  "candidateLabels": ["C", "Am", "G", "Em", "D", "Dm", "F"],
+  "preprocess": false,
+  "normalization": false,
+  "baselineRevision": "09c0deade08e9604f5bfc12a5832a13985a700d3",
+  "splits": {"R1": "development-observed", "R2": "observed-validation-same-players"},
+  "thresholdTuning": false,
+  "newDatasetDownloads": false
+}
