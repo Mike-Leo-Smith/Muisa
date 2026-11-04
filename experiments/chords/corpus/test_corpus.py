@@ -32,7 +32,8 @@ class CorpusTests(unittest.TestCase):
  def test_frozen_end_to_end_evaluation_and_tamper(self):
   root=self.root/'frozen';result=freeze(self.write_manifest(),self.root,root);self.assertFalse(result['inferenceRun'])
   script=Path(__file__).with_name('evaluate.js');output=self.root/'evaluated'
-  subprocess.run(['node',str(script),str(root),str(output),'development'],check=True,capture_output=True)
+  result=subprocess.run(['node',str(script),str(root),str(output),'development'],capture_output=True,text=True)
+  self.assertEqual(result.returncode,0,result.stdout+result.stderr)
   r=json.loads((output/'evaluation.json').read_text());self.assertEqual(len(r['recordings']),9);self.assertEqual(r['pooled']['baseline']['stable']['acceptedSupported'],0)
   first=root/'clip-0000.f32';first.write_bytes(b'changed')
   broken=subprocess.run(['node',str(script),str(root),str(self.root/'bad'),'development'],capture_output=True)
