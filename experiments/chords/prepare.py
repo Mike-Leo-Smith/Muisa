@@ -44,10 +44,11 @@ def main():
   if track is None or not track['segments']:raise ValueError('Missing selected chord annotation')
   with wave.open(str(root/r['wav'])) as w:
    rate=w.getframerate();x=np.frombuffer(w.readframes(w.getnframes()),dtype='<i2').astype(np.float32)/32768
+  source_clipped=int(np.sum(np.abs(x)>=.9999))
   divisor=math.gcd(rate,config['analysisSampleRateHz']);x=resample_poly(x,config['analysisSampleRateHz']//divisor,rate//divisor).astype('<f4')
   if not np.isfinite(x).all():raise ValueError('Nonfinite PCM')
   name=r['id']+'.f32';x.tofile(work/name)
-  output.append(dict(id=r['id'],player=r['player'],style=r['style'],sourceWavSha256=r['wavSha256'],sourceJamsSha256=r['jamsSha256'],pcmFile=name,pcmSha256=reader.sha(work/name),samples=len(x),segments=track['segments'],selectedTrack=track['trackIndex'],trackMetadata=track['metadata'],annotationTime=track['annotationTime'],reviewBasis=s['reviewBasis'],sourceClippedSamples=int(np.sum(np.abs(x)>=.9999))))
+  output.append(dict(id=r['id'],player=r['player'],style=r['style'],sourceWavSha256=r['wavSha256'],sourceJamsSha256=r['jamsSha256'],pcmFile=name,pcmSha256=reader.sha(work/name),samples=len(x),segments=track['segments'],selectedTrack=track['trackIndex'],trackMetadata=track['metadata'],annotationTime=track['annotationTime'],reviewBasis=s['reviewBasis'],sourceClippedSamples=source_clipped,analysisClippedSamples=int(np.sum(np.abs(x)>=.9999))))
  (work/'prepared.json').write_text(json.dumps(dict(**provenance,selectionSha256=reader.sha(selection_path),config=config,recordings=output),indent=2)+'\n')
  print('Prepared six observed comp recordings without normalization; no inference.')
 if __name__=='__main__':main()
