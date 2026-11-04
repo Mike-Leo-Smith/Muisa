@@ -44,3 +44,5 @@ SELECTION 是 `{ "inputManifestSha256": "...", "recordings": { "recording-id": {
 更新：C1已由独立私有环境完成，[真实结果与限制](RESULTS_C1.md)。已完成结果以 results-c1.json 为准，原config hash不改。下一阶段为独立[C2非神经候选](CANDIDATE.md)，尚未接入线上，真实C2开发结果待执行。
 
 C2真实R1结果已回传，泛音分解未胜出：[负结果](RESULTS_C2.md)。[C3固定开发候选](C3.md)继续原始chroma的幅度压缩/扩展模板对照，仍不部署，不读取R2反馈选参。
+
+[C3真实结果](RESULTS_C3.md)：提高R1召回同时增加OOV误接受，不部署。下一阶段优先[C4数据覆盖与固定导入评估](corpus/README.md)，暂停对单条录音继续选参。

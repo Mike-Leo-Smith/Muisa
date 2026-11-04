@@ -1,0 +1,11 @@
+{
+  "revision": "45f35c272a86c917f170596f0cb0f6e3b638c5dd",
+  "sha256": {
+    "src/dsp.js": "a3db9796d48690f822e821a7ca985b836afab275b873c9edac6ce54804bf742b",
+    "src/preprocess.js": "dce0915ca4b2a0934ff0f17bdd86545780160db3547378cfc0b948b78d890ec7",
+    "experiments/chords/contrast.js": "e3e34a46b750a44d4e836372dca7d67084c9255c4b23961ec0ad843cf34c21d9",
+    "experiments/chords/diagnostics.js": "56eb5123b3b2842e3314e019d0086ad57cb0c3b5bb9f017e2ea96f7efebc3567",
+    "experiments/chords/c3-config.json": "b429976237fdb582212ff75f0b284c7169778b7a9384640079112387d2085e6a",
+    "experiments/chords/candidate-config.json": "bdba92e37e3258b39231f768901c4cb8839e6f16ac935120d1b88f33280635a5"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "protocol": "C4-data-coverage-v1",
+  "candidateRevision": "45f35c272a86c917f170596f0cb0f6e3b638c5dd",
+  "analysisSampleRateHz": 48000,
+  "windowSamples": 16384,
+  "hopSamples": 4096,
+  "boundaryGuardSeconds": 0.25,
+  "targets": ["C","Am","G","Em","D","Dm","F"],
+  "minimumReviewedSecondsPerTarget": 5,
+  "minimumReviewedNoChordSeconds": 5,
+  "minimumReviewedOovSeconds": 5,
+  "minimumDistinctPerformers": 2,
+  "methods": ["baseline","rawThresholdOnly","contrastExpanded"],
+  "normalize": false,
+  "sourceAudioRedistribution": false,
+  "fitNewParameters": false
+}
