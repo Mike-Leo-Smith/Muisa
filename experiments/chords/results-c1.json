@@ -1,0 +1,1276 @@
+{
+  "protocol": "C1-clean-chord-baseline-v1",
+  "executionStatus": "completed",
+  "executionDate": "2026-11-04",
+  "sourceRevision": "ba6f545e45fdfa3240278e245c7854007f103c53",
+  "baselineRevision": "09c0deade08e9604f5bfc12a5832a13985a700d3",
+  "runtime": {
+    "node": "24.22.1",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "python": "3.12.14"
+  },
+  "runtimeDifference": "README reference Node22/numpy2.2.6/scipy1.15.3; executed Node24.22.1/numpy2.3.5/scipy1.17.0. Resampled PCM hashes retained.",
+  "provenanceAdapter": "Only git provenance lookups replaced with connector-verified source revision and baseline source file. Evaluation, DSP, label logic and configuration unchanged. Source blob SHA-1 and SHA-256 verified; adapter diff included.",
+  "adapterSha256": {
+    "prepare-local.py": "6189f8433f708ff362e6994224867c9794d914ff7b408e30262513e2f11d2ee9",
+    "run-local.js": "c7207e3af89939e9781a57eaf150f779aacf4b68b23747a22bef81cfdcecdd3b"
+  },
+  "baselineProof": {
+    "blob": "03a7e6b2269dfb31cac3be6eb538eae0c3872d55",
+    "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/09c0deade08e9604f5bfc12a5832a13985a700d3/src/dsp.js",
+    "sha256": "a3db9796d48690f822e821a7ca985b836afab275b873c9edac6ce54804bf742b",
+    "identicalToTargetRevision": true
+  },
+  "sourceFiles": {
+    "experiments/chords/prepare.py": {
+      "blob": "e78488c5a835b524c80a94a0870aeb3bd8ece5cc",
+      "sha256": "ca0150e81b0160ed5889253e0737f2fd2eebd81d2976423ad29e71bcd234b9ce",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/experiments/chords/prepare.py"
+    },
+    "experiments/chords/run.js": {
+      "blob": "ca9a2ef1bc59bafb0dd89538d2389a672777e676",
+      "sha256": "0aff46385c196365d26a8d39b4d7d7f28fb59e8b190b1e169a77de0f102a069c",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/experiments/chords/run.js"
+    },
+    "experiments/chords/README.md": {
+      "blob": "1f7190e7d3f95b52cd587e7141fee5375b82a6bc",
+      "sha256": "32afdcca9ac2c90df2b773d29fc8b3c94c0b167ab156b40c873c842f09f4cc8c",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/experiments/chords/README.md"
+    },
+    "experiments/real/dataset.py": {
+      "blob": "eec8fe3d5c8b483cbe8cc31b78ebfab68a9ec307",
+      "sha256": "60d34c2a4e681c1b486d636c9520c7c802f94d87803857206248c922b56c109a",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/experiments/real/dataset.py"
+    },
+    "experiments/real/config.json": {
+      "blob": "1dce93715dd467f2d451982bd2ca2d6d038d5e31",
+      "sha256": "74156f09af63dbe885c417f07f52f02dc54ef657f991384aad727a0728a2e609",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/experiments/real/config.json"
+    },
+    "experiments/chords/config.json": {
+      "blob": "0311fbbac39e18300b14d886bbf06b01a7852960",
+      "sha256": "125272dbe4d343c81f5199f2026558732be4d716edf5582826722a3955c206b2",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/experiments/chords/config.json"
+    },
+    "experiments/chords/labels.js": {
+      "blob": "a062999c4ae293e3155f21a9dc32c67d3aab85b8",
+      "sha256": "f3ff879c6b6b6e098a6db3c49d5916918d38a836128978011d69bea2c04c9a81",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/experiments/chords/labels.js"
+    },
+    "package.json": {
+      "blob": "ff5ca8a01a152aa043ee531443e6a63ed87273d9",
+      "sha256": "0772ac68e1cdc525f12ac8b7fea23629555749bedeb29ca8375be5cb357b249f",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/package.json"
+    },
+    "experiments/window/results-w1.json": {
+      "blob": "610cc62b305a95c5007dba6cbf34b20a1c982da4",
+      "sha256": "a22ceec9520eb08f1a43b42b558634595396593e462e45ca54414208a691d82d",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/experiments/window/results-w1.json"
+    },
+    "src/dsp.js": {
+      "blob": "03a7e6b2269dfb31cac3be6eb538eae0c3872d55",
+      "sha256": "a3db9796d48690f822e821a7ca985b836afab275b873c9edac6ce54804bf742b",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/src/dsp.js"
+    },
+    "src/preprocess.js": {
+      "blob": "5f4a5f024a0c69aabf4777c1d6cd05768c75f75f",
+      "sha256": "dce0915ca4b2a0934ff0f17bdd86545780160db3547378cfc0b948b78d890ec7",
+      "url": "https://github.com/Mike-Leo-Smith/Muisa/blob/ba6f545e45fdfa3240278e245c7854007f103c53/src/preprocess.js"
+    }
+  },
+  "archivesSha256": {
+    "guitarset_muisa_r2_holdout_12.zip": "5afba9ec1560a141f94e4f6230dc0a0312d849e3d92244f1ad449957b8817886",
+    "guitarset_muisa_diagnostic_12.zip": "ddd6daf31cd0b2b0861d86d6580a09384c15a2eb6c853b2c4cad7c97c7acf3db",
+    "annotation.zip": "8daa02e6417ccca1685feb44b135e95928ad7037e5032ecb326b5791856fda99"
+  },
+  "rawReportsSha256": {
+    "R1": "e469ac3c7a442c4274d4ffc96b303484fedf3b62f129bdc96462a7b0ad69ec00",
+    "R2": "1c60dc90e320dbf4c14804bcfc04355e6112fc4c04ac8678f2dc584d316d1a84"
+  },
+  "labelSelection": "Each of 12 recordings selected track15 only after reviewing actual metadata: data_source=Semi-automatic chord transcription with manual verification; annotation_rules=Chord sheet-informed symbolic chord transcription based on the included separate string note transcriptions with the chord segmentation and root derived from sheet music. Performed labels retain score root and segmentation prior.",
+  "splits": {
+    "R1": {
+      "split": "development-observed",
+      "durationSeconds": 143.80727083333335,
+      "frameWeightSeconds": 0.08533333333333333,
+      "configSha256": "125272dbe4d343c81f5199f2026558732be4d716edf5582826722a3955c206b2",
+      "preparedSha256": "1b7aa9c2ff4c8e9206aa95b9d145737ef2e741b5ec47e9953229bf1a0e24b1b7",
+      "selectionSha256": "f0c7a20b968e6fd1417c6dcb27ab1a1a1c978d4ee99b003d0f7f69456e527d98",
+      "baselineDspSha256": "a3db9796d48690f822e821a7ca985b836afab275b873c9edac6ce54804bf742b",
+      "pooledEqualDurationGrid": {
+        "transition": {
+          "frames": 310,
+          "supported": 35,
+          "correct": 3,
+          "acceptedSupported": 3,
+          "oov": 275,
+          "oovAccepted": 4,
+          "noChord": 0,
+          "noChordAccepted": 0,
+          "unknown": 0,
+          "unknownAccepted": 0,
+          "perChordRecall": {
+            "D": {
+              "frames": 20,
+              "recall": 0.0
+            },
+            "G": {
+              "frames": 15,
+              "recall": 0.2
+            }
+          },
+          "supportedAccuracy": 0.08571428571428572,
+          "supportedCoverage": 0.08571428571428572,
+          "acceptedSupportedPrecision": 1,
+          "oovFalseAcceptance": 0.014545454545454545,
+          "noChordFalseAcceptance": null,
+          "supportedFraction": 0.11290322580645161
+        },
+        "stable": {
+          "frames": 1354,
+          "supported": 200,
+          "correct": 29,
+          "acceptedSupported": 29,
+          "oov": 1154,
+          "oovAccepted": 11,
+          "noChord": 0,
+          "noChordAccepted": 0,
+          "unknown": 0,
+          "unknownAccepted": 0,
+          "perChordRecall": {
+            "D": {
+              "frames": 150,
+              "recall": 0.15333333333333332
+            },
+            "G": {
+              "frames": 50,
+              "recall": 0.12
+            }
+          },
+          "supportedAccuracy": 0.145,
+          "supportedCoverage": 0.145,
+          "acceptedSupportedPrecision": 1,
+          "oovFalseAcceptance": 0.009532062391681109,
+          "noChordFalseAcceptance": null,
+          "supportedFraction": 0.14771048744460857
+        }
+      },
+      "macro": {
+        "transition": {
+          "supportedAccuracy": {
+            "mean": 0.08571428571428572,
+            "definedRecordings": 1
+          },
+          "supportedCoverage": {
+            "mean": 0.08571428571428572,
+            "definedRecordings": 1
+          },
+          "acceptedSupportedPrecision": {
+            "mean": 1.0,
+            "definedRecordings": 1
+          },
+          "oovFalseAcceptance": {
+            "mean": 0.015873015873015872,
+            "definedRecordings": 6
+          },
+          "noChordFalseAcceptance": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "supportedFraction": {
+            "mean": 0.1388888888888889,
+            "definedRecordings": 6
+          }
+        },
+        "stable": {
+          "supportedAccuracy": {
+            "mean": 0.145,
+            "definedRecordings": 1
+          },
+          "supportedCoverage": {
+            "mean": 0.145,
+            "definedRecordings": 1
+          },
+          "acceptedSupportedPrecision": {
+            "mean": 1.0,
+            "definedRecordings": 1
+          },
+          "oovFalseAcceptance": {
+            "mean": 0.008566978193146417,
+            "definedRecordings": 6
+          },
+          "noChordFalseAcceptance": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "supportedFraction": {
+            "mean": 0.1557632398753894,
+            "definedRecordings": 6
+          }
+        },
+        "annotation-gap": {
+          "supportedAccuracy": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "supportedCoverage": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "acceptedSupportedPrecision": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "oovFalseAcceptance": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "noChordFalseAcceptance": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "supportedFraction": {
+            "mean": null,
+            "definedRecordings": 0
+          }
+        }
+      },
+      "recordings": [
+        {
+          "id": "00_BN1-129-Eb_comp",
+          "player": "00",
+          "style": "Bossa Nova",
+          "pcmSha256": "746116e394a013e95e929d847daaac3c07930ab0369f28be6adee2a15e60c17a",
+          "seconds": 22.324416666666668,
+          "frameCount": 258,
+          "tailSeconds": 0.05241666666666667,
+          "metrics": {
+            "transition": {
+              "frames": 40,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 40,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 3.4133333333333336,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 3.4133333333333336,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 218,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 218,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 18.602666666666668,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 18.602666666666668,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 22.016,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 15.547542000000021,
+            "p95Ms": 22.72665199999983,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 2
+          }
+        },
+        {
+          "id": "01_Funk1-114-Ab_comp",
+          "player": "01",
+          "style": "Funk",
+          "pcmSha256": "decabb2c7faa888e1db30dcc8909fec8d336624bd1c204323face743ad0c3410",
+          "seconds": 25.258395833333335,
+          "frameCount": 292,
+          "tailSeconds": 0.0850625,
+          "metrics": {
+            "transition": {
+              "frames": 41,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 41,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 3.498666666666667,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 3.498666666666667,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 251,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 251,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 21.418666666666667,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 21.418666666666667,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 24.917333333333332,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 15.325908999999228,
+            "p95Ms": 20.36885699999948,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "02_Jazz1-130-D_comp",
+          "player": "02",
+          "style": "Jazz",
+          "pcmSha256": "9c5dc1eb3e7dcdf2ceff9bcdf816ce331a64d7a1e7e73f2990f837cb36533fb0",
+          "seconds": 22.147229166666666,
+          "frameCount": 256,
+          "tailSeconds": 0.04589583333333333,
+          "metrics": {
+            "transition": {
+              "frames": 42,
+              "supported": 35,
+              "correct": 3,
+              "acceptedSupported": 3,
+              "oov": 7,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "D": {
+                  "frames": 20,
+                  "recall": 0.0
+                },
+                "G": {
+                  "frames": 15,
+                  "recall": 0.2
+                }
+              },
+              "supportedAccuracy": 0.08571428571428572,
+              "supportedCoverage": 0.08571428571428572,
+              "acceptedSupportedPrecision": 1,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.8333333333333334,
+              "gridSeconds": 3.584,
+              "supportedSeconds": 2.986666666666667,
+              "oovSeconds": 0.5973333333333334,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 214,
+              "supported": 200,
+              "correct": 29,
+              "acceptedSupported": 29,
+              "oov": 14,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "D": {
+                  "frames": 150,
+                  "recall": 0.15333333333333332
+                },
+                "G": {
+                  "frames": 50,
+                  "recall": 0.12
+                }
+              },
+              "supportedAccuracy": 0.145,
+              "supportedCoverage": 0.145,
+              "acceptedSupportedPrecision": 1,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.9345794392523364,
+              "gridSeconds": 18.261333333333333,
+              "supportedSeconds": 17.066666666666666,
+              "oovSeconds": 1.1946666666666668,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 21.845333333333333,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 14.99776600000041,
+            "p95Ms": 18.46153200000117,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "03_Rock1-130-A_comp",
+          "player": "03",
+          "style": "Rock",
+          "pcmSha256": "ae139ba4256fb69a27e6ce9f976dc0e26ec43c5c1c0dca5a81dcb41c08ff5bbb",
+          "seconds": 22.147229166666666,
+          "frameCount": 256,
+          "tailSeconds": 0.04589583333333333,
+          "metrics": {
+            "transition": {
+              "frames": 42,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 42,
+              "oovAccepted": 4,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.09523809523809523,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 3.584,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 3.584,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 214,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 214,
+              "oovAccepted": 11,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0514018691588785,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 18.261333333333333,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 18.261333333333333,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 21.845333333333333,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 15.781033000001116,
+            "p95Ms": 21.46588100000008,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "04_SS1-100-C#_comp",
+          "player": "04",
+          "style": "Singer-Songwriter",
+          "pcmSha256": "ecfa0a9337820a94921d893daaf43174c3cbba44a1dd87d416e4cd564aed1cc8",
+          "seconds": 28.8,
+          "frameCount": 334,
+          "tailSeconds": 0.042666666666666665,
+          "metrics": {
+            "transition": {
+              "frames": 42,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 42,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 3.584,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 3.584,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 292,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 292,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 24.917333333333332,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 24.917333333333332,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 28.501333333333335,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 18.434778999999253,
+            "p95Ms": 44.545985000000655,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 5
+          }
+        },
+        {
+          "id": "05_BN2-166-Ab_comp",
+          "player": "05",
+          "style": "Bossa Nova",
+          "pcmSha256": "ee16e5f5f90f15f41ffb0dead72d88f494a16e18198671aa6ff2fdfbbef609ae",
+          "seconds": 23.13,
+          "frameCount": 268,
+          "tailSeconds": 0.004666666666666667,
+          "metrics": {
+            "transition": {
+              "frames": 103,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 103,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 8.789333333333333,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 8.789333333333333,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 165,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 165,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 14.08,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 14.08,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 22.869333333333334,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 22.58547300000282,
+            "p95Ms": 41.486526000000595,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 2
+          }
+        }
+      ]
+    },
+    "R2": {
+      "split": "observed-validation-same-players",
+      "durationSeconds": 199.92725,
+      "frameWeightSeconds": 0.08533333333333333,
+      "configSha256": "125272dbe4d343c81f5199f2026558732be4d716edf5582826722a3955c206b2",
+      "preparedSha256": "96ec6d76487851ca379f1c594786994f9172df29b46abf020d6ceed7839f783f",
+      "selectionSha256": "4dbda048f8237ec1bea3d037c6651dba24ba657831c729a84996a55976a6dceb",
+      "baselineDspSha256": "a3db9796d48690f822e821a7ca985b836afab275b873c9edac6ce54804bf742b",
+      "pooledEqualDurationGrid": {
+        "transition": {
+          "frames": 644,
+          "supported": 73,
+          "correct": 3,
+          "acceptedSupported": 3,
+          "oov": 571,
+          "oovAccepted": 1,
+          "noChord": 0,
+          "noChordAccepted": 0,
+          "unknown": 0,
+          "unknownAccepted": 0,
+          "perChordRecall": {
+            "G": {
+              "frames": 6,
+              "recall": 0.0
+            },
+            "F": {
+              "frames": 44,
+              "recall": 0.06818181818181818
+            },
+            "C": {
+              "frames": 8,
+              "recall": 0.0
+            },
+            "Dm": {
+              "frames": 15,
+              "recall": 0.0
+            }
+          },
+          "supportedAccuracy": 0.0410958904109589,
+          "supportedCoverage": 0.0410958904109589,
+          "acceptedSupportedPrecision": 1,
+          "oovFalseAcceptance": 0.0017513134851138354,
+          "noChordFalseAcceptance": null,
+          "supportedFraction": 0.11335403726708075
+        },
+        "stable": {
+          "frames": 1678,
+          "supported": 191,
+          "correct": 25,
+          "acceptedSupported": 25,
+          "oov": 1487,
+          "oovAccepted": 7,
+          "noChord": 0,
+          "noChordAccepted": 0,
+          "unknown": 0,
+          "unknownAccepted": 0,
+          "perChordRecall": {
+            "G": {
+              "frames": 17,
+              "recall": 0.11764705882352941
+            },
+            "F": {
+              "frames": 98,
+              "recall": 0.1836734693877551
+            },
+            "C": {
+              "frames": 12,
+              "recall": 0.16666666666666666
+            },
+            "Dm": {
+              "frames": 64,
+              "recall": 0.046875
+            }
+          },
+          "supportedAccuracy": 0.13089005235602094,
+          "supportedCoverage": 0.13089005235602094,
+          "acceptedSupportedPrecision": 1,
+          "oovFalseAcceptance": 0.004707464694014795,
+          "noChordFalseAcceptance": null,
+          "supportedFraction": 0.11382598331346841
+        }
+      },
+      "macro": {
+        "transition": {
+          "supportedAccuracy": {
+            "mean": 0.02027027027027027,
+            "definedRecordings": 4
+          },
+          "supportedCoverage": {
+            "mean": 0.02027027027027027,
+            "definedRecordings": 4
+          },
+          "acceptedSupportedPrecision": {
+            "mean": 1.0,
+            "definedRecordings": 1
+          },
+          "oovFalseAcceptance": {
+            "mean": 0.001488095238095238,
+            "definedRecordings": 6
+          },
+          "noChordFalseAcceptance": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "supportedFraction": {
+            "mean": 0.11807437120213583,
+            "definedRecordings": 6
+          }
+        },
+        "stable": {
+          "supportedAccuracy": {
+            "mean": 0.1442543300434972,
+            "definedRecordings": 4
+          },
+          "supportedCoverage": {
+            "mean": 0.1442543300434972,
+            "definedRecordings": 4
+          },
+          "acceptedSupportedPrecision": {
+            "mean": 1.0,
+            "definedRecordings": 4
+          },
+          "oovFalseAcceptance": {
+            "mean": 0.004861111111111111,
+            "definedRecordings": 6
+          },
+          "noChordFalseAcceptance": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "supportedFraction": {
+            "mean": 0.13012161235993297,
+            "definedRecordings": 6
+          }
+        },
+        "annotation-gap": {
+          "supportedAccuracy": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "supportedCoverage": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "acceptedSupportedPrecision": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "oovFalseAcceptance": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "noChordFalseAcceptance": {
+            "mean": null,
+            "definedRecordings": 0
+          },
+          "supportedFraction": {
+            "mean": null,
+            "definedRecordings": 0
+          }
+        }
+      },
+      "recordings": [
+        {
+          "id": "00_BN3-119-G_comp",
+          "player": "00",
+          "style": "Bossa Nova",
+          "pcmSha256": "d404197e11f46e9e3f3ee4990eca1387b8c7c28bc791db763d3141cba9014420",
+          "seconds": 32.26320833333333,
+          "frameCount": 375,
+          "tailSeconds": 0.007208333333333333,
+          "metrics": {
+            "transition": {
+              "frames": 118,
+              "supported": 6,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 112,
+              "oovAccepted": 1,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "G": {
+                  "frames": 6,
+                  "recall": 0.0
+                }
+              },
+              "supportedAccuracy": 0.0,
+              "supportedCoverage": 0.0,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.008928571428571428,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.05084745762711865,
+              "gridSeconds": 10.069333333333333,
+              "supportedSeconds": 0.512,
+              "oovSeconds": 9.557333333333334,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 257,
+              "supported": 17,
+              "correct": 2,
+              "acceptedSupported": 2,
+              "oov": 240,
+              "oovAccepted": 7,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "G": {
+                  "frames": 17,
+                  "recall": 0.11764705882352941
+                }
+              },
+              "supportedAccuracy": 0.11764705882352941,
+              "supportedCoverage": 0.11764705882352941,
+              "acceptedSupportedPrecision": 1,
+              "oovFalseAcceptance": 0.029166666666666667,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.06614785992217899,
+              "gridSeconds": 21.930666666666667,
+              "supportedSeconds": 1.4506666666666668,
+              "oovSeconds": 20.48,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 32.0,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 16.3298020000002,
+            "p95Ms": 23.083236999999826,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "01_Funk2-108-Eb_comp",
+          "player": "01",
+          "style": "Funk",
+          "pcmSha256": "617244c4c702198481a4cdc59604d4da9aecfd18673f7dd618fbadca41555495",
+          "seconds": 35.54839583333333,
+          "frameCount": 413,
+          "tailSeconds": 0.049729166666666665,
+          "metrics": {
+            "transition": {
+              "frames": 103,
+              "supported": 15,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 88,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "F": {
+                  "frames": 15,
+                  "recall": 0.0
+                }
+              },
+              "supportedAccuracy": 0.0,
+              "supportedCoverage": 0.0,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.14563106796116504,
+              "gridSeconds": 8.789333333333333,
+              "supportedSeconds": 1.28,
+              "oovSeconds": 7.509333333333333,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 310,
+              "supported": 37,
+              "correct": 1,
+              "acceptedSupported": 1,
+              "oov": 273,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "F": {
+                  "frames": 37,
+                  "recall": 0.02702702702702703
+                }
+              },
+              "supportedAccuracy": 0.02702702702702703,
+              "supportedCoverage": 0.02702702702702703,
+              "acceptedSupportedPrecision": 1,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.11935483870967742,
+              "gridSeconds": 26.453333333333333,
+              "supportedSeconds": 3.1573333333333333,
+              "oovSeconds": 23.296,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 35.242666666666665,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 16.35672700000032,
+            "p95Ms": 27.529872999999498,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 2
+          }
+        },
+        {
+          "id": "02_Jazz2-110-Bb_comp",
+          "player": "02",
+          "style": "Jazz",
+          "pcmSha256": "e0a5d9808267b733e3e68de32dad88c0cb306ce24cecd8b4ab1263b5bbab0756",
+          "seconds": 34.90320833333333,
+          "frameCount": 406,
+          "tailSeconds": 0.001875,
+          "metrics": {
+            "transition": {
+              "frames": 103,
+              "supported": 15,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 88,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "F": {
+                  "frames": 15,
+                  "recall": 0.0
+                }
+              },
+              "supportedAccuracy": 0.0,
+              "supportedCoverage": 0.0,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.14563106796116504,
+              "gridSeconds": 8.789333333333333,
+              "supportedSeconds": 1.28,
+              "oovSeconds": 7.509333333333333,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 303,
+              "supported": 36,
+              "correct": 12,
+              "acceptedSupported": 12,
+              "oov": 267,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "F": {
+                  "frames": 36,
+                  "recall": 0.3333333333333333
+                }
+              },
+              "supportedAccuracy": 0.3333333333333333,
+              "supportedCoverage": 0.3333333333333333,
+              "acceptedSupportedPrecision": 1,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.1188118811881188,
+              "gridSeconds": 25.856,
+              "supportedSeconds": 3.072,
+              "oovSeconds": 22.784,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 34.64533333333333,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 17.02100000000064,
+            "p95Ms": 28.07459999999992,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 6
+          }
+        },
+        {
+          "id": "03_Rock2-142-D_comp",
+          "player": "03",
+          "style": "Rock",
+          "pcmSha256": "c9d2b3f56cd6ae1384fc16b0f7a6eb8f15fbc8ad9cb8e191cf141b269ce3190a",
+          "seconds": 27.041625,
+          "frameCount": 313,
+          "tailSeconds": 0.07629166666666666,
+          "metrics": {
+            "transition": {
+              "frames": 101,
+              "supported": 37,
+              "correct": 3,
+              "acceptedSupported": 3,
+              "oov": 64,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "C": {
+                  "frames": 8,
+                  "recall": 0.0
+                },
+                "F": {
+                  "frames": 14,
+                  "recall": 0.21428571428571427
+                },
+                "Dm": {
+                  "frames": 15,
+                  "recall": 0.0
+                }
+              },
+              "supportedAccuracy": 0.08108108108108109,
+              "supportedCoverage": 0.08108108108108109,
+              "acceptedSupportedPrecision": 1,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.36633663366336633,
+              "gridSeconds": 8.618666666666666,
+              "supportedSeconds": 3.1573333333333333,
+              "oovSeconds": 5.461333333333333,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 212,
+              "supported": 101,
+              "correct": 10,
+              "acceptedSupported": 10,
+              "oov": 111,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {
+                "C": {
+                  "frames": 12,
+                  "recall": 0.16666666666666666
+                },
+                "F": {
+                  "frames": 25,
+                  "recall": 0.2
+                },
+                "Dm": {
+                  "frames": 64,
+                  "recall": 0.046875
+                }
+              },
+              "supportedAccuracy": 0.09900990099009901,
+              "supportedCoverage": 0.09900990099009901,
+              "acceptedSupportedPrecision": 1,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.47641509433962265,
+              "gridSeconds": 18.090666666666667,
+              "supportedSeconds": 8.618666666666666,
+              "oovSeconds": 9.472,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 26.709333333333333,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 16.573593000000983,
+            "p95Ms": 25.089186999997764,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "04_SS2-107-Ab_comp",
+          "player": "04",
+          "style": "Singer-Songwriter",
+          "pcmSha256": "32791484688dc4a59544094c87d0152cafd4ff799b347b7ceb9c721cf64201da",
+          "seconds": 35.88639583333333,
+          "frameCount": 417,
+          "tailSeconds": 0.04639583333333333,
+          "metrics": {
+            "transition": {
+              "frames": 103,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 103,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 8.789333333333333,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 8.789333333333333,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 314,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 314,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 26.794666666666668,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 26.794666666666668,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 35.584,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 16.420506000002206,
+            "p95Ms": 22.621868000001996,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 0
+          }
+        },
+        {
+          "id": "05_Funk3-112-C#_comp",
+          "player": "05",
+          "style": "Funk",
+          "pcmSha256": "97092463c595d7b0fb06d7df5438e8960223a5e4a9f6ad0c0533a2020b8d9305",
+          "seconds": 34.284416666666665,
+          "frameCount": 398,
+          "tailSeconds": 0.06575,
+          "metrics": {
+            "transition": {
+              "frames": 116,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 116,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 9.898666666666667,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 9.898666666666667,
+              "unknownSeconds": 0
+            },
+            "stable": {
+              "frames": 282,
+              "supported": 0,
+              "correct": 0,
+              "acceptedSupported": 0,
+              "oov": 282,
+              "oovAccepted": 0,
+              "noChord": 0,
+              "noChordAccepted": 0,
+              "unknown": 0,
+              "unknownAccepted": 0,
+              "perChordRecall": {},
+              "supportedAccuracy": null,
+              "supportedCoverage": null,
+              "acceptedSupportedPrecision": null,
+              "oovFalseAcceptance": 0.0,
+              "noChordFalseAcceptance": null,
+              "supportedFraction": 0.0,
+              "gridSeconds": 24.064,
+              "supportedSeconds": 0.0,
+              "oovSeconds": 24.064,
+              "unknownSeconds": 0
+            }
+          },
+          "scoredGridSeconds": 33.962666666666664,
+          "initialUnscoredSeconds": 0.256,
+          "compute": {
+            "p50Ms": 15.47262399999454,
+            "p95Ms": 22.532477000000654,
+            "hopDeadlineMs": 85.33333333333333,
+            "deadlineMisses": 3
+          }
+        }
+      ]
+    }
+  },
+  "limitations": [
+    "Performed chord labels retain lead-sheet root/segmentation prior; not independent auditory truth",
+    "Observed GuitarSet development data, same players; no untouched test claim",
+    "Fixed unnormalized PCM, no score-conditioned classifier, no tuning",
+    "Root/quality only; bass/inversion not predicted; unsupported qualities not collapsed to triads",
+    "Stable subset and transitions reported separately, not all-frame accuracy",
+    "One shared-host run, no device/browser end-to-end latency; no noise-robustness claim",
+    "No listening audit; clean does not mean noiseless.",
+    "No supported Am or Em in either split; R1 supported stable truth D/G in one recording; R2 C/Dm/F/G in four recordings.",
+    "No no-chord/N or annotation-gap examples on scored grid; related rates undefined.",
+    "100% accepted-supported precision excludes OOV errors and rests on 29 and 25 accepted supported frames.",
+    "Overlapping frames are correlated; no independent-sample inference.",
+    "Source configuration status remains preregistered-not-run-on-real-audio; this report documents completed execution."
+  ]
+}
