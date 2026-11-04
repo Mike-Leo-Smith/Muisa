@@ -1,0 +1,222 @@
+{
+  "protocol": "C2-harmonic-nnls-development-v1",
+  "status": "completed-independent-private-environment-development-only",
+  "summaryOnly": true,
+  "codeRevision": "5cbb014cb0a5af3ed87534bc68fc20b170681776",
+  "configSha256": "bdba92e37e3258b39231f768901c4cb8839e6f16ac935120d1b88f33280635a5",
+  "preparedSha256": "1b7aa9c2ff4c8e9206aa95b9d145737ef2e741b5ec47e9953229bf1a0e24b1b7",
+  "sourceModification": false,
+  "baselineExactlyReproduced": true,
+  "R2Executed": false,
+  "runtime": {
+    "node": "24.22.1",
+    "wallSeconds": 35.623,
+    "userCpuSeconds": 35.487,
+    "systemCpuSeconds": 0.564,
+    "peakRssKiB": 97376
+  },
+  "data": {
+    "recordings": 6,
+    "seconds": 143.807,
+    "frames": 1664,
+    "stable": 1354,
+    "transition": 310,
+    "supportedStableRecording": "02_Jazz1-130-D_comp",
+    "stableOovErrorRecording": "03_Rock1-130-A_comp",
+    "sameC1PcmHashes": true,
+    "noResampling": true
+  },
+  "methods": {
+    "baseline": {
+      "stable": {
+        "supportedFrames": 200,
+        "correct": 29,
+        "acceptedSupported": 29,
+        "oovFrames": 1154,
+        "oovAccepted": 11,
+        "supportedAccuracy": 0.145,
+        "coverage": 0.145,
+        "acceptedKnownTruthPrecision": 0.725,
+        "oovFalseAcceptance": 0.009532062391681109,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 23,
+            "recall": 0.15333333333333332
+          },
+          "G": {
+            "frames": 50,
+            "correct": 6,
+            "recall": 0.12
+          }
+        }
+      },
+      "transition": {
+        "supportedFrames": 35,
+        "correct": 3,
+        "oovFrames": 275,
+        "oovAccepted": 4,
+        "supportedAccuracy": 0.08571428571428572
+      }
+    },
+    "rawThresholdOnly": {
+      "stable": {
+        "supportedFrames": 200,
+        "correct": 45,
+        "acceptedSupported": 45,
+        "oovFrames": 1154,
+        "oovAccepted": 11,
+        "supportedAccuracy": 0.225,
+        "coverage": 0.225,
+        "acceptedKnownTruthPrecision": 0.8035714285714286,
+        "oovFalseAcceptance": 0.009532062391681109,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 32,
+            "recall": 0.21333333333333335
+          },
+          "G": {
+            "frames": 50,
+            "correct": 13,
+            "recall": 0.26
+          }
+        }
+      },
+      "transition": {
+        "supportedFrames": 35,
+        "correct": 2,
+        "oovFrames": 275,
+        "oovAccepted": 3,
+        "supportedAccuracy": 0.05714285714285714
+      }
+    },
+    "raw24": {
+      "stable": {
+        "supportedFrames": 200,
+        "correct": 23,
+        "acceptedSupported": 23,
+        "oovFrames": 1154,
+        "oovAccepted": 10,
+        "supportedAccuracy": 0.115,
+        "coverage": 0.115,
+        "acceptedKnownTruthPrecision": 0.696969696969697,
+        "oovFalseAcceptance": 0.008665511265164644,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 21,
+            "recall": 0.14
+          },
+          "G": {
+            "frames": 50,
+            "correct": 2,
+            "recall": 0.04
+          }
+        }
+      },
+      "transition": {
+        "supportedFrames": 35,
+        "correct": 2,
+        "oovFrames": 275,
+        "oovAccepted": 3,
+        "supportedAccuracy": 0.05714285714285714
+      }
+    },
+    "harmonic24": {
+      "stable": {
+        "supportedFrames": 200,
+        "correct": 13,
+        "acceptedSupported": 13,
+        "oovFrames": 1154,
+        "oovAccepted": 0,
+        "supportedAccuracy": 0.065,
+        "coverage": 0.065,
+        "acceptedKnownTruthPrecision": 1.0,
+        "oovFalseAcceptance": 0.0,
+        "perChord": {
+          "D": {
+            "frames": 150,
+            "correct": 8,
+            "recall": 0.05333333333333334
+          },
+          "G": {
+            "frames": 50,
+            "correct": 5,
+            "recall": 0.1
+          }
+        }
+      },
+      "transition": {
+        "supportedFrames": 35,
+        "correct": 0,
+        "oovFrames": 275,
+        "oovAccepted": 0,
+        "supportedAccuracy": 0.0
+      }
+    }
+  },
+  "baselineStableSupportedRejection": {
+    "frames": 200,
+    "accepted": 29,
+    "quiet": 2,
+    "evidenceFailed": 91,
+    "weakestFailed": 143,
+    "marginFailed": 105,
+    "topMismatchExcludingQuiet": 14,
+    "onlyWeakestFailed": 39,
+    "weakestAndMarginFailed": 33,
+    "allThreeFailed": 58,
+    "failureCountsOverlap": true
+  },
+  "harmonicStableSupportedRejection": {
+    "frames": 200,
+    "accepted": 13,
+    "quiet": 2,
+    "clipped": 2,
+    "uncertain": 183,
+    "evidenceFailed": 174,
+    "marginFailed": 119,
+    "weakestFailed": 16,
+    "residualFailed": 10,
+    "topMismatchIncludingNoBestLabel": 22,
+    "noBestLabelWithinTopMismatch": 4,
+    "failureCountsOverlap": true
+  },
+  "compute": {
+    "baseline": {
+      "clipP50RangeMs": [
+        15.28,
+        16.17
+      ],
+      "clipP95RangeMs": [
+        18.51,
+        31.66
+      ],
+      "deadlineMisses": 5
+    },
+    "harmonic24": {
+      "clipP50RangeMs": [
+        2.68,
+        2.89
+      ],
+      "clipP95RangeMs": [
+        3.92,
+        6.27
+      ],
+      "deadlineMisses": 3
+    },
+    "hopDeadlineMs": 85.333,
+    "initializationExcluded": true,
+    "counterfactualsTimedIndependently": false
+  },
+  "limitations": [
+    "Summary transcribed from independent execution report; full91KB detailed JSON remains private and is not reproduced here",
+    "R1 previously observed development; correlated overlapping windows; not unbiased test",
+    "Only D/G supported stable truth, no five other target classes or N/silence",
+    "Performed labels inherit score root/segmentation, no listening audit",
+    "Counterfactuals are paired on same input, not independent experiments",
+    "Harmonic branch changes DC/spectrum/decomposition/residual/clipping together; no single-factor causal attribution",
+    "No R2 inference, no post-run retuning, no online deployment, no noise or stable-latency claim"
+  ]
+}
